@@ -13,32 +13,58 @@ public class MoveSceneCamera : MonoBehaviour
     [SerializeField]
     private Camera back;
 
-    public void MoveScreenLeft()
+    public Camera MoveScreen(string direction)
     {
-        MoveCamera(left);
+        switch(direction)
+        {
+            case "left":
+                return MoveCamera(left);
+
+            case "right":
+                return MoveCamera(right);
+
+            case "up":
+                return MoveCamera(up);
+
+            case "down":
+                return MoveCamera(down);
+
+            case "back":
+                return MoveCamera(back);
+
+            default:
+                throw new System.ArgumentException();
+        }
     }
 
-    public void MoveScreenRight()
-    {
-
-    }
-    public void MoveScreenUp()
-    {
-
-    }
-    public void MoveScreenDown()
-    {
-
-    }
-
-    public void MoveScreenBack()
-    {
-
-    }
-
-    private void MoveCamera(Camera target)
+    private Camera MoveCamera(Camera target)
     {
         Camera.main.gameObject.SetActive(false);
         target.gameObject.SetActive(true);
+        return target;
+    }
+
+    public bool CheckNullCamera(CameraDirection direction)
+    {
+        switch(direction)
+        {
+            case CameraDirection.Up:
+                return up != null;
+
+            case CameraDirection.Down:
+                return down != null;
+
+            case CameraDirection.Left:
+                return left != null;
+
+            case CameraDirection.Right:
+                return right != null;
+
+            case CameraDirection.Back:
+                return back != null;
+
+            default:
+                throw new System.ArgumentException();
+        }
     }
 }

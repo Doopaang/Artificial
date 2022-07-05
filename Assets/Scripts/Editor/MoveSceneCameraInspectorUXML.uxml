@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:GroupBox style="height: 149px;">
+        <uie:ObjectField label="Down" name="Down" binding-path="down" type="UnityEngine.Camera, UnityEngine.CoreModule" tabindex="4" style="flex-direction: column; height: 40px; width: 100px; position: absolute; top: 100px; left: 120px;" />
+        <uie:ObjectField label="Back" name="Back" binding-path="back" type="UnityEngine.Camera, UnityEngine.CoreModule" tabindex="3" style="flex-direction: column; height: 40px; width: 100px; position: absolute; top: 100px; left: 0; align-items: stretch;" />
+        <uie:ObjectField label="Up" name="Up" binding-path="up" type="UnityEngine.Camera, UnityEngine.CoreModule" style="flex-direction: column; height: 40px; width: 100px; position: absolute; top: 0; left: 120px;" />
+        <uie:ObjectField label="Left" name="Left" binding-path="left" type="UnityEngine.Camera, UnityEngine.CoreModule" tabindex="1" style="flex-direction: column; height: 40px; width: 100px; position: absolute; top: 50px; left: 0;" />
+        <uie:ObjectField label="Right" name="Right" binding-path="right" type="UnityEngine.Camera, UnityEngine.CoreModule" tabindex="2" style="flex-direction: column; height: 40px; width: 100px; position: absolute; top: 50px; left: 240px;" />
+    </ui:GroupBox>
+    <ui:Foldout text="Default Inspector" name="DefaultInspector" value="false" tabindex="5" />
+</ui:UXML>

@@ -24,11 +24,6 @@ public class Inventory : MonoBehaviour
         curItemList = new List<EItemType>();
     }
 
-    void Update()
-    {
-        
-    }
-
     public void GainItem(EItemType itemType)
     {
         curItemList.Add(itemType);

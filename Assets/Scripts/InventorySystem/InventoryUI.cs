@@ -5,17 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    public List<GameObject> slotList;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-    
-    }
+    public List<GameObject> itemSlotList;
 
     public void ApplyInventory(Inventory inventory)
     {
@@ -24,7 +14,7 @@ public class InventoryUI : MonoBehaviour
 
         for (int i = 0; i < curItemList.Count; i++)
         {
-           slotList[i].GetComponent<Slot>().itemImage.sprite = itemDictionary[(int)curItemList[i]].sprite;
+            itemSlotList[i].GetComponent<ItemSlot>().ChangeItem(itemDictionary[(int)curItemList[i]]);
         }
     }
 

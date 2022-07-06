@@ -749,6 +749,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3310366155868154451, guid: 3e749b8f26a234c4d811f610fb8b08f8,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310366155868154451, guid: 3e749b8f26a234c4d811f610fb8b08f8,
+        type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4177351262351467478, guid: 3e749b8f26a234c4d811f610fb8b08f8,
         type: 3}
       propertyPath: m_Name

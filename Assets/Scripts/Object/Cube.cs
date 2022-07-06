@@ -16,6 +16,6 @@ public class Cube : Object
 
     protected override void Interact()
     {
-        Debug.Log("Log");
+
     }
 }

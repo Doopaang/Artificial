@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotImage: {fileID: 7925091448885990996}
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 1505653167911177424}
 --- !u!1 &3144474557653795123
 GameObject:
   m_ObjectHideFlags: 0

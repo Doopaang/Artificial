@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum EItemType
-{
-    NONE,
-    ITEM_1
-}
-
 [System.Serializable]
 public struct ItemData
 {
@@ -19,19 +13,37 @@ public struct ItemData
 
 public class Inventory : MonoBehaviour
 {
+    public InventoryUI inventoryUI;
+
     public List<ItemData> itemDictionary;
 
     List<EItemType> curItemList;
 
     void Start()
     {
-        itemDictionary = new List<ItemData>();
         curItemList = new List<EItemType>();
     }
 
     void Update()
     {
         
+    }
+
+    public void GainItem(EItemType itemType)
+    {
+        curItemList.Add(itemType);
+
+        inventoryUI.ApplyInventory(this);
+    }
+
+    public List<ItemData> GetItemDictionary()
+    {
+        return itemDictionary;
+    }
+
+    public List<EItemType> GetCurrentItemList()
+    {
+        return curItemList;
     }
 
 }

@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1398139304964253356}
   - component: {fileID: 994069535840652644}
-  - component: {fileID: 3975796682033973221}
+  - component: {fileID: 3146131179669578826}
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -241,7 +241,7 @@ MonoBehaviour:
   - {fileID: 6304613193972079416}
   - {fileID: 7410476822390537708}
   - {fileID: 4839470186643801356}
---- !u!114 &3975796682033973221
+--- !u!114 &3146131179669578826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b5e0f1f3c9dbf4f891120d87de0d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryUI: {fileID: 994069535840652644}
   itemDictionary:
   - ItemType: 0
     sprite: {fileID: 0}

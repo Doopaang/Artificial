@@ -14,6 +14,18 @@ public class InventoryUI : MonoBehaviour
 
     void Update()
     {
-        
+    
     }
+
+    public void ApplyInventory(Inventory inventory)
+    {
+        List<EItemType> curItemList = inventory.GetCurrentItemList();
+        List<ItemData> itemDictionary = inventory.GetItemDictionary();
+
+        for (int i = 0; i < curItemList.Count; i++)
+        {
+           slotList[i].GetComponent<Slot>().itemImage.sprite = itemDictionary[(int)curItemList[i]].sprite;
+        }
+    }
+
 }

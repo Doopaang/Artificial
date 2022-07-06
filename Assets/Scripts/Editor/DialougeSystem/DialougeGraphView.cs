@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//using UnityEditor.Experimental.UIElements;
+using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.UIElements.GraphView;
+using UnityEngine.UIElements;
 
-public class DialougeGraphView : MonoBehaviour
+public class DialougeGraphView : GraphView
 {
-    // Start is called before the first frame update
-    void Start()
+    public DialougeGraphView()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        this.AddManipulator(new ContentDragger());
+        this.AddManipulator(new SelectionDragger());
+        this.AddManipulator(new RectangleSelector());
     }
 }

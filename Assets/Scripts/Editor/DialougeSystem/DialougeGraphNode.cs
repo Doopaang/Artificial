@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using UnityEditor.Experimental.GraphView;
 
-public class DialougeGraphNode : MonoBehaviour
+public class DialougeGraphNode : Node
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string GUID;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string DialogueText;
+
+    public bool Entrypoint = false;
 }

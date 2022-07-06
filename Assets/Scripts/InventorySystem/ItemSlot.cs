@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ItemSlot : MonoBehaviour
+public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
     public Image slotImage;
 
@@ -28,6 +28,11 @@ public class ItemSlot : MonoBehaviour
     {
         item = newItem;
         itemImage.sprite = item.sprite;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("Click");
     }
 
     void OnMouseDown()

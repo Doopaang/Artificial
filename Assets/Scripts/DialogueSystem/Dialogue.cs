@@ -4,8 +4,8 @@ using UnityEngine;
 [System.Serializable]
 public struct DialogueScript
 {
-    public Sprite sprite;
     public string text;
+    public Sprite sprite;
 }
 
 [System.Serializable]
@@ -18,8 +18,7 @@ public struct DialogueScriptSet
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue", order = 1)]
 public class Dialogue : ScriptableObject
 {
-    [SerializeField]
-    private List<DialogueScriptSet> scriptSets;
+    public List<DialogueScriptSet> scriptSets;
 
     public DialogueScriptSet FindScriptSetByKey(string key)
     {

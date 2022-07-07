@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60194e0d0b1cba144ac3852289976142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: 92cf7d74e08adcc45a8964e3d3b6cf36, type: 2}
   baseInspector:
     panel: {fileID: 5218719552101810046}
     profile: {fileID: 5218719551329742425}

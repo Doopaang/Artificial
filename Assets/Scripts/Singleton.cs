@@ -24,8 +24,9 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             return instance;
         }
     }
-    public virtual void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+
+    //public virtual void Awake()
+    //{
+    //    DontDestroyOnLoad(gameObject);
+    //}
 }

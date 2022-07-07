@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60194e0d0b1cba144ac3852289976142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 92cf7d74e08adcc45a8964e3d3b6cf36, type: 2}
+  dialogue: {fileID: 0}
   baseInspector:
     panel: {fileID: 5218719552101810046}
     profile: {fileID: 5218719551329742425}
@@ -214,7 +214,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &5218719551199323400
 MonoBehaviour:
@@ -517,10 +517,10 @@ RectTransform:
   m_Father: {fileID: 5218719551871199298}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 765, y: -125}
-  m_SizeDelta: {x: 1030, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1030, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5218719552253871843
 CanvasRenderer:
@@ -671,10 +671,10 @@ RectTransform:
   m_Father: {fileID: 5218719551871199298}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -250}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 250, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &5218719552498983778
 CanvasRenderer:

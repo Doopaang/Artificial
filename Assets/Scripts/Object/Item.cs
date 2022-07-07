@@ -5,7 +5,9 @@ using UnityEngine;
 public enum EItemType
 {
     NONE,
-    ITEM_1
+    ITEM_1,
+    ITEM_2,
+    ITEM_3
 }
 
 public class Item : Object
@@ -27,6 +29,11 @@ public class Item : Object
     protected override void Interact()
     {
         inventory.GainItem(itemType);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+    }
+
+    public void DebugA()
+    {
+        Debug.Log("AA");
     }
 }

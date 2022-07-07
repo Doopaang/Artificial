@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
+    InventoryUI inventoryUI;
+
     public Image slotImage;
 
     public Image itemImage;
@@ -16,7 +18,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
-
+        selectedImage.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -32,11 +34,14 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Click");
+        if (item.itemType == EItemType.NONE)
+            return;
+
+        inventoryUI.ApplySelectedItemSlot(this);
     }
 
-    void OnMouseDown()
+    public void SetInventoryUI(InventoryUI inventoryUI)
     {
-        Debug.Log("Mouse");
+        this.inventoryUI = inventoryUI;
     }
 }

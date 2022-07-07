@@ -6,7 +6,11 @@ using UnityEngine.UI;
 [System.Serializable]
 public struct ItemData
 {
-    public EItemType ItemType;
+    public EItemType itemType;
+
+    public EItemType combinableItemType;
+
+    public EItemType combineResultItemType;
 
     public Sprite sprite;
 }
@@ -26,8 +30,10 @@ public class Inventory : MonoBehaviour
 
     public void GainItem(EItemType itemType)
     {
-        curItemList.Add(itemType);
+        if (inventoryUI.itemSlotList.Count <= curItemList.Count)
+            return;
 
+        curItemList.Add(itemType);
         inventoryUI.ApplyInventory(this);
     }
 

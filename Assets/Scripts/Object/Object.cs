@@ -11,10 +11,10 @@ public abstract class Object : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
         Interact();
     }

@@ -10,30 +10,26 @@ public enum EItemType
     ITEM_3
 }
 
-public class Item : Object
+[System.Serializable]
+public struct ItemData
 {
-    public Inventory inventory;
-
     public EItemType itemType;
 
-    void Start()
-    {
+    public EItemType combinableItemType;
 
-    }
+    public EItemType combineResultItemType;
 
-    void Update()
-    {
-        
-    }
+    public Sprite itemSprite;
+}
+
+public class Item : InteractiveObject
+{
+    [SerializeField]
+    private EItemType itemType;
 
     protected override void Interact()
     {
-        inventory.GainItem(itemType);
+        GameManager.Instance.inventory.GainItem(itemType);
         //gameObject.SetActive(false);
-    }
-
-    public void DebugA()
-    {
-        Debug.Log("AA");
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Object : MonoBehaviour
+public abstract class InteractiveObject : MonoBehaviour
 {
     void Start()
     {
@@ -16,6 +16,9 @@ public abstract class Object : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (!GameManager.Instance.EnableClickObject)
+            return;
+
         Interact();
     }
 

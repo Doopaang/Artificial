@@ -14,14 +14,20 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
         public Image profile;
         public TMPro.TextMeshProUGUI text;
     }
-    [SerializeField, Header("Base"), Tooltip("�̰� �ǵ�ø� �ȵ˴ϴ�.")]
+    [SerializeField, Header("Base"), Tooltip("DON'T TOUCH THIS.")]
     private DialougeBaseInspector baseInspector;
 
     private bool isPlaying = false;
     private DialogueScriptSet script;
     private int index;
 
-    // �׽�Ʈ�� �ڵ�
+    private void Start()
+    {
+        GetComponent<Canvas>().worldCamera = Camera.main;
+    }
+
+    // �׽�Ʈ�� �ڵ�
+#if UNITY_EDITOR
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
@@ -29,6 +35,7 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
             StartDialogue("Test1");
         }
     }
+#endif
     //
 
     public void OnPointerClick(PointerEventData eventData)

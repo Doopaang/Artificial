@@ -153,6 +153,8 @@ public class Inventory : MonoBehaviour
     {
         itemDetailWindow.gameObject.SetActive(false);
 
+        itemDetailObject.transform.rotation = Quaternion.Euler(Vector3.zero);
+
         GameManager.Instance.DecreaseActivatedUINum();
     }
 
@@ -204,6 +206,8 @@ public class Inventory : MonoBehaviour
         gameObject.SetActive(true);
 
         DeactivateCombine();
+
+        usingItem = EItemType.NONE;
 
         GameManager.Instance.IncreaseActivatedUINum();
     }

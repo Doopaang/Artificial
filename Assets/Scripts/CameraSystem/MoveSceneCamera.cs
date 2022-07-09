@@ -1,21 +1,45 @@
 using UnityEngine;
 
+[System.Serializable]
 public class MoveSceneCamera : MonoBehaviour
 {
     [SerializeField]
-    private Camera left;
+    public MoveSceneCamera left;
     [SerializeField]
-    private Camera right;
+    private MoveSceneCamera right;
     [SerializeField]
-    private Camera up;
+    private MoveSceneCamera up;
     [SerializeField]
-    private Camera down;
+    private MoveSceneCamera down;
     [SerializeField]
-    private Camera back;
+    private MoveSceneCamera back;
 
-    public Camera MoveScreen(string direction)
+    private void OnDrawGizmos()
     {
-        switch(direction)
+        Gizmos.DrawIcon(transform.position, "CameraIcon", true);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Camera camera = Camera.main;
+        Matrix4x4 temp = Gizmos.matrix;
+        Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
+        if (camera.orthographic)
+        {
+            float spread = camera.farClipPlane - camera.nearClipPlane;
+            float center = (camera.farClipPlane + camera.nearClipPlane) * 0.5f;
+            Gizmos.DrawWireCube(new Vector3(0, 0, center), new Vector3(camera.orthographicSize * 2 * camera.aspect, camera.orthographicSize * 2, spread));
+        }
+        else
+        {
+            Gizmos.DrawFrustum(Vector3.zero, camera.fieldOfView, camera.farClipPlane, camera.nearClipPlane, camera.aspect);
+        }
+        Gizmos.matrix = temp;
+    }
+
+    public MoveSceneCamera MoveScreen(string direction)
+    {
+        switch (direction)
         {
             case "left":
                 return MoveCamera(left);
@@ -37,16 +61,15 @@ public class MoveSceneCamera : MonoBehaviour
         }
     }
 
-    private Camera MoveCamera(Camera target)
+    private MoveSceneCamera MoveCamera(MoveSceneCamera target)
     {
-        Camera.main.gameObject.SetActive(false);
-        target.gameObject.SetActive(true);
+        Camera.main.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
         return target;
     }
 
     public bool CheckNullCamera(CameraDirection direction)
     {
-        switch(direction)
+        switch (direction)
         {
             case CameraDirection.Up:
                 return up != null;

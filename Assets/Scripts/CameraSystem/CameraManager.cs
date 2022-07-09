@@ -5,34 +5,33 @@ using UnityEngine.UI;
 public class CameraManager : Singleton<CameraManager>
 {
     [SerializeField]
-    private Canvas UICanvas;
+    private MoveSceneCamera currentCamera;
+
     [SerializeField]
     private Button[] CameraButtons = new Button[System.Enum.GetValues(typeof(CameraDirection)).Length - 1];
 
     private void Start()
     {
-        ChangeCamera(Camera.main);
+        MoveCamera(currentCamera);
     }
 
-    private void ChangeCamera(Camera target)
+    private void ChangeScreen(MoveSceneCamera target)
     {
-        UICanvas.worldCamera = target;
-
-        MoveSceneCamera sceneCamera = Camera.main.GetComponent<MoveSceneCamera>();
+        currentCamera = target;
 
         for (int i = 0; i < System.Enum.GetValues(typeof(CameraDirection)).Length - 1; i++)
         {
-            CameraButtons[i].gameObject.SetActive(sceneCamera.CheckNullCamera((CameraDirection)i));
+            CameraButtons[i].gameObject.SetActive(currentCamera.CheckNullCamera((CameraDirection)i));
         }
     }
 
-    public void MoveCamera(Camera target)
+    public void MoveCamera(MoveSceneCamera target)
     {
-        ChangeCamera(target);
+        ChangeScreen(target);
     }
 
     public void MoveCameraDirection(string direction)
     {
-        ChangeCamera(Camera.main.GetComponent<MoveSceneCamera>().MoveScreen(direction));
+        ChangeScreen(currentCamera.MoveScreen(direction));
     }
 }

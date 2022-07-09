@@ -1,17 +1,23 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CameraManager : Singleton<CameraManager>
+public class CameraSystem : Singleton<CameraSystem>
 {
     [SerializeField]
     private MoveSceneCamera currentCamera;
 
-    [SerializeField]
-    private Button[] CameraButtons = new Button[System.Enum.GetValues(typeof(CameraDirection)).Length - 1];
+    [System.Serializable]
+    private class CameraBaseInspector
+    {
+        public Canvas CameraCanvas;
+        public Button[] CameraButtons = new Button[System.Enum.GetValues(typeof(CameraDirection)).Length - 1];
+    }
+    [SerializeField, Header("Base"), Tooltip("DON'T TOUCH THIS.")]
+    private CameraBaseInspector baseInspector = new CameraBaseInspector();
 
     private void Start()
     {
+        baseInspector.CameraCanvas.worldCamera = Camera.main;
         MoveCamera(currentCamera);
     }
 
@@ -21,7 +27,7 @@ public class CameraManager : Singleton<CameraManager>
 
         for (int i = 0; i < System.Enum.GetValues(typeof(CameraDirection)).Length - 1; i++)
         {
-            CameraButtons[i].gameObject.SetActive(currentCamera.CheckNullCamera((CameraDirection)i));
+            baseInspector.CameraButtons[i].gameObject.SetActive(currentCamera.CheckNullCamera((CameraDirection)i));
         }
     }
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[System.Serializable]
+[Icon("CameraIcon")]
 public class MoveSceneCamera : MonoBehaviour
 {
     [SerializeField]

@@ -14,14 +14,14 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
         public Image profile;
         public TMPro.TextMeshProUGUI text;
     }
-    [SerializeField, Header("Base"), Tooltip("ÀÌ°Ç °Çµå½Ã¸é ¾ÈµË´Ï´Ù.")]
+    [SerializeField, Header("Base"), Tooltip("ï¿½Ì°ï¿½ ï¿½Çµï¿½Ã¸ï¿½ ï¿½ÈµË´Ï´ï¿½.")]
     private DialougeBaseInspector baseInspector;
 
     private bool isPlaying = false;
     private DialogueScriptSet script;
     private int index;
 
-    // Å×½ºÆ®¿ë ÄÚµå
+    // ï¿½×½ï¿½Æ®ï¿½ï¿½ ï¿½Úµï¿½
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))

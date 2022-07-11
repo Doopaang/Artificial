@@ -21,12 +21,15 @@ public class InteractiveObject : MonoBehaviour
         Interact();
     }
 
-    protected virtual void Interact()
+    protected virtual bool Interact()
     {
         if (GameManager.Instance.inventory.UsingItem == interactiveItem)
         {
             GameManager.Instance.inventory.DeleteItem(deleteItem);
             GameManager.Instance.inventory.GainItem(gainItem);
+            return true;
         }
+
+        return false;
     }
 }

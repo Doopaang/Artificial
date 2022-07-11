@@ -32,10 +32,14 @@ public struct ItemData
 
 public class Item : InteractiveObject
 {
-    protected override void Interact()
+    protected override bool Interact()
     {
-        base.Interact();
+        if (base.Interact())
+        {
+            gameObject.SetActive(false);
+            return true;
+        }
 
-        gameObject.SetActive(false);
+        return false;
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6020500029521848597}
   - component: {fileID: 5858664349637740231}
   - component: {fileID: 8514882792883393074}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ItemDetailObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 3317211306506779081}
   - component: {fileID: 8134071247437736606}
   - component: {fileID: 8575332393100504312}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CancelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 6881091593493834595}
   - component: {fileID: 305071459741250238}
   - component: {fileID: 9172680381440393164}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CancelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 5115059320456981518}
   - component: {fileID: 2213463179006593175}
   - component: {fileID: 1067630553319736944}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ItemDetailWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ RectTransform:
   m_GameObject: {fileID: 6656290396516710435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1731007997750627727}
@@ -397,11 +397,11 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 600}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!223 &3624223854231301426
 Canvas:
   m_ObjectHideFlags: 0
@@ -411,7 +411,7 @@ Canvas:
   m_GameObject: {fileID: 6656290396516710435}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5115059320456981518
 MonoBehaviour:
   m_ObjectHideFlags: 0

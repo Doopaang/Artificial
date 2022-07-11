@@ -210,7 +210,7 @@ public class Inventory : MonoBehaviour
     public void ActivateInventory()
     {
         gameObject.SetActive(true);
-
+        Debug.Log("log");
         DeactivateCombine();
 
         usingItem = EItemType.NONE;

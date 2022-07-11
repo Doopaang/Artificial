@@ -5,9 +5,15 @@ using UnityEngine;
 public enum EItemType
 {
     NONE,
-    ITEM_1,
-    ITEM_2,
-    ITEM_3
+    APPLE,
+    EATEN_APPLE,
+    SWAP_PUZZLE_PAPER,
+    BATTERY, 
+    BATTERY_WATCH,
+    BATTERY_FREE_WATCH,
+    KEY,
+    CRESCENT_MOON,
+    BRUSH
 }
 
 [System.Serializable]
@@ -20,16 +26,16 @@ public struct ItemData
     public EItemType combineResultItemType;
 
     public Sprite itemSprite;
+
+    public Mesh itemMesh;
 }
 
 public class Item : InteractiveObject
 {
-    [SerializeField]
-    private EItemType itemType;
-
     protected override void Interact()
     {
-        GameManager.Instance.inventory.GainItem(itemType);
-        //gameObject.SetActive(false);
+        base.Interact();
+
+        gameObject.SetActive(false);
     }
 }

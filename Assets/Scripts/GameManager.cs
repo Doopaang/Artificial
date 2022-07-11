@@ -6,11 +6,15 @@ public class GameManager : Singleton<GameManager>
 {
     public Inventory inventory;
 
+    public List<ItemData> itemDictionary;
+
     private int activatedUINum;
 
     void Start()
     {
-        activatedUINum = 0;
+        //itemDictionary = new List<ItemData>();
+
+        InitActivatedUINum();
     }
 
     public bool EnableClickObject
@@ -19,6 +23,11 @@ public class GameManager : Singleton<GameManager>
         {
             return activatedUINum <= 0;
         }
+    }
+
+    public void InitActivatedUINum()
+    {
+        activatedUINum = 0;
     }
 
     public void IncreaseActivatedUINum()

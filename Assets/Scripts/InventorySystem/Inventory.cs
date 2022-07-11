@@ -9,9 +9,10 @@ public class Inventory : MonoBehaviour
 
     private List<ItemData> itemList;
 
-    public List<ItemData> itemDictionary;
-
     private Slot selectedSlot;
+
+    [SerializeField]
+    private EItemType usingItem;
 
     [SerializeField]
     private Image selectedImage;
@@ -20,9 +21,17 @@ public class Inventory : MonoBehaviour
     private Image itemDetailWindow;
 
     [SerializeField]
-    private Image itemDetailImage;
+    private GameObject itemDetailObject;
 
     private bool bActivatedCombine;
+
+    public EItemType UsingItem
+    {
+        get
+        {
+            return usingItem;
+        }
+    }
 
     public bool IsActivatedCombine
     {
@@ -32,12 +41,32 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public GameObject ItemDetailObject
+    {
+        get
+        {
+            return itemDetailObject;
+        }
+    }
+
+    public bool IsActivatedItemDetailWindow
+    {
+        get
+        {
+            return itemDetailWindow.gameObject.activeSelf;
+        }
+    }
+
     private void Start()
     {
         slotList = GetComponentsInChildren<Slot>();
         itemList = new List<ItemData>();
 
         gameObject.SetActive(false);
+
+        DeactiveInventory();
+        DeactivateItemDetailWindow();
+        GameManager.Instance.InitActivatedUINum();
     }
 
     private void ApplyItemList()
@@ -75,17 +104,32 @@ public class Inventory : MonoBehaviour
         itemList.Add(SearchItemData(itemType));
 
         ApplyItemList();
+
+        ActivateItemDetailWindow(itemType);
+    }
+
+    public void PressedUseButton()
+    {
+        if (!selectedSlot)
+            return;
+
+        usingItem = selectedSlot.ItemType;
+
+        DeactiveInventory();
     }
 
     public void Combine(EItemType otherItem)
     {
+        DeactivateCombine();
+
+        if (!selectedSlot)
+            return;
+
         EItemType resultItemType = SearchItemData(otherItem).combineResultItemType;
 
         DeleteItem(selectedSlot.ItemType);
         DeleteItem(otherItem);
         GainItem(resultItemType);
-
-        DeactivateCombine();
 
         selectedSlot = null;
         selectedImage.gameObject.SetActive(false);
@@ -104,7 +148,7 @@ public class Inventory : MonoBehaviour
 
         itemDetailWindow.gameObject.SetActive(true);
 
-        itemDetailImage.sprite = SearchItemData(itemType).itemSprite;
+        itemDetailObject.GetComponent<MeshFilter>().mesh = SearchItemData(itemType).itemMesh;
 
         GameManager.Instance.IncreaseActivatedUINum();
     }
@@ -113,11 +157,15 @@ public class Inventory : MonoBehaviour
     {
         itemDetailWindow.gameObject.SetActive(false);
 
+        itemDetailObject.transform.rotation = Quaternion.Euler(Vector3.zero);
+
         GameManager.Instance.DecreaseActivatedUINum();
     }
 
     public ItemData SearchItemData(EItemType itemType)
     {
+        List<ItemData> itemDictionary = GameManager.Instance.itemDictionary;
+
         for (int i = 0; i < itemDictionary.Count; i++)
         {
             if (itemDictionary[i].itemType == itemType)
@@ -129,11 +177,18 @@ public class Inventory : MonoBehaviour
 
     public void DeleteItem(EItemType itemType)
     {
+        if (itemType == EItemType.NONE)
+            return;
+
         for (int i = 0; i < itemList.Count; i++)
         {
             if (itemList[i].itemType == itemType)
             {
+                if (itemType == usingItem)
+                    usingItem = EItemType.NONE;
+
                 itemList.RemoveAt(i);
+                ApplyItemList();
                 return;
             }
         }
@@ -155,6 +210,10 @@ public class Inventory : MonoBehaviour
     public void ActivateInventory()
     {
         gameObject.SetActive(true);
+
+        DeactivateCombine();
+
+        usingItem = EItemType.NONE;
 
         GameManager.Instance.IncreaseActivatedUINum();
     }

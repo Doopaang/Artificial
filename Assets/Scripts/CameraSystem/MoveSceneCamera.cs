@@ -24,6 +24,9 @@ public class MoveSceneCamera : MonoBehaviour
         Camera camera = Camera.main;
         Matrix4x4 temp = Gizmos.matrix;
         Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
+        Color color = Gizmos.color;
+        color.a = 0.5f;
+        Gizmos.color = color;
         if (camera.orthographic)
         {
             float spread = camera.farClipPlane - camera.nearClipPlane;

@@ -12,8 +12,6 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        //itemDictionary = new List<ItemData>();
-
         InitActivatedUINum();
     }
 

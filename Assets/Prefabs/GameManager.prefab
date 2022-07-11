@@ -51,11 +51,12 @@ MonoBehaviour:
     combineResultItemType: 0
     itemSprite: {fileID: 0}
     itemMesh: {fileID: 0}
-  - itemType: 0
+  - itemType: 1
     combinableItemType: 0
     combineResultItemType: 0
-    itemSprite: {fileID: 0}
-    itemMesh: {fileID: 0}
+    itemSprite: {fileID: 21300000, guid: 3cc03a9bc7fc5614686cfd3f4278bb63, type: 3}
+    itemMesh: {fileID: 6099800089077584851, guid: 1a1c3d840ee2b4a42875b83333596bba,
+      type: 3}
   - itemType: 0
     combinableItemType: 0
     combineResultItemType: 0

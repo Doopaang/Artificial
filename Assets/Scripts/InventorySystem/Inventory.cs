@@ -65,6 +65,10 @@ public class Inventory : MonoBehaviour
         itemList = new List<ItemData>();
 
         gameObject.SetActive(false);
+
+        DeactiveInventory();
+        DeactivateItemDetailWindow();
+        GameManager.Instance.InitActivatedUINum();
     }
 
     private void ApplyItemList()
@@ -102,6 +106,8 @@ public class Inventory : MonoBehaviour
         itemList.Add(SearchItemData(itemType));
 
         ApplyItemList();
+
+        ActivateItemDetailWindow(itemType);
     }
 
     public void PressedUseButton()

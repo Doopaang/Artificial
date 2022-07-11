@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        activatedUINum = 0;
+        InitActivatedUINum();
     }
 
     public bool EnableClickObject
@@ -19,6 +19,11 @@ public class GameManager : Singleton<GameManager>
         {
             return activatedUINum <= 0;
         }
+    }
+
+    public void InitActivatedUINum()
+    {
+        activatedUINum = 0;
     }
 
     public void IncreaseActivatedUINum()

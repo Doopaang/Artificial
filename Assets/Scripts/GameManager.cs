@@ -6,10 +6,14 @@ public class GameManager : Singleton<GameManager>
 {
     public Inventory inventory;
 
+    public List<ItemData> itemDictionary;
+
     private int activatedUINum;
 
     void Start()
     {
+        //itemDictionary = new List<ItemData>();
+
         InitActivatedUINum();
     }
 

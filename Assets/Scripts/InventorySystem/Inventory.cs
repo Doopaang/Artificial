@@ -9,8 +9,6 @@ public class Inventory : MonoBehaviour
 
     private List<ItemData> itemList;
 
-    public List<ItemData> itemDictionary;
-
     private Slot selectedSlot;
 
     [SerializeField]
@@ -166,6 +164,8 @@ public class Inventory : MonoBehaviour
 
     public ItemData SearchItemData(EItemType itemType)
     {
+        List<ItemData> itemDictionary = GameManager.Instance.itemDictionary;
+
         for (int i = 0; i < itemDictionary.Count; i++)
         {
             if (itemDictionary[i].itemType == itemType)

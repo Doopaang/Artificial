@@ -1472,7 +1472,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 554.5, y: 259.5}
-  m_SizeDelta: {x: 1109, y: 519}
+  m_SizeDelta: {x: 1706, y: 960}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9008183254857977942
 MonoBehaviour:
@@ -1493,10 +1493,11 @@ MonoBehaviour:
     itemSprite: {fileID: 0}
     itemMesh: {fileID: 0}
   - itemType: 1
-    combinableItemType: 0
-    combineResultItemType: 0
+    combinableItemType: 1
+    combineResultItemType: 2
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    itemMesh: {fileID: 6099800089077584851, guid: a170a382d62d4ac4c9ef1b306fccccf8,
+      type: 3}
   - itemType: 2
     combinableItemType: 0
     combineResultItemType: 0

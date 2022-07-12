@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractiveObject : MonoBehaviour
+public abstract class InteractiveObject : MonoBehaviour
 {
     [SerializeField]
     protected EItemType interactiveItem;
@@ -17,14 +17,14 @@ public class InteractiveObject : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (!GameManager.Instance.EnableClickObject)
+        if (!GameManager.Instance.EnableClickObject && bInteractable &&
+            GameManager.Instance.inventory.UsingItem == interactiveItem)
+        {
             return;
+        }
 
         Interact();
     }
 
-    protected virtual bool Interact()
-    {
-        return bInteractable && GameManager.Instance.inventory.UsingItem == interactiveItem;
-    }
+    protected abstract void Interact();
 }

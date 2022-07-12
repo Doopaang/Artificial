@@ -94,6 +94,8 @@ public class Inventory : MonoBehaviour
 
         gameObject.SetActive(false);
 
+        selectedImage.rectTransform.sizeDelta = slotList[0].ItemImage.rectTransform.sizeDelta;
+
         DeactiveInventory();
         DeactivateItemDetailWindow();
         GameManager.Instance.InitActivatedUINum();

@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour//, IPointerClickHandler
+public class Slot : MonoBehaviour
 {
     private EItemType itemType;
 
     [SerializeField]
     private Image itemImage;
+
+    [SerializeField]
+    private Image slotImage;
 
     public EItemType ItemType
     {
@@ -25,6 +28,12 @@ public class Slot : MonoBehaviour//, IPointerClickHandler
         {
             return itemImage;
         }
+    }
+
+    private void Start()
+    {
+        if (slotImage.rectTransform.sizeDelta != Vector2.zero)
+            itemImage.rectTransform.sizeDelta = slotImage.rectTransform.sizeDelta;
     }
 
     public void ChangeItem(EItemType newItemType)
@@ -50,33 +59,5 @@ public class Slot : MonoBehaviour//, IPointerClickHandler
         {
             inventory.Combine(itemType);
         }
-
-        
-
-        //if (inventory.IsReadyCombine())
-        //{
-        //    inventory.DeactivateCombine();
-
-        //    if (inventoryUI.GetCurrentSelectedItemSlot() &&
-        //        itemData.combinableItemType == inventoryUI.GetCurrentSelectedItemSlot().itemData.itemType)
-        //    {
-        //        inventory.DeleteItem(this);
-        //        inventory.DeleteItem(inventoryUI.GetCurrentSelectedItemSlot());
-        //    }
-
-        //    Debug.Log("Combine");
-        //}
-
-        //inventoryUI.ApplySelectedItemSlot(this);
     }
-
-    //public void SetInventoryUI(InventoryUI inventoryUI)
-    //{
-    //    this.inventoryUI = inventoryUI;
-    //}
-
-    //public ItemData GetItemData()
-    //{
-    //    return itemData;
-    //}
 }

@@ -46,23 +46,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   itemDictionary:
-  - itemType: 0
+  - itemType: 1
     combinableItemType: 0
     combineResultItemType: 0
-    itemSprite: {fileID: 0}
-    itemMesh: {fileID: 0}
-  - itemType: 0
+    itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    itemDetailScale: {x: 0, y: 0, z: 0}
+  - itemType: 2
     combinableItemType: 0
     combineResultItemType: 0
-    itemSprite: {fileID: 0}
-    itemMesh: {fileID: 0}
-  - itemType: 0
+    itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    itemDetailScale: {x: 0, y: 0, z: 0}
+  - itemType: 3
     combinableItemType: 0
     combineResultItemType: 0
-    itemSprite: {fileID: 0}
-    itemMesh: {fileID: 0}
-  - itemType: 0
+    itemSprite: {fileID: 1819194086, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e, type: 3}
+    itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    itemDetailScale: {x: 0, y: 0, z: 0}
+  - itemType: 4
+    combinableItemType: 6
+    combineResultItemType: 5
+    itemSprite: {fileID: 1819194086, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e, type: 3}
+    itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    itemDetailScale: {x: 0, y: 0, z: 0}
+  - itemType: 5
     combinableItemType: 0
     combineResultItemType: 0
-    itemSprite: {fileID: 0}
-    itemMesh: {fileID: 0}
+    itemSprite: {fileID: 1819194086, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e, type: 3}
+    itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    itemDetailScale: {x: 0, y: 0, z: 0}
+  - itemType: 6
+    combinableItemType: 4
+    combineResultItemType: 5
+    itemSprite: {fileID: 1819194086, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e, type: 3}
+    itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    itemDetailScale: {x: 0, y: 0, z: 0}
+  - itemType: 7
+    combinableItemType: 0
+    combineResultItemType: 0
+    itemSprite: {fileID: 1819194086, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e, type: 3}
+    itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    itemDetailScale: {x: 0, y: 0, z: 0}
+  - itemType: 8
+    combinableItemType: 0
+    combineResultItemType: 0
+    itemSprite: {fileID: 1819194086, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e, type: 3}
+    itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    itemDetailScale: {x: 0, y: 0, z: 0}
+  - itemType: 9
+    combinableItemType: 0
+    combineResultItemType: 0
+    itemSprite: {fileID: 1819194086, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e, type: 3}
+    itemMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    itemDetailScale: {x: 0, y: 0, z: 0}

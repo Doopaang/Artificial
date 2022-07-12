@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [Icon("CameraIcon")]
@@ -13,6 +14,9 @@ public class MoveSceneCamera : MonoBehaviour
     private MoveSceneCamera down;
     [SerializeField]
     private MoveSceneCamera back;
+
+    [SerializeField]
+    private List<InteractiveObject> interactiveObjects;
 
     private void OnDrawGizmos()
     {
@@ -91,6 +95,14 @@ public class MoveSceneCamera : MonoBehaviour
 
             default:
                 throw new System.ArgumentException();
+        }
+    }
+
+    public void SetObjectsActive(bool boolean)
+    {
+        foreach (InteractiveObject io in interactiveObjects)
+        {
+            io.bInteractable = boolean;
         }
     }
 }

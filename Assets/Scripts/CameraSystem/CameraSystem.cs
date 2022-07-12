@@ -23,7 +23,11 @@ public class CameraSystem : Singleton<CameraSystem>
 
     private void ChangeScreen(MoveSceneCamera target)
     {
+        currentCamera.SetObjectsActive(false);
+
         currentCamera = target;
+
+        currentCamera.SetObjectsActive(true);
 
         for (int i = 0; i < System.Enum.GetValues(typeof(CameraDirection)).Length - 1; i++)
         {

@@ -28,7 +28,8 @@ public class MoveSceneCamera : MonoBehaviour
         Camera camera = Camera.main;
         Matrix4x4 temp = Gizmos.matrix;
         Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
-        Color color = Gizmos.color;
+        //Color color = Gizmos.color;
+        Color color = Color.red;
         color.a = 0.5f;
         Gizmos.color = color;
         if (camera.orthographic)
@@ -68,7 +69,7 @@ public class MoveSceneCamera : MonoBehaviour
         }
     }
 
-    private MoveSceneCamera MoveCamera(MoveSceneCamera target)
+    public MoveSceneCamera MoveCamera(MoveSceneCamera target)
     {
         Camera.main.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
         return target;

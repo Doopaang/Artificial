@@ -7,18 +7,13 @@ public abstract class InteractiveObject : MonoBehaviour
     [SerializeField]
     protected EItemType interactiveItem;
 
-    [SerializeField]
-    protected EItemType gainItem;
-
-    [SerializeField]
-    protected EItemType deleteItem;
-
+    [HideInInspector]
     public bool bInteractable = false;
 
     public void OnMouseDown()
     {
-        if (!GameManager.Instance.EnableClickObject && bInteractable &&
-            GameManager.Instance.inventory.UsingItem == interactiveItem)
+        if (!GameManager.Instance.EnableClickObject || bInteractable ||
+            GameManager.Instance.inventory.UsingItem != interactiveItem)
         {
             return;
         }

@@ -37,7 +37,7 @@ public class CameraSystem : Singleton<CameraSystem>
 
     public void MoveCamera(MoveSceneCamera target)
     {
-        ChangeScreen(target);
+        ChangeScreen(currentCamera.MoveCamera(target));
     }
 
     public void MoveCameraDirection(string direction)

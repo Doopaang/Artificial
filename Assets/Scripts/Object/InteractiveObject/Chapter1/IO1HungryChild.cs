@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class IOHungryChild : InteractiveObject
+public class IO1HungryChild : InteractiveObject
 {
     protected override void Interact()
     {

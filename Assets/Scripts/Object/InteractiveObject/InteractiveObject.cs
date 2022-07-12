@@ -13,7 +13,7 @@ public abstract class InteractiveObject : MonoBehaviour
     [SerializeField]
     protected EItemType deleteItem;
 
-    public bool bInteractable;
+    public bool bInteractable = false;
 
     public void OnMouseDown()
     {

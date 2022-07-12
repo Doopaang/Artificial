@@ -3,6 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum EItemType
+{
+    NONE,
+    APPLE,
+    EATEN_APPLE,
+    SWAP_PUZZLE_PAPER,
+    BATTERY,
+    BATTERY_WATCH,
+    BATTERY_FREE_WATCH,
+    KEY,
+    CRESCENT_MOON,
+    BRUSH
+}
+
+[System.Serializable]
+public struct ItemData
+{
+    public EItemType itemType;
+
+    public EItemType combinableItemType;
+
+    public EItemType combineResultItemType;
+
+    public Sprite itemSprite;
+
+    public Mesh itemMesh;
+
+    public Vector3 itemDetailScale;
+}
+
 public class Inventory : MonoBehaviour
 {
     private Slot[] slotList;

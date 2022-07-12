@@ -13,6 +13,8 @@ public class InteractiveObject : MonoBehaviour
     [SerializeField]
     protected EItemType deleteItem;
 
+    public bool bInteractable;
+
     public void OnMouseDown()
     {
         if (!GameManager.Instance.EnableClickObject)
@@ -23,13 +25,6 @@ public class InteractiveObject : MonoBehaviour
 
     protected virtual bool Interact()
     {
-        if (GameManager.Instance.inventory.UsingItem == interactiveItem)
-        {
-            GameManager.Instance.inventory.DeleteItem(deleteItem);
-            GameManager.Instance.inventory.GainItem(gainItem);
-            return true;
-        }
-
-        return false;
+        return bInteractable && GameManager.Instance.inventory.UsingItem == interactiveItem;
     }
 }

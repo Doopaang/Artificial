@@ -8,11 +8,10 @@ public class Slot : MonoBehaviour
 {
     private EItemType itemType;
 
-    [SerializeField]
-    private Image itemImage;
+    private Image slotImage;
 
     [SerializeField]
-    private Image slotImage;
+    private Image itemImage;
 
     public EItemType ItemType
     {
@@ -29,6 +28,10 @@ public class Slot : MonoBehaviour
             return itemImage;
         }
     }
+    private void Awake()
+    {
+        slotImage = GetComponent<Image>();
+    }
 
     private void Start()
     {
@@ -38,7 +41,7 @@ public class Slot : MonoBehaviour
 
     public void ChangeItem(EItemType newItemType)
     {
-        ItemData newItemData = GameManager.Instance.inventory.SearchItemData(newItemType);
+        Item newItemData = GameManager.Instance.inventory.SearchItemData(newItemType);
 
         itemType = newItemData.itemType;
         itemImage.sprite = newItemData.itemSprite;

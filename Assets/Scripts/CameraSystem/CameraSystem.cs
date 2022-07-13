@@ -9,7 +9,6 @@ public class CameraSystem : Singleton<CameraSystem>
     [System.Serializable]
     private class CameraBaseInspector
     {
-        public Canvas CameraCanvas;
         public Button[] CameraButtons = new Button[System.Enum.GetValues(typeof(CameraDirection)).Length - 1];
     }
     [SerializeField, Header("Base"), Tooltip("DON'T TOUCH THIS.")]
@@ -17,7 +16,6 @@ public class CameraSystem : Singleton<CameraSystem>
 
     private void Start()
     {
-        baseInspector.CameraCanvas.worldCamera = Camera.main;
         MoveCamera(currentCamera);
     }
 

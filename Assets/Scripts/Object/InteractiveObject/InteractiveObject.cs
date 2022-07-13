@@ -12,7 +12,7 @@ public abstract class InteractiveObject : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (!GameManager.Instance.EnableClickObject || bInteractable ||
+        if (!bInteractable ||
             GameManager.Instance.inventory.UsingItem != interactiveItem)
         {
             return;

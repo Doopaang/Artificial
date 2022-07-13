@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,50 +7,30 @@ public enum EItemType
     NONE,
     CHAPTER1_APPLE,
     CHAPTER1_EATEN_APPLE,
-    CHAPTER1_SWAP_PUZZLE_PAPER,
+    CHAPTER1_PAPER,
     CHAPTER1_BATTERY,
     CHAPTER1_BATTERY_WATCH,
-    CHAPTER1_BATTERY_FREE_WATCH,
+    CHAPTER1_EMPTY_WATCH,
     CHAPTER1_KEY,
     CHAPTER1_CRESCENT_MOON,
     CHAPTER1_BRUSH
-}
-
-[System.Serializable]
-public struct ItemData
-{
-    public EItemType itemType;
-
-    public EItemType combinableItemType;
-
-    public EItemType combineResultItemType;
-
-    public Sprite itemSprite;
-
-    public Mesh itemMesh;
-
-    public Vector3 itemDetailScale;
 }
 
 public class Inventory : MonoBehaviour
 {
     private Slot[] slotList;
 
-    private List<ItemData> itemList;
+    private List<Item> itemList;
 
     private Slot selectedSlot;
 
-    [SerializeField]
-    private EItemType usingItem;
+    private EItemType usingItem = EItemType.NONE;
 
     [SerializeField]
     private Image selectedImage;
 
     [SerializeField]
-    private Image itemDetailWindow;
-
-    [SerializeField]
-    private GameObject itemDetailObject;
+    private DetailWindow itemDetailWindow;
 
     private bool bActivatedCombine;
 
@@ -71,33 +50,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public GameObject ItemDetailObject
-    {
-        get
-        {
-            return itemDetailObject;
-        }
-    }
-
-    public bool IsActivatedItemDetailWindow
-    {
-        get
-        {
-            return itemDetailWindow.gameObject.activeSelf;
-        }
-    }
-
     private void Start()
     {
         slotList = GetComponentsInChildren<Slot>();
-        itemList = new List<ItemData>();
-
-        gameObject.SetActive(false);
+        itemList = new List<Item>();
 
         selectedImage.rectTransform.sizeDelta = slotList[0].ItemImage.rectTransform.sizeDelta;
 
         DeactiveInventory();
-        DeactivateItemDetailWindow();
+        itemDetailWindow.gameObject.SetActive(false);
         GameManager.Instance.InitActivatedUINum();
     }
 
@@ -178,25 +139,25 @@ public class Inventory : MonoBehaviour
         if (itemType == EItemType.NONE)
             return;
 
-        itemDetailWindow.gameObject.SetActive(true);
+        List<Item> itemDictionary = GameManager.Instance.itemDictionary;
 
-        itemDetailObject.GetComponent<MeshFilter>().mesh = SearchItemData(itemType).itemMesh;
+        for (int i = 0; i < itemDictionary.Count; i++)
+        {
+            if (itemDictionary[i].itemType == itemType)
+            {
+                itemDetailWindow.SetDetailObject(itemDictionary[i].gameObject);
+                break;
+            }
+        }
+
+        itemDetailWindow.gameObject.SetActive(true);
 
         GameManager.Instance.IncreaseActivatedUINum();
     }
 
-    public void DeactivateItemDetailWindow()
+    public Item SearchItemData(EItemType itemType)
     {
-        itemDetailWindow.gameObject.SetActive(false);
-
-        itemDetailObject.transform.rotation = Quaternion.Euler(Vector3.zero);
-
-        GameManager.Instance.DecreaseActivatedUINum();
-    }
-
-    public ItemData SearchItemData(EItemType itemType)
-    {
-        List<ItemData> itemDictionary = GameManager.Instance.itemDictionary;
+        List<Item> itemDictionary = GameManager.Instance.itemDictionary;
 
         for (int i = 0; i < itemDictionary.Count; i++)
         {
@@ -204,7 +165,7 @@ public class Inventory : MonoBehaviour
                 return itemDictionary[i];
         }
 
-        return new ItemData();
+        throw new System.Exception();
     }
 
     public void DeleteItem(EItemType itemType)

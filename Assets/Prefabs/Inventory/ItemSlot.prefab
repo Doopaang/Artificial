@@ -69,7 +69,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7482667652216324306, guid: 269332ceac808b641a79f617c34ae8e8,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -92,7 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1505653167911177424}
-  slotImage: {fileID: 2113528459477309293}
 --- !u!114 &6932074620879867775
 MonoBehaviour:
   m_ObjectHideFlags: 0

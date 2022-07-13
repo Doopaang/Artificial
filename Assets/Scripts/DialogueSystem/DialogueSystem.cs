@@ -21,11 +21,6 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
     private DialogueScriptSet script;
     private int index;
 
-    private void Start()
-    {
-        GetComponent<Canvas>().worldCamera = Camera.main;
-    }
-
     // 테스트용 코드
 #if UNITY_EDITOR
     private void Update()

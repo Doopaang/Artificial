@@ -7,12 +7,23 @@ public abstract class InteractiveObject : MonoBehaviour
     [SerializeField]
     protected EItemType interactiveItem;
 
-    [HideInInspector]
-    public bool bInteractable = false;
+    private bool interactable = false;
+    public bool Interactable
+    {
+        get
+        {
+            return interactable;
+        }
+        set
+        {
+            interactable = value;
+            OnInteractableChanged(value);
+        }
+    }
 
     public void OnMouseDown()
     {
-        if (!bInteractable ||
+        if (!interactable ||
             GameManager.Instance.inventory.UsingItem != interactiveItem)
         {
             return;
@@ -22,4 +33,6 @@ public abstract class InteractiveObject : MonoBehaviour
     }
 
     protected abstract void Interact();
+
+    protected virtual void OnInteractableChanged(bool value) { }
 }

@@ -103,7 +103,7 @@ public class MoveSceneCamera : MonoBehaviour
     {
         foreach (InteractiveObject io in interactiveObjects)
         {
-            io.bInteractable = boolean;
+            io.Interactable = boolean;
         }
     }
 }

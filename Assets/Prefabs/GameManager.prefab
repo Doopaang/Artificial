@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   itemDictionary:
-  - {fileID: 3842316842052873489, guid: 48f5504ecfa6dd14b881017aff01a78b, type: 3}
-  - {fileID: 3842316842052873489, guid: 85b51a47a56f2814092712f2d7828f9a, type: 3}
+  - {fileID: 3842316842052873489, guid: ed035e104d91e804689707d0612b3cf9, type: 3}
+  - {fileID: -8099930888517291604, guid: c52b1c69cfb56df4498fbed8ed2dc487, type: 3}
   - {fileID: 3842316842052873489, guid: a6f512abc2fc6b94fb0988d282c65893, type: 3}
   - {fileID: 3842316842052873489, guid: 302c4dba2906bcb4cac7b0075c8b42cd, type: 3}

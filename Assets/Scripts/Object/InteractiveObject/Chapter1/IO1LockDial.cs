@@ -55,5 +55,10 @@ public class IO1LockDial : InteractiveObject
     protected override void OnInteractableChanged(bool value)
     {
         canvas.gameObject.SetActive(value);
+
+        if (!value)
+        {
+            this.value = 0;
+        }
     }
 }

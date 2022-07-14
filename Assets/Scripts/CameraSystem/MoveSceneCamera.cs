@@ -103,12 +103,12 @@ public class MoveSceneCamera : MonoBehaviour
     {
         foreach (InteractiveObject io in interactiveObjects)
         {
-            if(io == null)
+            if (io == null)
                 continue;
 
-            io.bInteractable = boolean;
+            io.Interactable = boolean;
 
-            foreach(Collider coll in io.GetComponentsInChildren<Collider>())
+            foreach (Collider coll in io.GetComponentsInChildren<Collider>())
             {
                 coll.enabled = boolean;
             }

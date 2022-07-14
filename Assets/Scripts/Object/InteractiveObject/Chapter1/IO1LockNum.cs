@@ -36,5 +36,10 @@ public class IO1LockNum : InteractiveObject
     protected override void OnInteractableChanged(bool value)
     {
         canvas.gameObject.SetActive(value);
+
+        if(!value)
+        {
+            this.value = 0;
+        }
     }
 }

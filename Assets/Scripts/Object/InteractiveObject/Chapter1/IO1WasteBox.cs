@@ -1,6 +1,11 @@
+using UnityEngine;
 
 public class IO1WasteBox : InteractiveObject
 {
+    private void Update()
+    {
+        Debug.Log(Interactable);
+    }
     protected override void Interact()
     {
         GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER1_EATEN_APPLE);

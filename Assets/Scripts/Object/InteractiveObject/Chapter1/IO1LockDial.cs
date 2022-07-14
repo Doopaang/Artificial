@@ -1,15 +1,19 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class IO1LockNum : InteractiveObject
+public class IO1LockDial : InteractiveObject
 {
     [SerializeField, Header("Puzzle")]
     private int answer;
+    [SerializeField]
+    private int numLimit;
     [SerializeField]
     private UnityEvent solvedFunction;
 
     [SerializeField, Header("Base")]
     private Canvas canvas;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI text;
 
     private int value = 0;
 
@@ -18,19 +22,34 @@ public class IO1LockNum : InteractiveObject
 
     }
 
-    public void ControlLock(int value)
+    public void InputNum(int value)
     {
-        if (value == 0)
+        if (this.value > Mathf.Pow(10, numLimit - 1))
         {
-            throw new System.ArgumentException();
+            return;
         }
 
-        this.value += value * (value < 0 && this.value / Mathf.Abs(value) % 10 == 0 || value > 0 && this.value / Mathf.Abs(value) % 10 == 9 ? -9 : 1);
+        this.value *= 10;
+        this.value += value;
+
+        UpdateText();
 
         if (this.value == answer)
         {
             solvedFunction.Invoke();
         }
+    }
+
+    public void DelNum()
+    {
+        value = (int)(value * 0.1f);
+
+        UpdateText();
+    }
+
+    private void UpdateText()
+    {
+        text.text = value == 0 ? "" : value.ToString();
     }
 
     protected override void OnInteractableChanged(bool value)

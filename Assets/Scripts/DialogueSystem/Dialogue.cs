@@ -29,6 +29,6 @@ public class Dialogue : ScriptableObject
                 return scriptSet;
             }
         }
-        throw new System.ArgumentException("다이얼로그에 맞는 Key값이 없습니다. 아래 값과 일치하는 Key값이 있는지 확인하세요.", key);
+        throw new System.ArgumentException("Null Key Error.", key);
     }
 }

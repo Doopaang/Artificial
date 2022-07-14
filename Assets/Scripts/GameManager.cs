@@ -34,4 +34,8 @@ public class GameManager : Singleton<GameManager>
     {
         Debug.Log("Solved!");
     }
+    public void SolvedChapter1Door()
+    {
+        Debug.Log("Solved!");
+    }
 }

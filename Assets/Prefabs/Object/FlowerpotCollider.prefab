@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4517264216707950376}
   - component: {fileID: 4030918055135187932}
   m_Layer: 0
-  m_Name: Flowerpot
+  m_Name: FlowerpotCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

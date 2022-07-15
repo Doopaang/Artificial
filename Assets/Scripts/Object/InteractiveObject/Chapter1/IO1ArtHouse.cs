@@ -1,4 +1,3 @@
-
 public class IO1ArtHouse : InteractiveObject
 {
     protected override void Interact()

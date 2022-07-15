@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class IO1HungryChild : InteractiveObject
 {
     protected override void Interact()
@@ -7,7 +5,6 @@ public class IO1HungryChild : InteractiveObject
         if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER1_APPLE)
         {
             clearInteract = true;
-
             DialogueSystem.Instance.StartDialogue("HungryChildInteract", GainItem);
         }
         else if (clearInteract)

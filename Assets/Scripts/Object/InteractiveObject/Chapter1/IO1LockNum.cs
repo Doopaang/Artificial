@@ -21,8 +21,6 @@ public class IO1LockNum : InteractiveObject
     [SerializeField]
     private List<Transform> dialList;
     [SerializeField]
-    private float rotateSpeed;
-    [SerializeField]
     private UnityEvent solvedFunction;
 
     [SerializeField, Header("Base")]
@@ -106,8 +104,11 @@ public class IO1LockNum : InteractiveObject
 
         this.value += value * (isLeft && this.value / absValue % 10 == 0 || !isLeft && this.value / absValue % 10 == 9 ? -9 : 1);
 
-        Transform target = dialList[numLimit - (int)Mathf.Log10(absValue) - 1].transform;
-        target.Rotate(target.up, 360.0f / angleCount * (isLeft ? -1 : 1));
+        if (dialList.Count == numLimit)
+        {
+            Transform target = dialList[numLimit - (int)Mathf.Log10(absValue) - 1].transform;
+            target.Rotate(target.up, 360.0f / angleCount * (isLeft ? -1 : 1));
+        }
 
         if (this.value == answer)
         {

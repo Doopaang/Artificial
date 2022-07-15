@@ -5,10 +5,10 @@ using UnityEngine.EventSystems;
 
 public abstract class InteractiveObject : MonoBehaviour
 {
-    [SerializeField]
-    protected EItemType interactiveItem;
+    protected int interactCount = 0;
 
     private bool interactable = false;
+
     public bool Interactable
     {
         get
@@ -24,11 +24,8 @@ public abstract class InteractiveObject : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log("onmousedown   " + !Interactable + "  " + EventSystem.current.IsPointerOverGameObject() + "  " + (GameManager.Instance.inventory.UsingItem != interactiveItem).ToString());
-
         if (!Interactable ||
-            EventSystem.current.IsPointerOverGameObject() ||
-            GameManager.Instance.inventory.UsingItem != interactiveItem)
+            EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }

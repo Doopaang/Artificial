@@ -24,7 +24,6 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
 
     private UnityAction afterEvent = null;
 
-    // 테스트용 코드
 #if UNITY_EDITOR
     private void Update()
     {

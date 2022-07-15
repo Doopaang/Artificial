@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ffb84bdc2a5754e84aeef335f3d131, type: 3}
+  m_Name: InteractDialogue
+  m_EditorClassIdentifier: 
+  scriptSets:
+  - key: Test1
+    scripts:
+    - text: "\uBAA8\uD2F0\uC785\uB2C8\uB2E4"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+    - text: "\uC2A4\uD3F0\uC9C0\uBC25\uC785\uB2C8\uB2E4"
+      sprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}
+  - key: Test2
+    scripts:
+    - text: "\uC2A4\uC2A4\uD3F0\uD3F0"
+      sprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}
+    - text: "\uC9C0\uBC25\uBC25"
+      sprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}
+    - text: "\uBAA8\uBAA8"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+    - text: "\uD2F0\uD2F0"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: AppleInteract
+    scripts:
+    - text: "\uC0AC\uACFC\uB97C \uD68D\uB4DD\uD588\uB2E4!"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: HungryChildFirst
+    scripts:
+    - text: "\uCCAB \uC0C1\uD638\uC791\uC6A9 (\uBC30\uACE0\uD508 \uC544\uC774 \uADF8\uB9BC)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: HungryChildRetry
+    scripts:
+    - text: "\uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uBC30\uACE0\uD508 \uC544\uC774
+        \uADF8\uB9BC)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: HungryChildInteract
+    scripts:
+    - text: "\uC0AC\uACFC \uC774\uC81C \uB9C9 \uBC1B\uC740 \uC0C1\uD638\uC791\uC6A9
+        (\uBC30\uACE0\uD508 \uC544\uC774 \uADF8\uB9BC)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: HungryChildAfterInteract
+    scripts:
+    - text: "\uC0AC\uACFC\uBA39\uC740 \uC774\uD6C4 \uC0C1\uD638\uC791\uC6A9 (\uBC30\uACE0\uD508
+        \uC544\uC774 \uADF8\uB9BC)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: WasteBasketFirst
+    scripts:
+    - text: "\uCCAB \uC0C1\uD638\uC791\uC6A9 (\uC4F0\uB808\uAE30\uD1B5)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: WasteBasketRetry
+    scripts:
+    - text: "\uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uC4F0\uB808\uAE30\uD1B5)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: WasteBasketInteract
+    scripts:
+    - text: "\uC4F0\uB808\uAE30 \uC774\uC81C \uB9C9 \uBC1B\uC740 \uC0C1\uD638\uC791\uC6A9
+        (\uC4F0\uB808\uAE30\uD1B5)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: WasteBasketAfterInteract
+    scripts:
+    - text: "\uC4F0\uB808\uAE30 \uBC1B\uC740 \uC774\uD6C4 \uC0C1\uD638\uC791\uC6A9
+        (\uC4F0\uB808\uAE30\uD1B5)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}

@@ -29,13 +29,4 @@ public class GameManager : Singleton<GameManager>
     {
         activatedUINum--;
     }
-
-    public void SolvedChapter1Paper()
-    {
-        Debug.Log("Solved!");
-    }
-    public void SolvedChapter1Door()
-    {
-        Debug.Log("Solved!");
-    }
 }

@@ -224,14 +224,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097ee6607f177114fb5bc20acc432aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactiveItem: 0
   answer: 109
+  numLimit: 0
+  leftButtonSprite: {fileID: 1658034946, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e, type: 3}
+  rightButtonSprite: {fileID: 1819194086, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e,
+    type: 3}
   solvedFunction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SolvedChapter1Paper
+      - m_Target: {fileID: 8829049163921225912}
+        m_TargetAssemblyTypeName: IO1LockNum, Assembly-CSharp
+        m_MethodName: Solve
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -242,6 +245,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   canvas: {fileID: 8829049164696294619}
+  lockPos: {fileID: 8829049163262337156}
+  buttonPrefab: {fileID: 1924427092116470071, guid: 0f0aa5d0514535f4ba85204d4dec6f92,
+    type: 3}
 --- !u!1 &8829049164416734757
 GameObject:
   m_ObjectHideFlags: 0

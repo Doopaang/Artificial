@@ -7,6 +7,8 @@ public abstract class InteractiveObject : MonoBehaviour
 {
     protected int interactCount = 0;
 
+    protected bool clearInteract = false;
+
     private bool interactable = false;
 
     public bool Interactable

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7261508941928212783}
   - component: {fileID: 5304294176058783212}
   - component: {fileID: 2137916144834413882}
+  - component: {fileID: -6906057985678230774}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -98,6 +99,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.047668472, y: 0.024673566, z: 0.013773045}
   m_Center: {x: 0, y: -4.656613e-10, z: -4.656613e-10}
+--- !u!114 &-6906057985678230774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392974599745453279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7094d93c229304a959e3711d1ee167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 6
+  combinableItemType: 4
+  combineResultItemType: 5
+  itemSprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}
+  itemScale: {x: 7500, y: 7500, z: 7500}
 --- !u!1 &7815063768629272741
 GameObject:
   m_ObjectHideFlags: 0

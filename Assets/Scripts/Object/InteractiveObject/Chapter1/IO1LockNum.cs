@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -10,10 +12,16 @@ public class IO1LockNum : InteractiveObject
     [SerializeField]
     private int numLimit;
     [SerializeField]
+    private int angleCount;
+    [SerializeField]
     private Sprite leftButtonSprite;
     [SerializeField]
     private Sprite rightButtonSprite;
 #endif
+    [SerializeField]
+    private List<Transform> dialList;
+    [SerializeField]
+    private float rotateSpeed;
     [SerializeField]
     private UnityEvent solvedFunction;
 
@@ -66,16 +74,16 @@ public class IO1LockNum : InteractiveObject
 
     private void AddChild(int i)
     {
-        bool isLeft = (i + 1) % 2 != 0;
+        bool isRight = (i + 1) % 2 != 0;
         int num = Mathf.CeilToInt((i + 1) * 0.5f);
 
         GameObject newButton = Instantiate(buttonPrefab, lockPos.transform);
         Button button = newButton.GetComponent<Button>();
         Image image = newButton.GetComponent<Image>();
 
-        newButton.name = (isLeft ? "Right" : "Left") + " Button " + num;
-        image.sprite = isLeft ? rightButtonSprite : leftButtonSprite;
-        button.onClick.AddListener(delegate { ControlLock((int)Mathf.Pow(10, num - 1) * (isLeft ? 1 : -1)); });
+        newButton.name = (isRight ? "Right" : "Left") + " Button " + num;
+        image.sprite = isRight ? rightButtonSprite : leftButtonSprite;
+        button.onClick.AddListener(delegate { ControlLock((int)Mathf.Pow(10, num - 1) * (isRight ? 1 : -1)); });
         newButton.transform.SetAsFirstSibling();
     }
 
@@ -93,9 +101,13 @@ public class IO1LockNum : InteractiveObject
             throw new System.ArgumentException();
         }
 
-        this.value += value * (value < 0 && this.value / Mathf.Abs(value) % 10 == 0 || value > 0 && this.value / Mathf.Abs(value) % 10 == 9 ? -9 : 1);
+        int absValue = Mathf.Abs(value);
+        bool isLeft = value < 0;
 
-        Debug.Log(this.value);
+        this.value += value * (isLeft && this.value / absValue % 10 == 0 || !isLeft && this.value / absValue % 10 == 9 ? -9 : 1);
+
+        Transform target = dialList[numLimit - (int)Mathf.Log10(absValue) - 1].transform;
+        target.Rotate(target.up, 360.0f / angleCount * (isLeft ? -1 : 1));
 
         if (this.value == answer)
         {

@@ -114,7 +114,6 @@ GameObject:
   - component: {fileID: 3368544939741496233}
   - component: {fileID: 1829489025019637760}
   - component: {fileID: 4424783537176600227}
-  - component: {fileID: 3264914618089360923}
   - component: {fileID: 7678046237910584777}
   m_Layer: 0
   m_Name: Showcase
@@ -200,19 +199,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3264914618089360923
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5743276633598828745}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.08047462, y: 0.31841224, z: 0.21054736}
-  m_Center: {x: 0, y: 0, z: 0.000000007450581}
 --- !u!114 &7678046237910584777
 MonoBehaviour:
   m_ObjectHideFlags: 0

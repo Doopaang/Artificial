@@ -12,8 +12,9 @@ public class IO1WasteBox : InteractiveObject
         {
             DialogueSystem.Instance.StartDialogue("WasteBasketAfterInteract");
         }
-        else if (interactCount++ <= 0)
+        else if (!interactRetry)
         {
+            interactRetry = true;
             DialogueSystem.Instance.StartDialogue("WasteBasketFirst");
         }
         else

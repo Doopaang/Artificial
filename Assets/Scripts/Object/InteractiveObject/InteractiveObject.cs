@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public abstract class InteractiveObject : MonoBehaviour
 {
-    protected int interactCount = 0;
+    protected bool interactRetry = false;
 
     protected bool clearInteract = false;
 

@@ -35,6 +35,7 @@ public class DetailWindow : MonoBehaviour
     public void SetDetailObject(GameObject prefab)
     {
         itemDetailObject = Instantiate(prefab, itemDetailPos.position, Quaternion.identity, transform);
+        itemDetailObject.transform.rotation = itemDetailObject.GetComponent<Item>().itemRotation;
         itemDetailObject.transform.localScale = itemDetailObject.GetComponent<Item>().itemScale;
         itemDetailObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 

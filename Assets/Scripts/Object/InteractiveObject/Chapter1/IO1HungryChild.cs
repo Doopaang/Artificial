@@ -14,8 +14,9 @@ public class IO1HungryChild : InteractiveObject
         {
             DialogueSystem.Instance.StartDialogue("HungryChildAfterInteract");
         }
-        else if (interactCount++ <= 0)
+        else if (!interactRetry)
         {
+            interactRetry = true;
             DialogueSystem.Instance.StartDialogue("HungryChildFirst");
         }
         else

@@ -8,5 +8,7 @@ public class Item : MonoBehaviour
 
     public Sprite itemSprite;
 
+    public Quaternion itemRotation;
+
     public Vector3 itemScale;
 }

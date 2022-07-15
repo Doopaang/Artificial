@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
 {
@@ -21,10 +22,14 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
     private DialogueScriptSet script;
     private int index;
 
+<<<<<<< Updated upstream
     private void Start()
     {
         GetComponent<Canvas>().worldCamera = Camera.main;
     }
+=======
+    private UnityAction afterEvent = null;
+>>>>>>> Stashed changes
 
     // 테스트용 코드
 #if UNITY_EDITOR
@@ -32,8 +37,13 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            StartDialogue("Test1");
+            StartDialogue("Test1", TestAfter);
         }
+    }
+
+    private void TestAfter()
+    {
+        StartDialogue("Test2");
     }
 #endif
     //
@@ -51,19 +61,24 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
         }
     }
 
-    public void StartDialogue(string key)
+    public void StartDialogue(string key, UnityAction afterEvent = null)
     {
         isPlaying = true;
         baseInspector.panel.SetActive(true);
         index = 0;
         script = dialogue.FindScriptSetByKey(key);
         SetPanel();
+        this.afterEvent = afterEvent;
     }
 
     private void EndDialogue()
     {
         isPlaying = false;
         baseInspector.panel.SetActive(false);
+        if(afterEvent !=null)
+        {
+            afterEvent.Invoke();
+        }
     }
 
     private void SetPanel()

@@ -1,7 +1,18 @@
+using UnityEngine;
+
 public class DoorInHousePicture : InteractiveObject
 {
+    [SerializeField]
+    private bool opened;
+
     protected override void Interact()
     {
+        if (opened)
+        {
+            DialogueSystem.Instance.StartDialogue("OpenDoorInHousePicture");
+            return;
+        }
+
         if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER1_KEY)
         {
             if (clearInteract)

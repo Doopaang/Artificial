@@ -106,3 +106,23 @@ MonoBehaviour:
     - text: "\uC5F4\uC1E0\uB4E4\uACE0 \uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uB300\uBB38
         \uADF8\uB9BC)"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: HouseOwnerFirst
+    scripts:
+    - text: "\uCCAB \uC0C1\uD638\uC791\uC6A9 (\uC9D1\uC8FC\uC778)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: HouseOwnerRetry
+    scripts:
+    - text: "\uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uC9D1\uC8FC\uC778)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: HouseOwnerInteract
+    scripts:
+    - text: "\uC9D1\uC8FC\uC778\uC774 \uBB38\uC744 \uC5F4\uC5C8\uB2E4!"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: HouseOwnerAfterInteract
+    scripts:
+    - text: "\uC5F4\uC1E0\uB4E4\uACE0 \uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uC9D1\uC8FC\uC778)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: OpenDoorInHousePicture
+    scripts:
+    - text: "\uC9D1\uC548\uC73C\uB85C \uB4E4\uC5B4\uAC04\uB2E4."
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}

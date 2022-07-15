@@ -2,7 +2,7 @@ public class HouseOwner : InteractiveObject
 {
     protected override void Interact()
     {
-        if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER1_KEY)
+        if (!clearInteract && GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER1_KEY)
         {
             clearInteract = true;
             DialogueSystem.Instance.StartDialogue("HouseOwnerInteract");

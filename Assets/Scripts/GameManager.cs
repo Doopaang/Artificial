@@ -6,19 +6,18 @@ public class GameManager : Singleton<GameManager>
 {
     public Inventory inventory;
 
+    public List<Item> itemDictionary;
+
     private int activatedUINum;
 
     void Start()
     {
-        activatedUINum = 0;
+        InitActivatedUINum();
     }
 
-    public bool EnableClickObject
+    public void InitActivatedUINum()
     {
-        get
-        {
-            return activatedUINum <= 0;
-        }
+        activatedUINum = 0;
     }
 
     public void IncreaseActivatedUINum()
@@ -31,4 +30,12 @@ public class GameManager : Singleton<GameManager>
         activatedUINum--;
     }
 
+    public void SolvedChapter1Paper()
+    {
+        Debug.Log("Solved!");
+    }
+    public void SolvedChapter1Door()
+    {
+        Debug.Log("Solved!");
+    }
 }

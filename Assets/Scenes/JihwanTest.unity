@@ -544,6 +544,7 @@ MonoBehaviour:
   up: {fileID: 0}
   down: {fileID: 1751826063}
   back: {fileID: 0}
+  interactiveObjects: []
 --- !u!1 &881170395
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,11 +692,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f4032556e99b74382a251154c24b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: {fileID: 1059774225}
+  left: {fileID: 1751826063}
   right: {fileID: 1059774225}
   up: {fileID: 0}
   down: {fileID: 0}
   back: {fileID: 0}
+  interactiveObjects: []
 --- !u!1 &1059774223
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +747,7 @@ MonoBehaviour:
   up: {fileID: 0}
   down: {fileID: 0}
   back: {fileID: 0}
+  interactiveObjects: []
 --- !u!1 &1061832576
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +833,7 @@ MonoBehaviour:
   up: {fileID: 0}
   down: {fileID: 0}
   back: {fileID: 0}
+  interactiveObjects: []
 --- !u!1001 &1189450737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1051,6 +1055,7 @@ MonoBehaviour:
   up: {fileID: 845398823}
   down: {fileID: 0}
   back: {fileID: 0}
+  interactiveObjects: []
 --- !u!1001 &1895792726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1062,21 +1067,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogueSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 5218719551199323401, guid: 93c4b2b2ca646fd4c8660167d931535e,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5218719551199323401, guid: 93c4b2b2ca646fd4c8660167d931535e,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5218719551199323401, guid: 93c4b2b2ca646fd4c8660167d931535e,
-        type: 3}
-      propertyPath: m_PlaneDistance
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5218719551199323402, guid: 93c4b2b2ca646fd4c8660167d931535e,
         type: 3}
@@ -1183,12 +1173,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5218719551199323405, guid: 93c4b2b2ca646fd4c8660167d931535e,
-        type: 3}
-      propertyPath: dialogue
-      value: 
-      objectReference: {fileID: 11400000, guid: 92cf7d74e08adcc45a8964e3d3b6cf36,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93c4b2b2ca646fd4c8660167d931535e, type: 3}
 --- !u!1 &1982107147

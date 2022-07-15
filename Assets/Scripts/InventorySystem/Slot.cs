@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour//, IPointerClickHandler
+public class Slot : MonoBehaviour
 {
     private EItemType itemType;
+
+    private Image slotImage;
 
     [SerializeField]
     private Image itemImage;
@@ -26,10 +28,20 @@ public class Slot : MonoBehaviour//, IPointerClickHandler
             return itemImage;
         }
     }
+    private void Awake()
+    {
+        slotImage = GetComponent<Image>();
+    }
+
+    private void Start()
+    {
+        if (slotImage.rectTransform.sizeDelta != Vector2.zero)
+            itemImage.rectTransform.sizeDelta = slotImage.rectTransform.sizeDelta;
+    }
 
     public void ChangeItem(EItemType newItemType)
     {
-        ItemData newItemData = GameManager.Instance.inventory.SearchItemData(newItemType);
+        Item newItemData = GameManager.Instance.inventory.SearchItemData(newItemType);
 
         itemType = newItemData.itemType;
         itemImage.sprite = newItemData.itemSprite;
@@ -50,33 +62,5 @@ public class Slot : MonoBehaviour//, IPointerClickHandler
         {
             inventory.Combine(itemType);
         }
-
-        
-
-        //if (inventory.IsReadyCombine())
-        //{
-        //    inventory.DeactivateCombine();
-
-        //    if (inventoryUI.GetCurrentSelectedItemSlot() &&
-        //        itemData.combinableItemType == inventoryUI.GetCurrentSelectedItemSlot().itemData.itemType)
-        //    {
-        //        inventory.DeleteItem(this);
-        //        inventory.DeleteItem(inventoryUI.GetCurrentSelectedItemSlot());
-        //    }
-
-        //    Debug.Log("Combine");
-        //}
-
-        //inventoryUI.ApplySelectedItemSlot(this);
     }
-
-    //public void SetInventoryUI(InventoryUI inventoryUI)
-    //{
-    //    this.inventoryUI = inventoryUI;
-    //}
-
-    //public ItemData GetItemData()
-    //{
-    //    return itemData;
-    //}
 }

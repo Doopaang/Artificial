@@ -1,28 +1,46 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+public enum EItemType
+{
+    NONE,
+    CHAPTER1_APPLE,
+    CHAPTER1_EATEN_APPLE,
+    CHAPTER1_PAPER,
+    CHAPTER1_BATTERY,
+    CHAPTER1_BATTERY_WATCH,
+    CHAPTER1_EMPTY_WATCH,
+    CHAPTER1_KEY,
+    CHAPTER1_CRESCENT_MOON,
+    CHAPTER1_BRUSH
+}
 
 public class Inventory : MonoBehaviour
 {
     private Slot[] slotList;
 
-    private List<ItemData> itemList;
-
-    public List<ItemData> itemDictionary;
+    private List<Item> itemList;
 
     private Slot selectedSlot;
+
+    private EItemType usingItem = EItemType.NONE;
 
     [SerializeField]
     private Image selectedImage;
 
     [SerializeField]
-    private Image itemDetailWindow;
-
-    [SerializeField]
-    private Image itemDetailImage;
+    private DetailWindow itemDetailWindow;
 
     private bool bActivatedCombine;
+
+    public EItemType UsingItem
+    {
+        get
+        {
+            return usingItem;
+        }
+    }
 
     public bool IsActivatedCombine
     {
@@ -35,9 +53,13 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         slotList = GetComponentsInChildren<Slot>();
-        itemList = new List<ItemData>();
+        itemList = new List<Item>();
 
-        gameObject.SetActive(false);
+        selectedImage.rectTransform.sizeDelta = slotList[0].ItemImage.rectTransform.sizeDelta;
+
+        DeactiveInventory();
+        itemDetailWindow.gameObject.SetActive(false);
+        GameManager.Instance.InitActivatedUINum();
     }
 
     private void ApplyItemList()
@@ -75,17 +97,32 @@ public class Inventory : MonoBehaviour
         itemList.Add(SearchItemData(itemType));
 
         ApplyItemList();
+
+        ActivateItemDetailWindow(itemType);
+    }
+
+    public void PressedUseButton()
+    {
+        if (!selectedSlot)
+            return;
+
+        usingItem = selectedSlot.ItemType;
+
+        DeactiveInventory();
     }
 
     public void Combine(EItemType otherItem)
     {
+        DeactivateCombine();
+
+        if (!selectedSlot)
+            return;
+
         EItemType resultItemType = SearchItemData(otherItem).combineResultItemType;
 
         DeleteItem(selectedSlot.ItemType);
         DeleteItem(otherItem);
         GainItem(resultItemType);
-
-        DeactivateCombine();
 
         selectedSlot = null;
         selectedImage.gameObject.SetActive(false);
@@ -102,38 +139,49 @@ public class Inventory : MonoBehaviour
         if (itemType == EItemType.NONE)
             return;
 
-        itemDetailWindow.gameObject.SetActive(true);
+        List<Item> itemDictionary = GameManager.Instance.itemDictionary;
 
-        itemDetailImage.sprite = SearchItemData(itemType).itemSprite;
+        for (int i = 0; i < itemDictionary.Count; i++)
+        {
+            if (itemDictionary[i].itemType == itemType)
+            {
+                itemDetailWindow.SetDetailObject(itemDictionary[i].gameObject);
+                break;
+            }
+        }
+
+        itemDetailWindow.gameObject.SetActive(true);
 
         GameManager.Instance.IncreaseActivatedUINum();
     }
 
-    public void DeactivateItemDetailWindow()
+    public Item SearchItemData(EItemType itemType)
     {
-        itemDetailWindow.gameObject.SetActive(false);
+        List<Item> itemDictionary = GameManager.Instance.itemDictionary;
 
-        GameManager.Instance.DecreaseActivatedUINum();
-    }
-
-    public ItemData SearchItemData(EItemType itemType)
-    {
         for (int i = 0; i < itemDictionary.Count; i++)
         {
             if (itemDictionary[i].itemType == itemType)
                 return itemDictionary[i];
         }
 
-        return new ItemData();
+        throw new System.Exception();
     }
 
     public void DeleteItem(EItemType itemType)
     {
+        if (itemType == EItemType.NONE)
+            return;
+
         for (int i = 0; i < itemList.Count; i++)
         {
             if (itemList[i].itemType == itemType)
             {
+                if (itemType == usingItem)
+                    usingItem = EItemType.NONE;
+
                 itemList.RemoveAt(i);
+                ApplyItemList();
                 return;
             }
         }
@@ -155,6 +203,10 @@ public class Inventory : MonoBehaviour
     public void ActivateInventory()
     {
         gameObject.SetActive(true);
+
+        DeactivateCombine();
+
+        usingItem = EItemType.NONE;
 
         GameManager.Instance.IncreaseActivatedUINum();
     }

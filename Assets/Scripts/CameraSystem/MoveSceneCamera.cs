@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [Icon("CameraIcon")]
@@ -14,6 +15,9 @@ public class MoveSceneCamera : MonoBehaviour
     [SerializeField]
     private MoveSceneCamera back;
 
+    [SerializeField]
+    private List<InteractiveObject> interactiveObjects;
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawIcon(transform.position, "CameraIcon", true);
@@ -24,6 +28,10 @@ public class MoveSceneCamera : MonoBehaviour
         Camera camera = Camera.main;
         Matrix4x4 temp = Gizmos.matrix;
         Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
+        //Color color = Gizmos.color;
+        Color color = Color.red;
+        color.a = 0.5f;
+        Gizmos.color = color;
         if (camera.orthographic)
         {
             float spread = camera.farClipPlane - camera.nearClipPlane;
@@ -61,7 +69,7 @@ public class MoveSceneCamera : MonoBehaviour
         }
     }
 
-    private MoveSceneCamera MoveCamera(MoveSceneCamera target)
+    public MoveSceneCamera MoveCamera(MoveSceneCamera target)
     {
         Camera.main.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
         return target;
@@ -88,6 +96,14 @@ public class MoveSceneCamera : MonoBehaviour
 
             default:
                 throw new System.ArgumentException();
+        }
+    }
+
+    public void SetObjectsActive(bool boolean)
+    {
+        foreach (InteractiveObject io in interactiveObjects)
+        {
+            io.Interactable = boolean;
         }
     }
 }

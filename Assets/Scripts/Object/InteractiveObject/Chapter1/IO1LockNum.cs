@@ -38,30 +38,30 @@ public class IO1LockNum : InteractiveObject
             return;
         }
 
-        ClearChild();
-
-        for (int i = 0; i < numLimit * 2; i++)
+        UnityEditor.EditorApplication.delayCall += () =>
         {
-            AddChild(i);
-        }
+            ClearChild();
 
-        pastNumLimit = numLimit;
+            for (int i = 0; i < numLimit * 2; i++)
+            {
+                AddChild(i);
+            }
+
+            pastNumLimit = numLimit;
+        };
     }
 
     private void ClearChild()
     {
         Button[] list = lockPos.GetComponentsInChildren<Button>();
 
-        UnityEditor.EditorApplication.delayCall += () =>
+        foreach (Button button in list)
         {
-            foreach (Button button in list)
+            if (button)
             {
-                if (button)
-                {
-                    DestroyImmediate(button.gameObject);
-                }
+                DestroyImmediate(button.gameObject);
             }
-        };
+        }
     }
 
     private void AddChild(int i)

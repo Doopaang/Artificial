@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 6407206071537710165}
   - component: {fileID: 4386232085903004704}
   m_Layer: 0
-  m_Name: HouseDaytimePicture
+  m_Name: HouseDaytimeClosedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

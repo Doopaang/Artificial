@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &313464384831973720
+--- !u!1 &289970761492388428
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1503113686717371897}
-  - component: {fileID: 1515781411021404287}
-  - component: {fileID: -8907135139310921005}
+  - component: {fileID: 9205353778404952647}
+  - component: {fileID: 762672089124780941}
+  - component: {fileID: 2639186724849455550}
   m_Layer: 0
-  m_Name: HouseOpenDoorPicture
+  m_Name: HouseInsideDicePuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1503113686717371897
+--- !u!4 &9205353778404952647
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313464384831973720}
+  m_GameObject: {fileID: 289970761492388428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 5, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6449830253333133524}
-  - {fileID: 8325713406156379827}
-  - {fileID: 3840399490510579552}
+  - {fileID: 7589192152615487091}
+  - {fileID: 7668848564794318037}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1515781411021404287
+--- !u!23 &762672089124780941
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313464384831973720}
+  m_GameObject: {fileID: 289970761492388428}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +55,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dfc39640b1abb31479c170b9e7f57f50, type: 2}
+  - {fileID: 2100000, guid: e8701fd46d636bc4296852f4ccc0b302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,15 +77,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &-8907135139310921005
+--- !u!33 &2639186724849455550
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313464384831973720}
+  m_GameObject: {fileID: 289970761492388428}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1319425812234283093
+--- !u!1 &2137024820672205383
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,37 +93,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8325713406156379827}
-  - component: {fileID: 6187746661344851491}
+  - component: {fileID: 7668848564794318037}
+  - component: {fileID: 3514535812264411590}
   m_Layer: 0
-  m_Name: HouseOpenDoorCamera
+  m_Name: HouseInsideCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8325713406156379827
+--- !u!4 &7668848564794318037
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319425812234283093}
+  m_GameObject: {fileID: 2137024820672205383}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -10.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1503113686717371897}
+  m_Father: {fileID: 9205353778404952647}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &6187746661344851491
+--- !u!114 &3514535812264411590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319425812234283093}
+  m_GameObject: {fileID: 2137024820672205383}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6f4032556e99b74382a251154c24b63, type: 3}
@@ -136,13 +135,13 @@ MonoBehaviour:
   down: {fileID: 0}
   back: {fileID: 0}
   interactiveObjects:
-  - {fileID: 2837396205267095273}
---- !u!1001 &446630314562069988
+  - {fileID: 0}
+--- !u!1001 &3954973679771556675
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1503113686717371897}
+    m_TransformParent: {fileID: 9205353778404952647}
     m_Modifications:
     - target: {fileID: 6895250271163227440, guid: d953ad0456872f244972a2a02e72c237,
         type: 3}
@@ -202,130 +201,18 @@ PrefabInstance:
     - target: {fileID: 6941708039974703236, guid: d953ad0456872f244972a2a02e72c237,
         type: 3}
       propertyPath: m_Name
-      value: HouseOpenDoorZoomIn
+      value: HouseInsideZoomIn
       objectReference: {fileID: 0}
     - target: {fileID: 7906449518567550457, guid: d953ad0456872f244972a2a02e72c237,
         type: 3}
       propertyPath: moveSceneCamera
       value: 
-      objectReference: {fileID: 6187746661344851491}
+      objectReference: {fileID: 3514535812264411590}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d953ad0456872f244972a2a02e72c237, type: 3}
---- !u!4 &6449830253333133524 stripped
+--- !u!4 &7589192152615487091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6895250271163227440, guid: d953ad0456872f244972a2a02e72c237,
     type: 3}
-  m_PrefabInstance: {fileID: 446630314562069988}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3824873589167152129
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1503113686717371897}
-    m_Modifications:
-    - target: {fileID: -7893443920151424280, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: opened
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6026250449026736092, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5510765859364810047, guid: 8666f31d117943a4d8bcc3adfa83e567,
-        type: 3}
-      propertyPath: m_Name
-      value: DoorInHousePictureCollider
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8666f31d117943a4d8bcc3adfa83e567, type: 3}
---- !u!114 &2837396205267095273 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -7893443920151424280, guid: 8666f31d117943a4d8bcc3adfa83e567,
-    type: 3}
-  m_PrefabInstance: {fileID: 3824873589167152129}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ec217625bc63be488da7543383840f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &3840399490510579552 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
-    type: 3}
-  m_PrefabInstance: {fileID: 3824873589167152129}
+  m_PrefabInstance: {fileID: 3954973679771556675}
   m_PrefabAsset: {fileID: 0}

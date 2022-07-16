@@ -39,6 +39,15 @@ public class DetailWindow : MonoBehaviour
         itemDetailObject.transform.localScale = itemDetailObject.GetComponent<Item>().itemScale;
         itemDetailObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
-        itemDetailObject.layer = LayerMask.NameToLayer("UI");
+        ChangeLayersRecursively(itemDetailObject.transform);
+    }
+
+    public void ChangeLayersRecursively(Transform trans)
+    {
+        trans.gameObject.layer = LayerMask.NameToLayer("UI");
+        foreach (Transform child in trans)
+        {
+            ChangeLayersRecursively(child);
+        }
     }
 }

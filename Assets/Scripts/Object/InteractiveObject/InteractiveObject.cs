@@ -22,18 +22,5 @@ public abstract class InteractiveObject : MonoBehaviour
         }
     }
 
-    public void OnMouseDown()
-    {
-        if (!Interactable ||
-            EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-
-        Interact();
-    }
-
     protected virtual void OnInteractableChanged(bool value) { }
-
-    protected abstract void Interact();
 }

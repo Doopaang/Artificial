@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Clock : MonoBehaviour
+public class C1_Apple : InteractiveObject
 {
     void Start()
     {
@@ -12,5 +10,10 @@ public class Clock : MonoBehaviour
     void Update()
     {
         
+    }
+
+    protected override void Interact()
+    {
+
     }
 }

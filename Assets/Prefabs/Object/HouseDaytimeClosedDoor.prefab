@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1504913953505602405}
   - component: {fileID: 4166837927022741390}
   m_Layer: 0
-  m_Name: HouseDaytimeCamera
+  m_Name: HouseDaytimeClosedCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 1050739147016463186}
   - component: {fileID: 6407206071537710165}
   - component: {fileID: 4386232085903004704}
+  - component: {fileID: 4741227132288413421}
   m_Layer: 0
   m_Name: HouseDaytimeClosedDoor
   m_TagString: Untagged
@@ -141,6 +142,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4741227132288413421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2228780427062595894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830e8151c423dc640baca309745564d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2564248049396008121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -542,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 6941708039974703236, guid: d953ad0456872f244972a2a02e72c237,
         type: 3}
       propertyPath: m_Name
-      value: HouseDaytimeZoomIn
+      value: HouseDaytimeClosedZoomIn
       objectReference: {fileID: 0}
     - target: {fileID: 7906449518567550457, guid: d953ad0456872f244972a2a02e72c237,
         type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1503113686717371897}
   - component: {fileID: 1515781411021404287}
   - component: {fileID: -8907135139310921005}
+  - component: {fileID: 2039080364967733151}
   m_Layer: 0
   m_Name: HouseDaytimeOpenedDoor
   m_TagString: Untagged
@@ -86,6 +87,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313464384831973720}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2039080364967733151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313464384831973720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830e8151c423dc640baca309745564d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1319425812234283093
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +110,7 @@ GameObject:
   - component: {fileID: 8325713406156379827}
   - component: {fileID: 6187746661344851491}
   m_Layer: 0
-  m_Name: HouseOpenDoorCamera
+  m_Name: HouseDaytimeOpenedCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +217,7 @@ PrefabInstance:
     - target: {fileID: 6941708039974703236, guid: d953ad0456872f244972a2a02e72c237,
         type: 3}
       propertyPath: m_Name
-      value: HouseOpenDoorZoomIn
+      value: HouseDaytimeOpenedZoomIn
       objectReference: {fileID: 0}
     - target: {fileID: 7906449518567550457, guid: d953ad0456872f244972a2a02e72c237,
         type: 3}
@@ -234,7 +247,7 @@ PrefabInstance:
     - target: {fileID: -6026250449026736092, guid: 8666f31d117943a4d8bcc3adfa83e567,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 26872884159691617, guid: 8666f31d117943a4d8bcc3adfa83e567,
         type: 3}

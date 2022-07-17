@@ -52,7 +52,7 @@ PrefabInstance:
     - target: {fileID: 1263981421508382260, guid: 9b2064a643a8d6f42acf9a01dded4742,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2313701922769590380, guid: 9b2064a643a8d6f42acf9a01dded4742,
         type: 3}
@@ -503,6 +503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HouseDaytimeClosedDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2228780427062595894, guid: ca8f0c8ee1c82064c89dcfc142e6e733,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca8f0c8ee1c82064c89dcfc142e6e733, type: 3}

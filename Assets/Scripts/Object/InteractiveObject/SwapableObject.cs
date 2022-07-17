@@ -9,5 +9,7 @@ public class SwapableObject : MonoBehaviour
 
         gameObject.SetActive(false);
         transform.parent.GetChild(index).gameObject.SetActive(true);
+
+        CameraSystem.Instance.MoveCamera(transform.parent.GetChild(index).GetComponentInChildren<MoveSceneCamera>());
     }
 }

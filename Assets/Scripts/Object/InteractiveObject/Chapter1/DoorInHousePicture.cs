@@ -9,6 +9,7 @@ public class DoorInHousePicture : InteractiveObject
     {
         if (opened)
         {
+            transform.parent.GetComponent<SwapableObject>().SwapObjectByIndex(4);
             DialogueSystem.Instance.StartDialogue("OpenDoorInHousePicture");
             return;
         }

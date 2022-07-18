@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class IO1LockDial : InteractiveObject
+public class IO1LockDial : MonoBehaviour
 {
     [SerializeField, Header("Puzzle")]
     private int answer;
@@ -50,15 +50,5 @@ public class IO1LockDial : InteractiveObject
     private void UpdateText()
     {
         text.text = value == 0 ? "" : value.ToString();
-    }
-
-    protected override void OnInteractableChanged(bool value)
-    {
-        canvas.gameObject.SetActive(value);
-
-        if (!value)
-        {
-            this.value = 0;
-        }
     }
 }

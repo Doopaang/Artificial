@@ -59,7 +59,6 @@ public class Inventory : MonoBehaviour
 
         DeactiveInventory();
         itemDetailWindow.gameObject.SetActive(false);
-        GameManager.Instance.InitActivatedUINum();
     }
 
     private void ApplyItemList()
@@ -151,8 +150,6 @@ public class Inventory : MonoBehaviour
         }
 
         itemDetailWindow.gameObject.SetActive(true);
-
-        GameManager.Instance.IncreaseActivatedUINum();
     }
 
     public Item SearchItemData(EItemType itemType)
@@ -207,8 +204,6 @@ public class Inventory : MonoBehaviour
         DeactivateCombine();
 
         usingItem = EItemType.NONE;
-
-        GameManager.Instance.IncreaseActivatedUINum();
     }
 
     public void DeactiveInventory()
@@ -218,7 +213,5 @@ public class Inventory : MonoBehaviour
         selectedSlot = null;
 
         selectedImage.gameObject.SetActive(false);
-
-        GameManager.Instance.DecreaseActivatedUINum();
     }
 }

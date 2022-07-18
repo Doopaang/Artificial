@@ -18,7 +18,6 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
     [SerializeField, Header("Base"), Tooltip("DON'T TOUCH THIS.")]
     private DialougeBaseInspector baseInspector;
 
-    private bool isPlaying = false;
     private DialogueScriptSet script;
     private int index;
 
@@ -55,7 +54,6 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
 
     public void StartDialogue(string key, UnityAction afterEvent = null)
     {
-        isPlaying = true;
         baseInspector.panel.SetActive(true);
         index = 0;
         script = dialogue.FindScriptSetByKey(key);
@@ -65,7 +63,6 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
 
     private void EndDialogue()
     {
-        isPlaying = false;
         baseInspector.panel.SetActive(false);
         if(afterEvent !=null)
         {

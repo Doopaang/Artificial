@@ -8,10 +8,10 @@ public class Showcase : MonoBehaviour
     private MoveSceneCamera showcaseCamera;
 
     [SerializeField]
-    private IO1LockNum dialLock1;
+    private LockNum dialLock1;
 
     [SerializeField]
-    private IO1LockNum dialLock2;
+    private LockNum dialLock2;
 
     [SerializeField]
     private CameraMoveObject dialLockZoomIn1;

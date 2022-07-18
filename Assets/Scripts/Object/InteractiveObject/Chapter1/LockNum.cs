@@ -1,10 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class IO1LockNum : InteractiveObject
+public class LockNum : MonoBehaviour
 {
     [SerializeField, Header("Puzzle")]
     private int answer;
@@ -23,7 +22,8 @@ public class IO1LockNum : InteractiveObject
     [SerializeField]
     private UnityEvent solvedFunction;
 
-    [SerializeField, Header("Base")]
+    [Header("Base")]
+    [SerializeField]
     private Canvas canvas;
     [SerializeField]
     private Transform lockPos;
@@ -37,24 +37,30 @@ public class IO1LockNum : InteractiveObject
 
 #if UNITY_EDITOR
 
-    private void OnValidate()
+    private void OnValidate() => UnityEditor.EditorApplication.update += _OnValidate;
+    private void _OnValidate()
     {
+        UnityEditor.EditorApplication.update -= _OnValidate;
+        if (this == null || !UnityEditor.EditorUtility.IsDirty(this)) return;
+
+        if (canvas.worldCamera == null)
+        {
+            canvas.worldCamera = GameObject.Find("UI Camera").GetComponent<Camera>();
+        }
+
         if (numLimit == pastNumLimit)
         {
             return;
         }
 
-        UnityEditor.EditorApplication.delayCall += () =>
+        ClearChild();
+
+        for (int i = 0; i < numLimit * 2; i++)
         {
-            ClearChild();
+            AddChild(i);
+        }
 
-            for (int i = 0; i < numLimit * 2; i++)
-            {
-                AddChild(i);
-            }
-
-            pastNumLimit = numLimit;
-        };
+        pastNumLimit = numLimit;
     }
 
     private void ClearChild()
@@ -87,11 +93,6 @@ public class IO1LockNum : InteractiveObject
 
 #endif
 
-    protected void Interact()
-    {
-
-    }
-
     public void ControlLock(int value)
     {
         if (value == 0)
@@ -113,16 +114,6 @@ public class IO1LockNum : InteractiveObject
         if (this.value == answer)
         {
             solvedFunction.Invoke();
-        }
-    }
-
-    protected override void OnInteractableChanged(bool value)
-    {
-        canvas.gameObject.SetActive(value);
-
-        if(!value)
-        {
-            this.value = 0;
         }
     }
 }

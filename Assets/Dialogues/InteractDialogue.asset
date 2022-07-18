@@ -52,6 +52,15 @@ MonoBehaviour:
     - text: "\uC0AC\uACFC\uBA39\uC740 \uC774\uD6C4 \uC0C1\uD638\uC791\uC6A9 (\uBC30\uACE0\uD508
         \uC544\uC774 \uADF8\uB9BC)"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: FullChildFirst
+    scripts:
+    - text: "\uCCAB \uC0C1\uD638\uC791\uC6A9 (\uBC30\uBD80\uB978 \uC544\uC774 \uADF8\uB9BC)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: FullChildRetry
+    scripts:
+    - text: "\uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uBC30\uBD80\uB978 \uC544\uC774
+        \uADF8\uB9BC)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
   - key: WasteBasketFirst
     scripts:
     - text: "\uCCAB \uC0C1\uD638\uC791\uC6A9 (\uC4F0\uB808\uAE30\uD1B5)"

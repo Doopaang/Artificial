@@ -16,7 +16,7 @@ public class MoveSceneCamera : MonoBehaviour
     private MoveSceneCamera back;
 
     [SerializeField]
-    private List<InteractiveObject> interactiveObjects;
+    private List<Collider> colliders;
 
     private void OnDrawGizmos()
     {
@@ -101,17 +101,12 @@ public class MoveSceneCamera : MonoBehaviour
 
     public void SetObjectsActive(bool boolean)
     {
-        foreach (InteractiveObject io in interactiveObjects)
+        foreach (Collider coll in colliders)
         {
-            if (io == null)
+            if (coll == null)
                 continue;
 
-            io.Interactable = boolean;
-
-            foreach (Collider coll in io.GetComponentsInChildren<Collider>())
-            {
-                coll.enabled = boolean;
-            }
+            coll.enabled = boolean;
         }
     }
 }

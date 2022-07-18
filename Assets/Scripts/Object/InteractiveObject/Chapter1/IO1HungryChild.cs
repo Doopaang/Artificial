@@ -1,6 +1,6 @@
 public class IO1HungryChild : InteractiveObject
 {
-    protected override void Interact()
+    protected void Interact()
     {
         if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER1_APPLE)
         {

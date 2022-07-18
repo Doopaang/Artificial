@@ -87,7 +87,7 @@ public class IO1LockNum : InteractiveObject
 
 #endif
 
-    protected override void Interact()
+    protected void Interact()
     {
 
     }

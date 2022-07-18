@@ -1,6 +1,6 @@
 public class IO1WasteBox : InteractiveObject
 {
-    protected override void Interact()
+    protected void Interact()
     {
         if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER1_EATEN_APPLE)
         {

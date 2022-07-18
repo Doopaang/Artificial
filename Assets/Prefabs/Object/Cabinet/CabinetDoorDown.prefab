@@ -382,6 +382,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5316377057506676480, guid: e4db771763677474b84deb9f95b7d4d5,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316377057506676480, guid: e4db771763677474b84deb9f95b7d4d5,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316377057506676480, guid: e4db771763677474b84deb9f95b7d4d5,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5963806377260636496}
+    - target: {fileID: 5316377057506676480, guid: e4db771763677474b84deb9f95b7d4d5,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316377057506676480, guid: e4db771763677474b84deb9f95b7d4d5,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Unlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316377057506676480, guid: e4db771763677474b84deb9f95b7d4d5,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CabinetDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316377057506676480, guid: e4db771763677474b84deb9f95b7d4d5,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471526535946036688, guid: e4db771763677474b84deb9f95b7d4d5,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7585682295323955454, guid: e4db771763677474b84deb9f95b7d4d5,
         type: 3}
       propertyPath: m_Name

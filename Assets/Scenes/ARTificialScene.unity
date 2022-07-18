@@ -145,6 +145,11 @@ PrefabInstance:
       propertyPath: colliders.Array.data[6]
       value: 
       objectReference: {fileID: 544350308}
+    - target: {fileID: 3317747329080889031, guid: adb30a41cab287348b8e7e6a4133b61a,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 370927072}
     - target: {fileID: 3614931562054420678, guid: adb30a41cab287348b8e7e6a4133b61a,
         type: 3}
       propertyPath: m_RootOrder
@@ -215,6 +220,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5488268423162763388, guid: adb30a41cab287348b8e7e6a4133b61a,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 370927072}
+    - target: {fileID: 7818560053194063310, guid: adb30a41cab287348b8e7e6a4133b61a,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 370927072}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adb30a41cab287348b8e7e6a4133b61a, type: 3}
 --- !u!4 &236259040 stripped
@@ -518,6 +533,7 @@ MonoBehaviour:
   down: {fileID: 0}
   back: {fileID: 1918197046}
   colliders: []
+  canvases: []
 --- !u!1 &501791108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,6 +2077,7 @@ MonoBehaviour:
   back: {fileID: 0}
   colliders:
   - {fileID: 1010232203}
+  canvases: []
 --- !u!1 &1453158537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,6 +2128,7 @@ MonoBehaviour:
   down: {fileID: 0}
   back: {fileID: 0}
   colliders: []
+  canvases: []
 --- !u!1001 &1471000014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2338,6 +2356,7 @@ MonoBehaviour:
   colliders:
   - {fileID: 1895978077}
   - {fileID: 1024981667}
+  canvases: []
 --- !u!1001 &1613606089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2858,6 +2877,7 @@ MonoBehaviour:
   down: {fileID: 0}
   back: {fileID: 1374553755}
   colliders: []
+  canvases: []
 --- !u!4 &1823313033
 Transform:
   m_ObjectHideFlags: 0
@@ -3046,6 +3066,7 @@ MonoBehaviour:
   back: {fileID: 0}
   colliders:
   - {fileID: 0}
+  canvases: []
 --- !u!114 &1940898608 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5734853473736284262, guid: 63c1472a58e9812499c7aaa76056c47a,

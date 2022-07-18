@@ -7,5 +7,6 @@
         <uie:ObjectField label="Right" name="Right" binding-path="right" type="MoveSceneCamera, Assembly-CSharp" tabindex="3" style="flex-direction: column; height: 40px; width: 100px; position: absolute; top: 50px; left: 240px; align-items: stretch;" />
     </ui:GroupBox>
     <uie:PropertyField name="Colliders" label="Active Objects" binding-path="colliders" />
+    <uie:PropertyField name="Canvases" label="Active Canvases" binding-path="canvases" />
     <ui:Foldout text="Default Inspector" name="DefaultInspector" value="false" tabindex="5" label="Active Objects" />
 </ui:UXML>

@@ -28,8 +28,6 @@ public class DetailWindow : MonoBehaviour
 
         Destroy(itemDetailObject);
         itemDetailObject = null;
-
-        GameManager.Instance.DecreaseActivatedUINum();
     }
 
     public void SetDetailObject(GameObject prefab)

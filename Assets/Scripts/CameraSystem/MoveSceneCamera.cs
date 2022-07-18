@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [Icon("CameraIcon")]
 public class MoveSceneCamera : MonoBehaviour
@@ -17,6 +18,8 @@ public class MoveSceneCamera : MonoBehaviour
 
     [SerializeField]
     private List<Collider> colliders;
+    [SerializeField]
+    private List<Canvas> canvases;
 
     private void OnDrawGizmos()
     {
@@ -107,6 +110,14 @@ public class MoveSceneCamera : MonoBehaviour
                 continue;
 
             coll.enabled = boolean;
+        }
+
+        foreach(Canvas canvas in canvases)
+        {
+            if (canvas == null)
+                continue;
+
+            canvas.gameObject.SetActive(boolean);
         }
     }
 }

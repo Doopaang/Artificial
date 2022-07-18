@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChildPicture : MonoBehaviour
+public class Cabinet : MonoBehaviour
 {
     private MoveSceneCamera moveSceneCamera;
 
@@ -11,8 +11,6 @@ public class ChildPicture : MonoBehaviour
 
     public void Interact()
     {
-        Debug.Log("In");
-
         if (moveSceneCamera)
             CameraSystem.Instance.MoveCamera(moveSceneCamera);
     }

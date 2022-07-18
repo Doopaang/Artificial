@@ -1,5 +1,6 @@
+using UnityEngine;
 
-public class IO1LockKey : InteractiveObject
+public class IO1LockKey : MonoBehaviour
 {
     protected void Interact()
     {

@@ -19,25 +19,25 @@ public class HungryChildPicture : MonoBehaviour
 
     public void FirstNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("HungryChildInteract");
+        DialogueSystem.Instance.StartDialogue("HungryChildFirst");
     }
 
     public void RetryNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("HungryChildAfterInteract");
+        DialogueSystem.Instance.StartDialogue("HungryChildRetry");
     }
 
     public void UseApple()
     {
-        DialogueSystem.Instance.StartDialogue("HungryChildFirst");
+        DialogueSystem.Instance.StartDialogue("HungryChildInteract", GainEatenApple);
     }
 
     public void RetryAfterUseApple()
     {
-        DialogueSystem.Instance.StartDialogue("HungryChildRetry");
+        DialogueSystem.Instance.StartDialogue("HungryChildAfterInteract");
     }
 
-    public void GainPuzzlePaper()
+    public void GainEatenApple()
     {
         GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER1_APPLE);
         GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_EATEN_APPLE);

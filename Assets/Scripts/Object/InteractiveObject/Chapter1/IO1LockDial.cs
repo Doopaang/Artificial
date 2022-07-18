@@ -17,7 +17,7 @@ public class IO1LockDial : InteractiveObject
 
     private int value = 0;
 
-    protected override void Interact()
+    protected void Interact()
     {
 
     }

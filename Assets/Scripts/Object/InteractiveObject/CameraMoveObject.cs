@@ -6,7 +6,7 @@ public class CameraMoveObject : InteractiveObject
 {
     public MoveSceneCamera moveSceneCamera;
 
-    protected override void Interact()
+    protected void Interact()
     {
         if (moveSceneCamera)
             CameraSystem.Instance.MoveCamera(moveSceneCamera);

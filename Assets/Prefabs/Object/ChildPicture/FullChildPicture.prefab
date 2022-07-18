@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1391993792019702549
+--- !u!1 &3427681792907127162
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8010700852785037710}
-  - component: {fileID: 3308983472383376942}
-  - component: {fileID: 4748871389841192352}
-  - component: {fileID: 7376515485796345900}
-  - component: {fileID: 3296995272767351677}
-  - component: {fileID: 1679638450088086318}
+  - component: {fileID: 3159908690901196875}
+  - component: {fileID: 620517119885136876}
+  - component: {fileID: 326962903452789344}
+  - component: {fileID: 3839160461415610413}
+  - component: {fileID: 6728640879208007358}
+  - component: {fileID: 3604150460789381475}
+  - component: {fileID: 4971440047829992171}
   m_Layer: 0
-  m_Name: Desk
+  m_Name: FullChildPicture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8010700852785037710
+--- !u!4 &3159908690901196875
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391993792019702549}
+  m_GameObject: {fileID: 3427681792907127162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 5}
+  m_LocalScale: {x: 0.5, y: 5, z: 8}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6565585722236609074}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &3308983472383376942
+--- !u!23 &620517119885136876
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391993792019702549}
+  m_GameObject: {fileID: 3427681792907127162}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1134714066672644336, guid: cb46186350674af4dbd71cb0d9bf8661, type: 3}
+  - {fileID: 2100000, guid: 68768da1eda12aa46b29955ea6e8b036, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,34 +79,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &4748871389841192352
+--- !u!33 &326962903452789344
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391993792019702549}
+  m_GameObject: {fileID: 3427681792907127162}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &7376515485796345900
+--- !u!65 &3839160461415610413
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391993792019702549}
+  m_GameObject: {fileID: 3427681792907127162}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3296995272767351677
+--- !u!114 &6728640879208007358
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391993792019702549}
+  m_GameObject: {fileID: 3427681792907127162}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
@@ -117,8 +117,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1679638450088086318}
-          m_TargetAssemblyTypeName: Desk, Assembly-CSharp
+        - m_Target: {fileID: 4971440047829992171}
+          m_TargetAssemblyTypeName: FullChildPicture, Assembly-CSharp
           m_MethodName: Interact
           m_Mode: 1
           m_Arguments:
@@ -129,65 +129,64 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &1679638450088086318
+--- !u!114 &3604150460789381475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391993792019702549}
+  m_GameObject: {fileID: 3427681792907127162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd60c5efbd925e24893427e3cc2d611d, type: 3}
+  m_Script: {fileID: 11500000, guid: cf4d469f2c76f244baf054af818e6eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5611591197521289433
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6565585722236609074}
-  - component: {fileID: 7090640663793832288}
-  m_Layer: 0
-  m_Name: DeskCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6565585722236609074
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5611591197521289433}
-  m_LocalRotation: {x: 0.24184473, y: 0.66446304, z: -0.24184473, w: 0.66446304}
-  m_LocalPosition: {x: -1.75, y: 2.75, z: 0}
-  m_LocalScale: {x: 4, y: 5, z: 0.16666667}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8010700852785037710}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 40, y: 90, z: 0}
---- !u!114 &7090640663793832288
+  ReactFirstNoneItem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4971440047829992171}
+        m_TargetAssemblyTypeName: FullChildPicture, Assembly-CSharp
+        m_MethodName: FirstNoneItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ReactRetryNoneItem:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4971440047829992171}
+        m_TargetAssemblyTypeName: FullChildPicture, Assembly-CSharp
+        m_MethodName: RetryNoneItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ReactFirstUsingItem:
+    m_PersistentCalls:
+      m_Calls: []
+  ReactRetryUsedItem:
+    m_PersistentCalls:
+      m_Calls: []
+  necessaryItem: 0
+--- !u!114 &4971440047829992171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5611591197521289433}
+  m_GameObject: {fileID: 3427681792907127162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f4032556e99b74382a251154c24b63, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d33fc3612f315f4fbe6eeab532f5866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: {fileID: 0}
-  right: {fileID: 0}
-  up: {fileID: 0}
-  down: {fileID: 0}
-  back: {fileID: 0}
-  colliders: []

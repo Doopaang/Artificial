@@ -8,9 +8,15 @@ public class CabinetDoor : MonoBehaviour
     [SerializeField]
     private GameObject rightDoor;
 
+    [SerializeField]
+    private MoveSceneCamera CabinetCamera;
+
+    [SerializeField]
+    private Lock dialLock;
+
     private bool opened = false;
 
-    private bool locked = false;
+    private bool locked = true;
 
     public void Interact()
     {
@@ -29,6 +35,13 @@ public class CabinetDoor : MonoBehaviour
 
     public void Unlock()
     {
+        Debug.Log("unlock");
+
         locked = false;
+
+        dialLock.gameObject.SetActive(false);
+
+        if (CabinetCamera)
+            CameraSystem.Instance.MoveCamera(CabinetCamera);
     }
 }

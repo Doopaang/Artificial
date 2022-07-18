@@ -50,7 +50,8 @@ MonoBehaviour:
   down: {fileID: 0}
   back: {fileID: 0}
   colliders: []
-  canvases: []
+  canvases:
+  - {fileID: 6471526535946036688}
 --- !u!1 &7585682295323955454
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +80,7 @@ Transform:
   m_GameObject: {fileID: 7585682295323955454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2494626263076889406}
@@ -153,6 +154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LockCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949018211402601568, guid: 9090566b70cc0bd4c8cf13d1a38b3695,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4949018211402601569, guid: 9090566b70cc0bd4c8cf13d1a38b3695,
         type: 3}
@@ -264,13 +270,34 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4949018212165476413, guid: 9090566b70cc0bd4c8cf13d1a38b3695,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949018212165476413, guid: 9090566b70cc0bd4c8cf13d1a38b3695,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949018212165476413, guid: 9090566b70cc0bd4c8cf13d1a38b3695,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6099732118978199218, guid: 9090566b70cc0bd4c8cf13d1a38b3695,
         type: 3}
       propertyPath: answer
-      value: 11390
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9090566b70cc0bd4c8cf13d1a38b3695, type: 3}
+--- !u!223 &6471526535946036688 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4949018211402601570, guid: 9090566b70cc0bd4c8cf13d1a38b3695,
+    type: 3}
+  m_PrefabInstance: {fileID: 2116985185424945586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6471526535946036691 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4949018211402601569, guid: 9090566b70cc0bd4c8cf13d1a38b3695,

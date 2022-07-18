@@ -43,24 +43,7 @@ public class LockNum : MonoBehaviour
         UnityEditor.EditorApplication.update -= _OnValidate;
         if (this == null || !UnityEditor.EditorUtility.IsDirty(this)) return;
 
-        if (canvas.worldCamera == null)
-        {
-            canvas.worldCamera = GameObject.Find("UI Camera").GetComponent<Camera>();
-        }
-
-        if (numLimit == pastNumLimit)
-        {
-            return;
-        }
-
-        ClearChild();
-
-        for (int i = 0; i < numLimit * 2; i++)
-        {
-            AddChild(i);
-        }
-
-        pastNumLimit = numLimit;
+        InitButtons();
     }
 
     private void ClearChild()
@@ -93,6 +76,33 @@ public class LockNum : MonoBehaviour
 
 #endif
 
+    public void Start()
+    {
+        InitButtons();
+    }
+
+    private void InitButtons()
+    {
+        if (canvas.worldCamera == null)
+        {
+            canvas.worldCamera = GameObject.Find("UI Camera").GetComponent<Camera>();
+        }
+
+        if (numLimit == pastNumLimit)
+        {
+            return;
+        }
+
+        ClearChild();
+
+        for (int i = 0; i < numLimit * 2; i++)
+        {
+            AddChild(i);
+        }
+
+        pastNumLimit = numLimit;
+    }
+
     public void ControlLock(int value)
     {
         if (value == 0)
@@ -104,6 +114,8 @@ public class LockNum : MonoBehaviour
         bool isLeft = value < 0;
 
         this.value += value * (isLeft && this.value / absValue % 10 == 0 || !isLeft && this.value / absValue % 10 == 9 ? -9 : 1);
+
+        Debug.Log(this.value);
 
         if (dialList.Count == numLimit)
         {

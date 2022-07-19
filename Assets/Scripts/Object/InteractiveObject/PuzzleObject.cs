@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PuzzleObject : MonoBehaviour
+public abstract class PuzzleObject : MonoBehaviour
 {
     [Header("Puzzle Base")]
     protected Canvas canvas;

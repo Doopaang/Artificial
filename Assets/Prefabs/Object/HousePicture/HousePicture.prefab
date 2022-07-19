@@ -296,6 +296,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7536574498702785599}
     m_Modifications:
+    - target: {fileID: 1010749907553848953, guid: e2696d47ff321c042a5508d69fb51b23,
+        type: 3}
+      propertyPath: housePicture
+      value: 
+      objectReference: {fileID: 2814141215290110434}
     - target: {fileID: 2010630919055763583, guid: e2696d47ff321c042a5508d69fb51b23,
         type: 3}
       propertyPath: m_Name

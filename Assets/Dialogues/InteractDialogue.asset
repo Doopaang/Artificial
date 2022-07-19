@@ -143,3 +143,23 @@ MonoBehaviour:
     scripts:
     - text: "\uC9D1\uC548\uC774\uB2E4."
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: UnlockDrawer
+    scripts:
+    - text: "\uC11C\uB78D\uC774 \uC5F4\uB838\uB2E4."
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: WerewolfDaytimeFirst
+    scripts:
+    - text: "\uB0AE\uC5D0 \uB291\uB300\uC778\uAC04 \uCC98\uC74C \uC870\uC0AC"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: WerewolfDaytimeRetry
+    scripts:
+    - text: "\uB0AE\uC5D0 \uB291\uB300\uC778\uAC04 \uBC18\uBCF5 \uC870\uC0AC"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: WerewolfNightFirst
+    scripts:
+    - text: "\uBC24\uC5D0 \uB291\uB300\uC778\uAC04 \uCC98\uC74C \uC870\uC0AC"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: WerewolfNightRetry
+    scripts:
+    - text: "\uBC24\uC5D0 \uB291\uB300\uC778\uAC04 \uBC18\uBCF5 \uC870\uC0AC"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}

@@ -105,12 +105,12 @@ PrefabInstance:
     - target: {fileID: 1358456522607489565, guid: 9197978d741b61a4dbb598b0460bef06,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1358456522607489565, guid: 9197978d741b61a4dbb598b0460bef06,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1358456522607489565, guid: 9197978d741b61a4dbb598b0460bef06,
         type: 3}
@@ -202,6 +202,16 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7478677953367323474, guid: 9197978d741b61a4dbb598b0460bef06,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478677953367323474, guid: 9197978d741b61a4dbb598b0460bef06,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9197978d741b61a4dbb598b0460bef06, type: 3}
 --- !u!114 &1010749907553848953 stripped
@@ -242,7 +252,7 @@ PrefabInstance:
     - target: {fileID: 2029042669513760530, guid: 7cf844e50e00c124f9eba140a8744898,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.065
       objectReference: {fileID: 0}
     - target: {fileID: 2029042669513760530, guid: 7cf844e50e00c124f9eba140a8744898,
         type: 3}
@@ -283,6 +293,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3599018885064460076, guid: 7cf844e50e00c124f9eba140a8744898,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3599018885064460076, guid: 7cf844e50e00c124f9eba140a8744898,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6027476732035724281, guid: 7cf844e50e00c124f9eba140a8744898,
         type: 3}

@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class Desk : MonoBehaviour
+public class WerewolfPicture : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject[] pictures;
+
     private MoveSceneCamera moveSceneCamera;
 
     private void Start()

@@ -1,30 +1,24 @@
 using UnityEngine;
-using UnityEngine.Events;
 
-public class IO1LockDial : MonoBehaviour
+public class LockNumPad : PuzzleObject
 {
-    [SerializeField, Header("Puzzle")]
+    [Header("NumPad")]
+    [SerializeField]
     private int answer;
     [SerializeField]
     private int numLimit;
-    [SerializeField]
-    private UnityEvent solvedFunction;
 
-    [SerializeField, Header("Base")]
-    private Canvas canvas;
+    [Space(20)]
+    [Header("NumPad Base")]
     [SerializeField]
     private TMPro.TextMeshProUGUI text;
 
     private int value = 0;
 
-    protected void Interact()
-    {
-
-    }
-
     public void InputNum(int value)
     {
-        if (this.value > Mathf.Pow(10, numLimit - 1))
+        if (numLimit == 0 ||
+            this.value >= Mathf.Pow(10, numLimit - 1))
         {
             return;
         }

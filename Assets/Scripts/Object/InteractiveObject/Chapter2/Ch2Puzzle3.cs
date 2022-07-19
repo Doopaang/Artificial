@@ -3,14 +3,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class Ch2Puzzle1 : PuzzleObject
+public class Ch2Puzzle3 : PuzzleObject
 {
     [Header("Ch2Puzzle1 Base")]
     [SerializeField]
     private Transform gridPos;
 
     private List<Toggle> toggleList;
-    private List<Toggle> answerList;
     private int toggleIndex = 0;
     private bool correctOrder = true;
 
@@ -18,25 +17,20 @@ public class Ch2Puzzle1 : PuzzleObject
     {
         base.Start();
 
-        toggleList = new List<Toggle>(GetComponentsInChildren<Toggle>());
+        toggleList = new List<Toggle>(gridPos.GetComponentsInChildren<Toggle>());
         toggleList.Sort((A, B) => { return int.Parse(A.name).CompareTo(int.Parse(B.name)); });
-
-        answerList = new List<Toggle>(toggleList.FindAll((toggle) => { return toggle.isOn; }));
-
-        ResetPad();
     }
 
     protected void OnEnable()
     {
-        ResetPad();
+        ResetButton();
     }
 
     public void ToggleButton(Toggle toggle)
     {
         toggle.interactable = false;
 
-        if (toggleIndex >= answerList.Count ||
-            toggle != answerList[toggleIndex])
+        if (toggle != toggleList[toggleIndex])
         {
             correctOrder = false;
         }
@@ -47,16 +41,16 @@ public class Ch2Puzzle1 : PuzzleObject
     public void CheckAnswer()
     {
         if (!correctOrder ||
-            toggleIndex != answerList.Count)
+            toggleIndex != toggleList.Count)
         {
-            ResetPad();
+            ResetButton();
             return;
         }
 
         solvedFunction.Invoke();
     }
 
-    private void ResetPad()
+    private void ResetButton()
     {
         toggleIndex = 0;
         correctOrder = true;

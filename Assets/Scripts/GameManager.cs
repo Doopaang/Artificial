@@ -35,7 +35,7 @@ public class GameManager : Singleton<GameManager>
         //    v.x = Input.mousePosition.x / 1280.0f;
         //    v.y = Input.mousePosition.y / 720.0f;
 
-        //    Ray ray = GameObject.Find("UI Camera").GetComponent<Camera>().ViewportPointToRay(v);
+        //    Ray ray = Camera.main.ViewportPointToRay(v);
         //    RaycastHit hit;
         //    if (Physics.Raycast(ray, out hit))
         //        print("I'm looking at " + hit.transform.name);

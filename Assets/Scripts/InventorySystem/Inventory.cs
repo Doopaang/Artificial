@@ -61,6 +61,11 @@ public class Inventory : MonoBehaviour
         itemDetailWindow.gameObject.SetActive(false);
     }
 
+    public void ClearItem()
+    {
+        usingItem = EItemType.NONE;
+    }
+
     private void ApplyItemList()
     {
         for (int i = 0; i < slotList.Length; i++)
@@ -118,6 +123,12 @@ public class Inventory : MonoBehaviour
             return;
 
         EItemType resultItemType = SearchItemData(otherItem).combineResultItemType;
+
+        if (resultItemType == EItemType.NONE ||
+            SearchItemData(selectedSlot.ItemType).combinableItemType != otherItem)
+        {
+            return;
+        }
 
         DeleteItem(selectedSlot.ItemType);
         DeleteItem(otherItem);

@@ -15,6 +15,16 @@ public class HousePicture : MonoBehaviour
 
     private MoveSceneCamera moveSceneCamera;
 
+    private bool gateLocked = true;
+
+    public bool GateLocked
+    {
+        get
+        {
+            return gateLocked;
+        }
+    }
+
     private void Start()
     {
         moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
@@ -26,8 +36,21 @@ public class HousePicture : MonoBehaviour
             CameraSystem.Instance.MoveCamera(moveSceneCamera);
     }
 
+    public void UnlockGate()
+    {
+        gateLocked = false;
+    }
+
     public void ChangePicture(EHousePictureType housePictureType)
     {
+        if ((housePictureType == EHousePictureType.Daytime ||
+            housePictureType == EHousePictureType.Night) && 
+            (pictures[(int)EHousePictureType.Inside].activeSelf || 
+            pictures[(int)EHousePictureType.DicePuzzle].activeSelf))
+        {
+            return;
+        }
+
         for (int i = 0; i < pictures.Length; i++)
         {
             if (i == (int)housePictureType)

@@ -3,7 +3,7 @@ using UnityEngine;
 public class HouseOwner : MonoBehaviour
 {
     [SerializeField]
-    private Gate gate;
+    private HousePicture housePicture;
 
     private ReactInteraction reactInteraction;
 
@@ -30,9 +30,10 @@ public class HouseOwner : MonoBehaviour
 
     public void UseKey()
     {
-        gate.Unlock();
+        housePicture.UnlockGate();
 
         DialogueSystem.Instance.StartDialogue("OpenGate");
+        GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER1_KEY);
         gameObject.SetActive(false);
     }
 }

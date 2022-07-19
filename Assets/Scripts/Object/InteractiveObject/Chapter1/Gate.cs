@@ -7,8 +7,6 @@ public class Gate : MonoBehaviour
 
     private ReactInteraction reactInteraction;
 
-    private bool locked = true;
-
     private void Start()
     {
         reactInteraction = GetComponent<ReactInteraction>();
@@ -16,7 +14,7 @@ public class Gate : MonoBehaviour
 
     public void Interact()
     {
-        if (!locked)
+        if (!housePicture.GateLocked)
         {
             DialogueSystem.Instance.StartDialogue("EnterHouse", ChangeToHouseInsidePicture);
             return;
@@ -49,11 +47,6 @@ public class Gate : MonoBehaviour
     public void InvestigateRetryKey()
     {
         DialogueSystem.Instance.StartDialogue("GateRetryInteractKey");
-    }
-
-    public void Unlock()
-    {
-        locked = false;
     }
 
     public void ChangeToHouseInsidePicture()

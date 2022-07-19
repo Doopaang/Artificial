@@ -35,8 +35,6 @@ public class CabinetDoor : MonoBehaviour
 
     public void Unlock()
     {
-        Debug.Log("unlock");
-
         locked = false;
 
         dialLock.gameObject.SetActive(false);

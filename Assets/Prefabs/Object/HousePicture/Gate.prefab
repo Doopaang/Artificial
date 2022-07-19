@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3427681792907127162
+--- !u!1 &6027476732035724281
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,105 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3159908690901196875}
-  - component: {fileID: 620517119885136876}
-  - component: {fileID: 326962903452789344}
-  - component: {fileID: 3839160461415610413}
-  - component: {fileID: 6728640879208007358}
-  - component: {fileID: 3604150460789381475}
-  - component: {fileID: 4971440047829992171}
+  - component: {fileID: 2029042669513760530}
+  - component: {fileID: 3599018885064460076}
+  - component: {fileID: 6253513029892039848}
+  - component: {fileID: 4703150400213652196}
+  - component: {fileID: 1184255491050253554}
   m_Layer: 0
-  m_Name: FullChildPicture
+  m_Name: Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3159908690901196875
+--- !u!4 &2029042669513760530
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3427681792907127162}
+  m_GameObject: {fileID: 6027476732035724281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 5, z: 8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &620517119885136876
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3427681792907127162}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 68768da1eda12aa46b29955ea6e8b036, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &326962903452789344
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3427681792907127162}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &3839160461415610413
+--- !u!65 &3599018885064460076
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3427681792907127162}
+  m_GameObject: {fileID: 6027476732035724281}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6728640879208007358
+--- !u!114 &6253513029892039848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3427681792907127162}
+  m_GameObject: {fileID: 6027476732035724281}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
@@ -117,8 +65,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4971440047829992171}
-          m_TargetAssemblyTypeName: FullChildPicture, Assembly-CSharp
+        - m_Target: {fileID: 1184255491050253554}
+          m_TargetAssemblyTypeName: Gate, Assembly-CSharp
           m_MethodName: Interact
           m_Mode: 1
           m_Arguments:
@@ -129,13 +77,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &3604150460789381475
+--- !u!114 &4703150400213652196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3427681792907127162}
+  m_GameObject: {fileID: 6027476732035724281}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf4d469f2c76f244baf054af818e6eaf, type: 3}
@@ -144,9 +92,9 @@ MonoBehaviour:
   ReactFirstNoneItem:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4971440047829992171}
-        m_TargetAssemblyTypeName: FullChildPicture, Assembly-CSharp
-        m_MethodName: FirstNoneItem
+      - m_Target: {fileID: 1184255491050253554}
+        m_TargetAssemblyTypeName: Gate, Assembly-CSharp
+        m_MethodName: InvestigateFirstNoneItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -159,9 +107,9 @@ MonoBehaviour:
   ReactRetryNoneItem:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4971440047829992171}
-        m_TargetAssemblyTypeName: FullChildPicture, Assembly-CSharp
-        m_MethodName: RetryNoneItem
+      - m_Target: {fileID: 1184255491050253554}
+        m_TargetAssemblyTypeName: Gate, Assembly-CSharp
+        m_MethodName: InvestigateRetryNoneItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -173,20 +121,44 @@ MonoBehaviour:
         m_CallState: 2
   ReactFirstUsingItem:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1184255491050253554}
+        m_TargetAssemblyTypeName: Gate, Assembly-CSharp
+        m_MethodName: InvestigateFirstKey
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ReactRetryUsedItem:
     m_PersistentCalls:
-      m_Calls: []
-  necessaryItem: 0
---- !u!114 &4971440047829992171
+      m_Calls:
+      - m_Target: {fileID: 1184255491050253554}
+        m_TargetAssemblyTypeName: Gate, Assembly-CSharp
+        m_MethodName: InvestigateRetryKey
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  necessaryItem: 7
+--- !u!114 &1184255491050253554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3427681792907127162}
+  m_GameObject: {fileID: 6027476732035724281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d33fc3612f315f4fbe6eeab532f5866, type: 3}
+  m_Script: {fileID: 11500000, guid: dda41441024b8da4caca379b8a7c2190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

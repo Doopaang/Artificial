@@ -99,25 +99,29 @@ MonoBehaviour:
     scripts:
     - text: "\uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uC5F4\uC1E0\uC788\uB294 \uD654\uBD84)"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
-  - key: DoorInHouseDaytimeFirst
+  - key: GateFirstNoneItem
     scripts:
     - text: "\uC5F4\uC1E0\uC5C6\uC774 \uCCAB \uC0C1\uD638\uC791\uC6A9 (\uB300\uBB38
         \uADF8\uB9BC)"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
-  - key: DoorInHouseDaytimeRetry
+  - key: GateRetryNoneItem
     scripts:
     - text: "\uC5F4\uC1E0\uC5C6\uC774 \uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uB300\uBB38
         \uADF8\uB9BC)"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
-  - key: DoorInHouseDaytimeInteract
+  - key: GateFirstInteractKey
     scripts:
     - text: "\uC5F4\uC1E0\uB4E4\uACE0 \uCCAB \uC0C1\uD638\uC791\uC6A9 (\uB300\uBB38
         \uADF8\uB9BC)"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
-  - key: DoorInHouseDaytimeAfterInteract
+  - key: GateRetryInteractKey
     scripts:
     - text: "\uC5F4\uC1E0\uB4E4\uACE0 \uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uB300\uBB38
         \uADF8\uB9BC)"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: GateInteractNight
+    scripts:
+    - text: "\uBC24\uC5D0 \uBB38\uC744 \uC870\uC0AC\uD55C\uB2E4."
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
   - key: HouseOwnerFirst
     scripts:
@@ -127,15 +131,15 @@ MonoBehaviour:
     scripts:
     - text: "\uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uC9D1\uC8FC\uC778)"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
-  - key: HouseOwnerInteract
+  - key: OpenGate
     scripts:
     - text: "\uC9D1\uC8FC\uC778\uC774 \uBB38\uC744 \uC5F4\uC5C8\uB2E4!"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
-  - key: HouseOwnerAfterInteract
-    scripts:
-    - text: "\uC5F4\uC1E0\uB4E4\uACE0 \uBC18\uBCF5 \uC0C1\uD638\uC791\uC6A9 (\uC9D1\uC8FC\uC778)"
-      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
-  - key: OpenDoorInHousePicture
+  - key: EnterHouse
     scripts:
     - text: "\uC9D1\uC548\uC73C\uB85C \uB4E4\uC5B4\uAC04\uB2E4."
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+  - key: AfterEnterHouse
+    scripts:
+    - text: "\uC9D1\uC548\uC774\uB2E4."
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}

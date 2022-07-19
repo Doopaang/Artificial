@@ -46,7 +46,7 @@ BoxCollider:
   m_GameObject: {fileID: 3805761044473359841}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -143,6 +143,7 @@ MonoBehaviour:
   colliders:
   - {fileID: 8259458793131163182}
   - {fileID: 5081897056190035122}
+  canvases: []
 --- !u!1001 &3787574600442839212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,6 +161,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5639987758806146622, guid: 6ba17703202f9f34d83d7804ec2d9e29,
+        type: 3}
+      propertyPath: childPicture
+      value: 
+      objectReference: {fileID: 5139509368167502991}
     - target: {fileID: 6628792078094077810, guid: 6ba17703202f9f34d83d7804ec2d9e29,
         type: 3}
       propertyPath: m_RootOrder
@@ -329,7 +335,7 @@ PrefabInstance:
     - target: {fileID: 3427681792907127162, guid: 2f4507f83148f1040b15e1019b896d45,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3839160461415610413, guid: 2f4507f83148f1040b15e1019b896d45,
         type: 3}

@@ -6,6 +6,9 @@ public class HungryChildPicture : MonoBehaviour
 {
     private ReactInteraction reactInteraction;
 
+    [SerializeField]
+    private ChildPicture childPicture;
+
     private void Start()
     {
         reactInteraction = GetComponent<ReactInteraction>();
@@ -41,5 +44,7 @@ public class HungryChildPicture : MonoBehaviour
     {
         GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER1_APPLE);
         GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_EATEN_APPLE);
+
+        childPicture.ChangeToFullChildPicture();
     }
 }

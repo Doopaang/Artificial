@@ -8,6 +8,25 @@ public class GameManager : Singleton<GameManager>
 
     public List<Item> itemDictionary;
 
+    private bool isDaytime;
+
+    public bool IsDaytime
+    {
+        get
+        {
+            return isDaytime;
+        }
+        set
+        {
+            isDaytime = value;
+        }
+    }
+
+    private void Start()
+    {
+        isDaytime = true;
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

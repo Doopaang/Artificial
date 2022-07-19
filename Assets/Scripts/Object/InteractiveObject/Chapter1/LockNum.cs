@@ -1,17 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
-
-public class LockNum : MonoBehaviour
-{
-    [SerializeField, Header("Puzzle")]
-    private int answer;
+using UnityEngine.Events;
 #if UNITY_EDITOR
+using UnityEditor.Events;
+#endif
+
+public class LockNum : PuzzleObject
+{
+    [Header("LockNum")]
+    [SerializeField]
+    private int answer;
     [SerializeField]
     private int numLimit;
     [SerializeField]
     private int angleCount;
+#if UNITY_EDITOR
     [SerializeField]
     private Sprite leftButtonSprite;
     [SerializeField]
@@ -19,12 +23,9 @@ public class LockNum : MonoBehaviour
 #endif
     [SerializeField]
     private List<Transform> dialList;
-    [SerializeField]
-    private UnityEvent solvedFunction;
 
-    [Header("Base")]
-    [SerializeField]
-    private Canvas canvas;
+    [Space(20)]
+    [Header("Lock Base")]
     [SerializeField]
     private Transform lockPos;
 #if UNITY_EDITOR
@@ -37,17 +38,20 @@ public class LockNum : MonoBehaviour
 
 #if UNITY_EDITOR
 
-    private void OnValidate() => UnityEditor.EditorApplication.update += _OnValidate;
-    private void _OnValidate()
+    protected override void _OnValidate()
     {
-        UnityEditor.EditorApplication.update -= _OnValidate;
-        if (this == null || !UnityEditor.EditorUtility.IsDirty(this)) return;
+        base._OnValidate();
 
         InitButtons();
     }
 
     private void ClearChild()
     {
+        if (lockPos == null)
+        {
+            return;
+        }
+
         Button[] list = lockPos.GetComponentsInChildren<Button>();
 
         foreach (Button button in list)
@@ -61,6 +65,11 @@ public class LockNum : MonoBehaviour
 
     private void AddChild(int i)
     {
+        if (lockPos == null)
+        {
+            return;
+        }
+
         bool isRight = (i + 1) % 2 != 0;
         int num = Mathf.CeilToInt((i + 1) * 0.5f);
 
@@ -70,24 +79,29 @@ public class LockNum : MonoBehaviour
 
         newButton.name = (isRight ? "Right" : "Left") + " Button " + num;
         image.sprite = isRight ? rightButtonSprite : leftButtonSprite;
-        button.onClick.AddListener(delegate { ControlLock((int)Mathf.Pow(10, num - 1) * (isRight ? 1 : -1)); });
+
+        var targetinfo = UnityEventBase.GetValidMethodInfo(this, "ControlLock", new System.Type[] { typeof(int) });
+        int intParameter = (int)Mathf.Pow(10, num - 1) * (isRight ? 1 : -1);
+        UnityAction<int> action = System.Delegate.CreateDelegate(typeof(UnityAction<int>), this, targetinfo, false) as UnityAction<int>;
+        UnityEventTools.AddIntPersistentListener(button.onClick, action, intParameter);
+
         newButton.transform.SetAsFirstSibling();
     }
 
 #endif
 
-    public void Start()
+    protected override void Start()
     {
+        base.Start();
+
+#if UNITY_EDITOR
         InitButtons();
+#endif
     }
 
+#if UNITY_EDITOR
     private void InitButtons()
     {
-        if (canvas.worldCamera == null)
-        {
-            canvas.worldCamera = GameObject.Find("UI Camera").GetComponent<Camera>();
-        }
-
         if (numLimit == pastNumLimit)
         {
             return;
@@ -102,6 +116,7 @@ public class LockNum : MonoBehaviour
 
         pastNumLimit = numLimit;
     }
+#endif
 
     public void ControlLock(int value)
     {

@@ -2,20 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum EItemType
-{
-    NONE,
-    CHAPTER1_APPLE,
-    CHAPTER1_EATEN_APPLE,
-    CHAPTER1_PAPER,
-    CHAPTER1_BATTERY,
-    CHAPTER1_BATTERY_WATCH,
-    CHAPTER1_EMPTY_WATCH,
-    CHAPTER1_KEY,
-    CHAPTER1_CRESCENT_MOON,
-    CHAPTER1_BRUSH
-}
-
 public class Inventory : MonoBehaviour
 {
     private Slot[] slotList;

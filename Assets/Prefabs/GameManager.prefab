@@ -55,4 +55,5 @@ MonoBehaviour:
   - {fileID: 2508343385353374385, guid: be166ff800f91bb4cb167204c3933866, type: 3}
   - {fileID: 937430707427502897, guid: 16acafa636de7304dbd88e9d6cffd7d2, type: 3}
   - {fileID: 9102236760708260687, guid: 393df967417fa3e4095e137c4683d787, type: 3}
+  - {fileID: 4653321388596581950, guid: a987a864e2614ef42abef3f8a6bd7157, type: 3}
   housePicture: {fileID: 0}

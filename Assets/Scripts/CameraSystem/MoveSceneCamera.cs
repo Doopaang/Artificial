@@ -83,19 +83,19 @@ public class MoveSceneCamera : MonoBehaviour
         switch (direction)
         {
             case CameraDirection.Up:
-                return up != null;
+                return up != null && up.isActiveAndEnabled;
 
             case CameraDirection.Down:
-                return down != null;
+                return down != null && down.isActiveAndEnabled;
 
             case CameraDirection.Left:
-                return left != null;
+                return left != null && left.isActiveAndEnabled;
 
             case CameraDirection.Right:
-                return right != null;
+                return right != null && right.isActiveAndEnabled;
 
             case CameraDirection.Back:
-                return back != null;
+                return back != null && back.isActiveAndEnabled;
 
             default:
                 throw new System.ArgumentException();
@@ -112,7 +112,7 @@ public class MoveSceneCamera : MonoBehaviour
             coll.enabled = boolean;
         }
 
-        foreach(Canvas canvas in canvases)
+        foreach (Canvas canvas in canvases)
         {
             if (canvas == null)
                 continue;

@@ -15,6 +15,12 @@ public class LockNumPad : PuzzleObject
 
     private int value = 0;
 
+    protected void OnEnable()
+    {
+        value = 0;
+        text.text = "";
+    }
+
     public void InputNum(int value)
     {
         if (numLimit == 0 ||

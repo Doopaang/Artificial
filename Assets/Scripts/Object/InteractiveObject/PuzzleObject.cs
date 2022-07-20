@@ -1,3 +1,4 @@
+using UnityEditor.Events;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,6 +25,9 @@ public abstract class PuzzleObject : MonoBehaviour
     protected virtual void Start()
     {
         Init();
+
+        var targetinfo = UnityEventBase.GetValidMethodInfo(this, "DestroySelf", new System.Type[] { typeof(GameObject) });
+        UnityEventTools.AddPersistentListener(solvedFunction, () => { Destroy(gameObject); });
     }
 
     private void Init()

@@ -12,6 +12,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private HousePicture housePicture;
 
+
+    [HideInInspector]
+    public Color brushColor = Color.white;
+
     public bool IsDaytime
     {
         get
@@ -57,8 +61,17 @@ public class GameManager : Singleton<GameManager>
             housePicture.ChangePicture(EHousePictureType.Night);
     }
 
-    public void Chapter2Puzzle1Solved()
+    public void ChangeBrushColor(ref float brush)
     {
+        if (brush > 0)
+        {
+            brushColor = Color.black;
+        }
+        brush = 1.0f;
+    }
 
+    public void Chapter2Puzzle1Solved(Transform cover)
+    {
+        Destroy(cover.gameObject);
     }
 }

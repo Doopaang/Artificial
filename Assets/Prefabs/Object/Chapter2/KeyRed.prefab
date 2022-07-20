@@ -81,11 +81,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 68768da1eda12aa46b29955ea6e8b036, type: 2}
+      objectReference: {fileID: 2100000, guid: e8701fd46d636bc4296852f4ccc0b302, type: 2}
     - target: {fileID: 919132149155446097, guid: 9a6de2622738bfb4b946d9cc06ad25c3,
         type: 3}
       propertyPath: m_Name
-      value: KeyBlue
+      value: KeyRed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6de2622738bfb4b946d9cc06ad25c3, type: 3}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7094d93c229304a959e3711d1ee167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 13
+  itemType: 11
   combinableItemType: 0
   combineResultItemType: 0
   itemSprite: {fileID: 0}

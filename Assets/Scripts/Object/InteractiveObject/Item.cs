@@ -23,7 +23,10 @@ public enum EItemType
     CHAPTER2_BOOK4,
     CHAPTER2_BOOK5,
     CHAPTER2_PAPER_ARROW,
-    CHAPTER2_FLOWER
+    CHAPTER2_FLOWER,
+    CHAPTER2_TEMP1,
+    CHAPTER2_TEMP2,
+    CHAPTER3_TEMP3
 }
 
 public class Item : MonoBehaviour

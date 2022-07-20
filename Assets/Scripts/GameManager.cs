@@ -30,6 +30,11 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            inventory.GainItem(EItemType.CHAPTER3_TEMP3);
+        }
+
         //if (Input.GetMouseButtonDown(0))
         //{
         //    Vector3 v = new Vector3();
@@ -71,6 +76,11 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void Chapter2Puzzle1Solved(Transform cover)
+    {
+        Destroy(cover.gameObject);
+    }
+
+    public void Chapter2Puzzle2Solved(Transform cover)
     {
         Destroy(cover.gameObject);
     }

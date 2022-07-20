@@ -8,6 +8,8 @@ public class DeskDrawer : MonoBehaviour
     private Transform drawer;
     [SerializeField]
     private Transform openPos;
+    [SerializeField]
+    private MoveSceneCamera moveCamera;
 
     private bool isOpen = false;
 
@@ -15,7 +17,7 @@ public class DeskDrawer : MonoBehaviour
     {
         if(isOpen)
         {
-
+            CameraSystem.Instance.MoveCamera(moveCamera);
         }
         else
         {

@@ -56,4 +56,9 @@ public class GameManager : Singleton<GameManager>
         if (housePicture)
             housePicture.ChangePicture(EHousePictureType.Night);
     }
+
+    public void Chapter2Puzzle1Solved()
+    {
+
+    }
 }

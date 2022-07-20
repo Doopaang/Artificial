@@ -26,5 +26,7 @@ public class ColorDialPuzzleDoor : MonoBehaviour
         if (nextStageCamera)
             nextStageCamera.gameObject.SetActive(true);
 
+        if (moveSceneCamera)
+            CameraSystem.Instance.MoveCamera(moveSceneCamera);
     }
 }

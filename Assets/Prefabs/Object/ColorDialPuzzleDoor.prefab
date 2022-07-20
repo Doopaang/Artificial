@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 695a4837a336d7948a1d73c1918300a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextStageCamera: {fileID: 0}
 --- !u!1001 &5800715816803822837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,6 +206,41 @@ PrefabInstance:
         type: 3}
       propertyPath: answer
       value: 472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126907314360984259, guid: f37541b016d1de340b60dd6aac4402ee,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126907314360984259, guid: f37541b016d1de340b60dd6aac4402ee,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126907314360984259, guid: f37541b016d1de340b60dd6aac4402ee,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6637825158458441099}
+    - target: {fileID: 1126907314360984259, guid: f37541b016d1de340b60dd6aac4402ee,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126907314360984259, guid: f37541b016d1de340b60dd6aac4402ee,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Unlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126907314360984259, guid: f37541b016d1de340b60dd6aac4402ee,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ColorDialPuzzleDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126907314360984259, guid: f37541b016d1de340b60dd6aac4402ee,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1126907314360984268, guid: f37541b016d1de340b60dd6aac4402ee,
         type: 3}

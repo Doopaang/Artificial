@@ -37,6 +37,6 @@ public class WasteBasket : MonoBehaviour
     public void GainPuzzlePaper()
     {
         GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER1_EATEN_APPLE);
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_PAPER);
+        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_OPEN_PUZZLE_PAPER);
     }
 }

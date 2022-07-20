@@ -1,5 +1,20 @@
 using UnityEngine;
 
+public enum EItemType
+{
+    NONE,
+    CHAPTER1_APPLE,
+    CHAPTER1_EATEN_APPLE,
+    CHAPTER1_OPEN_PUZZLE_PAPER,
+    CHAPTER1_BATTERY,
+    CHAPTER1_BATTERY_WATCH,
+    CHAPTER1_EMPTY_WATCH,
+    CHAPTER1_KEY,
+    CHAPTER1_CRESCENT_MOON,
+    CHAPTER1_BRUSH,
+    CHAPTER1_COLOR_DIAL_PUZZLE_PAPER
+}
+
 public class Item : MonoBehaviour
 {
     public EItemType itemType;

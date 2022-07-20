@@ -30,6 +30,7 @@ public class LockNumPad : PuzzleObject
 
         if (this.value == answer)
         {
+            Destroy(gameObject);
             solvedFunction.Invoke();
         }
     }

@@ -53,6 +53,7 @@ public class Ch2Puzzle1 : PuzzleObject
             return;
         }
 
+        Destroy(gameObject);
         solvedFunction.Invoke();
     }
 

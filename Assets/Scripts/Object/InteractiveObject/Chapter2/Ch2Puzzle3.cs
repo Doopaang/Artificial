@@ -19,6 +19,8 @@ public class Ch2Puzzle3 : PuzzleObject
 
         toggleList = new List<Toggle>(gridPos.GetComponentsInChildren<Toggle>());
         toggleList.Sort((A, B) => { return int.Parse(A.name).CompareTo(int.Parse(B.name)); });
+
+        ResetButton();
     }
 
     protected void OnEnable()

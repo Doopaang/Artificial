@@ -32,7 +32,19 @@ public class GameManager : Singleton<GameManager>
     {
         if(Input.GetKeyDown(KeyCode.N))
         {
-            inventory.GainItem(EItemType.CHAPTER1_CRESCENT_MOON);
+            inventory.GainItem(EItemType.CHAPTER2_BRUSH);
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            ChangeBrushColor(ref brushColor.r);
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            ChangeBrushColor(ref brushColor.g);
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ChangeBrushColor(ref brushColor.b);
         }
 
         //if (Input.GetMouseButtonDown(0))

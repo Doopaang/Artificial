@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DrawerDoor : MonoBehaviour
@@ -19,7 +17,10 @@ public class DrawerDoor : MonoBehaviour
         {
             if (GameManager.Instance.inventory.UsingItem == LockKey)
             {
+                GameManager.Instance.inventory.DeleteItem(LockKey);
                 LockKey = EItemType.NONE;
+
+                // 임시 문고리 달기
             }
         }
         else if(!isOpen)

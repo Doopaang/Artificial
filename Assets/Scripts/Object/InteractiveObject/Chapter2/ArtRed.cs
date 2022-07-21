@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ArtRed : MonoBehaviour
 {
+    [SerializeField]
+    private Transform movePos;
+
     private bool isChanged = false;
 
     public void Interact()
     {
         if(isChanged)
         {
-
+            transform.SetPositionAndRotation(movePos.position, movePos.rotation);
         }
     }
 
@@ -18,6 +21,6 @@ public class ArtRed : MonoBehaviour
     {
         isChanged = true;
 
-        // 그림 변화
+        // (미구현) 그림 변화
     }
 }

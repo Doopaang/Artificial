@@ -30,9 +30,9 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
+        if(Input.GetKeyDown(KeyCode.N))
         {
-            inventory.GainItem(EItemType.CHAPTER3_TEMP3);
+            inventory.GainItem(EItemType.CHAPTER1_CRESCENT_MOON);
         }
 
         //if (Input.GetMouseButtonDown(0))
@@ -81,6 +81,11 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void Chapter2Puzzle2Solved(Transform cover)
+    {
+        Destroy(cover.gameObject);
+    }
+
+    public void CHpater2Puzzle3Solved(Transform cover)
     {
         Destroy(cover.gameObject);
     }

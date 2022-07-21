@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Temp2 : MonoBehaviour
+public class Ch2Key : MonoBehaviour
 {
     public void Interact()
     {
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER2_KNIFE);
+        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER2_KEY);
         Destroy(gameObject);
     }
 }

@@ -12,12 +12,13 @@ public class ArtYellow : MonoBehaviour
     public void Interact()
     {
         if(!usedItem &&
-            GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER3_TEMP3)
+            GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER2_KNIFE)
         {
+            GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER2_KNIFE);
             usedItem = true;
 
-            // 임시 암전
-
+            // (미구현) 암전
+            
             red.ChangeArt();
 
             GameManager.Instance.inventory.GainItem(EItemType.CHAPTER2_KEY_RED);

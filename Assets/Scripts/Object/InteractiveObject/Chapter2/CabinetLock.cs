@@ -13,8 +13,9 @@ public class CabinetLock : MonoBehaviour
 
     public void Interact()
     {
-        if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER2_TEMP1)
+        if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER2_KEY)
         {
+            GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER2_KEY);
             CameraSystem.Instance.MoveCamera(moveCamera);
             Destroy(gameObject);
 

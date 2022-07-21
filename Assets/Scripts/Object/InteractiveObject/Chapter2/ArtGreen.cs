@@ -11,6 +11,7 @@ public class ArtGreen : MonoBehaviour
         if (!usedItem &&
             GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER2_FLOWER)
         {
+            GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER2_FLOWER);
             usedItem = true;
             GameManager.Instance.inventory.GainItem(EItemType.CHAPTER2_KEY_GREEN);
         }

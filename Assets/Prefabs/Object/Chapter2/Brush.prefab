@@ -145,7 +145,7 @@ MonoBehaviour:
   itemType: 9
   combinableItemType: 0
   combineResultItemType: 0
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}
   itemRotation: {x: 0, y: 0, z: 0, w: 0}
   itemScale: {x: 1000, y: 1000, z: 1000}
 --- !u!114 &5642355714817059271

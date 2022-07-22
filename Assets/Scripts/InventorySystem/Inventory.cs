@@ -20,6 +20,8 @@ public class Inventory : MonoBehaviour
 
     private bool bActivatedCombine;
 
+    public UsingItem usingItemUI;
+
     public EItemType UsingItem
     {
         get
@@ -49,7 +51,7 @@ public class Inventory : MonoBehaviour
 
     public void ClearItem()
     {
-        usingItem = EItemType.NONE;
+        SetUsingItem(EItemType.NONE);
     }
 
     private void ApplyItemList()
@@ -96,7 +98,7 @@ public class Inventory : MonoBehaviour
         if (!selectedSlot)
             return;
 
-        usingItem = selectedSlot.ItemType;
+        SetUsingItem(selectedSlot.ItemType);
 
         DeactiveInventory();
     }
@@ -172,7 +174,7 @@ public class Inventory : MonoBehaviour
             if (itemList[i].itemType == itemType)
             {
                 if (itemType == usingItem)
-                    usingItem = EItemType.NONE;
+                    SetUsingItem(EItemType.NONE);
 
                 itemList.RemoveAt(i);
                 ApplyItemList();
@@ -200,7 +202,7 @@ public class Inventory : MonoBehaviour
 
         DeactivateCombine();
 
-        usingItem = EItemType.NONE;
+        SetUsingItem(EItemType.NONE);
     }
 
     public void DeactiveInventory()
@@ -210,5 +212,12 @@ public class Inventory : MonoBehaviour
         selectedSlot = null;
 
         selectedImage.gameObject.SetActive(false);
+    }
+
+    private void SetUsingItem(EItemType itemType)
+    {
+        usingItem = itemType;
+
+        usingItemUI.SetItem(UsingItem);
     }
 }

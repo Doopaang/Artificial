@@ -34,18 +34,6 @@ public class GameManager : Singleton<GameManager>
         {
             inventory.GainItem(EItemType.CHAPTER2_BRUSH);
         }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            ChangeBrushColor(ref brushColor.r);
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            ChangeBrushColor(ref brushColor.g);
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ChangeBrushColor(ref brushColor.b);
-        }
 
         //if (Input.GetMouseButtonDown(0))
         //{

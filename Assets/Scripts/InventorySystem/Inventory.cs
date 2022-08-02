@@ -43,8 +43,6 @@ public class Inventory : MonoBehaviour
         slotList = GetComponentsInChildren<Slot>();
         itemList = new List<Item>();
 
-        selectedImage.rectTransform.sizeDelta = slotList[0].ItemImage.rectTransform.sizeDelta;
-
         DeactiveInventory();
         itemDetailWindow.gameObject.SetActive(false);
     }
@@ -77,8 +75,7 @@ public class Inventory : MonoBehaviour
 
         selectedSlot = newSelectedItemSlot;
         selectedImage.gameObject.SetActive(true);
-        selectedImage.gameObject.GetComponent<RectTransform>().position =
-            selectedSlot.ItemImage.gameObject.GetComponent<RectTransform>().position;
+        selectedImage.gameObject.GetComponent<RectTransform>().position = selectedSlot.ItemObject.gameObject.transform.position;
     }
 
     public void GainItem(EItemType itemType)

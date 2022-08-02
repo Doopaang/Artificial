@@ -4,36 +4,49 @@ public class DrawerDoor : MonoBehaviour
 {
     [SerializeField]
     private EItemType LockKey;
+
     [SerializeField]
     private MoveSceneCamera moveCamera;
+
     [SerializeField]
     private GameObject doorModel;
 
-    private bool isOpen = false;
+    [SerializeField]
+    private Vector3 movementVectorForClose;
 
-    public void OpenDoor()
+    [SerializeField]
+    private bool locked = true;
+
+    private bool opened = false;
+    
+
+    public void Interact()
     {
-        if (LockKey != EItemType.NONE)
+        if (LockKey != EItemType.NONE && GameManager.Instance.inventory.UsingItem == LockKey)
         {
-            if (GameManager.Instance.inventory.UsingItem == LockKey)
-            {
-                GameManager.Instance.inventory.DeleteItem(LockKey);
-                LockKey = EItemType.NONE;
+            GameManager.Instance.inventory.DeleteItem(LockKey);
+            Unlock();
+        }
+        else if (!locked)
+        {
+            TranslateDrawer();
+        }
+    }
 
-                // 임시 문고리 달기
-            }
-        }
-        else if(!isOpen)
-        {
-            isOpen = true;
-            doorModel.SetActive(false);
-        }
-        else
-        {
-            if (moveCamera != null)
-            {
-                CameraSystem.Instance.MoveCamera(moveCamera);
-            }
-        }
+    public void TranslateDrawer()
+    {
+        int translateDirection = opened ? 1 : -1;
+
+        transform.Translate(translateDirection * movementVectorForClose, Space.Self);
+
+        opened = !opened;
+    }
+
+    public void Unlock()
+    {
+        DialogueSystem.Instance.StartDialogue("UnlockDrawer");
+        GameManager.Instance.inventory.ClearItem();
+
+        locked = false;
     }
 }

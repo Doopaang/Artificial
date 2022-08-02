@@ -34,7 +34,7 @@ public class DetailWindow : MonoBehaviour
     {
         itemDetailObject = Instantiate(prefab, itemDetailPos.position, Quaternion.identity, transform);
         itemDetailObject.transform.rotation = itemDetailObject.GetComponent<Item>().itemRotation;
-        itemDetailObject.transform.localScale = itemDetailObject.GetComponent<Item>().itemScale;
+        itemDetailObject.transform.localScale = itemDetailObject.GetComponent<Item>().scaleDetail;
         itemDetailObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         ChangeLayersRecursively(itemDetailObject.transform);

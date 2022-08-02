@@ -37,9 +37,11 @@ public class Item : MonoBehaviour
     public EItemType combinableItemType;
     public EItemType combineResultItemType;
 
-    public Sprite itemSprite;
-
     public Quaternion itemRotation;
 
-    public Vector3 itemScale;
+    public Vector3 scaleDetail;
+
+    public Vector3 scaleInventory;
+
+    public GameObject itemObject;
 }

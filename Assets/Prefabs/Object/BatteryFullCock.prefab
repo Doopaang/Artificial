@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 47871561}
   - component: {fileID: 47871562}
   m_Layer: 0
-  m_Name: Day
+  m_Name: DayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 639396325}
   - component: {fileID: 639396326}
   m_Layer: 0
-  m_Name: Night
+  m_Name: NightButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,9 +267,13 @@ MonoBehaviour:
   itemType: 5
   combinableItemType: 0
   combineResultItemType: 0
-  itemSprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}
   itemRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-  itemScale: {x: 7500, y: 7500, z: 7500}
+  scaleDetail: {x: 0, y: 0, z: 0}
+  scaleInventory: {x: 0, y: 0, z: 0}
+  itemMesh: {fileID: 6788383922943872000, guid: c0caf2f80c005bc4bad02519088954fb,
+    type: 3}
+  itemMaterials: []
+  itemObject: {fileID: 392974599745453279}
 --- !u!114 &5660340974528510868
 MonoBehaviour:
   m_ObjectHideFlags: 0

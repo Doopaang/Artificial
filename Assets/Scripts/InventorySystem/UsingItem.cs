@@ -4,14 +4,18 @@ using UnityEngine.UI;
 public class UsingItem : MonoBehaviour
 {
     [SerializeField]
-    private Image spriteImage;
+    private GameObject transformObject;
+
+    private GameObject usingItemObject;
 
     public BrushUI brushUI;
 
     public void SetItem(EItemType item)
     {
-        spriteImage.sprite = GameManager.Instance.itemDictionary.Find((A) => { return A.itemType == item; }).itemSprite;
-        spriteImage.enabled = spriteImage.sprite != null;
+        usingItemObject = GameManager.Instance.itemDictionary.Find((A) => { return A.itemType == item; }).itemObject;
+
+        Instantiate(usingItemObject, transformObject.transform.position, 
+            transformObject.transform.rotation, transformObject.transform);
 
         SetSubCanvas(item, EItemType.CHAPTER2_BRUSH, brushUI.GetComponent<RectTransform>());
     }

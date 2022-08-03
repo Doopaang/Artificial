@@ -1,14 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class BrushUI : MonoBehaviour
 {
     [SerializeField]
     private Button red;
+
     [SerializeField]
     private Button green;
+
     [SerializeField]
     private Button blue;
+
+    private List<Brush> brushes = new List<Brush>();
+
+    public void AddBrush(Brush brush)
+    {
+        brushes.Add(brush);
+    }
 
     public void ClickButton(string color)
     {
@@ -49,6 +59,17 @@ public class BrushUI : MonoBehaviour
 
             default:
                 throw new System.ArgumentException();
+        }
+    }
+
+    public void ApplyBrushColor()
+    {
+        for (int i = 0; i < brushes.Count; i++)
+        {
+            if (brushes[i])
+                brushes[i].ApplyColor();
+            else
+                brushes.RemoveAt(i);
         }
     }
 }

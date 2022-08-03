@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3855158548458213901}
   - component: {fileID: -4087785384012320045}
   - component: {fileID: 2602711009105084049}
-  - component: {fileID: 6816518495205474699}
   - component: {fileID: 3221293644663025148}
   m_Layer: 0
   m_Name: CrescentMoonPicture
@@ -77,31 +76,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &6816518495205474699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6355674840235939674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf4d469f2c76f244baf054af818e6eaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ReactFirstNoneItem:
-    m_PersistentCalls:
-      m_Calls: []
-  ReactRetryNoneItem:
-    m_PersistentCalls:
-      m_Calls: []
-  ReactFirstUsingItem:
-    m_PersistentCalls:
-      m_Calls: []
-  ReactRetryUsedItem:
-    m_PersistentCalls:
-      m_Calls: []
-  necessaryItem: 0
 --- !u!114 &3221293644663025148
 MonoBehaviour:
   m_ObjectHideFlags: 0

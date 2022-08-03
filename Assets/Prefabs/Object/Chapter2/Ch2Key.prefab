@@ -147,9 +147,11 @@ MonoBehaviour:
   itemType: 22
   combinableItemType: 0
   combineResultItemType: 0
-  itemSprite: {fileID: 0}
   itemRotation: {x: 0, y: 0, z: 0, w: 0}
-  itemScale: {x: 10000, y: 10000, z: 10000}
+  scaleDetail: {x: 5000, y: 5000, z: 5000}
+  scaleInventory: {x: 5000, y: 5000, z: 5000}
+  scaleUsing: {x: 2000, y: 2000, z: 2000}
+  itemObject: {fileID: 3234893473742646920}
 --- !u!114 &2624354218792756131
 MonoBehaviour:
   m_ObjectHideFlags: 0

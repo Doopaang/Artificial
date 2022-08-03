@@ -31,7 +31,9 @@ public class Paint : MonoBehaviour
                 default:
                     throw new System.ArgumentException();
             }
+
             GameManager.Instance.inventory.usingItemUI.brushUI.UnlockButton(color);
+            GameManager.Instance.brushUI.ApplyBrushColor();
         }
     }
 }

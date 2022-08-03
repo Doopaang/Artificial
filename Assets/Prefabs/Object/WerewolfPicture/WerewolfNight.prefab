@@ -162,6 +162,11 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7689076536118222031, guid: ca67e74ec8e5ead4e9a002f8c68ea4c0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca67e74ec8e5ead4e9a002f8c68ea4c0, type: 3}
 --- !u!4 &1073672722494682478 stripped
@@ -191,6 +196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.z
       value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: -4087785384012320045, guid: 586f08c4778d56547ab7878e71302d8c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3855158548458213901, guid: 586f08c4778d56547ab7878e71302d8c,
         type: 3}
@@ -252,7 +262,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrescentMoon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6816518495205474699, guid: 586f08c4778d56547ab7878e71302d8c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 586f08c4778d56547ab7878e71302d8c, type: 3}
 --- !u!4 &7194428367852813991 stripped
 Transform:

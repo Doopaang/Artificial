@@ -99,7 +99,8 @@ MonoBehaviour:
   itemType: 4
   combinableItemType: 6
   combineResultItemType: 5
-  itemRotation: {x: 0, y: 0, z: 0, w: 0}
-  scaleDetail: {x: 0, y: 0, z: 0}
+  itemRotation: {x: -0.25881904, y: 0, z: 0, w: 0.9659258}
+  scaleDetail: {x: 25000, y: 25000, z: 25000}
   scaleInventory: {x: 5000, y: 5000, z: 5000}
+  scaleUsing: {x: 4000, y: 4000, z: 4000}
   itemObject: {fileID: 1728232509825626471}

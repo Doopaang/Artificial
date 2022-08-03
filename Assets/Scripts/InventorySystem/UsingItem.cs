@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UsingItem : MonoBehaviour
 {
@@ -12,10 +11,20 @@ public class UsingItem : MonoBehaviour
 
     public void SetItem(EItemType item)
     {
-        usingItemObject = GameManager.Instance.itemDictionary.Find((A) => { return A.itemType == item; }).itemObject;
+        if (item == EItemType.NONE)
+            return;
 
-        Instantiate(usingItemObject, transformObject.transform.position, 
-            transformObject.transform.rotation, transformObject.transform);
+        Item newItemData = GameManager.Instance.inventory.SearchItemData(item);
+
+        if (usingItemObject)
+            Destroy(usingItemObject);
+
+        usingItemObject = Instantiate(newItemData.itemObject, 
+            transformObject.transform.position, newItemData.itemRotation, transformObject.transform);
+
+        usingItemObject.layer = LayerMask.NameToLayer("UI");
+        usingItemObject.transform.localScale = newItemData.scaleUsing;
+        usingItemObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         SetSubCanvas(item, EItemType.CHAPTER2_BRUSH, brushUI.GetComponent<RectTransform>());
     }

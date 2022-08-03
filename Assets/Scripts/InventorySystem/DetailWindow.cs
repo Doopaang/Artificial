@@ -36,6 +36,9 @@ public class DetailWindow : MonoBehaviour
         itemDetailObject.transform.rotation = itemDetailObject.GetComponent<Item>().itemRotation;
         itemDetailObject.transform.localScale = itemDetailObject.GetComponent<Item>().scaleDetail;
         itemDetailObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        
+        if (itemDetailObject.GetComponent<Collider>())
+            itemDetailObject.GetComponent<Collider>().enabled = false;
 
         ChangeLayersRecursively(itemDetailObject.transform);
     }
@@ -43,6 +46,7 @@ public class DetailWindow : MonoBehaviour
     public void ChangeLayersRecursively(Transform trans)
     {
         trans.gameObject.layer = LayerMask.NameToLayer("UI");
+
         foreach (Transform child in trans)
         {
             ChangeLayersRecursively(child);

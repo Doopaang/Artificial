@@ -134,16 +134,7 @@ public class Inventory : MonoBehaviour
         if (itemType == EItemType.NONE)
             return;
 
-        List<Item> itemDictionary = GameManager.Instance.itemDictionary;
-
-        for (int i = 0; i < itemDictionary.Count; i++)
-        {
-            if (itemDictionary[i].itemType == itemType)
-            {
-                itemDetailWindow.SetDetailObject(itemDictionary[i].gameObject);
-                break;
-            }
-        }
+        itemDetailWindow.SetDetailObject(SearchItemData(itemType).gameObject);
 
         itemDetailWindow.gameObject.SetActive(true);
     }

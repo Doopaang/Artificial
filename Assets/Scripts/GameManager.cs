@@ -5,6 +5,8 @@ public class GameManager : Singleton<GameManager>
 {
     public Inventory inventory;
 
+    public BrushUI brushUI;
+
     public List<Item> itemDictionary;
 
     private bool isDaytime = true;
@@ -12,6 +14,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private HousePicture housePicture;
 
+    [SerializeField]
+    private WerewolfPicture werewolfPicture;
 
     [HideInInspector]
     public Color brushColor = Color.white;
@@ -28,26 +32,17 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    private void Start()
+    {
+        //brushUI.gameObject.SetActive(false);
+    }
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.N))
         {
             inventory.GainItem(EItemType.CHAPTER2_BRUSH);
         }
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Vector3 v = new Vector3();
-        //    v.x = Input.mousePosition.x / 1280.0f;
-        //    v.y = Input.mousePosition.y / 720.0f;
-
-        //    Ray ray = GameObject.Find("UI Camera").GetComponent<Camera>().ViewportPointToRay(v);
-        //    RaycastHit hit;
-        //    if (Physics.Raycast(ray, out hit))
-        //        print("I'm looking at " + hit.transform.name);
-        //    else
-        //        print("I'm looking at nothing!");
-        //}
     }
 
     public void ChangeToDaytime()
@@ -56,6 +51,9 @@ public class GameManager : Singleton<GameManager>
 
         if (housePicture)
             housePicture.ChangePicture(EHousePictureType.Daytime);
+
+        if (werewolfPicture)
+            werewolfPicture.ChangePicture(EWerewolfPictureType.Daytime);
     }
 
     public void ChangeToNight()
@@ -64,6 +62,9 @@ public class GameManager : Singleton<GameManager>
 
         if (housePicture)
             housePicture.ChangePicture(EHousePictureType.Night);
+
+        if (werewolfPicture)
+            werewolfPicture.ChangePicture(EWerewolfPictureType.Night);
     }
 
     public void ChangeBrushColor(ref float brush)
@@ -72,7 +73,10 @@ public class GameManager : Singleton<GameManager>
         {
             brushColor = Color.black;
         }
+
         brush = 1.0f;
+
+        brushUI.ApplyBrushColor();
     }
 
     public void Chapter2Puzzle1Solved(Transform cover)

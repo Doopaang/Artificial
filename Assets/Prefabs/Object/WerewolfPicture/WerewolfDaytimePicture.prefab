@@ -171,6 +171,11 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7689076536118222031, guid: ca67e74ec8e5ead4e9a002f8c68ea4c0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8744358129386971792, guid: ca67e74ec8e5ead4e9a002f8c68ea4c0,
         type: 3}
       propertyPath: ReactFirstNoneItem.m_PersistentCalls.m_Calls.Array.size

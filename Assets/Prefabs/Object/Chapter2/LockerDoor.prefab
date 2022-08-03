@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2724118467372521310
+--- !u!1 &3108012765134340640
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6203864324830590933}
-  - component: {fileID: 6875813998292812538}
+  - component: {fileID: 5777817558666363066}
+  - component: {fileID: 5827753586862382081}
   m_Layer: 0
   m_Name: LockerDoorCamera
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6203864324830590933
+--- !u!4 &5777817558666363066
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724118467372521310}
+  m_GameObject: {fileID: 3108012765134340640}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3766374671311837627}
+  m_Father: {fileID: 3862600841725614651}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &6875813998292812538
+--- !u!114 &5827753586862382081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724118467372521310}
+  m_GameObject: {fileID: 3108012765134340640}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6f4032556e99b74382a251154c24b63, type: 3}
@@ -51,7 +51,7 @@ MonoBehaviour:
   back: {fileID: 0}
   colliders: []
   canvases: []
---- !u!1 &3766374671311837624
+--- !u!1 &4403735459225929673
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,12 +59,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3766374671311837627}
-  - component: {fileID: 3766374671311837628}
-  - component: {fileID: 3766374671311837629}
-  - component: {fileID: 5810465266363020751}
-  - component: {fileID: 6188379503711135872}
-  - component: {fileID: 4013456789319278893}
+  - component: {fileID: 3862600841725614651}
+  - component: {fileID: 7452313435428268902}
+  - component: {fileID: 125237445417703355}
   m_Layer: 0
   m_Name: LockerDoor
   m_TagString: Untagged
@@ -72,37 +69,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3766374671311837627
+--- !u!4 &3862600841725614651
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3766374671311837624}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 4403735459225929673}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.22290027, y: 0.31088603, z: 0.012400932}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6203864324830590933}
+  - {fileID: 5777817558666363066}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3766374671311837628
+--- !u!33 &7452313435428268902
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3766374671311837624}
-  m_Mesh: {fileID: 266277822639101992, guid: 9acdc5c78116ef342b9114ad1f225b0f, type: 3}
---- !u!23 &3766374671311837629
+  m_GameObject: {fileID: 4403735459225929673}
+  m_Mesh: {fileID: -2169594602857297319, guid: 1de5cc8c91f8493449eb6e17ec8b966c, type: 3}
+--- !u!23 &125237445417703355
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3766374671311837624}
+  m_GameObject: {fileID: 4403735459225929673}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -116,8 +113,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78da8f5693b580a4c868f000f77f903a, type: 2}
-  - {fileID: -1134714066672644336, guid: cb46186350674af4dbd71cb0d9bf8661, type: 3}
+  - {fileID: -3858958830114391915, guid: 1de5cc8c91f8493449eb6e17ec8b966c, type: 3}
+  - {fileID: -1620240175538815266, guid: 1de5cc8c91f8493449eb6e17ec8b966c, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,62 +136,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5810465266363020751
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3766374671311837624}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.36699975, y: 0.2708847, z: 0.04}
-  m_Center: {x: 0, y: 0, z: 0.2}
---- !u!114 &6188379503711135872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3766374671311837624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4013456789319278893}
-          m_TargetAssemblyTypeName: DrawerDoor, Assembly-CSharp
-          m_MethodName: Interact
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &4013456789319278893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3766374671311837624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8619af3ca7c0fae4a99fb0a897f130f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LockKey: 0
-  moveCamera: {fileID: 6875813998292812538}
-  doorModel: {fileID: 3766374671311837624}
-  movementVectorForClose: {x: 0, y: 0, z: -2}
-  locked: 1

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1308354780232575032}
   - component: {fileID: 8946446431855874756}
   m_Layer: 0
-  m_Name: RightDoor
+  m_Name: RightDoorDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668617911520473383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.054731425, y: 0, z: 0.064468235}
+  m_LocalPosition: {x: 0.055, y: 0, z: 0.1444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668617911520473383}
-  m_Mesh: {fileID: 7031866598743478148, guid: 39bc4dccad8fca04f9cac058c678cef5, type: 3}
+  m_Mesh: {fileID: 963259443247018926, guid: b5f3e4fc70ec81b449d13fd42c2da2d1, type: 3}
 --- !u!23 &8414647468150768646
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63,8 +63,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4125471728267972529, guid: 39bc4dccad8fca04f9cac058c678cef5, type: 3}
-  - {fileID: 5561349426305759274, guid: 39bc4dccad8fca04f9cac058c678cef5, type: 3}
+  - {fileID: -6271897200390792742, guid: b5f3e4fc70ec81b449d13fd42c2da2d1, type: 3}
+  - {fileID: 3655396658102750768, guid: b5f3e4fc70ec81b449d13fd42c2da2d1, type: 3}
+  - {fileID: 855434228054878152, guid: b5f3e4fc70ec81b449d13fd42c2da2d1, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 5020079805669582277}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8574812245364182244}
@@ -176,6 +177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftDoor: {fileID: 8724018881317226393}
   rightDoor: {fileID: 1668617911520473383}
+  CabinetCamera: {fileID: 0}
+  dialLock: {fileID: 0}
 --- !u!1 &8724018881317226393
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +193,7 @@ GameObject:
   - component: {fileID: 7154861878669361493}
   - component: {fileID: 5253448115086310095}
   m_Layer: 0
-  m_Name: LeftDoor
+  m_Name: LeftDoorDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8724018881317226393}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.054731425, y: 0, z: -0.07188577}
+  m_LocalPosition: {x: 0.055, y: 0, z: -0.1404}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -218,7 +221,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8724018881317226393}
-  m_Mesh: {fileID: -2037169236616178925, guid: 39bc4dccad8fca04f9cac058c678cef5, type: 3}
+  m_Mesh: {fileID: -4094775912280930374, guid: b5f3e4fc70ec81b449d13fd42c2da2d1, type: 3}
 --- !u!23 &7350405748232302109
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -239,8 +242,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4125471728267972529, guid: 39bc4dccad8fca04f9cac058c678cef5, type: 3}
-  - {fileID: 5561349426305759274, guid: 39bc4dccad8fca04f9cac058c678cef5, type: 3}
+  - {fileID: -6271897200390792742, guid: b5f3e4fc70ec81b449d13fd42c2da2d1, type: 3}
+  - {fileID: 3655396658102750768, guid: b5f3e4fc70ec81b449d13fd42c2da2d1, type: 3}
+  - {fileID: 855434228054878152, guid: b5f3e4fc70ec81b449d13fd42c2da2d1, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

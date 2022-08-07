@@ -1138,6 +1138,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: a07f728039abeab44ac9220877dacf6d, type: 2}
+    - target: {fileID: 4013456789319278893, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: LockKey
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48483a3e5eab8440aa6367e60c37b87, type: 3}
 --- !u!4 &1045308308833445757 stripped
@@ -1398,6 +1403,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 0a416a361af813b4eb31f6f03682a44a, type: 2}
+    - target: {fileID: 4013456789319278893, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: LockKey
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48483a3e5eab8440aa6367e60c37b87, type: 3}
 --- !u!65 &747428510449914309 stripped
@@ -1490,6 +1500,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 57f36db5b5a488244a9995d27b4a9ea7, type: 2}
+    - target: {fileID: 4013456789319278893, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: LockKey
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48483a3e5eab8440aa6367e60c37b87, type: 3}
 --- !u!65 &4452502792495939516 stripped
@@ -1583,6 +1598,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5815069081923033071, guid: 1de5cc8c91f8493449eb6e17ec8b966c,
         type: 3}
+    - target: {fileID: 4013456789319278893, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: LockKey
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48483a3e5eab8440aa6367e60c37b87, type: 3}
 --- !u!65 &2906701407992019133 stripped

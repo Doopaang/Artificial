@@ -18,7 +18,6 @@ public class DrawerDoor : MonoBehaviour
     private bool locked = true;
 
     private bool opened = false;
-    
 
     public void Interact()
     {

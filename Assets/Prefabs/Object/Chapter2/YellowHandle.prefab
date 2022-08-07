@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5567045807449887845
+--- !u!1 &7737917203045487382
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6453154814679147240}
-  - component: {fileID: -6300671579550687011}
-  - component: {fileID: 2235114244870092558}
-  - component: {fileID: 2910482344321327249}
-  - component: {fileID: 7421955680939660000}
-  - component: {fileID: 4653321388596581950}
-  - component: {fileID: 2849403431472196292}
+  - component: {fileID: 8450205942335472839}
+  - component: {fileID: 2365126988791540828}
+  - component: {fileID: 1612103353653108086}
+  - component: {fileID: 4203041618085827112}
+  - component: {fileID: 7445336804838033532}
+  - component: {fileID: 7367720824609474255}
+  - component: {fileID: -6951397357243987163}
   m_Layer: 0
-  m_Name: ColorDialPuzzlePaper
+  m_Name: YellowHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6453154814679147240
+--- !u!4 &8450205942335472839
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5567045807449887845}
+  m_GameObject: {fileID: 7737917203045487382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &-6300671579550687011
+--- !u!23 &2365126988791540828
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5567045807449887845}
+  m_GameObject: {fileID: 7737917203045487382}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1483ebd34a3a98e41a30e538eb1acacf, type: 2}
+  - {fileID: 2100000, guid: a07f728039abeab44ac9220877dacf6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,34 +79,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2235114244870092558
+--- !u!33 &1612103353653108086
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5567045807449887845}
-  m_Mesh: {fileID: 361570060702241720, guid: c0b5073ed89b86345bbbc7d24f637888, type: 3}
---- !u!65 &2910482344321327249
+  m_GameObject: {fileID: 7737917203045487382}
+  m_Mesh: {fileID: 4914040294686772366, guid: 1de5cc8c91f8493449eb6e17ec8b966c, type: 3}
+--- !u!65 &4203041618085827112
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5567045807449887845}
+  m_GameObject: {fileID: 7737917203045487382}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.59999996, y: 0.79999995, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0.00029999999}
---- !u!114 &7421955680939660000
+  m_Size: {x: 0.041104812, y: 0.04523163, z: 0.047358893}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7445336804838033532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5567045807449887845}
+  m_GameObject: {fileID: 7737917203045487382}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
@@ -117,8 +117,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2849403431472196292}
-          m_TargetAssemblyTypeName: ColorDialPuzzlePaper, Assembly-CSharp
+        - m_Target: {fileID: 7367720824609474255}
+          m_TargetAssemblyTypeName: RedHandle, Assembly-CSharp
           m_MethodName: Interact
           m_Mode: 1
           m_Arguments:
@@ -129,35 +129,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &4653321388596581950
+--- !u!114 &7367720824609474255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5567045807449887845}
+  m_GameObject: {fileID: 7737917203045487382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d08b55936a223e45b631ab20a5322cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6951397357243987163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737917203045487382}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb7094d93c229304a959e3711d1ee167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 10
+  itemType: 12
   combinableItemType: 0
   combineResultItemType: 0
-  itemRotation: {x: 0.08189959, y: -0.3407187, z: 0.9361168, w: 0.02980898}
-  scaleDetail: {x: 800, y: 800, z: 800}
-  scaleInventory: {x: 500, y: 500, z: 500}
-  scaleUsing: {x: 300, y: 300, z: 300}
-  itemObject: {fileID: 5567045807449887845}
---- !u!114 &2849403431472196292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5567045807449887845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ec7ea71c4073840b0e1f273cbf63ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  itemRotation: {x: 0, y: 0, z: 0, w: 0}
+  scaleDetail: {x: 1000, y: 1000, z: 1000}
+  scaleInventory: {x: 1000, y: 1000, z: 1000}
+  scaleUsing: {x: 1000, y: 1000, z: 1000}
+  itemObject: {fileID: 7737917203045487382}

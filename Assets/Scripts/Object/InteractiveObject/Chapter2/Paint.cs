@@ -12,7 +12,7 @@ public class Paint : MonoBehaviour
 
     public void Interact()
     {
-        if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER2_BRUSH)
+        if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_BRUSH)
         {
             switch(color)
             {
@@ -32,7 +32,7 @@ public class Paint : MonoBehaviour
                     throw new System.ArgumentException();
             }
 
-            GameManager.Instance.inventory.usingItemUI.brushUI.UnlockButton(color);
+            GameManager.Instance.Inventory.UsingItemUI.brushUI.UnlockButton(color);
             GameManager.Instance.brushUI.ApplyBrushColor();
         }
     }

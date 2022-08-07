@@ -94,7 +94,7 @@ BoxCollider:
   m_GameObject: {fileID: 7188757596061106351}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   combinableItemType: 0
   combineResultItemType: 0
   itemRotation: {x: 0, y: 0, z: 0, w: 0}
-  scaleDetail: {x: 5000, y: 5000, z: 5000}
-  scaleInventory: {x: 5000, y: 5000, z: 5000}
-  scaleUsing: {x: 2000, y: 2000, z: 2000}
+  scaleDetail: {x: 500, y: 500, z: 25}
+  scaleInventory: {x: 500, y: 500, z: 25}
+  scaleUsing: {x: 200, y: 200, z: 10}
   itemObject: {fileID: 7188757596061106351}

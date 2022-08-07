@@ -2,8 +2,11 @@ using UnityEngine;
 
 public enum EWerewolfPictureType
 {
-    Daytime,
-    Night
+    Day,
+    CrescentMoonNight,
+    Night,
+    FullMoonNight,
+    Werewolf
 }
 
 public class WerewolfPicture : MonoBehaviour
@@ -12,6 +15,8 @@ public class WerewolfPicture : MonoBehaviour
     private GameObject[] pictures;
 
     private MoveSceneCamera moveSceneCamera;
+
+    private bool isGainCrescentMoon = false;
 
     private void Start()
     {
@@ -22,6 +27,28 @@ public class WerewolfPicture : MonoBehaviour
     {
         if (moveSceneCamera)
             CameraSystem.Instance.MoveCamera(moveSceneCamera);
+    }
+
+    public void SetGainCrescentMoon()
+    {
+        isGainCrescentMoon = true;
+    }
+
+    public void ChangeToDay()
+    {
+        ChangePicture(EWerewolfPictureType.Day);
+    }
+
+    public void ChangeToNight()
+    {
+        if (isGainCrescentMoon)
+        {
+            ChangePicture(EWerewolfPictureType.Night);
+        }
+        else
+        {
+            ChangePicture(EWerewolfPictureType.CrescentMoonNight);
+        }
     }
 
     public void ChangePicture(EWerewolfPictureType werePictureType)

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ArtGreen : MonoBehaviour
@@ -9,11 +7,11 @@ public class ArtGreen : MonoBehaviour
     public void Interact()
     {
         if (!usedItem &&
-            GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER2_FLOWER)
+            GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_FLOWER)
         {
-            GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER2_FLOWER);
+            GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_FLOWER);
             usedItem = true;
-            GameManager.Instance.inventory.GainItem(EItemType.CHAPTER2_KEY_GREEN);
+            GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KEY_GREEN);
         }
     }
 }

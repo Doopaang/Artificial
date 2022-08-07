@@ -42,8 +42,8 @@ public class HungryChildPicture : MonoBehaviour
 
     public void GainEatenApple()
     {
-        GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER1_APPLE);
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_EATEN_APPLE);
+        GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_APPLE);
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_EATEN_APPLE);
 
         childPicture.ChangeToFullChildPicture();
     }

@@ -9,11 +9,11 @@ public class BookPos : MonoBehaviour
 
     public void Interact(int num)
     {
-        EItemType usingItem = GameManager.Instance.inventory.UsingItem;
+        EItemType usingItem = GameManager.Instance.Inventory.UsingItem;
 
         if (book != EItemType.NONE)
         {
-            GameManager.Instance.inventory.GainItem(book);
+            GameManager.Instance.Inventory.GainItem(book);
             book = EItemType.NONE;
             Destroy(bookObject);
         }
@@ -21,7 +21,7 @@ public class BookPos : MonoBehaviour
             usingItem <= EItemType.CHAPTER2_BOOK5)
         {
             book = usingItem;
-            GameManager.Instance.inventory.DeleteItem(usingItem);
+            GameManager.Instance.Inventory.DeleteItem(usingItem);
 
             List<Item> itemDictionary = GameManager.Instance.itemDictionary;
             foreach(Item item in itemDictionary)

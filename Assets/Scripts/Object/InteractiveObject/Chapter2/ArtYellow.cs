@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ArtYellow : MonoBehaviour
@@ -12,16 +10,14 @@ public class ArtYellow : MonoBehaviour
     public void Interact()
     {
         if(!usedItem &&
-            GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER2_KNIFE)
+            GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KNIFE)
         {
-            GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER2_KNIFE);
+            GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_KNIFE);
             usedItem = true;
-
-            // (미구현) 암전
             
             red.ChangeArt();
 
-            GameManager.Instance.inventory.GainItem(EItemType.CHAPTER2_KEY_RED);
+            GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KEY_RED);
         }
     }
 }

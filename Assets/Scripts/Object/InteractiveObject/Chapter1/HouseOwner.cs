@@ -33,7 +33,7 @@ public class HouseOwner : MonoBehaviour
         housePicture.UnlockGate();
 
         DialogueSystem.Instance.StartDialogue("OpenGate");
-        GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER1_KEY);
-        gameObject.SetActive(false);
+        GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_KEY);
+        housePicture.ChangePicture(EHousePictureType.Inside);
     }
 }

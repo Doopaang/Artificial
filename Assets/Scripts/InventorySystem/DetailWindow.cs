@@ -10,6 +10,14 @@ public class DetailWindow : MonoBehaviour
 
     private GameObject itemDetailObject;
 
+    public GameObject ItemDetailObject
+    {
+        get
+        {
+            return itemDetailObject;
+        }
+    }
+
     void Update()
     {
         if (Input.GetMouseButton(0))

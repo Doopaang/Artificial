@@ -11,7 +11,7 @@ public class Drawer : MonoBehaviour
 
     public void Interact()
     {
-        if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER1_KEY)
+        if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER1_KEY)
         {
             Unlock();
         }
@@ -33,7 +33,7 @@ public class Drawer : MonoBehaviour
     public void Unlock()
     {
         DialogueSystem.Instance.StartDialogue("UnlockDrawer");
-        GameManager.Instance.inventory.ClearItem();
+        GameManager.Instance.Inventory.ClearItem();
 
         locked = false;
     }

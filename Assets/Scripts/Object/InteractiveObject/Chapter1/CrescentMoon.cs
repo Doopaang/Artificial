@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class CrescentMoon : MonoBehaviour
 {
-    private bool gainCrescentMoon = false;
+    [SerializeField]
+    private WerewolfPicture wereWolfPicture;
 
     public void Interact()
     {
-        if (gainCrescentMoon)
-            return;
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_CRESCENT_MOON);
 
-        gainCrescentMoon = true;
-
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_CRESCENT_MOON);
+        wereWolfPicture.SetGainCrescentMoon();
+        wereWolfPicture.ChangeToNight();
     }
 }

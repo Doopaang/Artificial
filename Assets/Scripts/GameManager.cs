@@ -3,13 +3,8 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public Inventory inventory;
-
-    public BrushUI brushUI;
-
-    public List<Item> itemDictionary;
-
-    private bool isDaytime = true;
+    [SerializeField]
+    private Inventory inventory;
 
     [SerializeField]
     private HousePicture housePicture;
@@ -19,6 +14,12 @@ public class GameManager : Singleton<GameManager>
 
     [HideInInspector]
     public Color brushColor = Color.white;
+
+    public BrushUI brushUI;
+
+    public List<Item> itemDictionary;
+
+    private bool isDaytime = true;
 
     public bool IsDaytime
     {
@@ -32,9 +33,17 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    public Inventory Inventory
+    {
+        get
+        {
+            return inventory;
+        }
+    }
+
     private void Start()
     {
-        //brushUI.gameObject.SetActive(false);
+        brushUI.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -50,10 +59,10 @@ public class GameManager : Singleton<GameManager>
         isDaytime = true;
 
         if (housePicture)
-            housePicture.ChangePicture(EHousePictureType.Daytime);
+            housePicture.ChangeToDay();
 
         if (werewolfPicture)
-            werewolfPicture.ChangePicture(EWerewolfPictureType.Daytime);
+            werewolfPicture.ChangeToDay();
     }
 
     public void ChangeToNight()
@@ -61,10 +70,10 @@ public class GameManager : Singleton<GameManager>
         isDaytime = false;
 
         if (housePicture)
-            housePicture.ChangePicture(EHousePictureType.Night);
+            housePicture.ChangeToNight();
 
         if (werewolfPicture)
-            werewolfPicture.ChangePicture(EWerewolfPictureType.Night);
+            werewolfPicture.ChangeToNight();
     }
 
     public void ChangeBrushColor(ref float brush)

@@ -28,7 +28,7 @@ public class Slot : MonoBehaviour
 
     public void ChangeItem(EItemType newItemType)
     {
-        Item newItemData = GameManager.Instance.inventory.SearchItemData(newItemType);
+        Item newItemData = GameManager.Instance.Inventory.SearchItemData(newItemType);
 
         if (itemType != EItemType.NONE)
         {
@@ -58,7 +58,7 @@ public class Slot : MonoBehaviour
         if (itemType == EItemType.NONE)
             return;
 
-        Inventory inventory = GameManager.Instance.inventory;
+        Inventory inventory = GameManager.Instance.Inventory;
 
         if (!inventory.IsActivatedCombine)
         {

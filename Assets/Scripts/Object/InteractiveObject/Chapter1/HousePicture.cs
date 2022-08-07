@@ -41,16 +41,30 @@ public class HousePicture : MonoBehaviour
         gateLocked = false;
     }
 
-    public void ChangePicture(EHousePictureType housePictureType)
+    public void ChangeToDay()
     {
-        if ((housePictureType == EHousePictureType.Daytime ||
-            housePictureType == EHousePictureType.Night) && 
-            (pictures[(int)EHousePictureType.Inside].activeSelf || 
-            pictures[(int)EHousePictureType.DicePuzzle].activeSelf))
+        if (pictures[(int)EHousePictureType.Inside].activeSelf ||
+            pictures[(int)EHousePictureType.DicePuzzle].activeSelf)
         {
             return;
         }
 
+        ChangePicture(EHousePictureType.Daytime);
+    }
+
+    public void ChangeToNight()
+    {
+        if (pictures[(int)EHousePictureType.Inside].activeSelf ||
+            pictures[(int)EHousePictureType.DicePuzzle].activeSelf)
+        {
+            return;
+        }
+
+        ChangePicture(EHousePictureType.Night);
+    }
+
+    public void ChangePicture(EHousePictureType housePictureType)
+    {
         for (int i = 0; i < pictures.Length; i++)
         {
             if (i == (int)housePictureType)

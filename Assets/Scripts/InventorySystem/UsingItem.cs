@@ -9,12 +9,20 @@ public class UsingItem : MonoBehaviour
 
     public BrushUI brushUI;
 
+    public GameObject UsingItemObject
+    {
+        get
+        {
+            return usingItemObject;
+        }
+    }
+
     public void SetItem(EItemType item)
     {
         if (item == EItemType.NONE)
             return;
 
-        Item newItemData = GameManager.Instance.inventory.SearchItemData(item);
+        Item newItemData = GameManager.Instance.Inventory.SearchItemData(item);
 
         if (usingItemObject)
             Destroy(usingItemObject);

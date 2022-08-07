@@ -24,7 +24,7 @@ public class ReactInteraction : MonoBehaviour
     {
         if (!usedItem && 
             necessaryItem != EItemType.NONE &&
-            GameManager.Instance.inventory.UsingItem == necessaryItem)
+            GameManager.Instance.Inventory.UsingItem == necessaryItem)
         {
             usedItem = true;
             ReactFirstUsingItem.Invoke();

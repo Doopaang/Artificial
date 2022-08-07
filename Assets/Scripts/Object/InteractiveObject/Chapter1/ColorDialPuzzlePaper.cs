@@ -4,7 +4,7 @@ public class ColorDialPuzzlePaper : MonoBehaviour
 {
     public void Interact()
     {
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_COLOR_DIAL_PUZZLE_PAPER);
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_COLOR_DIAL_PUZZLE_PAPER);
         gameObject.SetActive(false);
     }
 }

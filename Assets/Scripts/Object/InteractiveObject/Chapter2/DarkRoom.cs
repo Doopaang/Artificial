@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DarkRoom : MonoBehaviour
@@ -9,12 +7,10 @@ public class DarkRoom : MonoBehaviour
     public void Interact()
     {
         if (!usedItem &&
-            GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER2_FLASHLIGHT)
+            GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_FLASHLIGHT)
         {
-            GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER2_FLASHLIGHT);
+            GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_FLASHLIGHT);
             usedItem = true;
-
-            // (미구현) 방 밝히기
 
             Destroy(GetComponent<Collider>());
         }

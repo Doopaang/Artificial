@@ -9,7 +9,7 @@ public class Clock : MonoBehaviour
 
     public void GainClock()
     {
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_EMPTY_WATCH);
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_EMPTY_WATCH);
         gameObject.SetActive(false);
     }
 }

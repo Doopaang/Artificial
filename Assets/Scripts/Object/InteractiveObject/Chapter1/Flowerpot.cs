@@ -33,6 +33,6 @@ public class Flowerpot : MonoBehaviour
 
     public void GainKey()
     {
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_KEY);
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_KEY);
     }
 }

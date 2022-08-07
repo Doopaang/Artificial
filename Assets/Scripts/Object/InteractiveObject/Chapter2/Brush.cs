@@ -11,7 +11,7 @@ public class Brush : MonoBehaviour
 
     public void Interect()
     {
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER2_BRUSH);
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_BRUSH);
         Destroy(gameObject);
     }
 

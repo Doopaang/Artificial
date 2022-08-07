@@ -4,7 +4,7 @@ public class IO1LockKey : MonoBehaviour
 {
     protected void Interact()
     {
-        GameManager.Instance.inventory.DeleteItem(EItemType.CHAPTER1_KEY);
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER1_BATTERY);
+        GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_KEY);
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_BATTERY);
     }
 }

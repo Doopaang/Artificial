@@ -93,12 +93,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5663367793619857167}
-  - component: {fileID: 8965637092433061379}
   - component: {fileID: 8077855397438125863}
   - component: {fileID: 7929988810657417756}
   - component: {fileID: 2405976483493909472}
   - component: {fileID: 2214350358654372524}
   - component: {fileID: 3296795924886730723}
+  - component: {fileID: 5316055066071466481}
   m_Layer: 0
   m_Name: WasteBasket
   m_TagString: Untagged
@@ -122,20 +122,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &8965637092433061379
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9055153684640048432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.2
-  m_Height: 4.5
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8077855397438125863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,3 +287,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9055153684640048432}
   m_Mesh: {fileID: -8545447256379345787, guid: 1cb2511f6c1a86d439e0652376ca3d1d, type: 3}
+--- !u!136 &5316055066071466481
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9055153684640048432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.01
+  m_Height: 0.04
+  m_Direction: 1
+  m_Center: {x: -0.0000031418167, y: 0, z: 0}

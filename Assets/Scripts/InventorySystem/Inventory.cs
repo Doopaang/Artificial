@@ -18,9 +18,10 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private DetailWindow itemDetailWindow;
 
-    private bool bActivatedCombine;
+    [SerializeField]
+    private UsingItem usingItemUI;
 
-    public UsingItem usingItemUI;
+    private bool bActivatedCombine;
 
     public EItemType UsingItem
     {
@@ -35,6 +36,14 @@ public class Inventory : MonoBehaviour
         get
         {
             return bActivatedCombine;
+        }
+    }
+
+    public UsingItem UsingItemUI
+    {
+        get
+        {
+            return usingItemUI;
         }
     }
 
@@ -162,7 +171,10 @@ public class Inventory : MonoBehaviour
             if (itemList[i].itemType == itemType)
             {
                 if (itemType == usingItem)
+                {
                     SetUsingItem(EItemType.NONE);
+                    Destroy(GameManager.Instance.Inventory.UsingItemUI.UsingItemObject);
+                }
 
                 itemList.RemoveAt(i);
                 ApplyItemList();

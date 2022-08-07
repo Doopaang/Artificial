@@ -14,9 +14,10 @@ public class CabinetDoor : MonoBehaviour
     [SerializeField]
     private Lock dialLock;
 
-    private bool opened = false;
-
+    [SerializeField]
     private bool locked = true;
+
+    private bool opened = false;
 
     public void Interact()
     {
@@ -27,7 +28,7 @@ public class CabinetDoor : MonoBehaviour
 
         int rotateDirection = opened ? 1 : -1;
 
-        leftDoor.transform.Rotate(new Vector3(0.0f, rotateDirection * 90.0f, 0.0f));
+        leftDoor.transform.Rotate(new Vector3(0.0f, rotateDirection * -90.0f, 0.0f));
         rightDoor.transform.Rotate(new Vector3(0.0f, rotateDirection * 90.0f, 0.0f));
 
         opened = !opened;

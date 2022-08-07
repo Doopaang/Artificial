@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1391993792019702549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 218586843159131735}
@@ -99,8 +99,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.11193024, y: 0.14506891, z: 0.22379777}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.11193024, y: 0.2, z: 0.22379777}
+  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!114 &3296995272767351677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   down: {fileID: 0}
   back: {fileID: 0}
   colliders:
-  - {fileID: 4851025250813461928}
+  - {fileID: 7675199044968126660}
   - {fileID: 2232207375841731621}
   canvases: []
 --- !u!1001 &1807544756520484179
@@ -205,7 +205,7 @@ PrefabInstance:
     - target: {fileID: 1011830183388725773, guid: 5d07a731f9fe7024a9d4e6ff4df47664,
         type: 3}
       propertyPath: movementVectorForClose.x
-      value: 5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1881699743664900868, guid: 5d07a731f9fe7024a9d4e6ff4df47664,
         type: 3}
@@ -303,6 +303,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e46a7277a5a3d29409dcbfa2976c1c8e, type: 2}
+    - target: {fileID: 6505447061656844539, guid: 5d07a731f9fe7024a9d4e6ff4df47664,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768097264229424307, guid: 5d07a731f9fe7024a9d4e6ff4df47664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00144
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328977313336911255, guid: 5d07a731f9fe7024a9d4e6ff4df47664,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d07a731f9fe7024a9d4e6ff4df47664, type: 3}
 --- !u!4 &218586843159131735 stripped
@@ -317,9 +332,9 @@ BoxCollider:
     type: 3}
   m_PrefabInstance: {fileID: 1807544756520484179}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &4851025250813461928 stripped
+--- !u!65 &7675199044968126660 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 6505447061656844539, guid: 5d07a731f9fe7024a9d4e6ff4df47664,
+  m_CorrespondingSourceObject: {fileID: 8328977313336911255, guid: 5d07a731f9fe7024a9d4e6ff4df47664,
     type: 3}
   m_PrefabInstance: {fileID: 1807544756520484179}
   m_PrefabAsset: {fileID: 0}

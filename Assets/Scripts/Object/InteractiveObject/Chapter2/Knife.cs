@@ -6,7 +6,7 @@ public class Knife : MonoBehaviour
 {
     public void Interact()
     {
-        GameManager.Instance.inventory.GainItem(EItemType.CHAPTER2_KNIFE);
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KNIFE);
         Destroy(gameObject);
     }
 }

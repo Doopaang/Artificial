@@ -21,7 +21,7 @@ public class Ch2Puzzle2 : PuzzleObject
 
     public void ClickButton(Button button)
     {
-        if (GameManager.Instance.inventory.UsingItem == EItemType.CHAPTER2_BRUSH)
+        if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_BRUSH)
         {
             button.GetComponent<Image>().color = GameManager.Instance.brushColor;
         }

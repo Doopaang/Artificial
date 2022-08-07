@@ -19,6 +19,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
     - text: "\uC2A4\uD3F0\uC9C0\uBC25\uC785\uB2C8\uB2E4"
       sprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}
+    - text: "\uC2A4\uD3F0\uC9C0\uBC25\uC785\uB2C8\uB2E4"
+      sprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}
   - key: Test2
     scripts:
     - text: "\uC2A4\uC2A4\uD3F0\uD3F0"
@@ -31,6 +33,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
   - key: AppleInteract
     scripts:
+    - text: "\uC0AC\uACFC\uB97C \uD68D\uB4DD\uD588\uB2E4!"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
     - text: "\uC0AC\uACFC\uB97C \uD68D\uB4DD\uD588\uB2E4!"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
   - key: HungryChildFirst
@@ -159,7 +163,15 @@ MonoBehaviour:
     scripts:
     - text: "\uBC24\uC5D0 \uB291\uB300\uC778\uAC04 \uCC98\uC74C \uC870\uC0AC"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
-  - key: WerewolfNightRetry
+  - key: Test1
     scripts:
-    - text: "\uBC24\uC5D0 \uB291\uB300\uC778\uAC04 \uBC18\uBCF5 \uC870\uC0AC"
+    - text: "\uBAA8\uD2F0\uC785\uB2C8\uB2E4"
       sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+    - text: "\uC2A4\uD3F0\uC9C0\uBC25\uC785\uB2C8\uB2E4"
+      sprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}
+  - key: Test1
+    scripts:
+    - text: "\uBAA8\uD2F0\uC785\uB2C8\uB2E4"
+      sprite: {fileID: 21300000, guid: e6eaf30138ea07946bafbd73606d5693, type: 3}
+    - text: "\uC2A4\uD3F0\uC9C0\uBC25\uC785\uB2C8\uB2E4"
+      sprite: {fileID: 21300000, guid: 5c9d9edc1574c7045b1aabc6e3200265, type: 3}

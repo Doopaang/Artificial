@@ -38,7 +38,7 @@ public class LockNum : PuzzleObject
 
 #if UNITY_EDITOR
 
-    protected override void _OnValidate()
+    protected new void _OnValidate()
     {
         base._OnValidate();
 

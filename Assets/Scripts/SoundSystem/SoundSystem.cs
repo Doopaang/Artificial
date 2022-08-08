@@ -30,6 +30,7 @@ public class SoundSystem : Singleton<SoundSystem>
     private void Awake()
     {
         BGM = Camera.main.GetComponent<AudioSource>();
+        SFXList = new List<SFXObject>();
 
         for (int i = 0; i < InitSFXCount; i++)
         {

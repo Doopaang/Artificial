@@ -57,8 +57,8 @@ public class DetailWindow : MonoBehaviour
         if (tempItem.itemType >= EItemType.CHAPTER2_BOOK1 &&
             tempItem.itemType <= EItemType.CHAPTER2_BOOK5)
         {
-            BookUI.Reset(tempItem.GetComponent<Book>().text);
             BookUI.gameObject.SetActive(true);
+            BookUI.Reset(tempItem.GetComponent<Book>().text);
         }
         else
         {

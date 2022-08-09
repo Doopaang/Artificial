@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8329680406302562679}
   - component: {fileID: 4059456122092469037}
   m_Layer: 0
-  m_Name: DialPannel
+  m_Name: RGBPuzzlePannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

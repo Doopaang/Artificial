@@ -14,9 +14,4 @@ public class Lock : MonoBehaviour
         if (moveSceneCamera)
             CameraSystem.Instance.MoveCamera(moveSceneCamera);
     }
-
-    public void Unlock()
-    {
-        Destroy(gameObject);
-    }
 }

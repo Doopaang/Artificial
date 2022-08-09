@@ -46,4 +46,6 @@ public class Item : MonoBehaviour
     public Vector3 scaleUsing;
 
     public GameObject itemObject;
+
+    public GameObject detailObject;
 }

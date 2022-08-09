@@ -12,13 +12,15 @@ public class DrawerDoor : MonoBehaviour
     private GameObject doorModel;
 
     [SerializeField]
+    private GameObject handle;
+
+    [SerializeField]
     private Vector3 movementVectorForClose;
 
     [SerializeField]
     private bool locked = true;
 
     private bool opened = false;
-    
 
     public void Interact()
     {
@@ -48,5 +50,7 @@ public class DrawerDoor : MonoBehaviour
         GameManager.Instance.Inventory.ClearItem();
 
         locked = false;
+
+        handle.SetActive(true);
     }
 }

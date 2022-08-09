@@ -5,9 +5,9 @@ using UnityEngine;
 public class CursorManager : Singleton<CursorManager>
 {
     [SerializeField]
-    private Texture2D defaultSprite;
+    private CursorSet defaultCursor;
     [SerializeField]
-    private Texture2D interactSprite;
+    private CursorSet interactCursor;
 
     public enum ECursorType
     {
@@ -23,10 +23,7 @@ public class CursorManager : Singleton<CursorManager>
 
     private void Update()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray))
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition)))
         {
             SetCursor(ECursorType.INTERACT);
             return;
@@ -36,20 +33,20 @@ public class CursorManager : Singleton<CursorManager>
 
     public void SetCursor(ECursorType type)
     {
-        Texture2D target;
+        CursorSet target;
         switch (type)
         {
             case ECursorType.DEFAULT:
-                target = defaultSprite;
+                target = defaultCursor;
                 break;
 
             case ECursorType.INTERACT:
-                target = interactSprite;
+                target = interactCursor;
                 break;
 
             default:
                 throw new System.ArgumentException();
         }
-        Cursor.SetCursor(target, new Vector2(10.0f, 6.0f), CursorMode.Auto);
+        Cursor.SetCursor(target.cursorSprite, target.hitSpot, CursorMode.Auto);
     }
 }

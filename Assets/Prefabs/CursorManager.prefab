@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2b6acf7581920489d2abe0d9480a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 2800000, guid: cf5bde71d84c65a4aac54515061439df, type: 3}
-  interactSprite: {fileID: 2800000, guid: 8016ccd3add2f2b4792bb1a29e6a55d4, type: 3}
+  defaultCursor: {fileID: 11400000, guid: d565d028b55efe047b5805372cb98e7e, type: 2}
+  interactCursor: {fileID: 11400000, guid: fd4ff927675502243b1369c023ceb69b, type: 2}

@@ -48,9 +48,13 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             inventory.GainItem(EItemType.CHAPTER2_BRUSH);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            DialogueSystem.Instance.StartDialogue("Test1");
         }
     }
 

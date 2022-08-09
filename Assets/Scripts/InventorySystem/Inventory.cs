@@ -143,9 +143,8 @@ public class Inventory : MonoBehaviour
         if (itemType == EItemType.NONE)
             return;
 
-        itemDetailWindow.SetDetailObject(SearchItemData(itemType).gameObject);
-
         itemDetailWindow.gameObject.SetActive(true);
+        itemDetailWindow.SetDetailObject(SearchItemData(itemType).gameObject);
     }
 
     public Item SearchItemData(EItemType itemType)

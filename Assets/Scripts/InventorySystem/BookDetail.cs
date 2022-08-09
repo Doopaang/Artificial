@@ -14,19 +14,29 @@ public class BookDetail : MonoBehaviour
     [SerializeField]
     private Button upBtn;
 
+    private void Start()
+    {
+        gameObject.SetActive(false);
+        textPanel.SetActive(false);
+    }
+
     public void Reset(string text)
     {
         textPanel.SetActive(false);
-        this.text.text = text;
+        this.text.SetText(text);
         this.text.pageToDisplay = 1;
-        downBtn.interactable = false;
-        upBtn.interactable = true;
+        this.text.ForceMeshUpdate(true);
+        CheckButton();
     }
 
     public void PlusPage(int value)
     {
         text.pageToDisplay += value;
+        CheckButton();
+    }
 
+    private void CheckButton()
+    {
         downBtn.interactable = text.pageToDisplay > 1;
         upBtn.interactable = text.pageToDisplay < text.textInfo.pageCount;
     }

@@ -119,7 +119,7 @@ MonoBehaviour:
   scaleDetail: {x: 0, y: 0, z: 0}
   scaleInventory: {x: 0, y: 0, z: 0}
   scaleUsing: {x: 0, y: 0, z: 0}
-  itemObject: {fileID: 0}
+  itemObject: {fileID: 4452044161898916696}
 --- !u!114 &4452044161898916519
 MonoBehaviour:
   m_ObjectHideFlags: 0

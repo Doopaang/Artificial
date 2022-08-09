@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1612103353653108086}
   - component: {fileID: 4203041618085827112}
   - component: {fileID: 7445336804838033532}
-  - component: {fileID: 7367720824609474255}
+  - component: {fileID: -312751119262885775}
   - component: {fileID: -6951397357243987163}
   m_Layer: 0
   m_Name: BlueHandle
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7737917203045487382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -117,8 +117,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7367720824609474255}
-          m_TargetAssemblyTypeName: RedHandle, Assembly-CSharp
+        - m_Target: {fileID: -312751119262885775}
+          m_TargetAssemblyTypeName: Handle, Assembly-CSharp
           m_MethodName: Interact
           m_Mode: 1
           m_Arguments:
@@ -129,7 +129,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &7367720824609474255
+--- !u!114 &-312751119262885775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7737917203045487382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d08b55936a223e45b631ab20a5322cb, type: 3}
+  m_Script: {fileID: 11500000, guid: e6687b1527a05834ebc13060345d6fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &-6951397357243987163
@@ -157,7 +157,7 @@ MonoBehaviour:
   combinableItemType: 0
   combineResultItemType: 0
   itemRotation: {x: 0, y: 0, z: 0, w: 0}
-  scaleDetail: {x: 1000, y: 1000, z: 1000}
-  scaleInventory: {x: 1000, y: 1000, z: 1000}
-  scaleUsing: {x: 1000, y: 1000, z: 1000}
+  scaleDetail: {x: 7000, y: 7000, z: 7000}
+  scaleInventory: {x: 2000, y: 2000, z: 2000}
+  scaleUsing: {x: 1500, y: 1500, z: 1500}
   itemObject: {fileID: 7737917203045487382}

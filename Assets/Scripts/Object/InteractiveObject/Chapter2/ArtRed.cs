@@ -20,7 +20,5 @@ public class ArtRed : MonoBehaviour
     public void ChangeArt()
     {
         isChanged = true;
-
-        // (미구현) 그림 변화
     }
 }

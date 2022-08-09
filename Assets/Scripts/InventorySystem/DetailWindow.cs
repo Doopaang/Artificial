@@ -10,6 +10,9 @@ public class DetailWindow : MonoBehaviour
 
     private GameObject itemDetailObject;
 
+    [SerializeField]
+    private BookDetail BookUI;
+
     public GameObject ItemDetailObject
     {
         get
@@ -41,14 +44,26 @@ public class DetailWindow : MonoBehaviour
     public void SetDetailObject(GameObject prefab)
     {
         itemDetailObject = Instantiate(prefab, itemDetailPos.position, Quaternion.identity, transform);
-        itemDetailObject.transform.rotation = itemDetailObject.GetComponent<Item>().itemRotation;
-        itemDetailObject.transform.localScale = itemDetailObject.GetComponent<Item>().scaleDetail;
+        Item tempItem = itemDetailObject.GetComponent<Item>();
+        itemDetailObject.transform.rotation = tempItem.itemRotation;
+        itemDetailObject.transform.localScale = tempItem.scaleDetail;
         itemDetailObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-        
+
         if (itemDetailObject.GetComponent<Collider>())
             itemDetailObject.GetComponent<Collider>().enabled = false;
 
         ChangeLayersRecursively(itemDetailObject.transform);
+
+        if (tempItem.itemType >= EItemType.CHAPTER2_BOOK1 &&
+            tempItem.itemType <= EItemType.CHAPTER2_BOOK5)
+        {
+            BookUI.Reset(tempItem.GetComponent<Book>().text);
+            BookUI.gameObject.SetActive(true);
+        }
+        else
+        {
+            BookUI.gameObject.SetActive(false);
+        }
     }
 
     public void ChangeLayersRecursively(Transform trans)

@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eecdea7ae091034ebb17f89def73890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitSFXCount: 0
+  InitSFXCount: 1
+  BGMVolume: 50
+  SFXVolume: 50
   BGMDic:
     m_keys: []
     m_values: []

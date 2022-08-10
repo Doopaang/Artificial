@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FullChildPicture : MonoBehaviour
 {
+    [SerializeField]
+    private ChildPicture childPicture;
+
     private ReactInteraction reactInteraction;
 
     private void Start()
@@ -19,11 +22,19 @@ public class FullChildPicture : MonoBehaviour
 
     public void FirstNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("FullChildFirst");
+        DialogueSystem.Instance.StartDialogue("After_Give_Apple", GainEatenApple);
     }
 
     public void RetryNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("FullChildRetry");
+        DialogueSystem.Instance.StartDialogue("Gain_Eaten_Apple");
+    }
+
+    public void GainEatenApple()
+    {
+        GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_APPLE);
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_EATEN_APPLE);
+
+        childPicture.ChangeToFullChildPicture();
     }
 }

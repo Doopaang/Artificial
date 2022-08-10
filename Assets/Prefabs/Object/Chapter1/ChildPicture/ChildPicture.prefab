@@ -400,11 +400,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3604150460789381475, guid: 2f4507f83148f1040b15e1019b896d45,
+        type: 3}
+      propertyPath: ReactFirstUsingItem.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604150460789381475, guid: 2f4507f83148f1040b15e1019b896d45,
+        type: 3}
+      propertyPath: ReactFirstUsingItem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604150460789381475, guid: 2f4507f83148f1040b15e1019b896d45,
+        type: 3}
+      propertyPath: ReactFirstUsingItem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3839160461415610413, guid: 2f4507f83148f1040b15e1019b896d45,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4971440047829992171, guid: 2f4507f83148f1040b15e1019b896d45,
+        type: 3}
+      propertyPath: childPicture
+      value: 
+      objectReference: {fileID: 5139509368167502991}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f4507f83148f1040b15e1019b896d45, type: 3}
 --- !u!4 &6348868612991511764 stripped

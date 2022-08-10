@@ -6,9 +6,6 @@ public class HungryChildPicture : MonoBehaviour
 {
     private ReactInteraction reactInteraction;
 
-    [SerializeField]
-    private ChildPicture childPicture;
-
     private void Start()
     {
         reactInteraction = GetComponent<ReactInteraction>();
@@ -22,29 +19,23 @@ public class HungryChildPicture : MonoBehaviour
 
     public void FirstNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("HungryChildFirst");
+        DialogueSystem.Instance.StartDialogue("Hungry_Child_First");
     }
 
     public void RetryNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("HungryChildRetry");
+        DialogueSystem.Instance.StartDialogue("Hungry_Child_Many_Times");
     }
 
     public void UseApple()
     {
-        DialogueSystem.Instance.StartDialogue("HungryChildInteract", GainEatenApple);
+        DialogueSystem.Instance.StartDialogue("Give_Apple");
     }
 
     public void RetryAfterUseApple()
     {
-        DialogueSystem.Instance.StartDialogue("HungryChildAfterInteract");
+        //DialogueSystem.Instance.StartDialogue("After_Give_Apple");
     }
 
-    public void GainEatenApple()
-    {
-        GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_APPLE);
-        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_EATEN_APPLE);
-
-        childPicture.ChangeToFullChildPicture();
-    }
+    
 }

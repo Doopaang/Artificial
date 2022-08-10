@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7509389768985188182}
   - component: {fileID: 1841533962063579695}
   - component: {fileID: 1267493357528954781}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5186475237131670357}
   - component: {fileID: 7177120996821694521}
   - component: {fileID: 6197384725203775724}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: OPENPuzzlePaper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   combineResultItemType: 0
   itemRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   scaleDetail: {x: 750, y: 750, z: 750}
-  scaleInventory: {x: 120, y: 120, z: 120}
+  scaleInventory: {x: 150, y: 150, z: 150}
   scaleUsing: {x: 100, y: 100, z: 100}
   itemObject: {fileID: 5526443491986999791}
 --- !u!1 &6203238540844195534
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 1273468453469028212}
   - component: {fileID: 7446002680571382447}
   - component: {fileID: 5778305034528938031}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

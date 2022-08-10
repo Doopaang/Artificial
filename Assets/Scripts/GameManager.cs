@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,10 +13,16 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private WerewolfPicture werewolfPicture;
 
+    [SerializeField]
+    private float fadeSpeed;
+
     [HideInInspector]
     public Color brushColor = Color.white;
 
     public BrushUI brushUI;
+
+    [SerializeField]
+    private Canvas inputBlock;
 
     public List<Item> itemDictionary;
 
@@ -46,16 +53,39 @@ public class GameManager : Singleton<GameManager>
         brushUI.gameObject.SetActive(false);
     }
 
-    private void Update()
+    public void SetInputBlock(bool value)
     {
-        if (Input.GetKeyDown(KeyCode.N))
+        if (CursorManager.Instance)
         {
-            inventory.GainItem(EItemType.CHAPTER2_BRUSH);
+            CursorManager.Instance.SetCursor(CursorManager.ECursorType.DEFAULT);
+            CursorManager.Instance.enabled = !value;
         }
-        if (Input.GetKeyDown(KeyCode.D))
+
+        inputBlock.gameObject.SetActive(value);
+    }
+
+    public IEnumerator FadeCoroutine(MeshRenderer renderer, bool isIn, bool isFade = true)
+    {
+        renderer.gameObject.SetActive(true);
+
+        Color color = renderer.material.color;
+        color.a = isIn ? 0.0f : 1.0f;
+        renderer.material.color = color;
+
+        while (isIn && color.a < 1.0f ||
+            !isIn && color.a > 0.0f)
         {
-            DialogueSystem.Instance.StartDialogue("Test1");
+            color.a += (isFade ? fadeSpeed * Time.fixedDeltaTime : 1.0f) * (isIn ? 1.0f : -1.0f);
+            renderer.material.color = color;
+            yield return new WaitForFixedUpdate();
         }
+
+        if (!isIn)
+        {
+            renderer.gameObject.SetActive(false);
+        }
+        color.a = 1.0f;
+        renderer.material.color = color;
     }
 
     public void ChangeToDaytime()

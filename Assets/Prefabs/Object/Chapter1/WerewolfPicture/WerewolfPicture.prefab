@@ -211,7 +211,7 @@ MonoBehaviour:
   - {fileID: 26397234293011333}
   - {fileID: 8420771498682205884}
   state: 0
-  animationDelay: 1
+  animationDelay: 1.2
 --- !u!1001 &1288163554190316425
 PrefabInstance:
   m_ObjectHideFlags: 0

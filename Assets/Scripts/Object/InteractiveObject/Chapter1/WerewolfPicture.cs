@@ -45,29 +45,26 @@ public class WerewolfPicture : MonoBehaviour
         ChangePicture(EWerewolfPictureType.Day);
     }
 
-    public void ChangeToNight()
+    public void ChangeToNight(bool isFade = true)
     {
         if (isGainCrescentMoon)
         {
-            ChangePicture(EWerewolfPictureType.Night);
+            ChangePicture(EWerewolfPictureType.Night, isFade);
         }
         else
         {
-            ChangePicture(EWerewolfPictureType.CrescentMoonNight);
+            ChangePicture(EWerewolfPictureType.CrescentMoonNight, isFade);
         }
     }
 
-    public void ChangePicture(EWerewolfPictureType werePictureType)
+    public void ChangePicture(EWerewolfPictureType werePictureType, bool isFade = true)
     {
+        MeshRenderer before = pictures[(int)state].GetComponent<MeshRenderer>();
         state = werePictureType;
+        MeshRenderer after = pictures[(int)werePictureType].GetComponent<MeshRenderer>();
 
-        for (int i = 0; i < pictures.Length; i++)
-        {
-            if (i == (int)werePictureType)
-                pictures[i].SetActive(true);
-            else
-                pictures[i].SetActive(false);
-        }
+        StartCoroutine(GameManager.Instance.FadeCoroutine(before, false, isFade));
+        StartCoroutine(GameManager.Instance.FadeCoroutine(after, true, isFade));
     }
 
     public void StartChangeCoroutine()

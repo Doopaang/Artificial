@@ -7,12 +7,12 @@ public class CrescentMoon : MonoBehaviour
 
     public void Interact()
     {
-        if (wereWolfPicture.state != EWerewolfPictureType.CrescentMoonNight)
+        if (wereWolfPicture.state != EWerewolfPictureType.Night)
         {
             GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_CRESCENT_MOON);
 
             wereWolfPicture.SetGainCrescentMoon();
-            wereWolfPicture.ChangeToNight();
+            wereWolfPicture.ChangeToNight(false);
         }
         else
         {

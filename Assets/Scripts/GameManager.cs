@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField]
     private WerewolfPicture werewolfPicture;
+
+    [SerializeField]
+    private float fadeSpeed;
 
     [HideInInspector]
     public Color brushColor = Color.white;
@@ -58,6 +62,30 @@ public class GameManager : Singleton<GameManager>
         }
 
         inputBlock.gameObject.SetActive(value);
+    }
+
+    public IEnumerator FadeCoroutine(MeshRenderer renderer, bool isIn, bool isFade = true)
+    {
+        renderer.gameObject.SetActive(true);
+
+        Color color = renderer.material.color;
+        color.a = isIn ? 0.0f : 1.0f;
+        renderer.material.color = color;
+
+        while (isIn && color.a < 1.0f ||
+            !isIn && color.a > 0.0f)
+        {
+            color.a += (isFade ? fadeSpeed * Time.fixedDeltaTime : 1.0f) * (isIn ? 1.0f : -1.0f);
+            renderer.material.color = color;
+            yield return new WaitForFixedUpdate();
+        }
+
+        if (!isIn)
+        {
+            renderer.gameObject.SetActive(false);
+        }
+        color.a = 1.0f;
+        renderer.material.color = color;
     }
 
     public void ChangeToDaytime()

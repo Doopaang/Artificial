@@ -130,8 +130,6 @@ public class LockNum : PuzzleObject
 
         this.value += value * (isLeft && this.value / absValue % 10 == 0 || !isLeft && this.value / absValue % 10 == 9 ? -9 : 1);
 
-        Debug.Log(this.value);
-
         if (dialList.Count == numLimit)
         {
             Transform target = dialList[numLimit - (int)Mathf.Log10(absValue) - 1].transform;

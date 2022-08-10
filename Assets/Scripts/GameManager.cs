@@ -17,6 +17,9 @@ public class GameManager : Singleton<GameManager>
 
     public BrushUI brushUI;
 
+    [SerializeField]
+    private Canvas inputBlock;
+
     public List<Item> itemDictionary;
 
     private bool isDaytime = true;
@@ -46,16 +49,15 @@ public class GameManager : Singleton<GameManager>
         brushUI.gameObject.SetActive(false);
     }
 
-    private void Update()
+    public void SetInputBlock(bool value)
     {
-        if (Input.GetKeyDown(KeyCode.N))
+        if (CursorManager.Instance)
         {
-            inventory.GainItem(EItemType.CHAPTER2_BRUSH);
+            CursorManager.Instance.SetCursor(CursorManager.ECursorType.DEFAULT);
+            CursorManager.Instance.enabled = !value;
         }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            DialogueSystem.Instance.StartDialogue("Test1");
-        }
+
+        inputBlock.gameObject.SetActive(value);
     }
 
     public void ChangeToDaytime()

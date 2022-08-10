@@ -4,6 +4,9 @@ public class Werewolf : MonoBehaviour
 {
     private ReactInteraction reactInteraction;
 
+    [SerializeField]
+    private WerewolfPicture werewolfPicture;
+
     private void Start()
     {
         reactInteraction = GetComponentInChildren<ReactInteraction>();

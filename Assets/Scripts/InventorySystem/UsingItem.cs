@@ -32,7 +32,9 @@ public class UsingItem : MonoBehaviour
 
         usingItemObject.layer = LayerMask.NameToLayer("UI");
         usingItemObject.transform.localScale = newItemData.scaleUsing;
-        usingItemObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
+        if (usingItemObject.GetComponent<MeshRenderer>())
+            usingItemObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         SetSubCanvas(item, EItemType.CHAPTER2_BRUSH, brushUI.GetComponent<RectTransform>());
     }

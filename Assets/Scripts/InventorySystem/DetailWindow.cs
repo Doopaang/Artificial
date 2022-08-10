@@ -47,7 +47,9 @@ public class DetailWindow : MonoBehaviour
         Item tempItem = itemDetailObject.GetComponent<Item>();
         itemDetailObject.transform.rotation = tempItem.itemRotation;
         itemDetailObject.transform.localScale = tempItem.scaleDetail;
-        itemDetailObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
+        if (itemDetailObject.GetComponent<MeshRenderer>())
+            itemDetailObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
         if (itemDetailObject.GetComponent<Collider>())
             itemDetailObject.GetComponent<Collider>().enabled = false;

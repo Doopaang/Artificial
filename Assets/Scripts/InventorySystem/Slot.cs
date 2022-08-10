@@ -44,7 +44,8 @@ public class Slot : MonoBehaviour
 
             itemObject.transform.localScale = newItemData.scaleInventory;
 
-            itemObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            if (itemObject.GetComponent<MeshRenderer>())
+                itemObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
             if (itemObject.GetComponent<Collider>())
                 itemObject.GetComponent<Collider>().enabled = false;

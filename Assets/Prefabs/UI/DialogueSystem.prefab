@@ -190,7 +190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60194e0d0b1cba144ac3852289976142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 92cf7d74e08adcc45a8964e3d3b6cf36, type: 2}
+  dialogue: {fileID: 11400000, guid: 86c25992c0180c14bb9574ffd6c796ae, type: 2}
+  typingDelay: 0.1
   baseInspector:
     panel: {fileID: 5218719552101810046}
     profile: {fileID: 5218719551329742425}
@@ -206,7 +207,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 0}
-  m_PlaneDistance: 0.5
+  m_PlaneDistance: 10
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -252,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -704,7 +705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3cc03a9bc7fc5614686cfd3f4278bb63, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 488c89692a760bb44b7b2d9ea8210517, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

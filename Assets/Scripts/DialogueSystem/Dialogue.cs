@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public struct DialogueScript
 {
+    [TextArea]
     public string text;
     public Sprite sprite;
 }
@@ -22,9 +23,9 @@ public class Dialogue : ScriptableObject
 
     public DialogueScriptSet FindScriptSetByKey(string key)
     {
-        foreach(DialogueScriptSet scriptSet in scriptSets)
+        foreach (DialogueScriptSet scriptSet in scriptSets)
         {
-            if(scriptSet.key == key)
+            if (scriptSet.key == key)
             {
                 return scriptSet;
             }

@@ -1,10 +1,7 @@
 using UnityEngine;
 
-public class DialPannel : MonoBehaviour
+public class ColorPuzzleBox : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject RGBPuzzlePadUI;
-
     private MoveSceneCamera moveSceneCamera;
 
     private void Start()
@@ -14,10 +11,7 @@ public class DialPannel : MonoBehaviour
 
     public void Interact()
     {
-        if (RGBPuzzlePadUI && moveSceneCamera)
-        {
-            RGBPuzzlePadUI.SetActive(true);
+        if (moveSceneCamera)
             CameraSystem.Instance.MoveCamera(moveSceneCamera);
-        }
     }
 }

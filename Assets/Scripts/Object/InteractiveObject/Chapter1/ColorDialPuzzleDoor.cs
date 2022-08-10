@@ -3,14 +3,19 @@ using UnityEngine;
 public class ColorDialPuzzleDoor : MonoBehaviour
 {
     [SerializeField]
+    private Vector3 doorOpenRotaion;
+
+    [SerializeField]
+    private Vector3 doorOpenTranslation;
+
+    [SerializeField]
     private MoveSceneCamera nextStageCamera;
 
+    [SerializeField]
     private MoveSceneCamera moveSceneCamera;
 
     private void Start()
     {
-        moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
-
         if (nextStageCamera)
             nextStageCamera.gameObject.SetActive(false);
     }
@@ -28,5 +33,8 @@ public class ColorDialPuzzleDoor : MonoBehaviour
 
         if (moveSceneCamera)
             CameraSystem.Instance.MoveCamera(moveSceneCamera);
+
+        gameObject.transform.Rotate(doorOpenRotaion);
+        gameObject.transform.Translate(doorOpenTranslation);
     }
 }

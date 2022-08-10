@@ -31,6 +31,11 @@ public class Ch2Puzzle1 : PuzzleObject
         ResetPad();
     }
 
+    public void Solve()
+    {
+        Debug.Log("solve");
+    }
+
     public void ToggleButton(Toggle toggle)
     {
         toggle.interactable = false;

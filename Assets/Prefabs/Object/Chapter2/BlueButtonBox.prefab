@@ -99,7 +99,7 @@ BoxCollider:
   m_GameObject: {fileID: 7385705726216481548}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.79999995, y: 1.4282563, z: 0.5}
   m_Center: {x: 0, y: -0.11412802, z: -0.55}
@@ -412,6 +412,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7385705726216481547}
     m_Modifications:
+    - target: {fileID: 367715192750705052, guid: 7e20452915aa4014c96d198dcbad5e1a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 367715192750705052, guid: 7e20452915aa4014c96d198dcbad5e1a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 367715192750705052, guid: 7e20452915aa4014c96d198dcbad5e1a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 305
+      objectReference: {fileID: 0}
+    - target: {fileID: 367715192750705053, guid: 7e20452915aa4014c96d198dcbad5e1a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 367715192750705054, guid: 7e20452915aa4014c96d198dcbad5e1a,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 367715192756792652, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}
       propertyPath: m_Interactable
@@ -570,7 +595,7 @@ PrefabInstance:
     - target: {fileID: 367715193137886194, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}
       propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 367715193137886194, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}
@@ -585,7 +610,7 @@ PrefabInstance:
     - target: {fileID: 367715193137886194, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}
       propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleButton
+      value: Solve
       objectReference: {fileID: 0}
     - target: {fileID: 367715193137886194, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}
@@ -600,7 +625,7 @@ PrefabInstance:
     - target: {fileID: 367715193137886194, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}
       propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.UI.Toggle, UnityEngine.UI
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 367715193137886195, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}

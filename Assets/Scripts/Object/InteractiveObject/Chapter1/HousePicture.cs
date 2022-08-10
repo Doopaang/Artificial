@@ -13,6 +13,8 @@ public class HousePicture : MonoBehaviour
     [SerializeField]
     private GameObject[] pictures;
 
+    private EHousePictureType state = EHousePictureType.Daytime;
+
     private MoveSceneCamera moveSceneCamera;
 
     private bool gateLocked = true;
@@ -65,12 +67,11 @@ public class HousePicture : MonoBehaviour
 
     public void ChangePicture(EHousePictureType housePictureType)
     {
-        for (int i = 0; i < pictures.Length; i++)
-        {
-            if (i == (int)housePictureType)
-                pictures[i].SetActive(true);
-            else
-                pictures[i].SetActive(false);
-        }
+        MeshRenderer before = pictures[(int)state].GetComponent<MeshRenderer>();
+        state = housePictureType;
+        MeshRenderer after = pictures[(int)housePictureType].GetComponent<MeshRenderer>();
+
+        StartCoroutine(GameManager.Instance.FadeCoroutine(before, false));
+        StartCoroutine(GameManager.Instance.FadeCoroutine(after, true));
     }
 }

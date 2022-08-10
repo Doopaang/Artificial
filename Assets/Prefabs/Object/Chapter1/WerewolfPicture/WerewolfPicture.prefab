@@ -53,6 +53,8 @@ MonoBehaviour:
   - {fileID: 7771899675645677813}
   - {fileID: 241220256071942691}
   - {fileID: 7860895043379453979}
+  - {fileID: 5970758104042200470}
+  - {fileID: 5420769504573134452}
   canvases: []
 --- !u!1 &4507017801982548723
 GameObject:
@@ -91,6 +93,9 @@ Transform:
   - {fileID: 3745182987473882067}
   - {fileID: 4625536295823594948}
   - {fileID: 1276115829889010289}
+  - {fileID: 4126563287251376789}
+  - {fileID: 8489936586176014708}
+  - {fileID: 95436934513728589}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -202,6 +207,188 @@ MonoBehaviour:
   - {fileID: 5982627897460844156}
   - {fileID: 5904929405090042660}
   - {fileID: 33247397988715665}
+  - {fileID: 5533770557599907940}
+  - {fileID: 26397234293011333}
+  - {fileID: 8420771498682205884}
+  state: 0
+  animationDelay: 1.2
+--- !u!1001 &1288163554190316425
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4412193293424807943}
+    m_Modifications:
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713634413329798125, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_Name
+      value: WerewolfFullMoonNight 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713634413329798125, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e59ad6e815098ef4190f5e7b98ee3bec, type: 3}
+--- !u!4 &4126563287251376789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2928472938939615516, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+    type: 3}
+  m_PrefabInstance: {fileID: 1288163554190316425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5533770557599907940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6713634413329798125, guid: e59ad6e815098ef4190f5e7b98ee3bec,
+    type: 3}
+  m_PrefabInstance: {fileID: 1288163554190316425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3023896659985929553
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4412193293424807943}
+    m_Modifications:
+    - target: {fileID: -7231969234458233279, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 39e68eaf2c63860468282ce9cb3e5bd3, type: 2}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713634413329798125, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_Name
+      value: WerewolfFullMoonNight 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713634413329798125, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c103ee434d9e694d9a0a4e7a355d442, type: 3}
+--- !u!4 &95436934513728589 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2928472938939615516, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+    type: 3}
+  m_PrefabInstance: {fileID: 3023896659985929553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8420771498682205884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6713634413329798125, guid: 2c103ee434d9e694d9a0a4e7a355d442,
+    type: 3}
+  m_PrefabInstance: {fileID: 3023896659985929553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3279085449811485143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,7 +399,27 @@ PrefabInstance:
     - target: {fileID: 423405390826175457, guid: 5e1ac3583e9050f4781c1fc25e776f99,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423405390826175457, guid: 5e1ac3583e9050f4781c1fc25e776f99,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2363088522122856795}
+    - target: {fileID: 423405390826175457, guid: 5e1ac3583e9050f4781c1fc25e776f99,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 423405390826175457, guid: 5e1ac3583e9050f4781c1fc25e776f99,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CrescentMoon, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 423405390826175457, guid: 5e1ac3583e9050f4781c1fc25e776f99,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 957796306326513804, guid: 5e1ac3583e9050f4781c1fc25e776f99,
         type: 3}
@@ -314,6 +521,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802592222835504585, guid: 5e1ac3583e9050f4781c1fc25e776f99,
+        type: 3}
+      propertyPath: werewolfPicture
+      value: 
+      objectReference: {fileID: -5534957710269561901}
     - target: {fileID: 7402747852154238883, guid: 5e1ac3583e9050f4781c1fc25e776f99,
         type: 3}
       propertyPath: m_Size.x
@@ -367,6 +579,116 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4338103619328142246, guid: 5e1ac3583e9050f4781c1fc25e776f99,
     type: 3}
   m_PrefabInstance: {fileID: 3279085449811485143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2363088522122856795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 957796306326513804, guid: 5e1ac3583e9050f4781c1fc25e776f99,
+    type: 3}
+  m_PrefabInstance: {fileID: 3279085449811485143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f6f6b2b5a465d4d8e1141855bdccb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &5420769504573134452 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 7402747852154238883, guid: 5e1ac3583e9050f4781c1fc25e776f99,
+    type: 3}
+  m_PrefabInstance: {fileID: 3279085449811485143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &5970758104042200470 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 9177704970685922369, guid: 5e1ac3583e9050f4781c1fc25e776f99,
+    type: 3}
+  m_PrefabInstance: {fileID: 3279085449811485143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6734665712914800744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4412193293424807943}
+    m_Modifications:
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713634413329798125, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_Name
+      value: WerewolfFullMoonNight 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713634413329798125, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7e5ab50111599d440b4a4eb48c6592dd, type: 3}
+--- !u!1 &26397234293011333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6713634413329798125, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6734665712914800744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8489936586176014708 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2928472938939615516, guid: 7e5ab50111599d440b4a4eb48c6592dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6734665712914800744}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6873292931686424731
 PrefabInstance:

@@ -26,7 +26,10 @@ public class ChildPicture : MonoBehaviour
 
     public void ChangeToFullChildPicture()
     {
-        hungryChildPicture.gameObject.SetActive(false);
-        fullChildPicture.gameObject.SetActive(true);
+        MeshRenderer before = hungryChildPicture.GetComponent<MeshRenderer>();
+        MeshRenderer after = fullChildPicture.GetComponent<MeshRenderer>();
+
+        StartCoroutine(GameManager.Instance.FadeCoroutine(before, false));
+        StartCoroutine(GameManager.Instance.FadeCoroutine(after, true));
     }
 }

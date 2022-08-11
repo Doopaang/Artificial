@@ -75,6 +75,11 @@ public class MoveSceneCamera : MonoBehaviour
     public MoveSceneCamera MoveCamera(MoveSceneCamera target)
     {
         Camera.main.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
+        IEnterCameraEvent camEvent = target.GetComponent<IEnterCameraEvent>();
+        if (camEvent != null)
+        {
+            camEvent.OnMoved();
+        }
         return target;
     }
 

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HungryChildPicture : MonoBehaviour
 {
+    [SerializeField]
+    private ChildPicture childPicture;
+
     private ReactInteraction reactInteraction;
 
     private void Start()
@@ -29,12 +32,14 @@ public class HungryChildPicture : MonoBehaviour
 
     public void UseApple()
     {
-        DialogueSystem.Instance.StartDialogue("Give_Apple");
+        DialogueSystem.Instance.StartDialogue("Give_Apple", ChangePicture);
     }
 
-    public void RetryAfterUseApple()
+    public void ChangePicture()
     {
-        //DialogueSystem.Instance.StartDialogue("After_Give_Apple");
+        GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_APPLE);
+
+        childPicture.ChangeToFullChildPicture();
     }
 
     

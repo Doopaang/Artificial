@@ -21,14 +21,22 @@ public class Flowerpot : MonoBehaviour
     public void InvestigateFirst()
     {
         if (hasKey)
-            DialogueSystem.Instance.StartDialogue("HasKeyFlowerpotFirst", GainKey);
+            DialogueSystem.Instance.StartDialogue("Search_Flowerpot_Right", PrintGainKeyText);
         else
-            DialogueSystem.Instance.StartDialogue("NotKeyFlowerpotFirst");
+            DialogueSystem.Instance.StartDialogue("Search_Flowerpot_Left");
     }
 
     public void InvestigateRetry()
     {
-        DialogueSystem.Instance.StartDialogue("NotKeyFlowerpotRetry");
+        if (hasKey)
+            DialogueSystem.Instance.StartDialogue("After_Gain_Key");
+        else
+            DialogueSystem.Instance.StartDialogue("Search_Flowerpot_Left");
+    }
+
+    public void PrintGainKeyText()
+    {
+        DialogueSystem.Instance.StartDialogue("Gain_Key", GainKey);
     }
 
     public void GainKey()

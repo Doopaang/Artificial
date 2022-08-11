@@ -24,10 +24,23 @@ public class DrawerDoor : MonoBehaviour
 
     public void Interact()
     {
-        if (LockKey != EItemType.NONE && GameManager.Instance.Inventory.UsingItem == LockKey)
+        if (locked && LockKey != EItemType.NONE)
         {
-            GameManager.Instance.Inventory.DeleteItem(LockKey);
-            Unlock();
+            if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_RED ||
+                GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_BLUE ||
+                GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_GREEN ||
+                GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_YELLOW)
+            {
+                if (GameManager.Instance.Inventory.UsingItem == LockKey)
+                {
+                    GameManager.Instance.Inventory.DeleteItem(LockKey);
+                    Unlock();
+                }
+                else
+                    DialogueSystem.Instance.StartDialogue("Locker_Use_Diffrent_Handle");
+            }
+            else
+                DialogueSystem.Instance.StartDialogue("Locker_Without_Item");
         }
         else if (!locked)
         {
@@ -46,7 +59,6 @@ public class DrawerDoor : MonoBehaviour
 
     public void Unlock()
     {
-        DialogueSystem.Instance.StartDialogue("UnlockDrawer");
         GameManager.Instance.Inventory.ClearItem();
 
         locked = false;

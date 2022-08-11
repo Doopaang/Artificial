@@ -16,25 +16,30 @@ public class WasteBasket : MonoBehaviour
 
     public void FirstNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("WasteBasketFirst");
+        DialogueSystem.Instance.StartDialogue("Trash_Can_First");
     }
 
     public void RetryNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("WasteBasketRetry");
+        DialogueSystem.Instance.StartDialogue("Trash_Can_Many_Times");
     }
 
     public void UseEatenApple()
     {
-        DialogueSystem.Instance.StartDialogue("WasteBasketInteract", GainPuzzlePaper);
+        DialogueSystem.Instance.StartDialogue("Give_EatenApple", GiveEatenApple);
     }
 
     public void RetryAfterUseEatenApple()
     {
-        DialogueSystem.Instance.StartDialogue("WasteBasketAfterInteract");
+        DialogueSystem.Instance.StartDialogue("Trash_Can_After_Gain_Hintpaper");
     }
 
-    public void GainPuzzlePaper()
+    public void GiveEatenApple()
+    {
+        DialogueSystem.Instance.StartDialogue("Trash_Can_Gain_Hintpaper", GainHintPaper);
+    }
+
+    public void GainHintPaper()
     {
         GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_EATEN_APPLE);
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_OPEN_PUZZLE_PAPER);

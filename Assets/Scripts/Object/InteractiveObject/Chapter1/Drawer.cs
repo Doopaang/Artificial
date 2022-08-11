@@ -32,7 +32,6 @@ public class Drawer : MonoBehaviour
 
     public void Unlock()
     {
-        DialogueSystem.Instance.StartDialogue("UnlockDrawer");
         GameManager.Instance.Inventory.ClearItem();
 
         locked = false;

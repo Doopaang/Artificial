@@ -15,14 +15,21 @@ public class WerewolfPicture : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] pictures;
+
+    [SerializeField]
+    private Collider crescentMoon;
+
     [HideInInspector]
     public EWerewolfPictureType state = EWerewolfPictureType.Day;
+
     [SerializeField]
     private float animationDelay;
 
     private MoveSceneCamera moveSceneCamera;
 
     private bool isGainCrescentMoon = false;
+
+    private bool firstNightInteract = true;
 
     private void Start()
     {
@@ -32,7 +39,15 @@ public class WerewolfPicture : MonoBehaviour
     public void Interact()
     {
         if (moveSceneCamera)
+        {
             CameraSystem.Instance.MoveCamera(moveSceneCamera);
+
+            if (firstNightInteract && !GameManager.Instance.IsDaytime)
+            {
+                firstNightInteract = false;
+                DialogueSystem.Instance.StartDialogue("First_Night");
+            }
+        }
     }
 
     public void SetGainCrescentMoon()

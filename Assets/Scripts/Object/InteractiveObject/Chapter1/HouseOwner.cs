@@ -20,19 +20,19 @@ public class HouseOwner : MonoBehaviour
 
     public void InvestigateFirstNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("HouseOwnerFirst");
+        DialogueSystem.Instance.StartDialogue("First_Lady");
     }
 
     public void InvestigateRetryNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("HouseOwnerRetry");
+        DialogueSystem.Instance.StartDialogue("Many_Times_Lady");
     }
 
     public void UseKey()
     {
         housePicture.UnlockGate();
 
-        DialogueSystem.Instance.StartDialogue("OpenGate");
+        DialogueSystem.Instance.StartDialogue("Give_Key_Lady");
         GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_KEY);
         housePicture.ChangePicture(EHousePictureType.Inside);
     }

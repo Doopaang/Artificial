@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 305099450423009294}
   - component: {fileID: 6405312649617717959}
   - component: {fileID: 897985693196122465}
-  - component: {fileID: 2532444981593430548}
   - component: {fileID: 9102236760708260687}
+  - component: {fileID: 6705230085725372114}
   m_Layer: 0
   m_Name: CrescentMoon
   m_TagString: Untagged
@@ -85,19 +85,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2333413415832332764}
   m_Mesh: {fileID: 2261283482888113226, guid: 53b8812391b913849bb5e0dd33bcb8e2, type: 3}
---- !u!65 &2532444981593430548
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2333413415832332764}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.07807858, y: 0.016269192, z: 0.07861598}
-  m_Center: {x: 0.0046186764, y: 0.0023569071, z: 0.004837187}
 --- !u!114 &9102236760708260687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +101,20 @@ MonoBehaviour:
   combinableItemType: 25
   combineResultItemType: 26
   itemRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
-  scaleDetail: {x: 5000, y: 5000, z: 5000}
-  scaleInventory: {x: 1200, y: 1200, z: 1200}
-  scaleUsing: {x: 1000, y: 1000, z: 1000}
+  scaleDetail: {x: 600, y: 600, z: 600}
+  scaleInventory: {x: 150, y: 150, z: 150}
+  scaleUsing: {x: 100, y: 100, z: 100}
   itemObject: {fileID: 2333413415832332764}
+--- !u!65 &6705230085725372114
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2333413415832332764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.75082254, y: 0.18521526, z: 0.9095175}
+  m_Center: {x: 0.15131778, y: 0.036126763, z: 0.017909512}

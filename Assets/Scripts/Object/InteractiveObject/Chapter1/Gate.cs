@@ -19,11 +19,6 @@ public class Gate : MonoBehaviour
             DialogueSystem.Instance.StartDialogue("EnterHouse", ChangeToHouseInsidePicture);
             return;
         }
-        else if (!GameManager.Instance.IsDaytime)
-        {
-            DialogueSystem.Instance.StartDialogue("GateInteractNight");
-            return;
-        }
 
         if (reactInteraction)
             reactInteraction.React();
@@ -31,22 +26,22 @@ public class Gate : MonoBehaviour
 
     public void InvestigateFirstNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("GateFirstNoneItem");
+        DialogueSystem.Instance.StartDialogue("First_MainDoor");
     }
 
     public void InvestigateRetryNoneItem()
     {
-        DialogueSystem.Instance.StartDialogue("GateRetryNoneItem");
+        DialogueSystem.Instance.StartDialogue("Many_Times_MainDoor");
     }
 
     public void InvestigateFirstKey()
     {
-        DialogueSystem.Instance.StartDialogue("GateFirstInteractKey");
+        DialogueSystem.Instance.StartDialogue("Give_Key_MainDoor");
     }
 
     public void InvestigateRetryKey()
     {
-        DialogueSystem.Instance.StartDialogue("GateRetryInteractKey");
+        DialogueSystem.Instance.StartDialogue("Give_Key_MainDoor_Many_Times");
     }
 
     public void ChangeToHouseInsidePicture()

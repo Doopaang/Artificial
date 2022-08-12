@@ -7,7 +7,7 @@ public class BookPos : MonoBehaviour
 
     private GameObject bookObject = null;
 
-    public void Interact(int num)
+    public void Interact()
     {
         EItemType usingItem = GameManager.Instance.Inventory.UsingItem;
 

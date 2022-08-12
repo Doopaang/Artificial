@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c1ab260339632449d8163d34d4af52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cover: {fileID: 7385705727651508511}
 --- !u!1 &7385705726844416258
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ MonoBehaviour:
   down: {fileID: 0}
   back: {fileID: 0}
   colliders:
-  - {fileID: 7385705727766057503}
+  - {fileID: 2302409414190860031}
   canvases:
   - {fileID: 7162182730174625169}
 --- !u!1 &7385705727651508511
@@ -301,6 +302,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7385705726216481547}
     m_Modifications:
+    - target: {fileID: 4017542591516783322, guid: dac38040c7e6df547b26324aa71a50a9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5642355714817058362, guid: dac38040c7e6df547b26324aa71a50a9,
         type: 3}
       propertyPath: m_Enabled
@@ -393,9 +399,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac38040c7e6df547b26324aa71a50a9, type: 3}
---- !u!65 &7385705727766057503 stripped
+--- !u!65 &2302409414190860031 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 5642355714817058362, guid: dac38040c7e6df547b26324aa71a50a9,
+  m_CorrespondingSourceObject: {fileID: 4017542591516783322, guid: dac38040c7e6df547b26324aa71a50a9,
     type: 3}
   m_PrefabInstance: {fileID: 2896624465083413541}
   m_PrefabAsset: {fileID: 0}
@@ -601,7 +607,7 @@ PrefabInstance:
         type: 3}
       propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7162182730174625172}
+      objectReference: {fileID: 2704204400298724734}
     - target: {fileID: 367715193137886194, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}
       propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -615,7 +621,7 @@ PrefabInstance:
     - target: {fileID: 367715193137886194, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}
       propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Ch2Puzzle1, Assembly-CSharp
+      value: BlueButtonBox, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 367715193137886194, guid: 7e20452915aa4014c96d198dcbad5e1a,
         type: 3}
@@ -1175,18 +1181,6 @@ Canvas:
     type: 3}
   m_PrefabInstance: {fileID: 7385705726188029542}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7162182730174625172 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 367715193137886194, guid: 7e20452915aa4014c96d198dcbad5e1a,
-    type: 3}
-  m_PrefabInstance: {fileID: 7385705726188029542}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1256ecc2f49405f4ea72e930dfa6e5c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &7162182730174625173 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 367715193137886195, guid: 7e20452915aa4014c96d198dcbad5e1a,

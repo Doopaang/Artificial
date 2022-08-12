@@ -33,7 +33,7 @@ public class Ch2Puzzle1 : PuzzleObject
 
     public void Solve()
     {
-        Debug.Log("solve");
+
     }
 
     public void ToggleButton(Toggle toggle)

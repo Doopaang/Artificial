@@ -28,7 +28,8 @@ public enum EItemType
     CHAPTER2_KNIFE,
     CHAPTER2_FLASHLIGHT,
     CHAPTER2_ROPE,
-    CHAPTER2_HOOK
+    CHAPTER2_HOOK,
+    CHAPTER2_KEY_BLACK
 }
 
 public class Item : MonoBehaviour

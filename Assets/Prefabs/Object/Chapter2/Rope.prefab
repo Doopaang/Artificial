@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5139173642191512290}
   - component: {fileID: 594974845643840649}
   - component: {fileID: 1402885252895726347}
-  - component: {fileID: 7030017427382283190}
+  - component: {fileID: 6271249939912581315}
   - component: {fileID: 5810640584854581327}
   - component: {fileID: 8482069826086135818}
   - component: {fileID: 6040888640744875467}
@@ -87,7 +87,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7030017427382283190
+--- !u!65 &6271249939912581315
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,10 +96,10 @@ BoxCollider:
   m_GameObject: {fileID: 2084082509573634715}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.14771181, y: 0.0049905013, z: 0.13882586}
+  m_Center: {x: 0.00063957274, y: -0.000000015483238, z: -0.0015513338}
 --- !u!114 &5810640584854581327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   scaleDetail: {x: 0, y: 0, z: 0}
   scaleInventory: {x: 0, y: 0, z: 0}
   scaleUsing: {x: 0, y: 0, z: 0}
-  itemObject: {fileID: 0}
+  itemObject: {fileID: 2084082509573634715}
 --- !u!114 &6040888640744875467
 MonoBehaviour:
   m_ObjectHideFlags: 0

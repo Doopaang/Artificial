@@ -1,12 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Rope : MonoBehaviour
 {
+    private bool interactive = false;
+
     public void Interact()
     {
-        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_ROPE);
-        Destroy(gameObject);
+        if (interactive)
+        {
+            GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_ROPE);
+            Destroy(gameObject);
+        }
+    }
+
+    public void EnableInteractive()
+    {
+        interactive = true;
     }
 }

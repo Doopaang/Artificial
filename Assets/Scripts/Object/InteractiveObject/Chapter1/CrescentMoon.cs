@@ -7,20 +7,18 @@ public class CrescentMoon : MonoBehaviour
 
     public void Interact()
     {
-        if (wereWolfPicture.state != EWerewolfPictureType.Night)
+        switch(wereWolfPicture.state)
         {
-            DialogueSystem.Instance.StartDialogue("Search_Crescent", DropCrescentMoon);
-        }
-        else
-        {
-            // Test None -> YellowBall
-            // if(GameManager.Instance.Inventory.UsingItem == EItemType.NONE)
-            // {
+            case EWerewolfPictureType.CrescentMoonNight:
+                DialogueSystem.Instance.StartDialogue("Search_Crescent", DropCrescentMoon);
+                break;
 
-            wereWolfPicture.StartChangeCoroutine();
-            //DialogueSystem.Instance.StartDialogue("After_Effect");
-
-            // }
+            case EWerewolfPictureType.Night:
+                if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_FULL_MOON)
+                {
+                    wereWolfPicture.StartChangeCoroutine();
+                }
+                break;
         }
     }
 

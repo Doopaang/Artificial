@@ -71,7 +71,6 @@ public class HousePicture : MonoBehaviour
         state = housePictureType;
         MeshRenderer after = pictures[(int)housePictureType].GetComponent<MeshRenderer>();
 
-        StartCoroutine(GameManager.Instance.FadeCoroutine(before, false));
-        StartCoroutine(GameManager.Instance.FadeCoroutine(after, true));
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after));
     }
 }

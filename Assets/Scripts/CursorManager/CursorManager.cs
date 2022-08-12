@@ -23,7 +23,9 @@ public class CursorManager : Singleton<CursorManager>
 
     private void Update()
     {
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition)))
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit) &&
+            hit.transform.tag != "NotInteract")
         {
             SetCursor(ECursorType.INTERACT);
             return;

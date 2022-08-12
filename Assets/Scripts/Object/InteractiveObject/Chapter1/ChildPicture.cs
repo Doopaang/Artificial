@@ -29,7 +29,6 @@ public class ChildPicture : MonoBehaviour
         MeshRenderer before = hungryChildPicture.GetComponent<MeshRenderer>();
         MeshRenderer after = fullChildPicture.GetComponent<MeshRenderer>();
 
-        StartCoroutine(GameManager.Instance.FadeCoroutine(before, false));
-        StartCoroutine(GameManager.Instance.FadeCoroutine(after, true));
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after));
     }
 }

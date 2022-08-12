@@ -3586,7 +3586,7 @@ PrefabInstance:
     - target: {fileID: 1661531191431673869, guid: 671c5a463f21d2b4ba590d04d4e7dd66,
         type: 3}
       propertyPath: m_Name
-      value: VFXSystem
+      value: VisualSystem
       objectReference: {fileID: 0}
     - target: {fileID: 4462071956296393705, guid: 671c5a463f21d2b4ba590d04d4e7dd66,
         type: 3}
@@ -5527,6 +5527,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 9159342388041775876, guid: 218f5e6a3a0e09e4a82c09505ed6b324,
+        type: 3}
+      propertyPath: ReactRetryUsedItem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RetryNoneItem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 218f5e6a3a0e09e4a82c09505ed6b324, type: 3}
 --- !u!1001 &700801798
@@ -6294,6 +6299,11 @@ PrefabInstance:
       propertyPath: back
       value: 
       objectReference: {fileID: 1453158539}
+    - target: {fileID: 6740074165941208215, guid: fcfc7385fa7462d40b835061137ba9f5,
+        type: 3}
+      propertyPath: m_TagString
+      value: NotInteract
+      objectReference: {fileID: 0}
     - target: {fileID: 8009540859005735966, guid: fcfc7385fa7462d40b835061137ba9f5,
         type: 3}
       propertyPath: crescentMoonCollider
@@ -13551,7 +13561,7 @@ MonoBehaviour:
   back: {fileID: 0}
   colliders:
   - {fileID: 2010432855}
-  - {fileID: 0}
+  - {fileID: 1929834062}
   canvases: []
 --- !u!1001 &1463931390
 PrefabInstance:
@@ -18472,6 +18482,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff3e4b8f4b1fa54993140456369bd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1929834062 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1867600727965564998, guid: fcfc7385fa7462d40b835061137ba9f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 767300524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1934838003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18641,6 +18657,7 @@ GameObject:
   - component: {fileID: 1947304469}
   - component: {fileID: 1947304472}
   - component: {fileID: 1947304473}
+  - component: {fileID: 1947304474}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -18826,6 +18843,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1947304474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947304468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shakeTechnique: 0
+  _makeDefaultOnEnable: 1
+  _limitMagnitude: 0
+  _positionalMagnitudeLimit: 10
+  _rotationalMagnitudeLimit: 3
 --- !u!1001 &1947749625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19998,6 +20032,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 370927072}
+    - target: {fileID: 7876554634205889831, guid: 8aa0b982ba4c5ad4da33f7e87dd79f07,
+        type: 3}
+      propertyPath: locked
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aa0b982ba4c5ad4da33f7e87dd79f07, type: 3}
 --- !u!4 &2094787900 stripped

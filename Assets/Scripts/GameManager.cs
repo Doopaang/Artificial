@@ -55,21 +55,9 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            VisualSystem.Instance.StartShakeCamera();
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            VisualSystem.Instance.StopShakeCamera();
-        }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            inventory.GainItem(EItemType.CHAPTER1_BATTERY_WATCH);
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            inventory.GainItem(EItemType.CHAPTER2_FULL_MOON);
+            inventory.GainItem(EItemType.CHAPTER2_KNIFE);
         }
     }
 

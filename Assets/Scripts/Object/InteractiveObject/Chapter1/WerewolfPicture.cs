@@ -109,9 +109,9 @@ public class WerewolfPicture : MonoBehaviour
         yield return new WaitForSeconds(animationDelay);
 
         ChangePicture(EWerewolfPictureType.Werewolf);
-        VisualSystem.Instance.StartShakeCamera();
+        VisualSystem.Instance.StartShakeCamera(shakeDuration);
 
-        yield return new WaitForSeconds(shakeDuration);
+        yield return new WaitForSeconds(VisualSystem.Instance.shakeData.TotalDuration);
 
         VisualSystem.Instance.StopShakeCamera();
         DialogueSystem.Instance.StartDialogue("After_Effect", GainKnife);

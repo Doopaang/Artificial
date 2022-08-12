@@ -10,13 +10,6 @@ public class ArtYellow : MonoBehaviour
 
     private bool firstInteractFlower = true;
 
-    private MoveSceneCamera moveSceneCamera;
-
-    private void Start()
-    {
-        moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
-    }
-
     public void Interact()
     {
         //if(!usedItem &&
@@ -30,26 +23,6 @@ public class ArtYellow : MonoBehaviour
         //    GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KEY_RED);
         //}
 
-        if (moveSceneCamera)
-        {
-            CameraSystem.Instance.MoveCamera(moveSceneCamera);
-
-            if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_FLOWER)
-            {
-                if (firstInteractFlower)
-                {
-                    firstInteractFlower = false;
-                    YellowFirstUseFlower();
-                }
-                else
-                    YellowRetryUseFlower();
-
-                return;
-            }
-
-            if (reactInteraction)
-                reactInteraction.React();
-        }
     }
 
     public void YellowFirstNoneItem()

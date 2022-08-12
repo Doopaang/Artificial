@@ -29,7 +29,8 @@ public enum EItemType
     CHAPTER2_FLASHLIGHT,
     CHAPTER2_ROPE,
     CHAPTER2_HOOK,
-    CHAPTER2_KEY_BLACK
+    CHAPTER2_KEY_BLACK,
+    CHAPTER2_FULL_MOON
 }
 
 public class Item : MonoBehaviour

@@ -99,7 +99,10 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
 
     private void SkipTyping()
     {
-        StopCoroutine(typingCoroutine);
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
         typingCoroutine = null;
 
         baseInspector.text.text = script.scripts[index].text;

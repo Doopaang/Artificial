@@ -3,55 +3,58 @@ using UnityEngine;
 public class ArtYellow : MonoBehaviour
 {
     [SerializeField]
-    private ReactInteraction reactInteraction;
-
-    [SerializeField]
     private ArtRed red;
 
-    private bool firstInteractFlower = true;
+    private bool isFirst = true;
+    private bool usedFlower = false;
+    private bool usedKnife = false;
+    private bool usedPill = false;
 
     public void Interact()
     {
-        //if(!usedItem &&
-        //    GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KNIFE)
-        //{
-        //    GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_KNIFE);
-        //    usedItem = true;
+        switch (GameManager.Instance.Inventory.UsingItem)
+        {
+            case EItemType.CHAPTER2_KNIFE:
+                DialogueSystem.Instance.StartDialogue("Yellow_Use_Knife", UseKnife);
+                break;
 
-        //    red.ChangeArt();
+            case EItemType.CHAPTER2_FLOWER:
+                if (!usedFlower)
+                {
+                    usedFlower = true;
+                    DialogueSystem.Instance.StartDialogue("Yellow_Use_Flower");
+                }
+                else
+                {
+                    DialogueSystem.Instance.StartDialogue("Yellow_Use_Flower_Many_Times");
+                }
+                break;
 
-        //    GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KEY_RED);
-        //}
-
+            default:
+                if (!usedKnife)
+                {
+                    if (isFirst)
+                    {
+                        isFirst = false;
+                        DialogueSystem.Instance.StartDialogue("Yellow_First");
+                    }
+                    else
+                    {
+                        DialogueSystem.Instance.StartDialogue("Yellow_Many_Times");
+                    }
+                }
+                else
+                {
+                    DialogueSystem.Instance.StartDialogue("Yellow_After_Gain_Item");
+                }
+                break;
+        }
     }
 
-    public void YellowFirstNoneItem()
+    private void UseKnife()
     {
-        DialogueSystem.Instance.StartDialogue("Yellow_First");
-    }
-
-    public void YellowRetryNoneItem()
-    {
-        DialogueSystem.Instance.StartDialogue("Yellow_Many_Times");
-    }
-
-    public void YellowUseItem()
-    {
-        DialogueSystem.Instance.StartDialogue("Yellow_Use_Knife");
-    }
-
-    public void YellowAfterUseItem()
-    {
-        DialogueSystem.Instance.StartDialogue("Yellow_After_Gain_Item");
-    }
-
-    public void YellowFirstUseFlower()
-    {
-        DialogueSystem.Instance.StartDialogue("Yellow_Use_Flower");
-    }
-
-    public void YellowRetryUseFlower()
-    {
-        DialogueSystem.Instance.StartDialogue("Yellow_Use_Flower_Many_Times");
+        VisualSystem.Instance.StartBlackOut();
+        /// [임시] 효과음 출력
+        VisualSystem.Instance.StopBlackOut();
     }
 }

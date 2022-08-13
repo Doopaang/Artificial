@@ -30,7 +30,8 @@ public enum EItemType
     CHAPTER2_ROPE,
     CHAPTER2_HOOK,
     CHAPTER2_KEY_BLACK,
-    CHAPTER2_FULL_MOON
+    CHAPTER2_FULL_MOON,
+    CHAPTER2_PILL
 }
 
 public class Item : MonoBehaviour

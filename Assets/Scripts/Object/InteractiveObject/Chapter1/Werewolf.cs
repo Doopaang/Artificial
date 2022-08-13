@@ -27,9 +27,10 @@ public class Werewolf : MonoBehaviour
         {
             DialogueSystem.Instance.StartDialogue("First_Morning");
         }
-        else
+        else if (werewolfPicture.state == EWerewolfPictureType.Night ||
+            werewolfPicture.state == EWerewolfPictureType.FullMoonNight)
         {
-            DialogueSystem.Instance.StartDialogue("Many_Times_Night");
+            DialogueSystem.Instance.StartDialogue("First_Night");
         }
     }
 
@@ -37,7 +38,8 @@ public class Werewolf : MonoBehaviour
     {
         if (GameManager.Instance.IsDaytime)
             DialogueSystem.Instance.StartDialogue("Many_Times_Morning");
-        else
+        else if (werewolfPicture.state == EWerewolfPictureType.Night ||
+            werewolfPicture.state == EWerewolfPictureType.FullMoonNight)
             DialogueSystem.Instance.StartDialogue("Many_Times_Night");
     }
 }

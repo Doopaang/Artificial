@@ -210,8 +210,10 @@ MonoBehaviour:
   - {fileID: 26397234293011333}
   - {fileID: 8420771498682205884}
   crescentMoon: {fileID: 4827627835847434526}
+  were: {fileID: 403175180599552249}
   state: 0
   animationDelay: 1.2
+  shakeDuration: 1
 --- !u!1001 &412757943835956173
 PrefabInstance:
   m_ObjectHideFlags: 0

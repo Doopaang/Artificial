@@ -23,21 +23,6 @@ public class ArtYellow : MonoBehaviour
         //    GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KEY_RED);
         //}
 
-        if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_FLOWER)
-        {
-            if (firstInteractFlower)
-            {
-                firstInteractFlower = false;
-                YellowFirstUseFlower();
-            }
-            else
-                YellowRetryUseFlower();
-
-            return;
-        }
-
-        if (reactInteraction)
-            reactInteraction.React();
     }
 
     public void YellowFirstNoneItem()
@@ -68,5 +53,5 @@ public class ArtYellow : MonoBehaviour
     public void YellowRetryUseFlower()
     {
         DialogueSystem.Instance.StartDialogue("Yellow_Use_Flower_Many_Times");
-    }    
+    }
 }

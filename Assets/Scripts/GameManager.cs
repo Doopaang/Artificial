@@ -53,6 +53,14 @@ public class GameManager : Singleton<GameManager>
         brushUI.gameObject.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            inventory.GainItem(EItemType.CHAPTER2_KNIFE);
+        }
+    }
+
     public void SetInputBlock(bool value)
     {
         if (CursorManager.Instance)
@@ -64,28 +72,41 @@ public class GameManager : Singleton<GameManager>
         inputBlock.gameObject.SetActive(value);
     }
 
-    public IEnumerator FadeCoroutine(MeshRenderer renderer, bool isIn, bool isFade = true)
+    public IEnumerator ChangeFadeCoroutine(MeshRenderer before, MeshRenderer after, bool isFade = true)
     {
-        renderer.gameObject.SetActive(true);
-
-        Color color = renderer.material.color;
-        color.a = isIn ? 0.0f : 1.0f;
-        renderer.material.color = color;
-
-        while (isIn && color.a < 1.0f ||
-            !isIn && color.a > 0.0f)
+        before.gameObject.SetActive(true);
+        after.gameObject.SetActive(true);
+        foreach (var col in before.GetComponents<Collider>())
         {
-            color.a += (isFade ? fadeSpeed * Time.fixedDeltaTime : 1.0f) * (isIn ? 1.0f : -1.0f);
-            renderer.material.color = color;
+            col.enabled = false;
+        }
+        foreach (var col in after.GetComponents<Collider>())
+        {
+            col.enabled = false;
+        }
+
+        before.material.renderQueue += 1;
+
+        Color color = before.material.color;
+        while (color.a > 0.0f)
+        {
+            color.a -= (isFade ? fadeSpeed * Time.fixedDeltaTime : 1.0f);
+            before.material.color = color;
             yield return new WaitForFixedUpdate();
         }
 
-        if (!isIn)
-        {
-            renderer.gameObject.SetActive(false);
-        }
+        before.gameObject.SetActive(false);
         color.a = 1.0f;
-        renderer.material.color = color;
+        before.material.color = color;
+        before.material.renderQueue -= 1;
+        foreach (var col in before.GetComponents<Collider>())
+        {
+            col.enabled = true;
+        }
+        foreach (var col in after.GetComponents<Collider>())
+        {
+            col.enabled = true;
+        }
     }
 
     public void ChangeToDaytime()

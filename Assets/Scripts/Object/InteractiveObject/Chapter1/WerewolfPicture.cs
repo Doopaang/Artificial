@@ -19,11 +19,17 @@ public class WerewolfPicture : MonoBehaviour
     [SerializeField]
     private Collider crescentMoon;
 
+    [SerializeField]
+    private Collider were;
+
     [HideInInspector]
     public EWerewolfPictureType state = EWerewolfPictureType.Day;
 
     [SerializeField]
     private float animationDelay;
+
+    [SerializeField]
+    private float shakeDuration;
 
     private MoveSceneCamera moveSceneCamera;
 
@@ -58,10 +64,12 @@ public class WerewolfPicture : MonoBehaviour
     public void ChangeToDay()
     {
         ChangePicture(EWerewolfPictureType.Day);
+        crescentMoon.tag = "NotInteract";
     }
 
     public void ChangeToNight(bool isFade = true)
     {
+        crescentMoon.tag = "Untagged";
         if (isGainCrescentMoon)
         {
             ChangePicture(EWerewolfPictureType.Night, isFade);
@@ -78,12 +86,13 @@ public class WerewolfPicture : MonoBehaviour
         state = werePictureType;
         MeshRenderer after = pictures[(int)werePictureType].GetComponent<MeshRenderer>();
 
-        StartCoroutine(GameManager.Instance.FadeCoroutine(before, false, isFade));
-        StartCoroutine(GameManager.Instance.FadeCoroutine(after, true, isFade));
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, isFade));
     }
 
     public void StartChangeCoroutine()
     {
+        crescentMoon.tag = "NotInteract";
+        were.tag = "NotInteract";
         StartCoroutine(WerewolfAnimation());
     }
 
@@ -100,7 +109,18 @@ public class WerewolfPicture : MonoBehaviour
         yield return new WaitForSeconds(animationDelay);
 
         ChangePicture(EWerewolfPictureType.Werewolf);
+        VisualSystem.Instance.StartShakeCamera(shakeDuration);
+
+        yield return new WaitForSeconds(VisualSystem.Instance.shakeData.TotalDuration);
+
+        VisualSystem.Instance.StopShakeCamera();
+        DialogueSystem.Instance.StartDialogue("After_Effect", GainKnife);
 
         GameManager.Instance.SetInputBlock(false);
+    }
+
+    public void GainKnife()
+    {
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KNIFE);
     }
 }

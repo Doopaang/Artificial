@@ -4,18 +4,20 @@ using FirstGearGames.SmoothCameraShaker;
 
 public class VisualSystem : Singleton<VisualSystem>
 {
-    [SerializeField]
-    private ShakeData shakeData;
+    public ShakeData shakeData;
 
     [SerializeField]
     private Canvas blackOutCanvas;
 
     private bool blackOut;
 
-    public void StartShakeCamera()
+    public void StartShakeCamera(float duration = 0.0f)
     {
         StopShakeCamera();
 
+        ShakeData data = shakeData.CreateInstance();
+        data.SetTotalDuration(duration);
+        shakeData = data;
         CameraShakerHandler.Shake(shakeData);
     }
 

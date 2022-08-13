@@ -77,4 +77,4 @@ MonoBehaviour:
   _positionalInverts: 0
   _rotationalInfluence: {x: 0, y: 0, z: 0.5}
   _rotationalInverts: 0
-  _randomSeed: 1
+  _randomSeed: 0

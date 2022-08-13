@@ -28,20 +28,17 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
     private UnityAction afterEvent = null;
 
 #if UNITY_EDITOR
+    ///  [임시] 치트키
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            StartDialogue("Test1", TestAfter);
+            SkipTyping();
+            EndDialogue();
         }
     }
 
-    private void TestAfter()
-    {
-        StartDialogue("Test2");
-    }
 #endif
-    //
 
     public void OnPointerClick(PointerEventData eventData)
     {

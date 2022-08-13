@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 6136006582955832288}
   - component: {fileID: 771905139209821180}
   - component: {fileID: 7727564628667138982}
-  - component: {fileID: 5378497881958541349}
   - component: {fileID: 3443077440109369682}
   m_Layer: 0
   m_Name: YellowCharacterPicture
@@ -214,79 +213,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &5378497881958541349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5730460580329522441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf4d469f2c76f244baf054af818e6eaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ReactFirstNoneItem:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3443077440109369682}
-        m_TargetAssemblyTypeName: ArtYellow, Assembly-CSharp
-        m_MethodName: YellowFirstNoneItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReactRetryNoneItem:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3443077440109369682}
-        m_TargetAssemblyTypeName: ArtYellow, Assembly-CSharp
-        m_MethodName: YellowRetryNoneItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReactFirstUsingItem:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3443077440109369682}
-        m_TargetAssemblyTypeName: ArtYellow, Assembly-CSharp
-        m_MethodName: YellowUseItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReactRetryUsedItem:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3443077440109369682}
-        m_TargetAssemblyTypeName: ArtYellow, Assembly-CSharp
-        m_MethodName: YellowAfterUseItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  necessaryItem: 23
 --- !u!114 &3443077440109369682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,8 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50fedeff3fc8f3f4a8b98a7ad7bc9408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reactInteraction: {fileID: 5378497881958541349}
+  soundBeforeDelay: 1
+  soundAfterDelay: 1
   red: {fileID: 0}
+  green: {fileID: 0}
 --- !u!1001 &818019756904050047
 PrefabInstance:
   m_ObjectHideFlags: 0

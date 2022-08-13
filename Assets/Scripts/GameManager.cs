@@ -59,6 +59,10 @@ public class GameManager : Singleton<GameManager>
         {
             inventory.GainItem(EItemType.CHAPTER2_KNIFE);
         }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            inventory.GainItem(EItemType.CHAPTER2_FLOWER);
+        }
     }
 
     public void SetInputBlock(bool value)

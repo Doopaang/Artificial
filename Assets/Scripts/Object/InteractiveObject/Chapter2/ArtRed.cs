@@ -8,7 +8,8 @@ public class ArtRed : MonoBehaviour
     [SerializeField]
     private Transform movePos;
 
-    private bool isChanged = false;
+    [SerializeField]
+    public bool isChanged = false;
 
     public void Interact()
     {

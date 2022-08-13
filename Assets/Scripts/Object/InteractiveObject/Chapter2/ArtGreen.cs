@@ -7,6 +7,9 @@ public class ArtGreen : MonoBehaviour
 
     private bool usedItem = false;
 
+    [HideInInspector]
+    public bool isChanged = false;
+
     public void Interact()
     {
         if (reactInteraction)

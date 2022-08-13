@@ -17,7 +17,6 @@ public class Brush : MonoBehaviour
 
     public void ApplyColor()
     {
-        GetComponent<MeshRenderer>().materials[1].SetColor("_Color", GameManager.Instance.brushColor);
+        GetComponentInChildren<MeshRenderer>().materials[0].SetColor("_Color", GameManager.Instance.brushColor);
     }
-
 }

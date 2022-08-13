@@ -3,9 +3,20 @@ using UnityEngine;
 
 public class BookPos : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject mesh;
+
     private EItemType book = EItemType.NONE;
 
     private GameObject bookObject = null;
+
+    public GameObject Mesh
+    {
+        get
+        {
+            return mesh;
+        }
+    }
 
     public void Interact()
     {
@@ -16,6 +27,7 @@ public class BookPos : MonoBehaviour
             GameManager.Instance.Inventory.GainItem(book);
             book = EItemType.NONE;
             Destroy(bookObject);
+            mesh.SetActive(true);
         }
         else if (usingItem >= EItemType.CHAPTER2_BOOK1 &&
             usingItem <= EItemType.CHAPTER2_BOOK5)
@@ -33,6 +45,8 @@ public class BookPos : MonoBehaviour
                     break;
                 }
             }
+
+            mesh.SetActive(false);
         }
     }
 }

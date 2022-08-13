@@ -208,9 +208,10 @@ MonoBehaviour:
   - {fileID: 5266143063124719215}
   - {fileID: 1282077584009834402}
   - {fileID: 8922781877974561102}
-  - {fileID: 3245023051809307579}
+  - {fileID: 3126956065795588246}
   - {fileID: 5670717833724539363}
   - {fileID: 1827490019248742173}
+  - {fileID: 4343718785467386689}
   canvases: []
 --- !u!1001 &40237026806284233
 PrefabInstance:
@@ -296,9 +297,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f49e145f6bed524a893abc75642ee27, type: 3}
---- !u!65 &3245023051809307579 stripped
+--- !u!65 &3126956065795588246 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3280397447068058738, guid: 2f49e145f6bed524a893abc75642ee27,
+  m_CorrespondingSourceObject: {fileID: 3164867966099849055, guid: 2f49e145f6bed524a893abc75642ee27,
     type: 3}
   m_PrefabInstance: {fileID: 40237026806284233}
   m_PrefabAsset: {fileID: 0}
@@ -1417,8 +1418,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6247538234376276477, guid: d587237bfd8bcce4f94c85035a582c41,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d587237bfd8bcce4f94c85035a582c41, type: 3}
+--- !u!135 &4343718785467386689 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 6247538234376276477, guid: d587237bfd8bcce4f94c85035a582c41,
+    type: 3}
+  m_PrefabInstance: {fileID: 7706868240392307388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7883723689055193715
 PrefabInstance:
   m_ObjectHideFlags: 0

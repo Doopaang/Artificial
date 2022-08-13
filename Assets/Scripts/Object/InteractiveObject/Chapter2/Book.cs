@@ -5,7 +5,7 @@ public class Book : MonoBehaviour
     [TextArea]
     public string text;
 
-    private bool first = true;
+    static bool first = true;
 
     private int bookNum;
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 158594644524764276}
   - component: {fileID: 4407138242439434285}
   - component: {fileID: 7670600643366961533}
-  - component: {fileID: 3280397447068058738}
+  - component: {fileID: 3164867966099849055}
   - component: {fileID: 2376390038131940643}
   - component: {fileID: 7080252968946789615}
   - component: {fileID: 6025272171281160710}
@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5661099798978663531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.341, y: -0.078, z: 0.034999847}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.72, z: 0.72}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,7 +88,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3280397447068058738
+--- !u!65 &3164867966099849055
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,8 +99,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.31689304, y: 1.4237275, z: 1.0978303}
+  m_Center: {x: 0.000000007450581, y: 0, z: 0}
 --- !u!114 &2376390038131940643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,8 +159,7 @@ MonoBehaviour:
   combinableItemType: 0
   combineResultItemType: 0
   itemRotation: {x: 0, y: 0, z: 0, w: 0}
-  scaleDetail: {x: 100, y: 100, z: 100}
-  scaleInventory: {x: 0, y: 0, z: 0}
+  scaleDetail: {x: 500, y: 500, z: 500}
+  scaleInventory: {x: 100, y: 100, z: 100}
   scaleUsing: {x: 0, y: 0, z: 0}
   itemObject: {fileID: 5661099798978663531}
-  detailObject: {fileID: 0}

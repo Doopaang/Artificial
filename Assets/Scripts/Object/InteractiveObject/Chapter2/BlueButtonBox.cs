@@ -5,6 +5,9 @@ public class BlueButtonBox : MonoBehaviour
     [SerializeField]
     private GameObject cover;
 
+    [SerializeField]
+    private GameObject item;
+
     private MoveSceneCamera moveSceneCamera;
 
     private void Start()
@@ -21,5 +24,6 @@ public class BlueButtonBox : MonoBehaviour
     public void Solve()
     {
         cover.SetActive(false);
+        item.GetComponent<Collider>().enabled = true;
     }
 }

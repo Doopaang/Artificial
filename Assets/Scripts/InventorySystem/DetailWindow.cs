@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DetailWindow : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class DetailWindow : MonoBehaviour
 
     [SerializeField]
     private BookDetail BookUI;
+
+    private UnityAction afterEvent = null;
 
     public GameObject ItemDetailObject
     {
@@ -39,9 +42,15 @@ public class DetailWindow : MonoBehaviour
 
         Destroy(itemDetailObject);
         itemDetailObject = null;
+
+        if (afterEvent != null)
+        {
+            afterEvent.Invoke();
+            afterEvent = null;
+        }
     }
 
-    public void SetDetailObject(GameObject prefab)
+    public void SetDetailObject(GameObject prefab, UnityAction afterEvent = null)
     {
         itemDetailObject = Instantiate(prefab, itemDetailPos.position, Quaternion.identity, transform);
         Item tempItem = itemDetailObject.GetComponent<Item>();
@@ -65,6 +74,11 @@ public class DetailWindow : MonoBehaviour
         else
         {
             BookUI.gameObject.SetActive(false);
+        }
+
+        if (afterEvent != null)
+        {
+            this.afterEvent = afterEvent;
         }
     }
 

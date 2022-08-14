@@ -53,20 +53,6 @@ public class GameManager : Singleton<GameManager>
         brushUI.gameObject.SetActive(false);
     }
 
-    /// [임시]
-    public float duration;
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            VisualSystem.Instance.StartShakeCamera(duration);
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            inventory.GainItem(EItemType.CHAPTER2_KNIFE);
-        }
-    }
-
     public void SetInputBlock(bool value)
     {
         if (CursorManager.Instance)

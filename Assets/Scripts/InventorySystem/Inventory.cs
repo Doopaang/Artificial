@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour
 {
@@ -87,7 +88,7 @@ public class Inventory : MonoBehaviour
         selectedImage.gameObject.GetComponent<RectTransform>().position = selectedSlot.ItemObject.gameObject.transform.position;
     }
 
-    public void GainItem(EItemType itemType)
+    public void GainItem(EItemType itemType, UnityAction afterEvent = null)
     {
         if (itemList.Count >= slotList.Length)
             return;
@@ -96,7 +97,7 @@ public class Inventory : MonoBehaviour
 
         ApplyItemList();
 
-        ActivateItemDetailWindow(itemType);
+        ActivateItemDetailWindow(itemType, afterEvent);
     }
 
     public void PressedUseButton()
@@ -138,13 +139,13 @@ public class Inventory : MonoBehaviour
             ActivateItemDetailWindow(selectedSlot.ItemType);
     }
 
-    public void ActivateItemDetailWindow(EItemType itemType)
+    public void ActivateItemDetailWindow(EItemType itemType, UnityAction afterEvent = null)
     {
         if (itemType == EItemType.NONE)
             return;
 
         itemDetailWindow.gameObject.SetActive(true);
-        itemDetailWindow.SetDetailObject(SearchItemData(itemType).gameObject);
+        itemDetailWindow.SetDetailObject(SearchItemData(itemType).gameObject, afterEvent);
     }
 
     public Item SearchItemData(EItemType itemType)

@@ -3,44 +3,84 @@ using UnityEngine;
 public class ArtBlue : MonoBehaviour
 {
     [SerializeField]
-    private ReactInteraction reactInteraction;
+    private MeshRenderer blueRenderer;
+    [SerializeField]
+    private MeshRenderer lemonRenderer;
+    [SerializeField]
+    private MeshRenderer whiteRenderer;
 
+    [SerializeField]
+    private GameObject cup;
+
+    [SerializeField]
+    private ArtRed red;
+    [SerializeField]
+    private ArtYellow yellow;
+
+    private bool isFirst = true;
     private bool usedItem = false;
 
     public void Interact()
     {
-        if (reactInteraction)
-            reactInteraction.React();
+        if (isFirst)
+        {
+            isFirst = false;
+            cup.SetActive(true);
+            DialogueSystem.Instance.StartDialogue("Blue_First");
+        }
+        else if (yellow.isChanged)
+        {
+            DialogueSystem.Instance.StartDialogue("Blue_After_Yellow_Died", ChangeWhite);
+        }
+        else if (red.isChanged)
+        {
+            DialogueSystem.Instance.StartDialogue("Blue_After_red_died");
+        }
+        else if (usedItem)
+        {
+            DialogueSystem.Instance.StartDialogue("Blue_After_Give_Drink");
+        }
+        else
+        {
+            DialogueSystem.Instance.StartDialogue("Blue_Many_Times");
+        }
     }
 
-    public void BlueFirstNoneItem()
-    {
-        DialogueSystem.Instance.StartDialogue("Blue_First");
-    }
-
-    public void BlueRetryNoneItem()
-    {
-        DialogueSystem.Instance.StartDialogue("Blue_Many_Times");
-    }
-
-    public void BlueUseItem()
+    public void InteractCup()
     {
         if (!usedItem &&
             GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_BRUSH &&
             GameManager.Instance.brushColor == new Color(1.0f, 1.0f, 0.0f, 1.0f))
         {
             usedItem = true;
-            DialogueSystem.Instance.StartDialogue("Blue_Use_Yellow_Brush", GainBlueHandle);
+            cup.SetActive(false);
+            DialogueSystem.Instance.StartDialogue("Blue_Use_Yellow_Brush", UseYellowBrush);
+        }
+        else
+        {
+            DialogueSystem.Instance.StartDialogue("Blue_Many_Times");
         }
     }
 
-    public void BlueAfterUseItem()
+    private void UseYellowBrush()
     {
-        DialogueSystem.Instance.StartDialogue("Blue_After_Give_Drink");
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(blueRenderer, lemonRenderer));
+        DialogueSystem.Instance.StartDialogue("Blue_Give_Drink", GainBlueHandle);
     }
 
-    public void GainBlueHandle()
+    private void GainBlueHandle()
     {
-        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KEY_BLUE);
+        GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KEY_BLUE, GainHandleAfter);
+    }
+
+    private void GainHandleAfter()
+    {
+        DialogueSystem.Instance.StartDialogue("After_Gain_Blue_Handle");
+    }
+
+    private void ChangeWhite()
+    {
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(lemonRenderer, whiteRenderer));
+        DialogueSystem.Instance.StartDialogue("Blue_After_Effect");
     }
 }

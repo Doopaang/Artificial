@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6889040223382413286}
   - component: {fileID: 6201753858075598726}
   m_Layer: 0
-  m_Name: GreenCharacterPortrait
+  m_Name: RedCharacterPortrait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,6 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reactInteraction: {fileID: 3827698209777695659}
   movePos: {fileID: 0}
+  isChanged: 0
 --- !u!1001 &7070008510655232473
 PrefabInstance:
   m_ObjectHideFlags: 0

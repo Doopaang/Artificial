@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   scriptSets:
-  - key: Game_start
+  - key: Game_Start
     scripts:
     - text: "\uADF8\uB7EC\uB2C8\uAE4C \uADF8\uB9BC\uB4E4\uC774 \uB9D0\uC744 \uD55C\uB2E4\uB294
         \uAC70\uC8E0?"
@@ -103,50 +103,64 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: d99e3d1010189ef4ab7b5a5656003b05, type: 3}
   - key: Search_Flowerpot_Right
     scripts:
-    - text: "\uC5B4? \uC5EC\uAE30 \uC5F4\uC1E0\uAC00 \uC788\uB124\uC694"
-      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
-    - text: "\uC800\uD76C \uC9D1\uB3C4 \uC774\uB807\uAC8C \uC5F4\uC1E0\uB97C \uD654\uBD84\uC5D0
-        \uC228\uACA8\uB450\uAC70\uB4E0\uC694"
-      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
-    - text: "\uC774 \uC9D1\uB3C4 \uADF8\uB7F0\uAC00 \uBCF4\uB124\uC694"
-      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
-    - text: "\uC774\uB7F0 \uC2DD\uC73C\uB85C \uC5F4\uC1E0\uB97C \uC228\uAE30\uB294
-        \uC9D1\uC740 \uC0DD\uAC01\uBCF4\uB2E4 \uB9CE\uB2F5\uB2C8\uB2E4."
-      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC800\uD76C \uC9D1\uC740 \uC5F4\uC1E0\uB97C \uD654\uBD84\uC5D0 \uC228\uACA8\uB450\uAC70\uB4E0\uC694"
+      sprite: {fileID: 0}
+    - text: "\uADF8\uB798\uC11C \uD654\uBD84\uC744 \uBCF8\uAC74\uB370..."
+      sprite: {fileID: 0}
+    - text: "\uC5F4\uC1E0\uB294 \uC548\uBCF4\uC774\uB294\uAD70\uC694."
+      sprite: {fileID: 0}
+    - text: "\uC88B\uC740 \uBC1C\uC0C1\uC774\uB77C\uACE0 \uC0DD\uAC01\uD569\uB2C8\uB2E4."
+      sprite: {fileID: 0}
+    - text: "\uADF8\uB7F0 \uC2DD\uC73C\uB85C \uC5F4\uC1E0\uB97C \uC228\uAE30\uB294
+        \uC9D1\uC740 \uC0DD\uAC01\uBCF4\uB2E4 \uB9CE\uC73C\uB2C8\uAE4C."
+      sprite: {fileID: 0}
     - text: "\uC9D1\uC9D1\uB9C8\uB2E4 \uD654\uBD84\uC744 \uC0B4\uD3B4\uBCF4\uBA74"
-      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+      sprite: {fileID: 0}
     - text: "\uC0DD\uAC01\uBCF4\uB2E4 \uC27D\uAC8C \uB0A8\uC758 \uC9D1\uC5D0 \uB4E4\uC5B4\uAC08
         \uC218 \uC788\uC9C0 \uC54A\uC744\uAE4C\uC694?"
-      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+      sprite: {fileID: 0}
     - text: ......
-      sprite: {fileID: 21300000, guid: e3298a317f0bd40478089f013aebd428, type: 3}
+      sprite: {fileID: 0}
     - text: "\uD558\uD558 \uB18D\uB2F4\uC785\uB2C8\uB2E4."
-      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
-    - text: "\uADF8\uB7F0\uB370 \uADF8 \uC5F4\uC1E0 \uAC00\uC838\uAC08 \uC218 \uC788\uC9C0
-        \uC54A\uC744\uAE4C\uC694?"
-      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
-    - text: "\uADF8\uB9BC\uC5D0 \uC190\uC744 \uB123\uC5B4\uBCF4\uC138\uC694."
-      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+      sprite: {fileID: 0}
+    - text: "\uADF8\uB7F0\uB370 \uC81C \uC0DD\uAC01\uC5D4 \uC774 \uC9D1\uB3C4 \uC5ED\uC2DC
+        \uC774\uB7F0 \uC2DD\uC73C\uB85C \uC228\uACA8\uB480\uC744\uAC83\uAC19\uAD70\uC694."
+      sprite: {fileID: 0}
+    - text: "\uD558\uC9C0\uB9CC \uC5F4\uC1E0\uB294 \uC548\uBCF4\uC774\uB294\uB370\uC694?"
+      sprite: {fileID: 0}
+    - text: "\uC5F4\uC1E0\uB97C \uC798 \uBCF4\uC774\uAC8C \uC228\uACA8\uB450\uB294
+        \uC0AC\uB78C\uC740 \uC5C6\uACA0\uC8E0."
+      sprite: {fileID: 0}
+    - text: "\uADF8\uB9BC\uC5D0 \uC190\uC744 \uB123\uC5B4\uBCF4\uC2DC\uACA0\uC5B4\uC694?"
+      sprite: {fileID: 0}
     - text: "\uC774\uAC83\uB3C4 \uB18D\uB2F4\uC778\uAC00\uC694?"
-      sprite: {fileID: 21300000, guid: e3298a317f0bd40478089f013aebd428, type: 3}
-    - text: "\uAE00\uC384\uC694.. \uC18D\uB294 \uC148 \uCE58\uACE0 \uC5F4\uC1E0\uB97C
-        \uC7A1\uC544\uBCFC\uB798\uC694?"
-      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+      sprite: {fileID: 0}
+    - text: "\uAE00\uC384\uC694... \uC18D\uB294 \uC148 \uCE58\uACE0 \uC190\uC744
+        \uB123\uC5B4\uBCFC\uB798\uC694?"
+      sprite: {fileID: 0}
     - text: "\uC544\uBB34\uB798\uB3C4 \uB180\uB9AC\uC2DC\uB824\uB294 \uAC83 \uAC19\uC740\uB370.."
-      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+      sprite: {fileID: 0}
+    - text: "\uC6B0\uC640! \uC815\uB9D0\uB85C \uC190\uC774 \uADF8\uB9BC \uC18D\uC5D0
+        \uB4E4\uC5B4\uAC00\uC84C\uC5B4\uC694!"
+      sprite: {fileID: 0}
+    - text: "\uADF8\uB807\uC8E0? \uC800\uB294 \uAC70\uC9D3\uB9D0\uC744 \uD558\uC9C0
+        \uC54A\uB294\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 0}
+    - text: "\uC5F4\uC1E0\uB97C \uCC3E\uC544\uBCFC\uAC8C\uC694."
+      sprite: {fileID: 0}
   - key: Gain_Key
     scripts:
     - text: "\uC557! \uC7A1\uD614\uB2E4!"
-      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
-    - text: "\uADF8\uB807\uC8E0? \uC800\uB294 \uAC70\uC9D3\uB9D0\uC744 \uD558\uC9C0
-        \uC54A\uB294\uB2F5\uB2C8\uB2E4."
-      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+      sprite: {fileID: 0}
+    - text: "\uC5ED\uC2DC \uC774 \uC9D1\uC758 \uC8FC\uC778\uB3C4 \uBED4\uD55C \uBC29\uBC95\uC73C\uB85C
+        \uC5F4\uC1E0\uB97C \uC228\uACA8\uB480\uC5C8\uAD70\uC694."
+      sprite: {fileID: 0}
     - text: "\uC6B0\uC640! \uC774\uAC70 \uC5B4\uB5BB\uAC8C \uC544\uC2E0 \uAC74\uAC00\uC694?"
-      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+      sprite: {fileID: 0}
     - text: "\uAE00\uC384\uC694... \uADF8\uB0E5 \uADF8\uB7F4 \uAC83 \uAC19\uC544\uC11C\uC694."
-      sprite: {fileID: 21300000, guid: 1d7b18a0ed221f9499c943dbc427a28e, type: 3}
+      sprite: {fileID: 0}
     - text: "\uBB54\uAC00 \uC801\uB2F9 \uC801\uB2F9\uD55C \uB300\uB2F5\uC774\uB124\uC694."
-      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+      sprite: {fileID: 0}
   - key: After_Gain_Key
     scripts:
     - text: "\uADF8\uB9BC \uC18D\uC758 \uC5F4\uC1E0\uB97C \uAC00\uC838\uC62C \uC218
@@ -817,6 +831,10 @@ MonoBehaviour:
     - text: "\uADF8\uB7F0\uB370 \uC774 \uC774\uC57C\uAE30\uB97C \uC804\uD574\uB3C4
         \uB420\uAE4C\uC694?"
       sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+  - key: Window
+    scripts:
+    - text: "\uADF8\uB9BC \uB4A4\uC5D0 \uCC3D\uBB38\uC774 \uC788\uC5C8\uB124\uC694."
+      sprite: {fileID: 0}
   - key: Red_After_Red_Died_Many_Times
     scripts:
     - text: "\uC774\uB7F0 \uBCC4 \uBCFC\uC77C \uC5C6\uB294 \uC544\uC774\uB97C \uC88B\uC544\uD558\uB294
@@ -825,32 +843,6 @@ MonoBehaviour:
   - key: Red_After_Green_Died
     scripts:
     - text: "(\uBBF8\uC548\uD574)"
-      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
-  - key: Red_Find_Window
-    scripts:
-    - text: "\uC5EC\uAE30 \uCC22\uC5B4\uC9C4 \uBD80\uBD84 \uB4A4\uB85C \uBB54\uAC00
-        \uC720\uB9AC \uAC19\uC740 \uAC8C \uBCF4\uC774\uB294\uB370\uC694?"
-      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
-    - text: "\uB4A4\uC5D0 \uBB54\uAC00\uAC00 \uC788\uB098 \uBCF4\uAD70\uC694. \uADF8\uB9BC\uC744
-        \uCE58\uC6CC\uBCFC\uAE4C\uC694?"
-      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
-    - text: "\uC73C... \uC774 \uADF8\uB9BC\uC744 \uC62E\uACA8\uB3C4 \uB420\uAE4C\uC694?"
-      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
-    - text: "\uC81C \uADF8\uB9BC\uC774\uB2C8\uAE4C \uC0C1\uAD00\uC5C6\uACA0\uC8E0."
-      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
-    - text: "\uC544\uB2C8, \uADF8\uB7F0 \uB73B\uC73C\uB85C \uB9D0\uD55C \uAC8C \uC544\uB2C8\uB77C..."
-      sprite: {fileID: 21300000, guid: e3298a317f0bd40478089f013aebd428, type: 3}
-    - text: "\uBE44\uCF1C\uC8FC\uC2DC\uACA0\uC5B4\uC694? \uC81C\uAC00 \uCE58\uC6B0\uB3C4\uB85D
-        \uD558\uC8E0"
-      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
-  - key: Red_After_Move_Red
-    scripts:
-    - text: "\uC815\uB9D0\uB85C \uB4A4\uC5D0 \uCC3D\uBB38\uC774 \uC788\uC5C8\uAD70\uC694.
-        \uC88B\uC740 \uAD00\uCC30\uB825\uC774\uC5D0\uC694."
-      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
-    - text: "\uB2F9\uC2E0\uC774 \uC810\uC810 \uB9C8\uC74C\uC5D0 \uB4ED\uB2C8\uB2E4."
-      sprite: {fileID: 21300000, guid: 1c385da6fb6445c47a21833c0da8b492, type: 3}
-    - text: ......
       sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
   - key: Green_First
     scripts:

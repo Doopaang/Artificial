@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/PuzzleTestScene.unity
-    guid: 17b5a1d9f0efd134aad18c1ca2fa88e5
+    path: Assets/Scenes/MainMenu.unity
+    guid: d078c222708ac0b47a50e432b6c3dde8
   - enabled: 1
-    path: Assets/Scenes/ARTificialScene.unity
-    guid: e05c398754adb774ab139db0c93e0758
+    path: Assets/Scenes/LevelTest.unity
+    guid: 822dceb03dc2dec498e9bae6d44c75d5
   m_configObjects: {}

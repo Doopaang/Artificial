@@ -3,7 +3,7 @@ using UnityEngine;
 public class DialPannel : MonoBehaviour
 {
     [SerializeField]
-    private GameObject RGBPuzzlePadUI;
+    private GameObject PuzzlePadUI;
 
     private MoveSceneCamera moveSceneCamera;
 
@@ -16,9 +16,9 @@ public class DialPannel : MonoBehaviour
 
     public void Interact()
     {
-        if (RGBPuzzlePadUI && moveSceneCamera)
+        if (PuzzlePadUI && moveSceneCamera)
         {
-            RGBPuzzlePadUI.SetActive(true);
+            PuzzlePadUI.SetActive(true);
             CameraSystem.Instance.MoveCamera(moveSceneCamera);
 
             if (firstInteract)

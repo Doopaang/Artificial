@@ -686,7 +686,7 @@ PrefabInstance:
     - target: {fileID: 6147253824734046462, guid: ae24f3890aba45943bc7fef5e25ca4e6,
         type: 3}
       propertyPath: m_Name
-      value: FlashLight
+      value: Binoculars
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae24f3890aba45943bc7fef5e25ca4e6, type: 3}

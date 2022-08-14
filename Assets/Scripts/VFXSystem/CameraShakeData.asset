@@ -21,8 +21,8 @@ MonoBehaviour:
   _totalDuration: 1
   _fadeInDuration: 0.5
   _fadeOutDuration: 0.5
-  _magnitude: 5
-  _magnitudeNoise: 0.2
+  _magnitude: 1.5
+  _magnitudeNoise: 1
   _magnitudeCurve:
     serializedVersion: 2
     m_Curve:
@@ -31,7 +31,7 @@ MonoBehaviour:
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -40,15 +40,15 @@ MonoBehaviour:
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _roughness: 3
-  _roughnessNoise: 0.5
+  _roughness: 50
+  _roughnessNoise: 1
   _roughnessCurve:
     serializedVersion: 2
     m_Curve:
@@ -57,7 +57,7 @@ MonoBehaviour:
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0

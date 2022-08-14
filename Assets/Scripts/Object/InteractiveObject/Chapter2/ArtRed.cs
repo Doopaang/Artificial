@@ -6,17 +6,13 @@ public class ArtRed : MonoBehaviour
     private ReactInteraction reactInteraction;
 
     [SerializeField]
-    private Transform movePos;
+    private GameObject ShreddedRedCharacterPicture;
 
-    private bool isChanged = false;
+    [HideInInspector]
+    public bool isChanged = false;
 
     public void Interact()
     {
-        //if(isChanged)
-        //{
-        //    transform.SetPositionAndRotation(movePos.position, movePos.rotation);
-        //}
-
         if (reactInteraction)
             reactInteraction.React();
     }
@@ -24,6 +20,9 @@ public class ArtRed : MonoBehaviour
     public void ChangeArt()
     {
         isChanged = true;
+
+        gameObject.SetActive(false);
+        ShreddedRedCharacterPicture.SetActive(true);
     }
 
     public void RedFirstNoneItem()

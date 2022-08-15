@@ -28,7 +28,7 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
     private UnityAction afterEvent = null;
 
 #if UNITY_EDITOR
-    ///  [�ӽ�] ġƮŰ
+    ///  [�ӽ�] ġƮŰ
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))

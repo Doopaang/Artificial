@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 6136006582955832288}
   - component: {fileID: 3106406105874469456}
   - component: {fileID: 5919755613350665344}
-  - component: {fileID: 8451572054369373356}
   - component: {fileID: 5397076941879240657}
   m_Layer: 0
   m_Name: GreenCharacterPicture
@@ -215,79 +214,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &8451572054369373356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5730460580329522441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf4d469f2c76f244baf054af818e6eaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ReactFirstNoneItem:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5397076941879240657}
-        m_TargetAssemblyTypeName: ArtGreen, Assembly-CSharp
-        m_MethodName: GreenFirstNoneItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReactRetryNoneItem:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5397076941879240657}
-        m_TargetAssemblyTypeName: ArtGreen, Assembly-CSharp
-        m_MethodName: GreenRetryNoneItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReactFirstUsingItem:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5397076941879240657}
-        m_TargetAssemblyTypeName: ArtGreen, Assembly-CSharp
-        m_MethodName: GreenUseItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ReactRetryUsedItem:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5397076941879240657}
-        m_TargetAssemblyTypeName: ArtGreen, Assembly-CSharp
-        m_MethodName: GreenAfterUseItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  necessaryItem: 21
 --- !u!114 &5397076941879240657
 MonoBehaviour:
   m_ObjectHideFlags: 0

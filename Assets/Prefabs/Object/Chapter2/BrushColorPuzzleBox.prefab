@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 175857294691378471}
+  - component: {fileID: 7336863754856450943}
+  - component: {fileID: 924586185185103768}
   m_Layer: 0
   m_Name: ColorPuzzleBoxCover
   m_TagString: Untagged
@@ -35,6 +37,48 @@ Transform:
   m_Father: {fileID: 5910914254974754457}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7336863754856450943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5450679036091162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 1.15, z: 0.2}
+  m_Center: {x: 0, y: 0.125, z: 0.02}
+--- !u!114 &924586185185103768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5450679036091162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1864596282486217879}
+          m_TargetAssemblyTypeName: ColorPuzzleBox, Assembly-CSharp
+          m_MethodName: Interact
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &136021591741824051
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,9 +128,7 @@ MonoBehaviour:
   up: {fileID: 0}
   down: {fileID: 0}
   back: {fileID: 0}
-  colliders:
-  - {fileID: 0}
-  - {fileID: 623685040359781305}
+  colliders: []
   canvases:
   - {fileID: 4183458073262724179}
 --- !u!1 &506516500984225688
@@ -98,8 +140,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5910914254974754457}
-  - component: {fileID: 623685040359781305}
-  - component: {fileID: 7826789110318925731}
   - component: {fileID: 1864596282486217879}
   m_Layer: 0
   m_Name: BrushColorPuzzleBox
@@ -127,48 +167,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &623685040359781305
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506516500984225688}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.85, y: 1.15, z: 0.2}
-  m_Center: {x: 0, y: 0.11, z: 0}
---- !u!114 &7826789110318925731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506516500984225688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1864596282486217879}
-          m_TargetAssemblyTypeName: ColorPuzzleBox, Assembly-CSharp
-          m_MethodName: Interact
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1864596282486217879
 MonoBehaviour:
   m_ObjectHideFlags: 0

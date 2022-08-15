@@ -4,7 +4,8 @@ public class Drawer : MonoBehaviour
 {
     private bool opened = false;
 
-    private bool locked = true;
+    [SerializeField]
+    private bool locked;
 
     [SerializeField]
     private Vector3 movementVectorForClose;

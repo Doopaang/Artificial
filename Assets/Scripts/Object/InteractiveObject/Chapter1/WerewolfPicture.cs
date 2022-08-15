@@ -125,5 +125,6 @@ public class WerewolfPicture : MonoBehaviour
     public void GainKnife()
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KNIFE);
+        GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_BATTERY_WATCH);
     }
 }

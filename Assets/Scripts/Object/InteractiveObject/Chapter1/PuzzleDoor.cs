@@ -14,6 +14,9 @@ public class PuzzleDoor : MonoBehaviour
     [SerializeField]
     private MoveSceneCamera moveSceneCamera;
 
+    [SerializeField]
+    private EItemType deleteItem;
+
     private void Start()
     {
         if (nextStageCamera)
@@ -36,5 +39,7 @@ public class PuzzleDoor : MonoBehaviour
 
         gameObject.transform.Rotate(doorOpenRotaion);
         gameObject.transform.Translate(doorOpenTranslation);
+
+        GameManager.Instance.Inventory.DeleteItem(deleteItem);
     }
 }

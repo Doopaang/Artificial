@@ -25,5 +25,6 @@ public class BlueButtonBox : MonoBehaviour
     {
         cover.SetActive(false);
         item.GetComponent<Collider>().enabled = true;
+        GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_PAPER_ARROW);
     }
 }

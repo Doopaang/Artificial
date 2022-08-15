@@ -8,6 +8,9 @@ public class ColorPuzzleBox : MonoBehaviour
     [SerializeField]
     private GameObject item;
 
+    [SerializeField]
+    private EItemType deleteItem;
+
     private MoveSceneCamera moveSceneCamera;
 
     private void Start()
@@ -25,5 +28,6 @@ public class ColorPuzzleBox : MonoBehaviour
     {
         item.GetComponent<Collider>().enabled = true;
         cover.SetActive(false);
+        GameManager.Instance.Inventory.DeleteItem(deleteItem);
     }
 }

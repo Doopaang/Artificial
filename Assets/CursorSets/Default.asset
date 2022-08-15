@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   cursorSprite: {fileID: 2800000, guid: cf5bde71d84c65a4aac54515061439df, type: 3}
-  hitSpot: {x: 10, y: 6}
+  hitSpot: {x: 50, y: 0}

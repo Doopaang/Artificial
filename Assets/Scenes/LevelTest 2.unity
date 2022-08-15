@@ -3408,6 +3408,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 566602209}
     m_Modifications:
+    - target: {fileID: 1465999184, guid: 671c5a463f21d2b4ba590d04d4e7dd66, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 370927072}
     - target: {fileID: 1661531191431673869, guid: 671c5a463f21d2b4ba590d04d4e7dd66,
         type: 3}
       propertyPath: m_Name
@@ -3467,6 +3471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298263727504604596, guid: 671c5a463f21d2b4ba590d04d4e7dd66,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 671c5a463f21d2b4ba590d04d4e7dd66, type: 3}
@@ -8459,7 +8468,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentCamera
       value: 
-      objectReference: {fileID: 798074517}
+      objectReference: {fileID: 1610163681}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e749b8f26a234c4d811f610fb8b08f8, type: 3}
 --- !u!1001 &893253175
@@ -13513,7 +13522,8 @@ MonoBehaviour:
   colliders:
   - {fileID: 2010432855}
   - {fileID: 0}
-  canvases: []
+  canvases:
+  - {fileID: 0}
 --- !u!1001 &1463931390
 PrefabInstance:
   m_ObjectHideFlags: 0

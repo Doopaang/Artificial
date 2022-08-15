@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Interact
   m_EditorClassIdentifier: 
   cursorSprite: {fileID: 2800000, guid: 8016ccd3add2f2b4792bb1a29e6a55d4, type: 3}
-  hitSpot: {x: 50, y: 0}
+  hitSpot: {x: 10, y: 6}

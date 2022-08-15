@@ -3408,6 +3408,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 566602209}
     m_Modifications:
+    - target: {fileID: 1465999184, guid: 671c5a463f21d2b4ba590d04d4e7dd66, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 370927072}
     - target: {fileID: 1661531191431673869, guid: 671c5a463f21d2b4ba590d04d4e7dd66,
         type: 3}
       propertyPath: m_Name
@@ -3468,6 +3472,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5298263727504604596, guid: 671c5a463f21d2b4ba590d04d4e7dd66,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8171248554136781928, guid: 671c5a463f21d2b4ba590d04d4e7dd66,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 370927072}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 671c5a463f21d2b4ba590d04d4e7dd66, type: 3}
 --- !u!4 &516723253 stripped
@@ -8459,7 +8473,7 @@ PrefabInstance:
         type: 3}
       propertyPath: currentCamera
       value: 
-      objectReference: {fileID: 798074517}
+      objectReference: {fileID: 1610163681}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e749b8f26a234c4d811f610fb8b08f8, type: 3}
 --- !u!1001 &893253175
@@ -8546,6 +8560,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b691dd77454dc498d67710fcfaf922, type: 3}
+--- !u!223 &895903683 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8171248554136781928, guid: 671c5a463f21d2b4ba590d04d4e7dd66,
+    type: 3}
+  m_PrefabInstance: {fileID: 516333539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &898551400 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5316377057506676480, guid: 63a0b79fc14e9b94d8b65112944f20fe,
@@ -13513,7 +13533,8 @@ MonoBehaviour:
   colliders:
   - {fileID: 2010432855}
   - {fileID: 0}
-  canvases: []
+  canvases:
+  - {fileID: 895903683}
 --- !u!1001 &1463931390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13916,7 +13937,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 11400000, guid: 633f34baa9f446449980c9a7fe1011ff,
+      objectReference: {fileID: 11400000, guid: 8aab6f4c3119da440bd3aae905d34f21,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93c4b2b2ca646fd4c8660167d931535e, type: 3}

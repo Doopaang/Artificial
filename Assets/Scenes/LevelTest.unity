@@ -16545,6 +16545,28 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2915562265785989505, guid: 547928f51b8dfc5489a20f598f731c25,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915562265785989505, guid: 547928f51b8dfc5489a20f598f731c25,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f9cd7e33b955452499a1b19be7fc5f8e,
+        type: 2}
+    - target: {fileID: 2915562265785989505, guid: 547928f51b8dfc5489a20f598f731c25,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915562265785989505, guid: 547928f51b8dfc5489a20f598f731c25,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2480824401375587629, guid: f9cd7e33b955452499a1b19be7fc5f8e,
+        type: 2}
     - target: {fileID: 3267152353284429613, guid: 547928f51b8dfc5489a20f598f731c25,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -18525,7 +18547,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41522
+  m_Name: pb_Mesh99176
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24290,6 +24312,26 @@ PrefabInstance:
         type: 3}
       propertyPath: locked
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905427263819373464, guid: 8aa0b982ba4c5ad4da33f7e87dd79f07,
+        type: 3}
+      propertyPath: text
+      value: "\uB098\uB294 \uCD08\uB85D\uC774\uB97C \uC88B\uC544\uD574\r\n\uD558\uC9C0\uB9CC
+        \uCD08\uB85D\uC774\uB294 \uBE68\uAC15\uC774\uB97C \uC88B\uC544\uD558\uB294
+        \uAC83 \uAC19\uC544\r\n\uBE68\uAC15\uC774\uB294 \uB098\uBCF4\uB2E4 \uC608\uC058\uACE0,
+        \uBA38\uB9AC\uB3C4 \uC88B\uACE0 \uC6B4\uB3D9\uB3C4 \uC798\uD574\r\n\uCC28\uB77C\uB9AC
+        \uBE68\uAC15\uC774\uAC00 \uC0AC\uB77C\uC84C\uC73C\uBA74 \uC88B\uACA0\uC5B4\r\n\uBB34\uC11C\uC6B4
+        \uB9D0\uC744 \uD558\uC2DC\uB294\uAD70\uC694.\r\n\uC544\uC800\uC528\uB294
+        \uB204\uAD6C\uC138\uC694?\r\n\uC800\uB294 \uC18C\uC6D0\uC744 \uC774\uB8E8\uC5B4\uC8FC\uB294
+        \uC0AC\uB78C\uC774\uB78D\uB2C8\uB2E4.\r\n\uBE68\uAC15\uC774\uB77C\uB294 \uCE5C\uAD6C\uAC00
+        \uC0AC\uB77C\uC84C\uC73C\uBA74 \uC88B\uACA0\uB098\uC694?\r\n......\uB178:\uBE68\uAC15\uC774\uB294
+        \uC18C\uC911\uD55C \uCE5C\uAD6C\uC9C0\uB9CC\r\n\uBE68\uAC15\uC774\uB54C\uBB38\uC5D0
+        \uCD08\uB85D\uC774\uB791 \uC0AC\uADC8 \uC218\uAC00 \uC5C6\uC5B4\uC694.\r\n\uADF8\uB798\uC11C
+        \uBE68\uAC15\uC774\uAC00 \uC0AC\uB77C\uC84C\uC73C\uBA74 \uC88B\uACA0\uB098\uC694?\r\n\uB124\r\n\uBE68\uAC15\uC774\uAC00
+        \uC0AC\uB77C\uC84C\uC73C\uBA74 \uC88B\uACA0\uC5B4\uC694.\r\n\uC88B\uC544\uC694
+        \uADF8\uB7FC \uC81C\uAC00 \uC18C\uC6D0\uC744 \uB4E4\uC5B4\uB4DC\uB9AC\uC8E0.\r\n\uC81C\uAC00
+        \uC18C\uC6D0\uC744 \uB4E4\uC5B4\uC904 \uC218 \uC788\uB3C4\uB85D \uC870\uAE08
+        \uB3C4\uC640\uC8FC\uC2DC\uACA0\uC5B4\uC694?\r\n\uBB3C\uB860\uC774\uC8E0!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aa0b982ba4c5ad4da33f7e87dd79f07, type: 3}

@@ -10905,36 +10905,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3310366155868154448, guid: 3e749b8f26a234c4d811f610fb8b08f8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3310366155868154449, guid: 3e749b8f26a234c4d811f610fb8b08f8,
-        type: 3}
-      propertyPath: m_BlockingObjects
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3310366155868154450, guid: 3e749b8f26a234c4d811f610fb8b08f8,
-        type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3310366155868154451, guid: 3e749b8f26a234c4d811f610fb8b08f8,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 370927072}
-    - target: {fileID: 3310366155868154451, guid: 3e749b8f26a234c4d811f610fb8b08f8,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3310366155868154451, guid: 3e749b8f26a234c4d811f610fb8b08f8,
-        type: 3}
-      propertyPath: m_PlaneDistance
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 4177351262351467478, guid: 3e749b8f26a234c4d811f610fb8b08f8,
         type: 3}
       propertyPath: m_Name
@@ -22120,7 +22095,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63324
+  m_Name: pb_Mesh38198
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

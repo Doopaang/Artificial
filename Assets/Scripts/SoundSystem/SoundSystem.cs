@@ -58,7 +58,7 @@ public class SoundSystem : Singleton<SoundSystem>
     {
         foreach (SFXObject source in SFXList)
         {
-            if (source.gameObject.activeSelf)
+            if (!source.gameObject.activeSelf)
             {
                 return source;
             }

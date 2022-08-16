@@ -20,6 +20,10 @@ public class Drawer : MonoBehaviour
         {
             TranslateDrawer();
         }
+        else
+        {
+            SoundSystem.Instance.PlaySFX("Locked", transform.position);
+        }
     }
 
     public void TranslateDrawer()
@@ -29,6 +33,8 @@ public class Drawer : MonoBehaviour
         transform.Translate(translateDirection * movementVectorForClose, Space.Self);
 
         opened = !opened;
+
+        SoundSystem.Instance.PlaySFX("Drawer", transform.position);
     }
 
     public void Unlock()

@@ -113,6 +113,7 @@ public class WerewolfPicture : MonoBehaviour
         yield return new WaitForSeconds(animationDelay);
 
         VisualSystem.Instance.StartShakeCamera(shakeDuration);
+        SoundSystem.Instance.PlaySFX("Werewolf", transform.position);
 
         yield return new WaitForSeconds(VisualSystem.Instance.shakeData.TotalDuration);
 

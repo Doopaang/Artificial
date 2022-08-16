@@ -120,9 +120,8 @@ MonoBehaviour:
   answer: 0
   numLimit: 0
   angleCount: 10
-  leftButtonSprite: {fileID: 1658034946, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e, type: 3}
-  rightButtonSprite: {fileID: 1819194086, guid: 9ef8a766571ad8f4e9c0ca9601d98a6e,
-    type: 3}
+  leftButtonSprite: {fileID: 21300000, guid: 5653629b9224c2b429434b90da961437, type: 3}
+  rightButtonSprite: {fileID: 21300000, guid: 5bfc0158754251147b3a6bd0ecd8927e, type: 3}
   dialList: []
   lockPos: {fileID: 4949018212165476413}
   buttonPrefab: {fileID: 1924427092116470071, guid: 0f0aa5d0514535f4ba85204d4dec6f92,

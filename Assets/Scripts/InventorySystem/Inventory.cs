@@ -54,6 +54,7 @@ public class Inventory : MonoBehaviour
         itemList = new List<Item>();
 
         DeactiveInventory();
+        
         itemDetailWindow.gameObject.SetActive(false);
     }
 

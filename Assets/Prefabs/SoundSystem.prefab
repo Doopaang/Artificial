@@ -61,8 +61,8 @@ MonoBehaviour:
     - LockRoll
     - LockUnlock
     - OpenDoor
-    - PassweordFaild
-    - PassweordPress
+    - PasswordFaild
+    - PasswordPress
     - WereWolf
     m_values:
     - {fileID: 8300000, guid: c572a8b3e7222d146a3baa9cb3a5ec32, type: 3}

@@ -19,6 +19,9 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector]
     public Color brushColor = Color.white;
 
+    [SerializeField]
+    private Color red;
+
     public BrushUI brushUI;
 
     [SerializeField]

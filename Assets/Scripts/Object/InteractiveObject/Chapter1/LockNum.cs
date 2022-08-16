@@ -136,8 +136,12 @@ public class LockNum : PuzzleObject
             target.Rotate(target.up, 360.0f / angleCount * (isLeft ? -1 : 1));
         }
 
+        SoundSystem.Instance.PlaySFX("LockRoll", transform.parent.position);
+
         if (this.value == answer)
         {
+            SoundSystem.Instance.PlaySFX("LockUnlock", transform.parent.position);
+
             Destroy(gameObject);
             solvedFunction.Invoke();
         }

@@ -23,11 +23,16 @@ public class LockNumPad : PuzzleObject
 
     public void InputNum(int value)
     {
+
         if (numLimit == 0 ||
             this.value >= Mathf.Pow(10, numLimit - 1))
         {
+            SoundSystem.Instance.PlaySFX("PasswordFailed", transform.parent.position);
+
             return;
         }
+
+        SoundSystem.Instance.PlaySFX("PasswordPress", transform.parent.position);
 
         this.value *= 10;
         this.value += value;
@@ -43,6 +48,8 @@ public class LockNumPad : PuzzleObject
 
     public void DelNum()
     {
+        SoundSystem.Instance.PlaySFX("PasswordPress", transform.parent.position);
+
         value = (int)(value * 0.1f);
 
         UpdateText();

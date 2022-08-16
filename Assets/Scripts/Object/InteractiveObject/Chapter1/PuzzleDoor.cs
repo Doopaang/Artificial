@@ -40,6 +40,8 @@ public class PuzzleDoor : MonoBehaviour
         gameObject.transform.Rotate(doorOpenRotaion);
         gameObject.transform.Translate(doorOpenTranslation);
 
+        SoundSystem.Instance.PlaySFX("OpenDoor", transform.position);
+
         GameManager.Instance.Inventory.DeleteItem(deleteItem);
     }
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Rope : MonoBehaviour
 {
+    [SerializeField]
     private bool interactive = false;
 
     public void Interact()

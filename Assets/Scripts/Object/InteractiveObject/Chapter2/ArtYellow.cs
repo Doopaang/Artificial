@@ -93,7 +93,7 @@ public class ArtYellow : MonoBehaviour
 
         yield return new WaitForSeconds(soundBeforeDelay);
 
-        /// [ÀÓ½Ã] È¿°úÀ½ Ãâ·Â
+        /// [ï¿½Ó½ï¿½] È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         red.ChangeArt();
 
         yield return new WaitForSeconds(soundAfterDelay);

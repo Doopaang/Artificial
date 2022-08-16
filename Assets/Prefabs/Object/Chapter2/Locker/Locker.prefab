@@ -210,7 +210,7 @@ MonoBehaviour:
   - {fileID: 8922781877974561102}
   - {fileID: 3126956065795588246}
   - {fileID: 5670717833724539363}
-  - {fileID: 0}
+  - {fileID: 2156050707219042778}
   - {fileID: 4343718785467386689}
   canvases: []
 --- !u!1001 &40237026806284233
@@ -774,6 +774,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae24f3890aba45943bc7fef5e25ca4e6, type: 3}
+--- !u!65 &2156050707219042778 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3486131739946387318, guid: ae24f3890aba45943bc7fef5e25ca4e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3281697963897607852}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3624802187664263046
 PrefabInstance:
   m_ObjectHideFlags: 0

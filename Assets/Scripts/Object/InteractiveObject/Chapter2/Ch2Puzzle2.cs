@@ -8,6 +8,9 @@ public class Ch2Puzzle2 : PuzzleObject
     [SerializeField]
     private Transform gridPos;
 
+    [SerializeField]
+    private Color resetColor;
+
     private List<Button> buttonList;
 
     protected override void Start()
@@ -46,7 +49,7 @@ public class Ch2Puzzle2 : PuzzleObject
     {
         foreach(Button button in buttonList)
         {
-            button.GetComponent<Image>().color = Color.white;
+            button.GetComponent<Image>().color = resetColor;
         }
     }
 }

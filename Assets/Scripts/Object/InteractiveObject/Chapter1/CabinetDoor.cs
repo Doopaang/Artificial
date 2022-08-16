@@ -29,6 +29,8 @@ public class CabinetDoor : MonoBehaviour
         rightDoor.transform.Rotate(new Vector3(0.0f, rotateDirection * 90.0f, 0.0f));
 
         opened = !opened;
+
+        SoundSystem.Instance.PlaySFX("Cabinet", transform.position);
     }
 
     public void Unlock()

@@ -32,6 +32,8 @@ public class HungryChildPicture : MonoBehaviour
 
     public void UseApple()
     {
+        SoundSystem.Instance.PlaySFX("EatApple", transform.position);
+
         DialogueSystem.Instance.StartDialogue("Give_Apple", ChangePicture);
     }
 
@@ -42,5 +44,5 @@ public class HungryChildPicture : MonoBehaviour
         childPicture.ChangeToFullChildPicture();
     }
 
-    
+
 }

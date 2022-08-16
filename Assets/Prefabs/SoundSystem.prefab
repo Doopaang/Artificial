@@ -48,10 +48,32 @@ MonoBehaviour:
   BGMVolume: 50
   SFXVolume: 50
   BGMDic:
-    m_keys: []
-    m_values: []
+    m_keys:
+    - MainBGM
+    m_values:
+    - {fileID: 8300000, guid: 6bf4f4cbb8483ce41a50497e2da68db3, type: 3}
   SFXDic:
-    m_keys: []
-    m_values: []
+    m_keys:
+    - Cabinet
+    - Drawer
+    - EatApple
+    - Locked
+    - LockRoll
+    - LockUnlock
+    - OpenDoor
+    - PassweordFaild
+    - PassweordPress
+    - WereWolf
+    m_values:
+    - {fileID: 8300000, guid: c572a8b3e7222d146a3baa9cb3a5ec32, type: 3}
+    - {fileID: 8300000, guid: ecbb8447214b23543a3a96c1dcf8123b, type: 3}
+    - {fileID: 8300000, guid: 7653d559b8fc3b141b953620274194e9, type: 3}
+    - {fileID: 8300000, guid: 71c5d8c81ca12634cb9cef465b5c3210, type: 3}
+    - {fileID: 8300000, guid: 9fb7a7aedfdabe3468d129094980ca7e, type: 3}
+    - {fileID: 8300000, guid: 9a3b37e860569a24f96e49932b2307da, type: 3}
+    - {fileID: 8300000, guid: b0d9bf954fb460446b003a2d2d2a7d69, type: 3}
+    - {fileID: 8300000, guid: 83b1282a1dd47fa478ec8ee63e8e88ea, type: 3}
+    - {fileID: 8300000, guid: 59e97e6301fe3694f8911d359005e5b0, type: 3}
+    - {fileID: 8300000, guid: cd115be461e09a446a92af8f3e3b0ce7, type: 3}
   SFXPrefab: {fileID: 2003506486480327837, guid: f073dc7d5de9c5645ac78a5d4f396201,
     type: 3}

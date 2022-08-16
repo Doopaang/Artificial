@@ -51,6 +51,8 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         brushUI.gameObject.SetActive(false);
+
+        SoundSystem.Instance.PlayBGM("MainBGM");
     }
 
     public void SetInputBlock(bool value)

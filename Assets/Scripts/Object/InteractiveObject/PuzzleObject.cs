@@ -1,6 +1,8 @@
-using UnityEditor.Events;
 using UnityEngine;
 using UnityEngine.Events;
+#if UNITY_EDITOR
+using UnityEditor.Events;
+#endif
 
 public abstract class PuzzleObject : MonoBehaviour
 {
@@ -19,15 +21,15 @@ public abstract class PuzzleObject : MonoBehaviour
         if (this == null || !UnityEditor.EditorUtility.IsDirty(this)) return;
 
         Init();
+
+        var targetinfo = UnityEventBase.GetValidMethodInfo(this, "DestroySelf", new System.Type[] { typeof(GameObject) });
+        UnityEventTools.AddPersistentListener(solvedFunction, () => { Destroy(gameObject); });
     }
 #endif
 
     protected virtual void Start()
     {
         Init();
-
-        var targetinfo = UnityEventBase.GetValidMethodInfo(this, "DestroySelf", new System.Type[] { typeof(GameObject) });
-        UnityEventTools.AddPersistentListener(solvedFunction, () => { Destroy(gameObject); });
     }
 
     private void Init()

@@ -72,6 +72,11 @@ public class SoundSystem : Singleton<SoundSystem>
         BGM.Play();
     }
 
+    public void StopBGM()
+    {
+        BGM.Stop();
+    }
+
     public void PlaySFX(string key, Vector3 position)
     {
         SFXObject sfx = GetDeactivedSource();

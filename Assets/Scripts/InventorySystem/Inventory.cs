@@ -54,7 +54,7 @@ public class Inventory : MonoBehaviour
         itemList = new List<Item>();
 
         DeactiveInventory();
-        
+
         itemDetailWindow.gameObject.SetActive(false);
     }
 
@@ -108,6 +108,8 @@ public class Inventory : MonoBehaviour
 
         SetUsingItem(selectedSlot.ItemType);
 
+        SoundSystem.Instance.PlaySFX("Inventory", Camera.main.transform.position);
+
         DeactiveInventory();
     }
 
@@ -147,6 +149,8 @@ public class Inventory : MonoBehaviour
 
         itemDetailWindow.gameObject.SetActive(true);
         itemDetailWindow.SetDetailObject(SearchItemData(itemType).gameObject, afterEvent);
+
+        SoundSystem.Instance.PlaySFX("PopDetail", Camera.main.transform.position);
     }
 
     public Item SearchItemData(EItemType itemType)
@@ -201,6 +205,8 @@ public class Inventory : MonoBehaviour
     {
         gameObject.SetActive(true);
 
+        SoundSystem.Instance.PlaySFX("Inventory", Camera.main.transform.position);
+
         DeactivateCombine();
 
         SetUsingItem(EItemType.NONE);
@@ -211,6 +217,8 @@ public class Inventory : MonoBehaviour
         gameObject.SetActive(false);
 
         selectedSlot = null;
+
+        SoundSystem.Instance.PlaySFX("Inventory", Camera.main.transform.position);
 
         selectedImage.gameObject.SetActive(false);
     }

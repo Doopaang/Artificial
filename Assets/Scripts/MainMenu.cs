@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : Singleton<MainMenu>
+public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] buttons;
@@ -12,6 +12,11 @@ public class MainMenu : Singleton<MainMenu>
     private Image fadeOutImage;
 
     bool startFadeOut = false;
+
+    private void Start()
+    {
+        SoundSystem.Instance.PlayBGM("MainMenu");
+    }
 
     private void Update()
     {
@@ -28,6 +33,8 @@ public class MainMenu : Singleton<MainMenu>
 
     public void StartGame()
     {
+        SoundSystem.Instance.PlaySFX("Button", Camera.main.transform.position);
+
         foreach (GameObject button in buttons)
             button.SetActive(false);
 
@@ -55,10 +62,18 @@ public class MainMenu : Singleton<MainMenu>
 
     public void ExitGame()
     {
+        SoundSystem.Instance.PlaySFX("Button", Camera.main.transform.position);
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
+    }
+
+    public void CreditsButton()
+    {
+        SoundSystem.Instance.PlaySFX("Button", Camera.main.transform.position);
+
+        SceneManager.LoadScene("Credits");
     }
 }

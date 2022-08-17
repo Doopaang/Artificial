@@ -707,11 +707,6 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 209816019643724091, guid: 346ca9f16fe9ea541a3ed2209152b26e,
-        type: 3}
-      propertyPath: m_characterSpacing
-      value: 122
-      objectReference: {fileID: 0}
     - target: {fileID: 209816019643724093, guid: 346ca9f16fe9ea541a3ed2209152b26e,
         type: 3}
       propertyPath: m_SizeDelta.x

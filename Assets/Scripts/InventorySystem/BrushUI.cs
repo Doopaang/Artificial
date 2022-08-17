@@ -13,11 +13,11 @@ public class BrushUI : MonoBehaviour
     [SerializeField]
     private Button blue;
 
-    private List<Brush> brushes = new List<Brush>();
+    private Brush brush;
 
     public void AddBrush(Brush brush)
     {
-        brushes.Add(brush);
+        this.brush = brush;
     }
 
     public void ClickButton(string color)
@@ -64,12 +64,6 @@ public class BrushUI : MonoBehaviour
 
     public void ApplyBrushColor()
     {
-        for (int i = 0; i < brushes.Count; i++)
-        {
-            if (brushes[i])
-                brushes[i].ApplyColor();
-            else
-                brushes.RemoveAt(i);
-        }
+        brush.ApplyColor();
     }
 }

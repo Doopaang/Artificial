@@ -61,9 +61,17 @@ MonoBehaviour:
     - LockRoll
     - LockUnlock
     - OpenDoor
-    - PasswordFaild
+    - PasswordFailed
     - PasswordPress
-    - WereWolf
+    - Werewolf
+    - HouseDoor
+    - PopDetail
+    - OpenBox
+    - Inventory
+    - ResetButton
+    - BlueButton
+    - ??
+    - EndDump
     m_values:
     - {fileID: 8300000, guid: c572a8b3e7222d146a3baa9cb3a5ec32, type: 3}
     - {fileID: 8300000, guid: ecbb8447214b23543a3a96c1dcf8123b, type: 3}
@@ -75,5 +83,13 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 83b1282a1dd47fa478ec8ee63e8e88ea, type: 3}
     - {fileID: 8300000, guid: 59e97e6301fe3694f8911d359005e5b0, type: 3}
     - {fileID: 8300000, guid: cd115be461e09a446a92af8f3e3b0ce7, type: 3}
+    - {fileID: 8300000, guid: 4cc0c88d6fe026c48934dbf566628773, type: 3}
+    - {fileID: 8300000, guid: 8857c0dba6ce70e4b8b43ecd29bf4939, type: 3}
+    - {fileID: 8300000, guid: 73112953dbc694441a4649431d3df220, type: 3}
+    - {fileID: 8300000, guid: 91dcc244b4d38c848ab9ac64840ad168, type: 3}
+    - {fileID: 8300000, guid: 099837f6108297b478c36e727f0aae9d, type: 3}
+    - {fileID: 8300000, guid: a38d9633247418441b37bd084fbdaca5, type: 3}
+    - {fileID: 8300000, guid: 49093eb6aecb30243ba0e104ba1c551a, type: 3}
+    - {fileID: 8300000, guid: bbd176fea8cd9a14292ca3013091c417, type: 3}
   SFXPrefab: {fileID: 2003506486480327837, guid: f073dc7d5de9c5645ac78a5d4f396201,
     type: 3}

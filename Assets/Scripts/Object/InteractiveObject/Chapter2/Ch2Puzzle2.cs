@@ -44,6 +44,8 @@ public class Ch2Puzzle2 : ColorPuzzleObject
 
     private void ResetButton()
     {
+        SoundSystem.Instance.PlaySFX("ResetButton", transform.parent.position);
+
         foreach (Button button in buttonList)
         {
             button.GetComponent<Image>().color = colorSet.gray;

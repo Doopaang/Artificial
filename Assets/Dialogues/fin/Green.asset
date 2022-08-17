@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ffb84bdc2a5754e84aeef335f3d131, type: 3}
+  m_Name: Green
+  m_EditorClassIdentifier: 
+  scriptSets:
+  - key: Green_First
+    scripts:
+    - text: "\uC800\uAE30 \uC788\uB294 \uBE68\uAC04 \uC637\uC744 \uC785\uC740 \uC544\uC774
+        \uB9D0\uC774\uC57C"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC815\uB9D0 \uC608\uC058\uB2E4\uACE0 \uC0DD\uAC01\uD558\uC9C0 \uC54A\uC544?"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC800\uB294 \uBCC4\uB85C \uC88B\uC544\uD558\uC9C0 \uC54A\uB294 \uADF8\uB9BC\uC774\uAD70\uC694."
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+    - text: "\uADF8\uB7F0\uAC00\uC694? \uC800\uB294 \uC608\uC058\uB2E4\uACE0 \uC0DD\uAC01\uD558\uB294\uB370"
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uB204\uB098\uB3C4 \uADF8\uB807\uAC8C \uC0DD\uAC01\uD558\uC9C0? \uC544\uC800\uC528\uAC00
+        \uBCF4\uB294 \uB208\uC774 \uC5C6\uB294 \uAC70\uC57C"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uADF8\uB798\uC11C \uC800 \uC608\uC05C \uC544\uC774\uC5D0\uAC8C \uACE0\uBC31\uD558\uACE0
+        \uC2F6\uC5B4!"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uADF8\uB7F0\uB370 \uC9C0\uAE08 \uAC00\uC9C0\uACE0 \uC788\uB294 \uAC8C
+        \uC544\uBB34\uAC83\uB3C4 \uC5C6\uC5B4\uC11C..."
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uD639\uC2DC \uC800 \uC544\uC774\uC5D0\uAC8C \uACE0\uBC31\uD558\uBA74\uC11C
+        \uC904 \uB9CC\uD55C \uAC70 \uAC16\uACE0 \uC788\uC5B4?"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC74C... \uAE00\uC384?"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uCC3E\uAC8C \uB418\uBA74 \uAC00\uC838\uB2E4\uC904\uAC8C"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uC815\uB9D0 \uACE0\uB9C8\uC6CC"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uADF8\uB3D9\uC548\uC5D0 \uBA4B\uC9C4 \uACE0\uBC31 \uBA58\uD2B8\uB97C
+        \uC0DD\uAC01\uD574 \uBD10\uC57C\uACA0\uC5B4"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC800\uB7F0 \uADF8\uB9BC\uC744 \uC88B\uC544\uD55C\uB2E4\uB2C8"
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+    - text: "\uC5ED\uC2DC \uC798 \uC774\uD574\uAC00 \uB418\uC9C0 \uC54A\uB294\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+    - text: "\uC5ED\uC2DC \uC798 \uC774\uD574\uAC00 \uB418\uC9C0 \uC54A\uB294\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+    - text: "(\uC120\uC0DD\uB2D8\uC740 \uC870\uAC74\uC5D0 \uB9DE\uB294 \uC0AC\uB78C\uB9CC
+        \uADF8\uB9B0\uB2E4\uACE0 \uD558\uC168\uB294\uB370)"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "(\uC800 \uADF8\uB9BC\uB9CC \uC2EB\uC5B4\uD558\uC2DC\uB294 \uC774\uC720\uAC00
+        \uC788\uB294 \uAC78\uAE4C?)"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC120\uC0DD\uB2D8!"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uB124? \uBB34\uC2A8 \uC77C\uC778\uAC00\uC694?"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "(\uC74C... \uAD1C\uD788 \uBB3C\uC5B4\uBD24\uB2E4\uAC00 \uC544\uAE4C\uCC98\uB7FC
+        \uC5F0\uC124\uC744 \uD558\uC2E4 \uAC83 \uAC19\uC544)"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC544\uB1E8, \uC800 \uC544\uC774\uC5D0\uAC8C \uC904\uB9CC\uD55C \uBB3C\uAC74\uC744
+        \uCC3E\uC544\uBCF4\uB294 \uAC8C \uC88B\uACA0\uC5B4\uC694."
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+  - key: Green_Many_times
+    scripts:
+    - text: "\uD639\uC2DC \uC800 \uC544\uC774\uC5D0\uAC8C \uACE0\uBC31\uD558\uBA74\uC11C
+        \uC904 \uB9CC\uD55C \uAC70 \uAC16\uACE0 \uC788\uC5B4?"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+  - key: Green_Use_flower
+    scripts:
+    - text: "\uC5EC\uAE30, \uC774 \uAF43\uC744 \uC8FC\uBA74\uC11C \uACE0\uBC31\uD558\uBA74
+        \uB418\uC9C0 \uC54A\uC744\uAE4C?"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uC74C,,, \uC804\uC5D0 \uC900 \uAF43\uC5D0 \uBE44\uD558\uBA74 \uC791\uAE34
+        \uD55C\uB370"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uADF8\uB798\uB3C4 \uC774\uBC88\uC5D4 \uB354 \uC88B\uC740 \uBA58\uD2B8\uAC00
+        \uB5A0\uC62C\uB790\uC5B4! \uC774\uBC88\uC5D0\uC57C\uB9D0\uB85C \uC131\uACF5\uD560
+        \uAC70\uC57C!"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC804\uC5D0 \uC900 \uAF43? \uC774\uBC88\uC5D0\uC57C\uB9D0\uB85C?"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uD639\uC2DC \uC800 \uC544\uC774\uC5D0\uAC8C \uACE0\uBC31\uD558\uB294
+        \uAC8C \uCC98\uC74C\uC774 \uC544\uB2CC \uAC70\uB2C8?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC751! \uC774\uBC88\uC774 \uB2E4\uC12F \uBC88\uC9F8\uC57C!"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uB2E4\uC12F \uBC88?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC74C...\uB098\uC058\uAC8C \uB9D0\uD558\uB824\uB294 \uAC74 \uC544\uB2CC\uB370..."
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC815\uB9D0 \uD6CC\uB96D\uD558\uB2E4\uACE0 \uC0DD\uAC01\uD574\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uB124?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uBAA9\uC801\uC744 \uB2EC\uC131\uD558\uAE30 \uC704\uD55C \uC800\uB7F0
+        \uB048\uAE30 \uC788\uB294 \uBAA8\uC2B5"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC774\uAC83\uC774\uC57C\uB9D0\uB85C \uC778\uAC04\uC758 \uAC00\uC7A5
+        \uC544\uB984\uB2E4\uC6B4 \uBA74\uC774\uB77C\uACE0 \uD560 \uC218 \uC788\uC8E0"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC544\uB2C8, \uC88B\uC740 \uB9D0\uC774\uAE34 \uD55C\uB370 \uACE0\uBC31\uC5D0
+        \uC801\uC6A9\uC2DC\uD0A4\uB294 \uAC74..."
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC81C\uAC00 \uADF8\uB9B0 \uADF8\uB9BC\uC774\uC9C0\uB9CC \uC815\uB9D0\uB85C
+        \uC790\uB791\uC2A4\uB7FD\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC5ED\uC2DC \uB2F9\uC2E0\uC744 \uADF8\uB9AC\uAE38 \uC798\uD588\uB2E4\uACE0
+        \uC0DD\uAC01\uD55C\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC544\uB2C8, \uADF8\uB7EC\uB2C8\uAE4C!"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uACE0\uB9C8\uC6CC! \uC544\uC800\uC528 \uB355\uBD84\uC5D0 \uC6A9\uAE30\uAC00
+        \uB0AC\uC5B4"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC774\uBC88\uC5D0\uC57C\uB9D0\uB85C \uC131\uACF5\uC2DC\uD0AC \uAC70\uC57C!
+        \uBC18\uB4DC\uC2DC!"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC544\uB2C8,"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC544 \uB9DE\uB2E4! \uACE0\uB9C8\uC6CC \uC774\uAC70 \uC904\uAC8C"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC544, \uC751, \uACE0\uB9C8\uC6CC... (\uC774\uC81C \uB098\uB3C4 \uBAA8\uB974\uACA0\uB2E4)"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+  - key: Green_After_use_flower
+    scripts:
+    - text: "\uBBF8\uC548, \uB354 \uBA4B\uC9C4 \uBA58\uD2B8\uB97C \uC0DD\uAC01\uD558\uB294
+        \uC911\uC774\uB77C \uBC14\uBE60"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+  - key: Green_After_red_died
+    scripts:
+    - text: "\uACE0\uBC31\uC744 \uD558\uB824 \uD588\uB294\uB370 \uBE68\uAC04 \uC544\uC774\uAC00
+        \uC548 \uBCF4\uC5EC"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uD639\uC2DC \uC5B4\uB514\uC5D0 \uAC14\uB294\uC9C0 \uC54C\uACE0 \uC788\uC5B4?"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uADF8\uB7EC\uB2C8\uAE4C..."
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC5B4\uB514\uB85C \uAC14\uB294\uC9C0 \uC800\uB294 \uC54C\uACE0 \uC788\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uB124?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC815\uB9D0? \uC5B4\uB514\uC5D0 \uC788\uC5B4?"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC800\uCABD\uC73C\uB85C \uCB49 \uAC00\uB2E4 \uBCF4\uBA74"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uBB34\uC9C0\uAC2F\uBE5B\uC758 \uB2E4\uB9AC\uAC00 \uC788\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC544\uAE4C \uADF8\uCABD\uC73C\uB85C \uAC00\uB294 \uAC83\uC744 \uBD24\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC120\uC0DD\uB2D8?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC5B4\uCA4C\uBA74 \uAE38\uC744 \uC783\uC5C8\uC744\uC9C0\uB3C4 \uBAA8\uB974\uACA0\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+    - text: "\uADF8\uB798? \uADF8\uB7FC \uB0B4\uAC00 \uCC3E\uC73C\uB7EC \uAC08 \uAC70\uC57C!"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uAD1C\uCC2E\uC73C\uC2DC\uACA0\uC5B4\uC694? \uC5B4\uCA4C\uBA74 \uB2E4\uC2DC\uB294
+        \uBABB \uB3CC\uC544\uC62C \uC218\uB3C4 \uC788\uB2F5\uB2C8\uB2E4?"
+      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+    - text: "\uC0C1\uAD00\uC5C6\uC5B4! \uBC14\uB85C \uCD9C\uBC1C\uD560 \uAC70\uC57C,
+        \uC544\uC800\uC528 \uACE0\uB9C8\uC6CC!"
+      sprite: {fileID: 21300000, guid: 33de6aecb86304445b3d644d44d8bdfb, type: 3}
+    - text: "\uC7A0\uAE50, \uADF8 \uC544\uC774\uB294 \uC774\uBBF8..."
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+  - key: Green_After_effect
+    scripts:
+    - text: "\uC774\uBBF8 \uB5A0\uB098\uBC84\uB838\uAD70\uC694."
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+    - text: "\uC800\uB7F0 \uD3EC\uAE30\uB97C \uBAA8\uB974\uB294 \uBAA8\uC2B5\uC740
+        \uC815\uB9D0 \uC544\uB984\uB2F5\uB2E4\uACE0 \uC0DD\uAC01\uD558\uC9C0 \uC54A\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC65C \uADF8\uB7F0 \uAC70\uC9D3\uB9D0\uC744..."
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC800\uB807\uAC8C \uC0AC\uB791\uBC16\uC5D0 \uBAA8\uB974\uB294 \uC544\uC774\uC5D0\uAC8C
+        \uC9C4\uC2E4\uC744 \uC54C\uB824\uC8FC\uBA74 \uC5B4\uB5BB\uAC8C \uB420\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC0AC\uB791\uC744 \uCC3E\uC544\uC11C \uC815\uB9D0\uB85C \uC5B4\uB514\uAE4C\uC9C0\uB4E0
+        \uB530\uB77C\uAC08 \uC218\uB3C4 \uC788\uC9C0 \uC54A\uC744\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+    - text: "\uD558\uC9C0\uB9CC \uC808\uB300 \uB9CC\uB0A0 \uC218 \uC5C6\uB2E4\uB294
+        \uAC70 \uC544\uC2DC\uC796\uC544\uC694!"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uAE00\uC384\uC694... \uC5B4\uCA4C\uBA74 \uB9CC\uB098\uAC8C \uB420 \uC218\uB3C4
+        \uC788\uACA0\uC8E0"
+      sprite: {fileID: 21300000, guid: 1c385da6fb6445c47a21833c0da8b492, type: 3}
+    - text: "\uC804\uC5D0\uB3C4 \uB9D0\uC500\uB4DC\uB9B0 \uC801\uC774 \uC788\uC5C8\uC8E0?"
+      sprite: {fileID: 21300000, guid: 1c385da6fb6445c47a21833c0da8b492, type: 3}
+    - text: "\uC800\uB294 \uAC70\uC9D3\uB9D0\uC744 \uD558\uC9C0 \uC54A\uB294\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+    - text: "\uC77C\uB2E8 \uC774 \uC18C\uB144\uC744 \uC0AC\uB791\uD558\uB294 \uC18C\uB140\uC5D0\uAC8C
+        \uC774 \uC774\uC57C\uAE30\uB97C \uC804\uD558\uB3C4\uB85D \uD560\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+  - key: Green_After_green_died
+    scripts:
+    - text: "\uC77C\uB2E8 \uC774 \uC18C\uB144\uC744 \uC0AC\uB791\uD558\uB294 \uC18C\uB140\uC5D0\uAC8C
+        \uC774 \uC774\uC57C\uAE30\uB97C \uC804\uD558\uB3C4\uB85D \uD560\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+  - key: Green_After_tell_to_yellow
+    scripts:
+    - text: ......
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}

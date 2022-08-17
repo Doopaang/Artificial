@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ffb84bdc2a5754e84aeef335f3d131, type: 3}
+  m_Name: 2ndroom
+  m_EditorClassIdentifier: 
+  scriptSets:
+  - key: 2ndroom
+    scripts:
+    - text: "\uC0AC\uC2E4 \uC800, \uC120\uC0DD\uB2D8\uC758 \uADF8\uB9BC\uC744 \uC88B\uC544\uD574\uC694"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uADF8\uB9BC\uB4E4\uC774 \uC0B4\uC544 \uC6C0\uC9C1\uC774\uB294 \uAC83
+        \uAC19\uC544\uC11C\uC694"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uC9C0\uAE08\uC740 \uC2E4\uC81C\uB85C \uC0B4\uC544 \uC6C0\uC9C1\uC774\uACE0
+        \uC788\uC9C0\uB9CC\uC694"
+      sprite: {fileID: 21300000, guid: 1d7b18a0ed221f9499c943dbc427a28e, type: 3}
+    - text: "\uC9C0\uAE08\uC740 \uC2E4\uC81C\uB85C \uC0B4\uC544 \uC6C0\uC9C1\uC774\uACE0
+        \uC788\uC9C0\uB9CC\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC544\uBB34\uD2BC \uD639\uC2DC \uC774\uBC88 \uC0AC\uAC74\uC774 \uD574\uACB0\uB418\uBA74
+        \uC81C \uADF8\uB9BC\uB3C4 \uADF8\uB824\uC8FC\uC2E4 \uC218 \uC788\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uAE00\uC384\uC694... \uC800\uB294 \uC870\uAC74\uC5D0 \uB9DE\uB294 \uC0AC\uB78C\uB9CC
+        \uADF8\uB824\uC11C\uC694"
+      sprite: {fileID: 21300000, guid: 1d7b18a0ed221f9499c943dbc427a28e, type: 3}
+    - text: "\uC870\uAC74\uC774 \uC5B4\uB5BB\uAC8C \uB418\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uC870\uAC74\uC774 \uC5B4\uB5BB\uAC8C \uB418\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uB048\uAE30\uAC00 \uC788\uACE0... \uC6D0\uD558\uB294 \uAC78 \uC5BB\uAE30
+        \uC704\uD574 \uBB3C\uBD88 \uC548 \uAC00\uB9AC\uB294 \uC0AC\uB78C\uC774\uACA0\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC774\uAC83 \uB9D0\uACE0\uB3C4 \uC870\uAC74\uC774 \uB354 \uC788\uC9C0\uB9CC
+        \uB9D0\uC774\uC8E0"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC0AC\uAC74\uC774 \uB05D\uB098\uACE0 \uC870\uAC74\uC5D0 \uB9DE\uB294\uB2E4\uACE0
+        \uC0DD\uAC01\uB418\uBA74 \uADF8\uB824\uBCF4\uB3C4\uB85D \uD558\uC8E0"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC5B4... \uAC10\uC0AC\uD569\uB2C8\uB2E4"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC608\uC220\uC774\uB780 \uC791\uD488\uC5D0 \uD63C\uC744 \uB2F4\uB294
+        \uAC83\uC774\uB78D\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+    - text: "\uB2E4\uC2DC \uB9D0\uD574 \uC791\uD488\uC5D0 \uC0DD\uBA85\uC744 \uBD88\uC5B4\uB123\uB294
+        \uAC83\uC774\uB77C\uACE0\uB3C4 \uD560 \uC218 \uC788\uACA0\uC8E0"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uADF8\uB798\uC11C......"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uADF8\uB798\uC11C......"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "(\uBCF8\uC778\uC758 \uC608\uC220\uC5D0 \uB300\uD55C \uCCA0\uD559\uC744
+        \uB298\uC5B4\uB193\uAE30 \uC2DC\uC791\uD558\uC168\uB2E4.)"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "(\uB2E4\uC74C\uBD80\uD134 \uC774\uB7F0 \uAC78 \uBB3C\uC5B4\uBCFC \uB550
+        \uC870\uC2EC\uD574\uC57C\uACA0\uB2E4...)"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uACB0\uACFC\uC801\uC73C\uB85C!...."
+      sprite: {fileID: 21300000, guid: 1c385da6fb6445c47a21833c0da8b492, type: 3}
+    - text: "\uB4E3\uACE0 \uACC4\uC2DC\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+    - text: "\uC544, \uB124, \uB135! (\uC815\uB9D0 \uC870\uC2EC\uD574\uC57C\uACA0\uB2E4.)"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}

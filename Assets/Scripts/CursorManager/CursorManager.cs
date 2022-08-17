@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class CursorManager : Singleton<CursorManager>
 {
+    [SerializeField]
+    private Camera UICamera;
+
     [SerializeField]
     private CursorSet defaultCursor;
     [SerializeField]
     private CursorSet interactCursor;
 
     private ECursorType current = ECursorType.DEFAULT;
+
+    private GraphicRaycaster[] gr;
 
     public enum ECursorType
     {
@@ -18,20 +25,44 @@ public class CursorManager : Singleton<CursorManager>
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        gr = FindObjectsOfType<GraphicRaycaster>();
 
         SetCursor(ECursorType.DEFAULT);
     }
 
     private void Update()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+        bool interact = false;
+
+        RaycastHit hitObject;
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitObject) &&
+            hitObject.transform.tag != "NotInteract")
         {
-            if (hit.transform.tag != "NotInteract" &&
-                current == ECursorType.DEFAULT)
+            interact = true;
+        }
+
+        List<RaycastResult> hitUI = new List<RaycastResult>();
+        var ped = new PointerEventData(null);
+        ped.position = Input.mousePosition;
+        foreach (var a in gr)
+        {
+            hitUI.Clear();
+            a.Raycast(ped, hitUI);
+
+            if (hitUI.Count > 0 &&
+                hitUI[0].gameObject.tag == "Interact")
+            {
+                interact = true;
+                break;
+            }
+        }
+
+        if(interact)
+        {
+            if (current == ECursorType.DEFAULT)
             {
                 SetCursor(ECursorType.INTERACT);
+                return;
             }
         }
         else
@@ -39,6 +70,7 @@ public class CursorManager : Singleton<CursorManager>
             if (current == ECursorType.INTERACT)
             {
                 SetCursor(ECursorType.DEFAULT);
+                return;
             }
         }
     }

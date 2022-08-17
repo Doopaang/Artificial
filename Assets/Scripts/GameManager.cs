@@ -17,10 +17,7 @@ public class GameManager : Singleton<GameManager>
     private float fadeSpeed;
 
     [HideInInspector]
-    public Color brushColor = Color.white;
-
-    [SerializeField]
-    private Color red;
+    public Color brushColor;
 
     public BrushUI brushUI;
 
@@ -53,10 +50,24 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        brushColor = Color.black;
         brushUI.gameObject.SetActive(false);
 
         SoundSystem.Instance.PlayBGM("MainBGM");
     }
+
+#if UNITY_EDITOR
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            inventory.GainItem(EItemType.CHAPTER2_BRUSH);
+            brushUI.UnlockButton(PaintColor.Red);
+            brushUI.UnlockButton(PaintColor.Green);
+            brushUI.UnlockButton(PaintColor.Blue);
+        }
+    }
+#endif
 
     public void SetInputBlock(bool value)
     {
@@ -138,20 +149,5 @@ public class GameManager : Singleton<GameManager>
         brush = 1.0f;
 
         brushUI.ApplyBrushColor();
-    }
-
-    public void Chapter2Puzzle1Solved(Transform cover)
-    {
-        Destroy(cover.gameObject);
-    }
-
-    public void Chapter2Puzzle2Solved(Transform cover)
-    {
-        Destroy(cover.gameObject);
-    }
-
-    public void CHpater2Puzzle3Solved(Transform cover)
-    {
-        Destroy(cover.gameObject);
     }
 }

@@ -2,14 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Ch2Puzzle2 : PuzzleObject
+public class Ch2Puzzle2 : ColorPuzzleObject
 {
     [Header("Ch2Puzzle1 Base")]
     [SerializeField]
     private Transform gridPos;
-
-    [SerializeField]
-    private Color resetColor;
 
     private List<Button> buttonList;
 
@@ -26,7 +23,7 @@ public class Ch2Puzzle2 : PuzzleObject
     {
         if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_BRUSH)
         {
-            button.GetComponent<Image>().color = GameManager.Instance.brushColor;
+            button.GetComponent<Image>().color = GetColor();
         }
     }
 
@@ -34,7 +31,7 @@ public class Ch2Puzzle2 : PuzzleObject
     {
         foreach (Button button in buttonList)
         {
-            if(button.GetComponent<Image>().color != button.colors.disabledColor)
+            if (button.GetComponent<Image>().color != button.colors.disabledColor)
             {
                 ResetButton();
                 return;
@@ -47,9 +44,9 @@ public class Ch2Puzzle2 : PuzzleObject
 
     private void ResetButton()
     {
-        foreach(Button button in buttonList)
+        foreach (Button button in buttonList)
         {
-            button.GetComponent<Image>().color = resetColor;
+            button.GetComponent<Image>().color = colorSet.gray;
         }
     }
 }

@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ffb84bdc2a5754e84aeef335f3d131, type: 3}
+  m_Name: Blue
+  m_EditorClassIdentifier: 
+  scriptSets:
+  - key: First
+    scripts:
+    - text: "\uC548\uB155?"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uC548\uB155\uD558\uC138\uC694!"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uC624\uB298\uB530\uB77C \uC2E0\uB098 \uBCF4\uC774\uB294\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uBB54\uAC00 \uC7AC\uBBF8\uC788\uB294 \uC77C\uC774 \uC788\uC5C8\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC624\uB298\uC740 \uCE5C\uAD6C\uB4E4\uC774\uB791 \uC228\uBC14\uAF2D\uC9C8\uC744
+        \uD588\uC5B4\uC694!"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uD558\uB8E8 \uC885\uC77C \uB3CC\uC544\uB2E4\uB154\uB354\uB2C8 \uBAA9\uC774
+        \uB9D0\uB77C\uC694"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uCE5C\uAD6C\uB4E4\uC774 \uB108\uBB34 \uC798 \uC228\uC5B4\uC11C \uD558\uB8E8
+        \uC885\uC77C \uC220\uB798\uB9CC \uD588\uAC70\uB4E0\uC694."
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uCEF5\uC774 \uBE44\uC5B4\uC788\uAD70\uC694. \uC6B0\uB9AC\uAC00 \uB9C8\uC2E4
+        \uAC83\uC744 \uCC3E\uC544\uC8FC\uB294 \uAC8C \uC5B4\uB5A8\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC544, \uC88B\uC740 \uC0DD\uAC01\uC774\uC5D0\uC694!"
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uBB54\uAC00 \uB9C8\uC2DC\uACE0 \uC2F6\uC740 \uAC8C \uC788\uB2C8?"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uBB54\uAC00 \uB9C8\uC2DC\uACE0 \uC2F6\uC740 \uAC8C \uC788\uB2C8?"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uC74C..."
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uB808\uBAA8\uB124\uC774\uB4DC\uAC00 \uB9C8\uC2DC\uACE0 \uC2F6\uC5B4\uC694"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uB808\uBAA8\uB124\uC774\uB4DC\uB77C"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC120\uC0DD\uB2D8 \uC5EC\uAE30 \uB808\uBAA8\uB124\uC774\uB4DC\uAC00
+        \uC788\uC744\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uB808\uBAA8\uB124\uC774\uB4DC\uB294\uCEE4\uB155 \uB9C8\uC2E4 \uAC83\uB3C4
+        \uC5C6\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uADF8\uB7FC \uC65C \uB9C8\uC2E4 \uAC83\uC744 \uCC3E\uC544\uC8FC\uC790\uACE0
+        \uB9D0\uC500\uD558\uC2E0 \uAC74\uAC00\uC694"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC544\uC774\uAC00 \uBAA9\uC774 \uB9C8\uB974\uB2E4\uACE0 \uD588\uC73C\uB2C8\uAE4C\uC694."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC77C\uB2E8 \uCC3E\uC544\uBCF4\uAE30\uB294 \uD560\uAC8C\uC694"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+  - key: Blue_many_times
+    scripts:
+    - text: "\uB808\uBAA8\uB124\uC774\uB4DC\uAC00 \uB9C8\uC2DC\uACE0 \uC2F6\uC5B4\uC694"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+  - key: Blue_Use_yellow_brush
+    scripts:
+    - text: "\uC120\uC0DD\uB2D8 \uC800 \uC544\uC774\uB294 \uADF8\uB9BC\uC774\uC796\uC544\uC694"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uADF8\uB7EC\uB2C8\uAE4C \uB808\uBAA8\uB124\uC774\uB4DC\uB3C4 \uADF8\uB824\uC11C
+        \uC8FC\uBA74 \uB418\uC9C0 \uC54A\uC744\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uC774 \uBD93\uC73C\uB85C \uCEF5\uC744 \uB178\uB797\uAC8C \uCE60\uD558\uB294
+        \uAC70\uC608\uC694!"
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uC88B\uC740 \uC0DD\uAC01\uC774\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC88B\uC740 \uC0DD\uAC01\uC774\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+  - key: Blue_Give_drink
+    scripts:
+    - text: "\uC640! \uAC10\uC0AC\uD569\uB2C8\uB2E4"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uD639\uC2DC \uCE5C\uAD6C\uB4E4\uB3C4 \uC8FC\uAC8C \uB354 \uC8FC\uC2E4
+        \uC218 \uC788\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uBB3C\uB860\uC774\uC9C0 \uC5BC\uB9C8\uB4E0\uC9C0 \uC788\uC73C\uB2C8\uAE4C
+        \uB9C8\uC74C\uAECF \uBC1B\uC544 \uAC00\uB3C4 \uB3FC"
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uB178\uB780 \uBB3C\uAC10\uC73C\uB85C \uC0C9\uCE60\uD558\uB294 \uAC83\uBFD0\uC774\uC9C0\uB9CC\uC694."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC88B\uC740 \uAC8C \uC88B\uC740 \uAC70\uC8E0"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uAC10\uC0AC\uD569\uB2C8\uB2E4! \uC774\uAC70 \uBC1B\uC544\uC8FC\uC138\uC694"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uADF8\uB098\uC800\uB098 \uC815\uB9D0 \uCC29\uD55C \uC544\uC774\uC778
+        \uAC83 \uAC19\uC544\uC694."
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uCE5C\uAD6C\uB3C4 \uC0DD\uAC01\uD558\uACE0 \uB9D0\uC774\uC8E0"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uC608, \uC800\uB3C4 \uADF8\uB807\uAC8C \uC0DD\uAC01\uD55C\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+  - key: Blue_After_give_drink
+    scripts:
+    - text: "\uC815\uB9D0 \uAC10\uC0AC\uD569\uB2C8\uB2E4!"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+  - key: Blue_After_red_died
+    scripts:
+    - text: "\uC694\uC998 \uBCF4\uC774\uC9C0 \uC54A\uB294 \uCE5C\uAD6C\uB4E4\uC774
+        \uC788\uC5B4\uC694. \uD639\uC2DC \uC5B4\uB514 \uAC14\uB294\uC9C0 \uC544\uC2DC\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+  - key: Blue_After_red_died
+    scripts:
+    - text: "\uCE5C\uAD6C\uB4E4\uC774 \uB2E4 \uC0AC\uB77C\uC84C\uC5B4"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uB2E4\uB4E4 \uC5B4\uB514\uB85C \uAC04 \uAC78\uAE4C?"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uCE5C\uAD6C\uB4E4\uC744 \uCC3E\uACE0 \uC788\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC774 \uC544\uC774\uB3C4 \uADF8\uB807\uAC8C \uB9CC\uB4E4 \uC0DD\uAC01\uC774\uC2E0\uAC00\uC694?"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC774\uBC88\uB9CC\uD07C\uC740 \uC808\uB300\uB85C \uC548 \uB3FC\uC694!"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uBB50\uB77C\uACE0 \uB9D0\uC500\uD558\uC154\uB3C4 \uC18C\uC6A9\uC5C6\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+    - text: "\uC544\uC800\uC528\uB294 \uB204\uAD6C\uC138\uC694?"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uBB34\uC2A8 \uC18C\uB9AC\uC57C? \uC6B0\uB9AC \uC544\uAE4C \uC804\uC5D0
+        \uB9CC\uB0AC\uC796\uC544"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC544\uAE4C \uB808\uBAA8\uB124\uC774\uB4DC \uB9C8\uC2E0 \uAC70 \uAE30\uC5B5
+        \uC548 \uB098\uB2C8?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC800\uB294 \uC18C\uC6D0\uC744 \uC774\uB8E8\uC5B4\uC8FC\uB294 \uC0AC\uB78C\uC774\uB78D\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+    - text: "\uCE5C\uAD6C\uB4E4\uC744 \uCC3E\uB294 \uAC8C \uC18C\uC6D0\uC778\uAC00\uC694?"
+      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+    - text: "\uB124 \uADF8\uAC8C \uC81C \uC18C\uC6D0\uC774\uC5D0\uC694"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uD639\uC2DC \uC81C \uCE5C\uAD6C\uB4E4\uC744 \uBCF4\uC168\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uBB3C\uB860\uC774\uC8E0."
+      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+    - text: "\uC800\uCABD\uC73C\uB85C \uCB49 \uAC00\uB2E4 \uBCF4\uBA74"
+      sprite: {fileID: 21300000, guid: 1c385da6fb6445c47a21833c0da8b492, type: 3}
+    - text: "\uBB34\uC9C0\uAC2F\uBE5B\uC758 \uB2E4\uB9AC\uAC00,,,"
+      sprite: {fileID: 21300000, guid: 1c385da6fb6445c47a21833c0da8b492, type: 3}
+    - text: "\uADF8\uB9CC\uD558\uC138\uC694!"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC774\uC81C \uC815\uB9D0\uB85C \uBB50\uB77C\uACE0 \uB9D0\uC500\uD558\uC154\uB3C4
+        \uB9C9\uC744 \uAC70\uC608\uC694!"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC774\uB7F0 \uC0C1\uD669\uC5D0\uC11C\uB3C4 \uAC81\uBA39\uC9C0 \uC54A\uACE0
+        \uD560 \uB9D0\uC500\uC744 \uD558\uC2DC\uB2E4\uB2C8"
+      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+    - text: "\uC5ED\uC2DC \uB2F9\uC2E0\uC740 \uC81C\uAC00 \uC0DD\uAC01\uD588\uB358
+        \uBD84\uC774\uC168\uAD70\uC694."
+      sprite: {fileID: 21300000, guid: d34b66d163db6614b84ece7195e4ede0, type: 3}
+    - text: "\uD558\uC9C0\uB9CC \uB9D0\uC500\uB4DC\uB838\uC5C8\uC8E0?"
+      sprite: {fileID: 21300000, guid: 1c385da6fb6445c47a21833c0da8b492, type: 3}
+    - text: "\uBB50\uB77C\uACE0 \uD558\uC154\uB3C4 \uC18C\uC6A9\uC5C6\uB2E4\uACE0"
+      sprite: {fileID: 21300000, guid: 1c385da6fb6445c47a21833c0da8b492, type: 3}
+    - text: "\uC815\uB9D0 \uCE5C\uAD6C\uB4E4\uC774 \uAC70\uAE30\uC5D0 \uC788\uB098\uC694?"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uC5B4?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uB3CC\uC544\uC62C \uC218 \uC5C6\uC5B4\uB3C4 \uC0C1\uAD00\uC5C6\uC5B4\uC694."
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uC800\uB294 \uCE5C\uAD6C\uB4E4\uC744 \uCC3E\uC73C\uB7EC \uAC08 \uAC70\uC608\uC694!"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+    - text: "\uC7A0\uAE50, \uAC00\uBA74 \uC548 \uB3FC!"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC54C\uB824\uC8FC\uC154\uC11C \uAC10\uC0AC\uD569\uB2C8\uB2E4!"
+      sprite: {fileID: 21300000, guid: 5aae53b8b19d2dc4ba11066e47bc4373, type: 3}
+  - key: Blue_After_effect
+    scripts:
+    - text: ......
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+  - key: Blue_After_blue_died
+    scripts:
+    - text: ......
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}

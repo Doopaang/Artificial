@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ffb84bdc2a5754e84aeef335f3d131, type: 3}
+  m_Name: Werewolf
+  m_EditorClassIdentifier: 
+  scriptSets:
+  - key: First_morning
+    scripts:
+    - text: "\uC5EC\uAE30 \uADF8\uB9BC\uC774 \uC788\uC5B4\uC694"
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uC774\uAC74 \uBB58 \uADF8\uB9B0 \uAC74\uAC00\uC694?"
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uC774\uAC74 \uB291\uB300 \uC778\uAC04\uC744 \uADF8\uB9B0 \uAC70\uC608\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC800\uAE30 \uC6B0\uB9AC\uC5D0 \uAC07\uD78C \uC0AC\uB78C\uC774 \uB291\uB300
+        \uC778\uAC04\uC774\uB78D\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC800\uAE30 \uC6B0\uB9AC\uC5D0 \uAC07\uD78C \uC0AC\uB78C\uC774 \uB291\uB300
+        \uC778\uAC04\uC774\uB78D\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uB291\uB300 \uC778\uAC04\uC774\uC624?"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uD558\uC9C0\uB9CC \uADF8\uB0E5 \uC0AC\uB78C\uC778\uB370\uC694?"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uB291\uB300 \uC778\uAC04\uC740 \uBCF4\uB984\uB2EC\uC774 \uC788\uC5B4\uC57C\uB9CC
+        \uAC15\uD574\uC9C4\uB2F5\uB2C8\uB2E4. "
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+  - key: Many_times_morning
+    scripts:
+    - text: "\uB291\uB300 \uC778\uAC04\uC740 \uBCF4\uB984\uB2EC \uB5A0\uC57C\uB9CC
+        \uAC15\uD574\uC9C4\uB2F5\uB2C8\uB2E4."
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+  - key: First_night
+    scripts:
+    - text: "\uC5B4?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC774 \uADF8\uB9BC \uC6D0\uB798 \uBC24\uC774\uC5C8\uB358\uAC00\uC694?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uAE00\uC384\uC694"
+      sprite: {fileID: 21300000, guid: 653fee226af939f4ea54c99f9a40a0e7, type: 3}
+    - text: "\uC6B0\uB9AC\uC5D0 \uAC07\uD78C \uB291\uB300 \uC778\uAC04\uC740 \uC544\uC9C1
+        \uC778\uAC04\uC758 \uBAA8\uC2B5\uC774\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uC5ED\uC2DC \uBCC0\uC2E0\uD558\uB824\uBA74 \uBCF4\uB984\uB2EC\uC774
+        \uD544\uC694\uD55C \uAC78\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+  - key: Many_times_night
+    scripts:
+    - text: "\uB291\uB300 \uC778\uAC04\uC774 \uBCC0\uC2E0\uD558\uB824\uBA74 \uBCF4\uB984\uB2EC\uC774
+        \uD544\uC694\uD55C \uAC83 \uAC19\uAD70\uC694"
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+  - key: Search_crescent
+    scripts:
+    - text: "\uB2EC\uC744 \uBCF4\uB984\uB2EC\uB85C \uBC14\uAFD4\uC57C \uD55C\uB2E8
+        \uB9D0\uC774\uC8E0."
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC774 \uB2EC\uB85C \uBB54\uAC00\uB97C \uD560 \uC218 \uC788\uC9C0 \uC54A\uC744\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC557!"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uC774\uB7F0... \uB2EC\uC774 \uB5A8\uC5B4\uC84C\uAD70\uC694."
+      sprite: {fileID: 21300000, guid: 1d7b18a0ed221f9499c943dbc427a28e, type: 3}
+    - text: "\uADF8\uB9BC\uC5D0\uC11C \uB2EC\uC774 \uC5C6\uC5B4\uC84C\uB294\uB370
+        \uAD1C\uCC2E\uC740 \uAC78\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: b7a7b821ace8de343897fc6e203dc359, type: 3}
+    - text: "\uAD1C\uCC2E\uC9C0 \uC54A\uC744\uAE4C\uC694? \uADF8\uBBD0\uB2EC\uC774\uB77C\uB294
+        \uAC83\uB3C4 \uC788\uC73C\uB2C8\uAE4C\uC694."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+    - text: "\uADF8\uBCF4\uB2E4 \uBCF4\uB984\uB2EC\uC744 \uB9CC\uB4E4\uC5B4\uC57C
+        \uD558\uB294\uB370 \uC624\uD788\uB824 \uB2EC\uC744 \uC904\uC5EC\uBC84\uB838\uAD70\uC694."
+      sprite: {fileID: 21300000, guid: 1d7b18a0ed221f9499c943dbc427a28e, type: 3}
+    - text: "\uC73C..."
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uAE0D\uC815\uC801\uC73C\uB85C \uC0DD\uAC01\uD574\uC694!"
+      sprite: {fileID: 21300000, guid: 4773e65643217ef478ea100b13e5abf5, type: 3}
+    - text: "\uC624\uD788\uB824 \uC774\uC81C \uC0C8\uB85C\uC6B4 \uB2EC\uC744 \uB2EC
+        \uC218 \uC788\uAC8C \uB410\uC796\uC544\uC694?"
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uADF8\uB807\uAC8C \uC0DD\uAC01\uD560 \uC218\uB3C4 \uC788\uACA0\uAD70\uC694 "
+      sprite: {fileID: 21300000, guid: 1d7b18a0ed221f9499c943dbc427a28e, type: 3}
+  - key: Give_Yellow_ball
+    scripts:
+    - text: "\uBCF4\uB984\uB2EC\uC774 \uD544\uC694\uD558\uB2E8 \uB9D0\uC774\uC8E0?"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+    - text: "\uC774\uAC78 \uBCF4\uB984\uB2EC\uB85C \uC4F8 \uC218 \uC788\uC9C0 \uC54A\uC744\uAE4C\uC694?"
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}
+  - key: After_effect
+    scripts:
+    - text: "\uC544! \uC561\uC790\uAC00 \uD754\uB4E4\uB9AC\uBA74\uC11C \uBB50\uAC00
+        \uB5A8\uC5B4\uC84C\uC5B4\uC694"
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uC774\uAC74 \uCE7C\uC774\uB124\uC694."
+      sprite: {fileID: 21300000, guid: fd06aa28d55695c47883d1684deb8cee, type: 3}
+    - text: "\uC704\uD5D8\uD55C \uAC8C \uB5A8\uC5B4\uC84C\uAD70\uC694."
+      sprite: {fileID: 21300000, guid: 1d7b18a0ed221f9499c943dbc427a28e, type: 3}
+    - text: "\uC774\uAC74 \uC81C\uAC00 \uAC16\uACE0 \uC788\uB3C4\uB85D\uD558\uC8E0."
+      sprite: {fileID: 21300000, guid: 89dab14ae7df52244895cb1dc5fc432f, type: 3}
+  - key: After_gain_ knife
+    scripts:
+    - text: "\uB291\uB300\uC778\uAC04\uC774 \uD3EC\uD6A8\uD558\uACE0 \uC788\uB2E4."
+      sprite: {fileID: 21300000, guid: 65c8216603dec0546810b01fd169033e, type: 3}

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,12 +11,6 @@ public class BookDetail : MonoBehaviour
     private Button downBtn;
     [SerializeField]
     private Button upBtn;
-
-    private void Start()
-    {
-        gameObject.SetActive(false);
-        textPanel.SetActive(false);
-    }
 
     public void Reset(string text)
     {

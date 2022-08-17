@@ -16,14 +16,6 @@ public class DetailWindow : MonoBehaviour
 
     private UnityAction afterEvent = null;
 
-    public GameObject ItemDetailObject
-    {
-        get
-        {
-            return itemDetailObject;
-        }
-    }
-
     void Update()
     {
         if (Input.GetMouseButton(0))

@@ -68,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c07b59074a7359e4e9a0edbbbc030202, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 81ffc4bb020a08142a9c607dd338f49a, type: 2}
   m_sharedMaterial: {fileID: -1917719471589300066, guid: c07b59074a7359e4e9a0edbbbc030202,
     type: 2}
   m_fontSharedMaterials: []
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_margin: {x: -0.50704956, y: -3.1358483, z: 63.80127, w: 38.43197}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5218719551199323398
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60194e0d0b1cba144ac3852289976142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 8aab6f4c3119da440bd3aae905d34f21, type: 2}
+  dialogue: {fileID: 11400000, guid: d44144eba6750ad4186ae7358131fa8a, type: 2}
   typingDelay: 0.1
   baseInspector:
     panel: {fileID: 5218719552101810046}
@@ -298,10 +298,10 @@ RectTransform:
   m_Father: {fileID: 5218719551871199298}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 176, y: -125}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5218719551329742426
 CanvasRenderer:

@@ -9,6 +9,8 @@ public class CursorManager : Singleton<CursorManager>
     [SerializeField]
     private CursorSet interactCursor;
 
+    private ECursorType current = ECursorType.DEFAULT;
+
     public enum ECursorType
     {
         DEFAULT, INTERACT
@@ -24,17 +26,27 @@ public class CursorManager : Singleton<CursorManager>
     private void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit) &&
-            hit.transform.tag != "NotInteract")
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
         {
-            SetCursor(ECursorType.INTERACT);
-            return;
+            if (hit.transform.tag != "NotInteract" &&
+                current == ECursorType.DEFAULT)
+            {
+                SetCursor(ECursorType.INTERACT);
+            }
         }
-        SetCursor(ECursorType.DEFAULT);
+        else
+        {
+            if (current == ECursorType.INTERACT)
+            {
+                SetCursor(ECursorType.DEFAULT);
+            }
+        }
     }
 
     public void SetCursor(ECursorType type)
     {
+        current = type;
+
         CursorSet target;
         switch (type)
         {

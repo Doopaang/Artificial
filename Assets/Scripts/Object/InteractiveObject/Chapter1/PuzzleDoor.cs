@@ -44,7 +44,7 @@ public class PuzzleDoor : MonoBehaviour
             CameraSystem.Instance.MoveCamera(solveSceneCamera);
 
         if (doorCollider)
-            doorCollider.SetActive(false);
+            doorCollider.GetComponent<Collider>().enabled = false;
 
         gameObject.transform.Rotate(doorOpenRotaion);
         gameObject.transform.Translate(doorOpenTranslation);

@@ -13224,7 +13224,7 @@ MonoBehaviour:
   down: {fileID: 0}
   back: {fileID: 282068100}
   colliders:
-  - {fileID: 2125047019}
+  - {fileID: 2052688214}
   canvases: []
 --- !u!1001 &949957675
 PrefabInstance:
@@ -28922,6 +28922,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1274786472}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2052688214 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 6458952392013381914, guid: 3d6a6615b09ec3e4392c8e799b333ef3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2130793118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2053459056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30627,6 +30633,11 @@ PrefabInstance:
       propertyPath: moveSceneCamera
       value: 
       objectReference: {fileID: 654132281}
+    - target: {fileID: 6637825158458441099, guid: 3d6a6615b09ec3e4392c8e799b333ef3,
+        type: 3}
+      propertyPath: solveSceneCamera
+      value: 
+      objectReference: {fileID: 943264777}
     - target: {fileID: 6637825158458441099, guid: 3d6a6615b09ec3e4392c8e799b333ef3,
         type: 3}
       propertyPath: doorOpenRotaion.y

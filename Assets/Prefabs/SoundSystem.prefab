@@ -49,8 +49,10 @@ MonoBehaviour:
   SFXVolume: 50
   BGMDic:
     m_keys:
-    - MainBGM
+    - MainMenu
+    - InGame
     m_values:
+    - {fileID: 8300000, guid: af65961e3a77b1042b77db723eb5a102, type: 3}
     - {fileID: 8300000, guid: 6bf4f4cbb8483ce41a50497e2da68db3, type: 3}
   SFXDic:
     m_keys:
@@ -70,7 +72,7 @@ MonoBehaviour:
     - Inventory
     - ResetButton
     - BlueButton
-    - ??
+    - Button
     - EndDump
     m_values:
     - {fileID: 8300000, guid: c572a8b3e7222d146a3baa9cb3a5ec32, type: 3}

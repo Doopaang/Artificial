@@ -53,7 +53,7 @@ public class GameManager : Singleton<GameManager>
         brushColor = Color.black;
         brushUI.gameObject.SetActive(false);
 
-        SoundSystem.Instance.PlayBGM("MainBGM");
+        SoundSystem.Instance.PlayBGM("InGame");
     }
 
 #if UNITY_EDITOR

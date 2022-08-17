@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6633357711315905897}
   m_Layer: 5
   m_Name: RedButton
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 6633357711410881910}
   m_Layer: 5
   m_Name: GreenButton
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 6633357712357280090}
   m_Layer: 5
   m_Name: BlueButton
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

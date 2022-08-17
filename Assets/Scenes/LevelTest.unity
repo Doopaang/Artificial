@@ -14963,6 +14963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CursorManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5972121909744723811, guid: 29730e7b253ad654eb0dc7dec278960f,
+        type: 3}
+      propertyPath: UICamera
+      value: 
+      objectReference: {fileID: 370927072}
     - target: {fileID: 6535835186193547988, guid: 29730e7b253ad654eb0dc7dec278960f,
         type: 3}
       propertyPath: m_RootOrder

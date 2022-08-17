@@ -37,6 +37,8 @@ public class WerewolfPicture : MonoBehaviour
 
     private bool firstNightInteract = true;
 
+    private Coroutine coroutine = null;
+
     private void Start()
     {
         moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
@@ -82,11 +84,16 @@ public class WerewolfPicture : MonoBehaviour
 
     public void ChangePicture(EWerewolfPictureType werePictureType, bool isFade = true)
     {
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
+
         MeshRenderer before = pictures[(int)state].GetComponent<MeshRenderer>();
         state = werePictureType;
         MeshRenderer after = pictures[(int)werePictureType].GetComponent<MeshRenderer>();
 
-        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, isFade));
+        coroutine = StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, isFade));
     }
 
     public void StartChangeCoroutine()

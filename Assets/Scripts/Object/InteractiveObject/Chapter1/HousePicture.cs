@@ -19,6 +19,8 @@ public class HousePicture : MonoBehaviour
 
     private bool gateLocked = true;
 
+    private Coroutine coroutine = null;
+
     public bool GateLocked
     {
         get
@@ -68,10 +70,15 @@ public class HousePicture : MonoBehaviour
 
     public void ChangePicture(EHousePictureType housePictureType)
     {
+        if(coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
+
         MeshRenderer before = pictures[(int)state].GetComponent<MeshRenderer>();
         state = housePictureType;
         MeshRenderer after = pictures[(int)housePictureType].GetComponent<MeshRenderer>();
 
-        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after));
+        coroutine = StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after));
     }
 }

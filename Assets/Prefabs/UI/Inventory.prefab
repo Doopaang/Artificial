@@ -1305,6 +1305,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1434,6 +1439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}
@@ -1565,6 +1575,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1694,6 +1709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}
@@ -1825,6 +1845,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1954,6 +1979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}
@@ -2085,6 +2115,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2214,6 +2249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}
@@ -2345,6 +2385,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2474,6 +2519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933760578613199050, guid: 55c71139667c2284c82bcc40243b87f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 8118419242176738364, guid: 55c71139667c2284c82bcc40243b87f7,
         type: 3}

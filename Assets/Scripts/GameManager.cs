@@ -119,24 +119,24 @@ public class GameManager : Singleton<GameManager>
 
     public void ChangeToDaytime()
     {
-        isDaytime = true;
-
-        if (housePicture)
+        if (housePicture && !isDaytime)
             housePicture.ChangeToDay();
 
-        if (werewolfPicture)
+        if (werewolfPicture && !isDaytime)
             werewolfPicture.ChangeToDay();
+
+        isDaytime = true;
     }
 
     public void ChangeToNight()
     {
-        isDaytime = false;
-
-        if (housePicture)
+        if (housePicture && isDaytime)
             housePicture.ChangeToNight();
 
-        if (werewolfPicture)
+        if (werewolfPicture && isDaytime)
             werewolfPicture.ChangeToNight();
+
+        isDaytime = false;
     }
 
     public void ChangeBrushColor(ref float brush)

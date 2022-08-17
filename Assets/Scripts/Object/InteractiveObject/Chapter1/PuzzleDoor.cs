@@ -9,15 +9,21 @@ public class PuzzleDoor : MonoBehaviour
     private Vector3 doorOpenTranslation;
 
     [SerializeField]
+    private GameObject doorCollider;
+
+    [SerializeField]
     private MoveSceneCamera nextStageCamera;
 
     [SerializeField]
     private MoveSceneCamera moveSceneCamera;
 
     [SerializeField]
+    private MoveSceneCamera solveSceneCamera;
+
+    [SerializeField]
     private EItemType deleteItem;
 
-    private void Start()
+    private void Awake()
     {
         if (nextStageCamera)
             nextStageCamera.gameObject.SetActive(false);
@@ -34,8 +40,11 @@ public class PuzzleDoor : MonoBehaviour
         if (nextStageCamera)
             nextStageCamera.gameObject.SetActive(true);
 
-        if (moveSceneCamera)
-            CameraSystem.Instance.MoveCamera(moveSceneCamera);
+        if (solveSceneCamera)
+            CameraSystem.Instance.MoveCamera(solveSceneCamera);
+
+        if (doorCollider)
+            doorCollider.SetActive(false);
 
         gameObject.transform.Rotate(doorOpenRotaion);
         gameObject.transform.Translate(doorOpenTranslation);

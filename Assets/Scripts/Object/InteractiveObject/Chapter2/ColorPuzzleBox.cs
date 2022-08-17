@@ -28,6 +28,7 @@ public class ColorPuzzleBox : MonoBehaviour
     {
         item.GetComponent<Collider>().enabled = true;
         cover.SetActive(false);
+        SoundSystem.Instance.PlaySFX("OpenBox", transform.position);
         GameManager.Instance.Inventory.DeleteItem(deleteItem);
     }
 }

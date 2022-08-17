@@ -25,6 +25,7 @@ public class BookDetail : MonoBehaviour
     {
         text.pageToDisplay += value;
         CheckButton();
+        SoundSystem.Instance.PlaySFX("Inventory", Camera.main.transform.position);
     }
 
     private void CheckButton()

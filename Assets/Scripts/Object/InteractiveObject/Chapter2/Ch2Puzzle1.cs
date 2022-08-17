@@ -31,13 +31,10 @@ public class Ch2Puzzle1 : PuzzleObject
         ResetPad();
     }
 
-    public void Solve()
-    {
-
-    }
-
     public void ToggleButton(Toggle toggle)
     {
+        SoundSystem.Instance.PlaySFX("BlueButton", transform.parent.position);
+
         toggle.interactable = false;
 
         if (toggleIndex >= answerList.Count ||
@@ -66,6 +63,8 @@ public class Ch2Puzzle1 : PuzzleObject
     {
         toggleIndex = 0;
         correctOrder = true;
+
+        SoundSystem.Instance.PlaySFX("ResetButton", transform.parent.position);
 
         if (toggleList != null)
         {

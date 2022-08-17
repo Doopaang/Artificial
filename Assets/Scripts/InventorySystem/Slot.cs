@@ -49,6 +49,12 @@ public class Slot : MonoBehaviour
 
             if (itemObject.GetComponent<Collider>())
                 itemObject.GetComponent<Collider>().enabled = false;
+
+            transform.tag = "Interact";
+        }
+        else
+        {
+            transform.tag = "Untagged";
         }
 
         itemType = newItemData.itemType;

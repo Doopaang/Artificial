@@ -77,6 +77,7 @@ public class GameManager : Singleton<GameManager>
             CursorManager.Instance.enabled = !value;
         }
 
+        Cursor.visible = !value;
         inputBlock.gameObject.SetActive(value);
     }
 

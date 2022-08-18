@@ -51,9 +51,11 @@ MonoBehaviour:
     m_keys:
     - MainMenu
     - InGame
+    - Credits
     m_values:
     - {fileID: 8300000, guid: af65961e3a77b1042b77db723eb5a102, type: 3}
     - {fileID: 8300000, guid: 6bf4f4cbb8483ce41a50497e2da68db3, type: 3}
+    - {fileID: 8300000, guid: 45b22de82fcd41941bb2deba42cb488a, type: 3}
   SFXDic:
     m_keys:
     - Cabinet
@@ -75,23 +77,23 @@ MonoBehaviour:
     - Button
     - EndDump
     m_values:
-    - {fileID: 8300000, guid: c572a8b3e7222d146a3baa9cb3a5ec32, type: 3}
-    - {fileID: 8300000, guid: ecbb8447214b23543a3a96c1dcf8123b, type: 3}
-    - {fileID: 8300000, guid: 7653d559b8fc3b141b953620274194e9, type: 3}
-    - {fileID: 8300000, guid: 71c5d8c81ca12634cb9cef465b5c3210, type: 3}
-    - {fileID: 8300000, guid: 9fb7a7aedfdabe3468d129094980ca7e, type: 3}
-    - {fileID: 8300000, guid: 9a3b37e860569a24f96e49932b2307da, type: 3}
-    - {fileID: 8300000, guid: b0d9bf954fb460446b003a2d2d2a7d69, type: 3}
-    - {fileID: 8300000, guid: 83b1282a1dd47fa478ec8ee63e8e88ea, type: 3}
-    - {fileID: 8300000, guid: 59e97e6301fe3694f8911d359005e5b0, type: 3}
-    - {fileID: 8300000, guid: cd115be461e09a446a92af8f3e3b0ce7, type: 3}
-    - {fileID: 8300000, guid: 4cc0c88d6fe026c48934dbf566628773, type: 3}
-    - {fileID: 8300000, guid: 8857c0dba6ce70e4b8b43ecd29bf4939, type: 3}
-    - {fileID: 8300000, guid: 73112953dbc694441a4649431d3df220, type: 3}
-    - {fileID: 8300000, guid: 91dcc244b4d38c848ab9ac64840ad168, type: 3}
-    - {fileID: 8300000, guid: 099837f6108297b478c36e727f0aae9d, type: 3}
-    - {fileID: 8300000, guid: a38d9633247418441b37bd084fbdaca5, type: 3}
-    - {fileID: 8300000, guid: 49093eb6aecb30243ba0e104ba1c551a, type: 3}
-    - {fileID: 8300000, guid: bbd176fea8cd9a14292ca3013091c417, type: 3}
+    - {fileID: 8300000, guid: b580442c9630862469636b0b5ab5faaf, type: 3}
+    - {fileID: 8300000, guid: 0e3d06a79adb7164b9fb9cc0559e5311, type: 3}
+    - {fileID: 8300000, guid: 7fdd15e22272cb0449bbd3fb21874d37, type: 3}
+    - {fileID: 8300000, guid: 657336263dd16774088edb5e93e96d7f, type: 3}
+    - {fileID: 8300000, guid: 8ab552b56fc65e24d817d38cbe036f01, type: 3}
+    - {fileID: 8300000, guid: 346e179ae99ef6a44a7e66b4f73418ab, type: 3}
+    - {fileID: 8300000, guid: 9a2e15def7384dd4ba68249f2acd9722, type: 3}
+    - {fileID: 8300000, guid: 7c1a14980552fda47a8e0e2f1cb5592c, type: 3}
+    - {fileID: 8300000, guid: 1d6ff6c3513fd0d43a784b1ecd9134c0, type: 3}
+    - {fileID: 8300000, guid: 58edc3415d73dc248ac902c0ec79ae23, type: 3}
+    - {fileID: 8300000, guid: 472648bba86787444af5d08e063c2998, type: 3}
+    - {fileID: 8300000, guid: 756cdddeedb8d854ca6381084c4c20fe, type: 3}
+    - {fileID: 8300000, guid: b9017a1cdc2d01540be5edf5f7a65c49, type: 3}
+    - {fileID: 8300000, guid: a92005a3c00a6164ba324ab811ad8573, type: 3}
+    - {fileID: 8300000, guid: d331d9790d4e56b47bd90b27f90e7b36, type: 3}
+    - {fileID: 8300000, guid: c9f73cfb685bc7749bda356d74942f4d, type: 3}
+    - {fileID: 8300000, guid: e732fc0d2b1cf804c8a8951589156900, type: 3}
+    - {fileID: 8300000, guid: b8d38e8ec909ead44bd5ef7dc200ab79, type: 3}
   SFXPrefab: {fileID: 2003506486480327837, guid: f073dc7d5de9c5645ac78a5d4f396201,
     type: 3}

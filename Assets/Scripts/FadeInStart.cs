@@ -31,6 +31,9 @@ public class FadeInStart : MonoBehaviour
     {
         Color color = fadeInImage.color;
 
+        color.a = info.isIn ? 1.0f : -1.0f;
+        fadeInImage.color = color;
+
         fadeInImage.gameObject.SetActive(true);
         while (info.isIn && fadeInImage.color.a > 0.0f ||
             !info.isIn && fadeInImage.color.a < 1.0f)
@@ -45,6 +48,18 @@ public class FadeInStart : MonoBehaviour
         if (info.afterEvent != null)
         {
             info.afterEvent.Invoke();
+        }
+    }
+
+    public void Pop(bool isIn, UnityAction afterEvent = null)
+    {
+        Color color = fadeInImage.color;
+        color.a = isIn ? -1.0f : 1.0f;
+        fadeInImage.color = color;
+        fadeInImage.gameObject.SetActive(!isIn);
+        if (afterEvent != null)
+        {
+            afterEvent.Invoke();
         }
     }
 }

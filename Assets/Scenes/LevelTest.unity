@@ -8837,7 +8837,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh55132
+  m_Name: pb_Mesh23152
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20187,7 +20187,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh55758
+  m_Name: pb_Mesh23798
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22807,18 +22807,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 0.02
+  clearTextDuration: 2
+  endTextDuration: 2
+  blackOutDuration: 3
+  endingDuration: 4
+  doorOpenRotaion: {x: 0, y: 120, z: 0}
+  doorOpenTranslation: {x: -3.64, y: 0, z: 2}
   fade: {fileID: 664651736}
   solveSceneCamera: {fileID: 943264777}
-  clearTextDuration: 2
   text: {fileID: 751097052}
   UIList:
   - {fileID: 1058161258}
   - {fileID: 1892240329}
-  doorOpenRotaion: {x: 0, y: 120, z: 0}
-  doorOpenTranslation: {x: -3.3, y: 0, z: 0}
+  - {fileID: 2114051716}
   endingImage: {fileID: 1349717694}
-  endTextDuration: 2
-  endingDuration: 2
 --- !u!65 &1562437938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30484,6 +30486,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1756d4e85e5bec47a38e3d05532f673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!223 &2114051716 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 3310366155868154451, guid: 3e749b8f26a234c4d811f610fb8b08f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 892942995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2116894073
 PrefabInstance:
   m_ObjectHideFlags: 0

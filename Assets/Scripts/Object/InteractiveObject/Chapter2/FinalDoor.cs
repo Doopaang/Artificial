@@ -9,33 +9,32 @@ public class FinalDoor : MonoBehaviour
     [SerializeField]
     private float fadeSpeed;
     [SerializeField]
-    private FadeInStart fade;
-    [SerializeField]
-    private MoveSceneCamera solveSceneCamera;
-
-    [SerializeField]
     private float clearTextDuration;
     [SerializeField]
-    private TMPro.TextMeshProUGUI text;
-
-    private BoxCollider coll;
-
+    private float endTextDuration;
     [SerializeField]
-    private List<Canvas> UIList;
+    private float blackOutDuration;
+    [SerializeField]
+    private float endingDuration;
 
+    [Space(20.0f)]
     [SerializeField]
     private Vector3 doorOpenRotaion;
     [SerializeField]
     private Vector3 doorOpenTranslation;
 
+    [Space(20.0f)]
+    [SerializeField]
+    private FadeInStart fade;
+    [SerializeField]
+    private MoveSceneCamera solveSceneCamera;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI text;
+    private BoxCollider coll;
+    [SerializeField]
+    private List<Canvas> UIList;
     [SerializeField]
     private Image endingImage;
-
-    [SerializeField]
-    private float endTextDuration;
-
-    [SerializeField]
-    private float endingDuration;
 
     private void Awake()
     {
@@ -87,16 +86,23 @@ public class FinalDoor : MonoBehaviour
         text.gameObject.SetActive(true);
         yield return new WaitForSeconds(endTextDuration);
 
-        fade.StartCoroutine("Fade", new FadeInStart.FadeInfo(false, 1.0f));
+        fade.Pop(false);
         SoundSystem.Instance.PlaySFX("EndDump", Camera.main.transform.position);
 
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(blackOutDuration);
 
         endingImage.gameObject.SetActive(true);
         fade.StartCoroutine("Fade", new FadeInStart.FadeInfo(true, fadeSpeed));
 
         yield return new WaitForSeconds(endingDuration);
 
-        fade.StartCoroutine("Fade", new FadeInStart.FadeInfo(false, fadeSpeed, () => { SceneManager.LoadScene("Credits"); }));
+        fade.StartCoroutine("Fade", new FadeInStart.FadeInfo(false, fadeSpeed, MoveScene));
+    }
+
+    private void MoveScene()
+    {
+        fade.Pop(false);
+        Cursor.visible = true;
+        SceneManager.LoadSceneAsync("Credits");
     }
 }

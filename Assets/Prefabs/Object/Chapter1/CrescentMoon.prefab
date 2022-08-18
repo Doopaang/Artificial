@@ -102,8 +102,8 @@ MonoBehaviour:
   combineResultItemType: 26
   itemRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
   scaleDetail: {x: 600, y: 600, z: 600}
-  scaleInventory: {x: 150, y: 150, z: 150}
-  scaleUsing: {x: 100, y: 100, z: 100}
+  scaleInventory: {x: 70, y: 70, z: 70}
+  scaleUsing: {x: 80, y: 80, z: 80}
   itemObject: {fileID: 2333413415832332764}
 --- !u!65 &6705230085725372114
 BoxCollider:

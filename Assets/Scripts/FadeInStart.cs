@@ -1,33 +1,65 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class FadeInStart : MonoBehaviour
 {
     [SerializeField]
     private Image fadeInImage;
 
-    private void Update()
+    public struct FadeInfo
     {
-        StartCoroutine("FadeIn");
+        public bool isIn;
+        public float speed;
+        public UnityAction afterEvent;
 
-        if (fadeInImage.color.a <= 0.0f)
+        public FadeInfo(bool isIn, float speed, UnityAction afterEvent = null)
         {
-            Destroy(gameObject);
+            this.isIn = isIn;
+            this.speed = speed;
+            this.afterEvent = afterEvent;
         }
     }
 
-    private IEnumerator FadeIn()
+    private void Start()
+    {
+        StartCoroutine("Fade", new FadeInfo(true, 0.01f));
+    }
+
+    private IEnumerator Fade(FadeInfo info)
     {
         Color color = fadeInImage.color;
 
-        for (int i = 0; i <= 100; i++)
+        color.a = info.isIn ? 1.0f : -1.0f;
+        fadeInImage.color = color;
+
+        fadeInImage.gameObject.SetActive(true);
+        while (info.isIn && fadeInImage.color.a > 0.0f ||
+            !info.isIn && fadeInImage.color.a < 1.0f)
         {
-            color.a -= Time.deltaTime * 0.005f;
+            color.a += info.speed * (info.isIn ? -1.0f : 1.0f);
 
             fadeInImage.color = color;
-        }
 
-        yield return null;
+            yield return new WaitForFixedUpdate();
+        }
+        fadeInImage.gameObject.SetActive(false);
+        if (info.afterEvent != null)
+        {
+            info.afterEvent.Invoke();
+        }
+    }
+
+    public void Pop(bool isIn, UnityAction afterEvent = null)
+    {
+        Color color = fadeInImage.color;
+        color.a = isIn ? -1.0f : 1.0f;
+        fadeInImage.color = color;
+        fadeInImage.gameObject.SetActive(!isIn);
+        if (afterEvent != null)
+        {
+            afterEvent.Invoke();
+        }
     }
 }

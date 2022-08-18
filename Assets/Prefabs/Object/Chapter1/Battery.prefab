@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1728232509825626471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   combinableItemType: 6
   combineResultItemType: 5
   itemRotation: {x: 0.2500001, y: 0.06698732, z: 0.25, w: -0.93301266}
-  scaleDetail: {x: 1500, y: 1500, z: 1500}
-  scaleInventory: {x: 200, y: 200, z: 200}
-  scaleUsing: {x: 230, y: 230, z: 230}
+  scaleDetail: {x: 1000, y: 2250, z: 1000}
+  scaleInventory: {x: 100, y: 225, z: 100}
+  scaleUsing: {x: 120, y: 300, z: 120}
   itemObject: {fileID: 1728232509825626471}

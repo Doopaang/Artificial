@@ -30,8 +30,12 @@ public class FinalDoor : MonoBehaviour
     private List<Canvas> UIList;
     [SerializeField]
     private Image endingImage;
+    [SerializeField]
+    private ZoomIn zoomIn;
 
     private BoxCollider doorColl;
+
+    private bool isSolved = false;
 
     private void Awake()
     {
@@ -49,6 +53,7 @@ public class FinalDoor : MonoBehaviour
 
     private void Solve()
     {
+        isSolved = true;
         CameraSystem.Instance.MoveCamera(solveSceneCamera);
         fade.StartCoroutine("Fade", new FadeInStart.FadeInfo(true, fadeSpeed, ClearDialogue));
     }
@@ -66,6 +71,12 @@ public class FinalDoor : MonoBehaviour
 
     public void Interact()
     {
+        if (!isSolved && zoomIn)
+        {
+            zoomIn.Interact();
+            return;
+        }
+
         SoundSystem.Instance.StopBGM();
 
         gameObject.transform.Rotate(doorOpenRotaion);

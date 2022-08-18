@@ -42,5 +42,7 @@ public class Drawer : MonoBehaviour
         GameManager.Instance.Inventory.ClearItem();
 
         locked = false;
+
+        SoundSystem.Instance.PlaySFX("LockUnlock", transform.position);
     }
 }

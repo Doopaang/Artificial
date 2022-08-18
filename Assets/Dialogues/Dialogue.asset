@@ -454,7 +454,7 @@ MonoBehaviour:
     - text: "\uB2F9\uC5F0\uD558\uC9C0!"
       sprite: {fileID: 21300000, guid: 0e07b86aef2ade249a0dce0e1b681697, type: 3}
     - text: "\uADF8\uB7FC \uB69C\uAED1\uC744 \uC5F4\uC5B4\uC904\uAC8C"
-      sprite: {fileID: 21300000, guid: 68ef6a797415ad440957d64ba30a2c8a, type: 3}
+      sprite: {fileID: 21300000, guid: dec2d00c4f9ce14459a17021ebc7a698, type: 3}
     - text: "\uC5ED\uC2DC \uC548\uC5D0 \uBB54\uAC00\uAC00 \uC788\uC5B4\uC694 \uC120\uC0DD\uB2D8"
       sprite: {fileID: 21300000, guid: 6ffe6037c5455b94199be1ab757df8e2, type: 3}
     - text: "\uC5D0\uC787!"

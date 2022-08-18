@@ -24,7 +24,7 @@ public class DrawerDoor : MonoBehaviour
 
     public void Interact()
     {
-        if (locked && LockKey != EItemType.NONE)
+        if (locked)
         {
             if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_RED ||
                 GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_BLUE ||

@@ -3,6 +3,9 @@ using UnityEngine;
 public class CabinetDoor : MonoBehaviour
 {
     [SerializeField]
+    private Collider[] objectColliders;
+
+    [SerializeField]
     private GameObject leftDoor;
 
     [SerializeField]
@@ -29,6 +32,11 @@ public class CabinetDoor : MonoBehaviour
         rightDoor.transform.Rotate(new Vector3(0.0f, rotateDirection * 90.0f, 0.0f));
 
         opened = !opened;
+
+        foreach (Collider collider in objectColliders)
+        {
+            collider.enabled = opened;
+        }
 
         SoundSystem.Instance.PlaySFX("Cabinet", transform.position);
     }

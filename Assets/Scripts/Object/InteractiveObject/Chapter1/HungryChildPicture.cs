@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HungryChildPicture : MonoBehaviour
@@ -30,11 +28,14 @@ public class HungryChildPicture : MonoBehaviour
         DialogueSystem.Instance.StartDialogue("Hungry_Child_Many_Times");
     }
 
-    public void UseApple()
+    public void UseEatenApple()
     {
-        SoundSystem.Instance.PlaySFX("EatApple", transform.position);
-
         DialogueSystem.Instance.StartDialogue("Give_Apple", ChangePicture);
+    }
+
+    public void AfterUseApple()
+    {
+        DialogueSystem.Instance.StartDialogue("After_Gain_EatenApple");
     }
 
     public void ChangePicture()
@@ -42,6 +43,8 @@ public class HungryChildPicture : MonoBehaviour
         GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_APPLE);
 
         childPicture.ChangeToFullChildPicture();
+
+        SoundSystem.Instance.PlaySFX("EatApple", transform.position);
     }
 
 

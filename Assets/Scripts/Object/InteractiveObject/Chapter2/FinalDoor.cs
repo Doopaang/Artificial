@@ -9,10 +9,6 @@ public class FinalDoor : MonoBehaviour
     [SerializeField]
     private float fadeSpeed;
     [SerializeField]
-    private float clearTextDuration;
-    [SerializeField]
-    private float endTextDuration;
-    [SerializeField]
     private float blackOutDuration;
     [SerializeField]
     private float endingDuration;
@@ -29,62 +25,60 @@ public class FinalDoor : MonoBehaviour
     [SerializeField]
     private MoveSceneCamera solveSceneCamera;
     [SerializeField]
-    private TMPro.TextMeshProUGUI text;
-    private BoxCollider coll;
+    private BoxCollider puzzleColl;
     [SerializeField]
     private List<Canvas> UIList;
     [SerializeField]
     private Image endingImage;
 
+    private BoxCollider doorColl;
+
     private void Awake()
     {
-        coll = GetComponent<BoxCollider>();
+        doorColl = GetComponent<BoxCollider>();
     }
 
     public void SolvedFinalDoor()
     {
-        GameManager.Instance.SetInputBlock(true);
         foreach (var temp in UIList)
         {
             temp.gameObject.SetActive(false);
         }
-        fade.StartCoroutine("Fade", new FadeInStart.FadeInfo(false, fadeSpeed, Solve1));
+        fade.StartCoroutine("Fade", new FadeInStart.FadeInfo(false, fadeSpeed, Solve));
     }
 
-    private void Solve1()
+    private void Solve()
     {
         CameraSystem.Instance.MoveCamera(solveSceneCamera);
-        fade.StartCoroutine("Fade", new FadeInStart.FadeInfo(true, fadeSpeed, () => { StartCoroutine(PopText()); }));
+        fade.StartCoroutine("Fade", new FadeInStart.FadeInfo(true, fadeSpeed, ClearDialogue));
     }
 
-    private IEnumerator PopText()
+    private void ClearDialogue()
     {
-        text.text = "Clear Final Password";
-        text.gameObject.SetActive(true);
-        yield return new WaitForSeconds(clearTextDuration);
-        text.gameObject.SetActive(false);
-        GameManager.Instance.SetInputBlock(false);
-        coll.enabled = true;
+        DialogueSystem.Instance.StartDialogue("Clear_Final_Passworld", ClearDialogueAfter);
+    }
+
+    private void ClearDialogueAfter()
+    {
+        puzzleColl.enabled = false;
+        doorColl.enabled = true;
     }
 
     public void Interact()
     {
-        StartCoroutine(PopText2());
-    }
-
-    private IEnumerator PopText2()
-    {
-        GameManager.Instance.SetInputBlock(true);
-
         SoundSystem.Instance.StopBGM();
 
         gameObject.transform.Rotate(doorOpenRotaion);
         gameObject.transform.Translate(doorOpenTranslation);
         SoundSystem.Instance.PlaySFX("OpenDoor", transform.position);
 
-        text.text = "Ending";
-        text.gameObject.SetActive(true);
-        yield return new WaitForSeconds(endTextDuration);
+        DialogueSystem.Instance.StartDialogue("Ending", () => { StartCoroutine(EndingDialogueAfter()); });
+
+    }
+
+    private IEnumerator EndingDialogueAfter()
+    {
+        GameManager.Instance.SetInputBlock(true);
 
         fade.Pop(false);
         SoundSystem.Instance.PlaySFX("EndDump", Camera.main.transform.position);

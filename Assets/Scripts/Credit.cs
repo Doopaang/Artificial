@@ -23,6 +23,11 @@ public class Credit : MonoBehaviour
         text.text = System.Environment.MachineName + ".";
     }
 
+    private void Start()
+    {
+        SoundSystem.Instance.PlayBGM("Credits");
+    }
+
     void Update()
     {
         if (player.isPaused)

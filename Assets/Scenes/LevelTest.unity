@@ -10377,21 +10377,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 566602209}
     m_Modifications:
-    - target: {fileID: 1141543570431928086, guid: 79807289fbc9ea54381c269ea004a1ef,
-        type: 3}
-      propertyPath: SFXDic.m_keys.Array.data[7]
-      value: PasswordFailed
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141543570431928086, guid: 79807289fbc9ea54381c269ea004a1ef,
-        type: 3}
-      propertyPath: SFXDic.m_keys.Array.data[8]
-      value: PasswordPress
-      objectReference: {fileID: 0}
-    - target: {fileID: 1141543570431928086, guid: 79807289fbc9ea54381c269ea004a1ef,
-        type: 3}
-      propertyPath: SFXDic.m_keys.Array.data[9]
-      value: Werewolf
-      objectReference: {fileID: 0}
     - target: {fileID: 7409224354476342353, guid: 79807289fbc9ea54381c269ea004a1ef,
         type: 3}
       propertyPath: m_RootOrder

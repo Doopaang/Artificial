@@ -28,18 +28,24 @@ public class Werewolf : MonoBehaviour
             DialogueSystem.Instance.StartDialogue("First_Morning");
         }
         else if (werewolfPicture.state == EWerewolfPictureType.Night ||
+            werewolfPicture.state == EWerewolfPictureType.CrescentMoonNight ||
             werewolfPicture.state == EWerewolfPictureType.FullMoonNight)
         {
-            DialogueSystem.Instance.StartDialogue("First_Night");
+            DialogueSystem.Instance.StartDialogue("Many_Times_Night");
         }
     }
 
     public void InvestigateRetry()
     {
         if (GameManager.Instance.IsDaytime)
+        {
             DialogueSystem.Instance.StartDialogue("Many_Times_Morning");
+        }
         else if (werewolfPicture.state == EWerewolfPictureType.Night ||
+            werewolfPicture.state == EWerewolfPictureType.CrescentMoonNight ||
             werewolfPicture.state == EWerewolfPictureType.FullMoonNight)
+        {
             DialogueSystem.Instance.StartDialogue("Many_Times_Night");
+        }
     }
 }

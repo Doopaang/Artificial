@@ -11,6 +11,8 @@ public class ArtBlue : MonoBehaviour
 
     [SerializeField]
     private GameObject cup;
+    [SerializeField]
+    private Color iteractiveColor;
 
     [SerializeField]
     private ArtRed red;
@@ -42,6 +44,7 @@ public class ArtBlue : MonoBehaviour
         }
         else
         {
+            Debug.Log("1");
             DialogueSystem.Instance.StartDialogue("Blue_Many_Times");
         }
     }
@@ -58,6 +61,7 @@ public class ArtBlue : MonoBehaviour
         }
         else
         {
+            Debug.Log("2");
             DialogueSystem.Instance.StartDialogue("Blue_Many_Times");
         }
     }

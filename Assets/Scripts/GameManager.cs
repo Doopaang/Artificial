@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private float fadeSpeed;
 
-    [HideInInspector]
+    //[HideInInspector]
     public Color brushColor;
 
     public BrushUI brushUI;

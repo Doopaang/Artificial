@@ -43,7 +43,6 @@ public class HousePicture : MonoBehaviour
     public void UnlockGate()
     {
         gateLocked = false;
-        SoundSystem.Instance.PlaySFX("HouseDoor", transform.position);
     }
 
     public void ChangeToDay()

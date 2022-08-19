@@ -2,13 +2,20 @@ using UnityEngine;
 
 public class Brush : MonoBehaviour
 {
-    private bool paint = false;
+    private void OnDestroy()
+    {
+        if (GameManager.Instance &&
+            GameManager.Instance.brushUI)
+        {
+            GameManager.Instance.brushUI.Brushes.Remove(this);
+        }
+    }
 
     private void Start()
     {
         GameManager.Instance.brushUI.AddBrush(this);
 
-        SetPaintAlpha(0.0f);
+        ApplyColor();
     }
 
     public void Interect()
@@ -19,11 +26,7 @@ public class Brush : MonoBehaviour
 
     public void ApplyColor()
     {
-        if (!paint)
-        {
-            paint = true;
-            SetPaintAlpha(1.0f);
-        }
+        SetPaintAlpha(GameManager.Instance.brushColor == Color.black ? 0.0f : 1.0f);
     }
 
     private void SetPaintAlpha(float value)

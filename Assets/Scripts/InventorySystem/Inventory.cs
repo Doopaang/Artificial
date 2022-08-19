@@ -61,6 +61,9 @@ public class Inventory : MonoBehaviour
     public void ClearItem()
     {
         SetUsingItem(EItemType.NONE);
+
+        if (usingItemUI.UsingItemObject)
+            Destroy(usingItemUI.UsingItemObject);
     }
 
     private void ApplyItemList()
@@ -208,8 +211,6 @@ public class Inventory : MonoBehaviour
         SoundSystem.Instance.PlaySFX("Inventory", Camera.main.transform.position);
 
         DeactivateCombine();
-
-        SetUsingItem(EItemType.NONE);
     }
 
     public void DeactiveInventory()

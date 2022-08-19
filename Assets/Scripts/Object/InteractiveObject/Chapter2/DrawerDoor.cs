@@ -29,7 +29,8 @@ public class DrawerDoor : MonoBehaviour
             if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_RED ||
                 GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_BLUE ||
                 GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_GREEN ||
-                GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_YELLOW)
+                GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_YELLOW ||
+                GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_KEY_BLACK)
             {
                 if (GameManager.Instance.Inventory.UsingItem == LockKey)
                 {

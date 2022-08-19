@@ -32,8 +32,14 @@ public class HouseOwner : MonoBehaviour
     {
         housePicture.UnlockGate();
 
-        DialogueSystem.Instance.StartDialogue("Give_Key_Lady", EnterHouse);
+        DialogueSystem.Instance.StartDialogue("Give_Key_Lady", OpenGate);
         GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER1_KEY);
+    }
+
+    private void OpenGate()
+    {
+        SoundSystem.Instance.PlaySFX("HouseDoor", transform.position);
+        DialogueSystem.Instance.StartDialogue("Open_Gate", EnterHouse);
     }
 
     public void EnterHouse()

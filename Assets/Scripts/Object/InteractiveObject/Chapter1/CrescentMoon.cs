@@ -16,6 +16,7 @@ public class CrescentMoon : MonoBehaviour
             case EWerewolfPictureType.Night:
                 if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_FULL_MOON)
                 {
+                    GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_FULL_MOON);
                     wereWolfPicture.StartChangeCoroutine();
                 }
                 break;

@@ -12,7 +12,7 @@ public class Drawer : MonoBehaviour
 
     public void Interact()
     {
-        if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER1_KEY)
+        if (locked && GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER1_KEY)
         {
             Unlock();
         }

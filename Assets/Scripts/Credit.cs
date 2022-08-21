@@ -20,7 +20,7 @@ public class Credit : MonoBehaviour
     {
         player = GetComponent<VideoPlayer>();
 
-        text.text = System.Environment.MachineName + ".";
+        text.text = " Playing";
     }
 
     private void Start()

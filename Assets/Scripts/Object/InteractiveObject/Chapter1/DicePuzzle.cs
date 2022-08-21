@@ -8,6 +8,9 @@ public class DicePuzzle : MonoBehaviour
     public void Interact()
     {
         if (housePicture)
+        {
+            gameObject.SetActive(false);
             housePicture.ChangePicture(EHousePictureType.DicePuzzle);
+        }
     }
 }

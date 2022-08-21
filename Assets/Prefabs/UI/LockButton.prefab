@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1924427092116470075}
   - component: {fileID: 1924427092116470072}
   - component: {fileID: 1924427092116470073}
+  - component: {fileID: 5950399533764973773}
   m_Layer: 5
   m_Name: LockButton
   m_TagString: Untagged
@@ -119,5 +120,22 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1924427092116470072}
   m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5950399533764973773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924427092116470071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013ce79e9eb66a84788f61a1f82be54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+  lockNum: {fileID: 0}
+  solvedFunction:
     m_PersistentCalls:
       m_Calls: []

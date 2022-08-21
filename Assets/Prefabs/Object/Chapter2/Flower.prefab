@@ -146,8 +146,8 @@ MonoBehaviour:
   combineResultItemType: 0
   itemRotation: {x: -0.6416993, y: 0.56147146, z: -0.17502986, w: 0.49227667}
   scaleDetail: {x: 1500, y: 1500, z: 1500}
-  scaleInventory: {x: 0, y: 0, z: 0}
-  scaleUsing: {x: 0, y: 0, z: 0}
+  scaleInventory: {x: 300, y: 300, z: 300}
+  scaleUsing: {x: 350, y: 350, z: 350}
   itemObject: {fileID: 3678299372719654089}
 --- !u!114 &3678299372719654064
 MonoBehaviour:

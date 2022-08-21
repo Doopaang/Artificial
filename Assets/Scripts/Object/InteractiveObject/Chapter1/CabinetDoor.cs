@@ -23,6 +23,7 @@ public class CabinetDoor : MonoBehaviour
     {
         if (locked)
         {
+            SoundSystem.Instance.PlaySFX("Locked", transform.position);
             return;
         }
 

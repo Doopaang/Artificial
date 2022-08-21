@@ -123,15 +123,15 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 367715193137886194}
         m_TargetAssemblyTypeName: Ch2Puzzle1, Assembly-CSharp
-        m_MethodName: CheckAnswer
-        m_Mode: 1
+        m_MethodName: ResetPad
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &367715192756792650
 GameObject:
@@ -882,7 +882,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   solvedFunction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 367715193137886194}
+        m_TargetAssemblyTypeName: PuzzleObject, Assembly-CSharp
+        m_MethodName: <_OnValidate>b__4_0
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   gridPos: {fileID: 367715193272540124}
 --- !u!1 &367715193192948557
 GameObject:

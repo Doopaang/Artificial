@@ -5,6 +5,9 @@ public class HouseOwner : MonoBehaviour
     [SerializeField]
     private HousePicture housePicture;
 
+    [SerializeField]
+    private Gate gate;
+
     private ReactInteraction reactInteraction;
 
     private void Start()
@@ -44,6 +47,16 @@ public class HouseOwner : MonoBehaviour
 
     public void EnterHouse()
     {
-        housePicture.ChangePicture(EHousePictureType.Inside);
+        housePicture.ChangePicture(EHousePictureType.Inside, AfterEnterHouse);
+    }
+
+    private void AfterEnterHouse()
+    {
+        DialogueSystem.Instance.StartDialogue("After_Change_House", DeactiveGate);
+    }
+
+    private void DeactiveGate()
+    {
+        gate.gameObject.SetActive(false);
     }
 }

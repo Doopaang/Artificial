@@ -22,12 +22,7 @@ public class Pill : MonoBehaviour
 
     public void UseHook()
     {
-        DialogueSystem.Instance.StartDialogue("Use_Fishing_Rod", AfterUseHook);
-    }
-
-    public void AfterUseHook()
-    {
-        DialogueSystem.Instance.StartDialogue("After_Gain_Sleeping_Pills", GainPill);
+        DialogueSystem.Instance.StartDialogue("Use_Fishing_Rod", GainPill);
     }
 
     public void GainPill()

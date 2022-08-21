@@ -144,10 +144,10 @@ MonoBehaviour:
   itemType: 25
   combinableItemType: 8
   combineResultItemType: 26
-  itemRotation: {x: 0, y: 0, z: 0, w: 0}
-  scaleDetail: {x: 0, y: 0, z: 0}
-  scaleInventory: {x: 0, y: 0, z: 0}
-  scaleUsing: {x: 0, y: 0, z: 0}
+  itemRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+  scaleDetail: {x: 2500, y: 2500, z: 2500}
+  scaleInventory: {x: 500, y: 500, z: 500}
+  scaleUsing: {x: 600, y: 600, z: 600}
   itemObject: {fileID: 2084082509573634715}
 --- !u!114 &6040888640744875467
 MonoBehaviour:
@@ -161,3 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d574bb94f30c70f4394c29da54b628b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactive: 0

@@ -23,12 +23,12 @@ public class Ch2Puzzle1 : PuzzleObject
 
         answerList = new List<Toggle>(toggleList.FindAll((toggle) => { return toggle.isOn; }));
 
-        ResetPad();
+        ResetPad(false);
     }
 
     protected void OnEnable()
     {
-        ResetPad();
+        ResetPad(false);
     }
 
     public void ToggleButton(Toggle toggle)
@@ -44,14 +44,15 @@ public class Ch2Puzzle1 : PuzzleObject
         }
 
         toggleIndex++;
+
+        CheckAnswer();
     }
 
-    public void CheckAnswer()
+    private void CheckAnswer()
     {
         if (!correctOrder ||
             toggleIndex != answerList.Count)
         {
-            ResetPad();
             return;
         }
 
@@ -59,12 +60,15 @@ public class Ch2Puzzle1 : PuzzleObject
         solvedFunction.Invoke();
     }
 
-    private void ResetPad()
+    public void ResetPad(bool sound = true)
     {
         toggleIndex = 0;
         correctOrder = true;
 
-        SoundSystem.Instance.PlaySFX("ResetButton", transform.parent.position);
+        if (sound)
+        {
+            SoundSystem.Instance.PlaySFX("ResetButton", transform.parent.position);
+        }
 
         if (toggleList != null)
         {

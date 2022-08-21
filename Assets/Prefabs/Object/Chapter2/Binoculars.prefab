@@ -100,7 +100,7 @@ BoxCollider:
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.16467516, y: 0.19919194, z: 0.07942472}
-  m_Center: {x: 0, y: 0.09959599, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3724169443238029836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,10 +145,10 @@ MonoBehaviour:
   itemType: 24
   combinableItemType: 0
   combineResultItemType: 0
-  itemRotation: {x: 0, y: 0, z: 0, w: 0}
-  scaleDetail: {x: 0, y: 0, z: 0}
-  scaleInventory: {x: 0, y: 0, z: 0}
-  scaleUsing: {x: 0, y: 0, z: 0}
+  itemRotation: {x: -0.256561, y: 0.20849122, z: -0.23097265, w: -0.9150736}
+  scaleDetail: {x: 2000, y: 2000, z: 2000}
+  scaleInventory: {x: 350, y: 350, z: 350}
+  scaleUsing: {x: 400, y: 400, z: 400}
   itemObject: {fileID: 6147253824734046462}
 --- !u!114 &8280729289673443953
 MonoBehaviour:

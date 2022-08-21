@@ -93,8 +93,8 @@ public class ArtYellow : MonoBehaviour
 
         yield return new WaitForSeconds(soundBeforeDelay);
 
-        /// [�ӽ�] ȿ���� ���
         red.ChangeArt();
+        SoundSystem.Instance.PlaySFX("KnifeAttack", transform.position);
 
         yield return new WaitForSeconds(soundAfterDelay);
 

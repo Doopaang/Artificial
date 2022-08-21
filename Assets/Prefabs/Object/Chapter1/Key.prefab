@@ -113,7 +113,7 @@ MonoBehaviour:
   itemType: 7
   combinableItemType: 0
   combineResultItemType: 0
-  itemRotation: {x: 0.5, y: 0, z: 0.49999994, w: -0.70710677}
+  itemRotation: {x: 0.3235076, y: -0.59798694, z: 0.61317456, w: -0.40220824}
   scaleDetail: {x: 300, y: 300, z: 300}
   scaleInventory: {x: 80, y: 80, z: 80}
   scaleUsing: {x: 100, y: 100, z: 100}

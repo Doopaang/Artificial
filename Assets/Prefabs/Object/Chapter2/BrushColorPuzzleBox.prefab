@@ -1254,7 +1254,17 @@ PrefabInstance:
       objectReference: {fileID: 4183458073262724187}
     - target: {fileID: 6965896138821249434, guid: 5a050f93c4f3f664b8feb840264251f2,
         type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 4183458073262724187}
+    - target: {fileID: 6965896138821249434, guid: 5a050f93c4f3f664b8feb840264251f2,
+        type: 3}
       propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965896138821249434, guid: 5a050f93c4f3f664b8feb840264251f2,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6965896138821249434, guid: 5a050f93c4f3f664b8feb840264251f2,
@@ -1269,12 +1279,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965896138821249434, guid: 5a050f93c4f3f664b8feb840264251f2,
         type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: <_OnValidate>b__4_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965896138821249434, guid: 5a050f93c4f3f664b8feb840264251f2,
+        type: 3}
       propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ColorPuzzleBox, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6965896138821249434, guid: 5a050f93c4f3f664b8feb840264251f2,
         type: 3}
       propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PuzzleObject, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965896138821249434, guid: 5a050f93c4f3f664b8feb840264251f2,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: PuzzleObject, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6965896140108874362, guid: 5a050f93c4f3f664b8feb840264251f2,

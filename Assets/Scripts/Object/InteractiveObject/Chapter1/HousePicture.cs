@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum EHousePictureType
 {
@@ -13,6 +14,7 @@ public class HousePicture : MonoBehaviour
     [SerializeField]
     private GameObject[] pictures;
 
+    [SerializeField]
     private EHousePictureType state = EHousePictureType.Daytime;
 
     private MoveSceneCamera moveSceneCamera;
@@ -67,9 +69,9 @@ public class HousePicture : MonoBehaviour
         ChangePicture(EHousePictureType.Night);
     }
 
-    public void ChangePicture(EHousePictureType housePictureType)
+    public void ChangePicture(EHousePictureType housePictureType, UnityAction afterEvent = null)
     {
-        if(coroutine != null)
+        if (coroutine != null)
         {
             StopCoroutine(coroutine);
         }
@@ -78,6 +80,6 @@ public class HousePicture : MonoBehaviour
         state = housePictureType;
         MeshRenderer after = pictures[(int)housePictureType].GetComponent<MeshRenderer>();
 
-        coroutine = StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after));
+        coroutine = StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, true, afterEvent));
     }
 }

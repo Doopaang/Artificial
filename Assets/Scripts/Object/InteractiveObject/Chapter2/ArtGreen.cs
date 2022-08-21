@@ -5,6 +5,8 @@ public class ArtGreen : MonoBehaviour
     [SerializeField]
     private MeshRenderer greenRenderer;
     [SerializeField]
+    private MeshRenderer roseRenderer;
+    [SerializeField]
     private MeshRenderer whiteRenderer;
 
     [SerializeField]
@@ -33,7 +35,7 @@ public class ArtGreen : MonoBehaviour
                 isFlowerFirst = false;
                 GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_FLOWER);
 
-                DialogueSystem.Instance.StartDialogue("Green_Use_Flower", GainGreenHandle);
+                DialogueSystem.Instance.StartDialogue("Green_Use_Flower", ChangeToRose);
             }
             else
             {
@@ -61,6 +63,11 @@ public class ArtGreen : MonoBehaviour
         }
     }
 
+    private void ChangeToRose()
+    {
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(greenRenderer, roseRenderer, true, GainGreenHandle));
+    }
+
     public void GainGreenHandle()
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KEY_GREEN);
@@ -69,7 +76,7 @@ public class ArtGreen : MonoBehaviour
     private void ChangePicture()
     {
         isChanged = true;
-        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(greenRenderer, whiteRenderer));
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(roseRenderer, whiteRenderer));
 
         DialogueSystem.Instance.StartDialogue("Green_After_effect");
     }

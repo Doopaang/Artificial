@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6093681942744488670}
   - component: {fileID: 6093681942744488665}
   - component: {fileID: 6093681942744488664}
+  - component: {fileID: 6093681942744488668}
   - component: {fileID: 6093681942744488671}
   - component: {fileID: 6093681942744488669}
-  - component: {fileID: 6093681942744488668}
   m_Layer: 0
   m_Name: BlueBook
   m_TagString: Untagged
@@ -101,52 +101,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.31689304, y: 1.4237275, z: 1.0978303}
   m_Center: {x: 0.000000007450581, y: 0, z: 0}
---- !u!114 &6093681942744488671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6093681942744488666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb7094d93c229304a959e3711d1ee167, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemType: 15
-  combinableItemType: 0
-  combineResultItemType: 0
-  itemRotation: {x: 0.061907977, y: 0.9252516, z: -0.20574442, w: -0.31264377}
-  scaleDetail: {x: 350, y: 350, z: 350}
-  scaleInventory: {x: 40, y: 40, z: 40}
-  scaleUsing: {x: 55, y: 55, z: 55}
-  itemObject: {fileID: 6093681942744488666}
---- !u!114 &6093681942744488669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6093681942744488666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36ca5ab097a5f314c9be882cd1ba39eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: "\uD30C\uB791\uC774\uC758 \uCE5C\uAD6C\uB4E4\uC774 \uBAA8\uB450 \uC0AC\uB77C\uC84C\uC2B5\uB2C8\uB2E4.\r\n\uD30C\uB791\uC774\uB294
-    \uCE5C\uAD6C\uB4E4\uC774 \uAC71\uC815\uB410\uC2B5\uB2C8\uB2E4.\r\n\"\uB2E4\uB4E4
-    \uC5B4\uB514\uB85C \uAC04\uAC78\uAE4C?\"\r\n\uADF8\uB54C \uD558\uC580 \uD131\uC2DC\uB3C4\uB97C
-    \uC785\uC740 \uB9C8\uC220\uC0AC\uAC00 \uD30C\uB791\uC774\uC5D0\uAC8C \uB9D0\uC744
-    \uAC78\uC5C8\uC2B5\uB2C8\uB2E4.\r\n\"\uCE5C\uAD6C\uB4E4\uC744 \uCC3E\uACE0\uC788\uB2C8?\"\r\n\"\uB124,
-    \uCE5C\uAD6C\uB4E4\uC774 \uC694\uC998 \uC548\uBCF4\uC5EC\uC11C\uC694. \uC544\uC800\uC528\uB294
-    \uB204\uAD6C\uC138\uC694?\"\r\n\"\uC544\uC800\uC528\uB294 \uC18C\uC6D0\uC744
-    \uB4E4\uC5B4\uC8FC\uB294 \uC0AC\uB78C\uC774\uB780\uB2E4.\"\r\n\uB9C8\uC220\uC0AC\uC758
-    \uB9D0\uC5D0 \uD30C\uB791\uC774\uB294 \uB208\uC744 \uBC18\uC9DD\uC774\uBA70 \uB9D0\uD588\uC2B5\uB2C8\uB2E4.\r\n\"\uC544\uC800\uC528,
-    \uADF8\uB7FC \uC81C \uCE5C\uAD6C\uB4E4\uC744 \uCC3E\uC544\uC8FC\uC2E4 \uC218
-    \uC788\uB098\uC694?\"\r\n\"\uCE5C\uAD6C\uB4E4\uC744 \uCC3E\uB294\uAC8C \uB124
-    \uC18C\uC6D0\uC774\uB2C8?\"\r\n\"\uB124! \uADF8\uAC8C \uC81C \uC18C\uC6D0\uC774\uC5D0\uC694!\"\r\n\"\uB530\uB77C\uC624\uB834
-    \uC800\uCABD\uC5D0\uC11C \uB124 \uCE5C\uAD6C\uB4E4\uC744 \uBD24\uB2E8\uB2E4\"\r\n\uD30C\uB791\uC774\uB294
-    \uAE30\uBED0\uD558\uBA70 \uB9C8\uC220\uC0AC\uB97C \uB530\uB77C\uAC14\uB2F5\uB2C8\uB2E4."
 --- !u!114 &6093681942744488668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,3 +130,48 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &6093681942744488671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6093681942744488666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7094d93c229304a959e3711d1ee167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 15
+  combinableItemType: 0
+  combineResultItemType: 0
+  itemRotation: {x: 0.009796847, y: 0.38648108, z: 0.10691042, w: -0.9160275}
+  scaleDetail: {x: 350, y: 350, z: 350}
+  scaleInventory: {x: 40, y: 40, z: 40}
+  scaleUsing: {x: 55, y: 55, z: 55}
+  itemObject: {fileID: 6093681942744488666}
+--- !u!114 &6093681942744488669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6093681942744488666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ca5ab097a5f314c9be882cd1ba39eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\uD30C\uB791\uC774\uC758 \uCE5C\uAD6C\uB4E4\uC774 \uBAA8\uB450 \uC0AC\uB77C\uC84C\uC2B5\uB2C8\uB2E4.\r\n\n\uD30C\uB791\uC774\uB294
+    \uCE5C\uAD6C\uB4E4\uC774 \uAC71\uC815\uB410\uC2B5\uB2C8\uB2E4.\r\n\n\"\uB2E4\uB4E4
+    \uC5B4\uB514\uB85C \uAC04\uAC78\uAE4C?\"\r\n\n\uADF8\uB54C \uD558\uC580 \uD131\uC2DC\uB3C4\uB97C
+    \uC785\uC740 \uB0A8\uC790\uAC00 \uD30C\uB791\uC774\uC5D0\uAC8C \uB9D0\uC744 \uAC78\uC5C8\uC2B5\uB2C8\uB2E4.\r\n\n\"\uCE5C\uAD6C\uB4E4\uC744
+    \uCC3E\uACE0\uC788\uB2C8?\"\r\n\n\"\uB124, \uCE5C\uAD6C\uB4E4\uC774 \uC694\uC998
+    \uC548\uBCF4\uC5EC\uC11C\uC694. \uC544\uC800\uC528\uB294 \uB204\uAD6C\uC138\uC694?\"\r\n\n\"\uC544\uC800\uC528\uB294
+    \uC18C\uC6D0\uC744 \uB4E4\uC5B4\uC8FC\uB294 \uC0AC\uB78C\uC774\uB780\uB2E4.\"\r\n\n\uB0A8\uC790\uC758
+    \uB9D0\uC5D0 \uD30C\uB791\uC774\uB294 \uB208\uC744 \uBC18\uC9DD\uC774\uBA70 \uB9D0\uD588\uC2B5\uB2C8\uB2E4.\r\n\n\"\uC544\uC800\uC528,
+    \uADF8\uB7FC \uC81C \uCE5C\uAD6C\uB4E4\uC744 \uCC3E\uC544\uC8FC\uC2E4 \uC218
+    \uC788\uB098\uC694?\"\r\n\n\"\uCE5C\uAD6C\uB4E4\uC744 \uCC3E\uB294\uAC8C \uB124
+    \uC18C\uC6D0\uC774\uB2C8?\"\r\n\n\"\uB124! \uADF8\uAC8C \uC81C \uC18C\uC6D0\uC774\uC5D0\uC694!\"\r\n\n\"\uB530\uB77C\uC624\uB834
+    \uC800\uCABD\uC5D0\uC11C \uB124 \uCE5C\uAD6C\uB4E4\uC744 \uBD24\uB2E8\uB2E4\"\r\n\n\uD30C\uB791\uC774\uB294
+    \uAE30\uBED0\uD558\uBA70 \uB0A8\uC790\uB97C \uB530\uB77C\uAC14\uB2F5\uB2C8\uB2E4."

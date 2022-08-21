@@ -8,6 +8,14 @@ public class BatteryFullClock : MonoBehaviour
     [SerializeField]
     private Texture nightTexture;
 
+    private void Start()
+    {
+        if (!GameManager.Instance.IsDaytime)
+        {
+            ClickNightButton();
+        }
+    }
+
     public void ClickDaytimeButton()
     {
         GetComponent<MeshRenderer>().materials[2].mainTexture = dayTexture;

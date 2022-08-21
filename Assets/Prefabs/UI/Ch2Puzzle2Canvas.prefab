@@ -1326,8 +1326,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6965896138821249434}
+        m_TargetAssemblyTypeName: PuzzleObject, Assembly-CSharp
+        m_MethodName: <_OnValidate>b__4_0
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  colorSet:
+    white: {r: 0, g: 0, b: 0, a: 0}
+    red: {r: 0, g: 0, b: 0, a: 0}
+    green: {r: 0, g: 0, b: 0, a: 0}
+    blue: {r: 0, g: 0, b: 0, a: 0}
+    cyan: {r: 0, g: 0, b: 0, a: 0}
+    magenta: {r: 0, g: 0, b: 0, a: 0}
+    yellow: {r: 0, g: 0, b: 0, a: 0}
+    gray: {r: 0, g: 0, b: 0, a: 0}
   gridPos: {fileID: 6965896140108874362}
-  resetColor: {r: 0.28627452, g: 0.22745098, b: 0.18431373, a: 1}
 --- !u!1 &6965896139815797046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,13 +1588,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6965896138821249434}
         m_TargetAssemblyTypeName: Ch2Puzzle2, Assembly-CSharp
-        m_MethodName: CheckAnswer
-        m_Mode: 1
+        m_MethodName: ResetButton
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2

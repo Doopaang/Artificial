@@ -14,12 +14,6 @@ public class Gate : MonoBehaviour
 
     public void Interact()
     {
-        if (!housePicture.GateLocked)
-        {
-            DialogueSystem.Instance.StartDialogue("EnterHouse", ChangeToHouseInsidePicture);
-            return;
-        }
-
         if (reactInteraction)
             reactInteraction.React();
     }
@@ -41,14 +35,9 @@ public class Gate : MonoBehaviour
 
     public void InvestigateRetryKey()
     {
-        DialogueSystem.Instance.StartDialogue("Give_Key_MainDoor_Many_Times");
-    }
-
-    public void ChangeToHouseInsidePicture()
-    {
-        if (housePicture)
-            housePicture.ChangePicture(EHousePictureType.Inside);
-
-        DialogueSystem.Instance.StartDialogue("AfterEnterHouse");
+        if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER1_KEY)
+            DialogueSystem.Instance.StartDialogue("Give_Key_MainDoor_Many_Times");
+        else
+            DialogueSystem.Instance.StartDialogue("Many_Times_MainDoor");
     }
 }

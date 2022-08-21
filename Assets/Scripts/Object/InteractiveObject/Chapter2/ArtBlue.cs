@@ -19,6 +19,9 @@ public class ArtBlue : MonoBehaviour
     [SerializeField]
     private ArtYellow yellow;
 
+    [HideInInspector]
+    public bool isChanged = false;
+
     private bool isFirst = true;
     private bool usedItem = false;
 
@@ -30,22 +33,28 @@ public class ArtBlue : MonoBehaviour
             cup.SetActive(true);
             DialogueSystem.Instance.StartDialogue("Blue_First");
         }
-        else if (yellow.isChanged)
-        {
-            DialogueSystem.Instance.StartDialogue("Blue_After_Yellow_Died", ChangeWhite);
-        }
-        else if (red.isChanged)
-        {
-            DialogueSystem.Instance.StartDialogue("Blue_After_red_died");
-        }
-        else if (usedItem)
-        {
-            DialogueSystem.Instance.StartDialogue("Blue_After_Give_Drink");
-        }
         else
         {
-            Debug.Log("1");
-            DialogueSystem.Instance.StartDialogue("Blue_Many_Times");
+            if (isChanged)
+            {
+                DialogueSystem.Instance.StartDialogue("Blue_After_Blue_Died");
+            }
+            else if (yellow.isChanged)
+            {
+                DialogueSystem.Instance.StartDialogue("Blue_After_Yellow_Died", ChangeWhite);
+            }
+            else if (red.isChanged)
+            {
+                DialogueSystem.Instance.StartDialogue("Blue_After_red_died");
+            }
+            else if (usedItem)
+            {
+                DialogueSystem.Instance.StartDialogue("Blue_After_Give_Drink");
+            }
+            else
+            {
+                DialogueSystem.Instance.StartDialogue("Blue_Many_Times");
+            }
         }
     }
 
@@ -58,11 +67,6 @@ public class ArtBlue : MonoBehaviour
             usedItem = true;
             cup.SetActive(false);
             DialogueSystem.Instance.StartDialogue("Blue_Use_Yellow_Brush", UseYellowBrush);
-        }
-        else
-        {
-            Debug.Log("2");
-            DialogueSystem.Instance.StartDialogue("Blue_Many_Times");
         }
     }
 
@@ -86,5 +90,6 @@ public class ArtBlue : MonoBehaviour
     {
         StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(lemonRenderer, whiteRenderer));
         DialogueSystem.Instance.StartDialogue("Blue_After_Effect");
+        isChanged = true;
     }
 }

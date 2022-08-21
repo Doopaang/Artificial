@@ -16,7 +16,7 @@ public class Ch2Puzzle2 : ColorPuzzleObject
 
         buttonList = new List<Button>(gridPos.GetComponentsInChildren<Button>());
 
-        ResetButton();
+        ResetButton(false);
     }
 
     public void ClickButton(Button button)
@@ -24,16 +24,17 @@ public class Ch2Puzzle2 : ColorPuzzleObject
         if (GameManager.Instance.Inventory.UsingItem == EItemType.CHAPTER2_BRUSH)
         {
             button.GetComponent<Image>().color = GetColor();
+
+            CheckAnswer();
         }
     }
 
-    public void CheckAnswer()
+    private void CheckAnswer()
     {
         foreach (Button button in buttonList)
         {
             if (button.GetComponent<Image>().color != button.colors.disabledColor)
             {
-                ResetButton();
                 return;
             }
         }
@@ -42,9 +43,12 @@ public class Ch2Puzzle2 : ColorPuzzleObject
         solvedFunction.Invoke();
     }
 
-    private void ResetButton()
+    public void ResetButton(bool sound)
     {
-        SoundSystem.Instance.PlaySFX("ResetButton", transform.parent.position);
+        if (sound)
+        {
+            SoundSystem.Instance.PlaySFX("ResetButton", transform.parent.position);
+        }
 
         foreach (Button button in buttonList)
         {

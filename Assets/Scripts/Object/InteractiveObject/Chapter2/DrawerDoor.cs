@@ -56,6 +56,8 @@ public class DrawerDoor : MonoBehaviour
         transform.Translate(translateDirection * movementVectorForClose, Space.Self);
 
         opened = !opened;
+
+        SoundSystem.Instance.PlaySFX("Drawer", transform.position);
     }
 
     public void Unlock()

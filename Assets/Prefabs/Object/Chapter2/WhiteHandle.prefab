@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1243709639798742585}
   - component: {fileID: -6951397357243987163}
   m_Layer: 0
-  m_Name: BlackHandle
+  m_Name: WhiteHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 563b1e5d7f008914c9a3759dd50dcee2, type: 2}
+  - {fileID: 2100000, guid: cf60bd12c0fa6914aaba087f1a5ab212, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,6 +158,6 @@ MonoBehaviour:
   combineResultItemType: 0
   itemRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   scaleDetail: {x: 7000, y: 7000, z: 7000}
-  scaleInventory: {x: 2000, y: 2000, z: 2000}
+  scaleInventory: {x: 1500, y: 1500, z: 1500}
   scaleUsing: {x: 1500, y: 1500, z: 1500}
   itemObject: {fileID: 7737917203045487382}

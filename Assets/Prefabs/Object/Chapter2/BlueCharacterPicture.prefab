@@ -55,7 +55,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8a5d412af631dfe49b0ac15926e405b9, type: 2}
+  - {fileID: 2100000, guid: e0d10d257eaefe24b933b4435f54564a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -359,6 +359,7 @@ MonoBehaviour:
   lemonRenderer: {fileID: 6437086051107212313}
   whiteRenderer: {fileID: 7575539731386600016}
   cup: {fileID: 7890831392807730654}
+  iteractiveColor: {r: 0, g: 0, b: 0, a: 0}
   red: {fileID: 0}
   yellow: {fileID: 0}
 --- !u!1 &7473732316327348953

@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class Brush : MonoBehaviour
 {
+    private static bool interected = false;
+
     private void OnDestroy()
     {
-        if (GameManager.Instance &&
-            GameManager.Instance.brushUI)
+        if (interected)
         {
             GameManager.Instance.brushUI.Brushes.Remove(this);
         }
@@ -13,13 +14,16 @@ public class Brush : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.brushUI.AddBrush(this);
-
+        if (interected)
+        {
+            GameManager.Instance.brushUI.AddBrush(this);
+        }
         ApplyColor();
     }
 
     public void Interect()
     {
+        interected = true;
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_BRUSH);
         Destroy(gameObject);
     }

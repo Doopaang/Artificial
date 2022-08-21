@@ -212,6 +212,13 @@ MonoBehaviour:
   - {fileID: 5670717833724539363}
   - {fileID: 2156050707219042778}
   - {fileID: 4343718785467386689}
+  - {fileID: 7005773771494998992}
+  - {fileID: 6769943326401332064}
+  - {fileID: 1678170492957739412}
+  - {fileID: 204585135336820373}
+  - {fileID: 3838127836588794092}
+  - {fileID: 6159585518825650720}
+  - {fileID: 9120472281734665072}
   canvases: []
 --- !u!1001 &40237026806284233
 PrefabInstance:
@@ -324,7 +331,7 @@ PrefabInstance:
     - target: {fileID: 3766374671311837624, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_Name
-      value: LockerDoorBlack
+      value: LockerDoorWhite
       objectReference: {fileID: 0}
     - target: {fileID: 3766374671311837627, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
@@ -385,8 +392,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 4168103190629887134, guid: 1de5cc8c91f8493449eb6e17ec8b966c,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: cf60bd12c0fa6914aaba087f1a5ab212, type: 2}
     - target: {fileID: 4013456789319278893, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: locked
@@ -402,7 +408,17 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4809678306777376636, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Name
+      value: WhiteFloorCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -411,7 +427,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 563b1e5d7f008914c9a3759dd50dcee2, type: 2}
+      objectReference: {fileID: 2100000, guid: cf60bd12c0fa6914aaba087f1a5ab212, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48483a3e5eab8440aa6367e60c37b87, type: 3}
 --- !u!4 &2695682611025628717 stripped
@@ -423,6 +439,12 @@ Transform:
 --- !u!65 &4723941330137604697 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,
+    type: 3}
+  m_PrefabInstance: {fileID: 1237404420240791446}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &9120472281734665072 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
     type: 3}
   m_PrefabInstance: {fileID: 1237404420240791446}
   m_PrefabAsset: {fileID: 0}
@@ -693,8 +715,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9064872124401446339, guid: 5c7304882f31a9849920ae87b396378e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c7304882f31a9849920ae87b396378e, type: 3}
+--- !u!65 &7005773771494998992 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 9064872124401446339, guid: 5c7304882f31a9849920ae87b396378e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2086687303056272915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3281697963897607852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,6 +809,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Binoculars
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460514754351767779, guid: ae24f3890aba45943bc7fef5e25ca4e6,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae24f3890aba45943bc7fef5e25ca4e6, type: 3}
@@ -883,7 +921,17 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4809678306777376636, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Name
+      value: GoldFloorCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -898,6 +946,12 @@ PrefabInstance:
 --- !u!4 &434944451326746173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3766374671311837627, guid: a48483a3e5eab8440aa6367e60c37b87,
+    type: 3}
+  m_PrefabInstance: {fileID: 3624802187664263046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6769943326401332064 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
     type: 3}
   m_PrefabInstance: {fileID: 3624802187664263046}
   m_PrefabAsset: {fileID: 0}
@@ -1000,7 +1054,17 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4809678306777376636, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Name
+      value: YellowFloorCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1015,6 +1079,12 @@ PrefabInstance:
 --- !u!4 &1045308308833445757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3766374671311837627, guid: a48483a3e5eab8440aa6367e60c37b87,
+    type: 3}
+  m_PrefabInstance: {fileID: 4234922487828856518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6159585518825650720 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
     type: 3}
   m_PrefabInstance: {fileID: 4234922487828856518}
   m_PrefabAsset: {fileID: 0}
@@ -1120,6 +1190,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0197
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091390787327907021, guid: 8b012dc46bf50db4199acc29ca8a81ca,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b012dc46bf50db4199acc29ca8a81ca, type: 3}
@@ -1312,7 +1387,17 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4809678306777376636, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Name
+      value: GreenFloorCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1327,6 +1412,12 @@ PrefabInstance:
 --- !u!65 &747428510449914309 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,
+    type: 3}
+  m_PrefabInstance: {fileID: 6556551778703107082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3838127836588794092 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
     type: 3}
   m_PrefabInstance: {fileID: 6556551778703107082}
   m_PrefabAsset: {fileID: 0}
@@ -1527,14 +1618,24 @@ PrefabInstance:
     - target: {fileID: 4189382045583500351, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4506086725538978999, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809678306777376636, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Name
+      value: BlueFloorCollider
       objectReference: {fileID: 0}
     - target: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1546,6 +1647,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 57f36db5b5a488244a9995d27b4a9ea7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48483a3e5eab8440aa6367e60c37b87, type: 3}
+--- !u!65 &204585135336820373 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
+    type: 3}
+  m_PrefabInstance: {fileID: 7883723689055193715}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &4452502792495939516 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,
@@ -1650,14 +1757,24 @@ PrefabInstance:
     - target: {fileID: 4189382045583500351, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4506086725538978999, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809678306777376636, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Name
+      value: RedFloorCollider
       objectReference: {fileID: 0}
     - target: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1669,6 +1786,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ad3959f5e6a4d0e40bf553f39f3df17e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48483a3e5eab8440aa6367e60c37b87, type: 3}
+--- !u!65 &1678170492957739412 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8051954497572046054, guid: a48483a3e5eab8440aa6367e60c37b87,
+    type: 3}
+  m_PrefabInstance: {fileID: 8715669073975692658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &2906701407992019133 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 5810465266363020751, guid: a48483a3e5eab8440aa6367e60c37b87,

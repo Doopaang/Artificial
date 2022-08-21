@@ -12,6 +12,8 @@ public class LockForKey : MonoBehaviour
             GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_KEY);
             cabinetDoor.Unlock();
             Destroy(gameObject);
+
+            SoundSystem.Instance.PlaySFX("LockUnlock", transform.position);
         }
     }
 }

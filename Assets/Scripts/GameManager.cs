@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -81,10 +82,13 @@ public class GameManager : Singleton<GameManager>
         inputBlock.gameObject.SetActive(value);
     }
 
-    public IEnumerator ChangeFadeCoroutine(MeshRenderer before, MeshRenderer after, bool isFade = true)
+    public IEnumerator ChangeFadeCoroutine(MeshRenderer before, MeshRenderer after, bool isFade = true, UnityAction afterEvent = null)
     {
         before.gameObject.SetActive(true);
         after.gameObject.SetActive(true);
+        Color temp = after.material.color;
+        temp.a = 1.0f;
+        after.material.color = temp;
         foreach (var col in before.GetComponents<Collider>())
         {
             col.enabled = false;
@@ -115,6 +119,11 @@ public class GameManager : Singleton<GameManager>
         foreach (var col in after.GetComponents<Collider>())
         {
             col.enabled = true;
+        }
+        
+        if(afterEvent != null)
+        {
+            afterEvent.Invoke();
         }
     }
 

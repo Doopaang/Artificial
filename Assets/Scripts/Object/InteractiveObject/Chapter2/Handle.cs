@@ -6,5 +6,6 @@ public class Handle : MonoBehaviour
     {
         GameManager.Instance.Inventory.GainItem(GetComponent<Item>().itemType);
         gameObject.SetActive(false);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

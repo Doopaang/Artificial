@@ -78,6 +78,9 @@ public class DetailWindow : MonoBehaviour
     {
         trans.gameObject.layer = LayerMask.NameToLayer("UI");
 
+        if (trans.GetComponent<MeshRenderer>())
+            trans.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
         foreach (Transform child in trans)
         {
             ChangeLayersRecursively(child);

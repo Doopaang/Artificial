@@ -6,5 +6,6 @@ public class Apple : MonoBehaviour
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_APPLE);
         gameObject.SetActive(false);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

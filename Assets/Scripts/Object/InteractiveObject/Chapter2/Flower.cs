@@ -6,5 +6,6 @@ public class Flower : MonoBehaviour
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_FLOWER);
         Destroy(gameObject);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

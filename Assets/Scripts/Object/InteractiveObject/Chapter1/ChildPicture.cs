@@ -8,6 +8,9 @@ public class ChildPicture : MonoBehaviour
 
     private FullChildPicture fullChildPicture;
 
+    [HideInInspector]
+    public bool changed = false;
+
     private void Start()
     {
         moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
@@ -26,6 +29,8 @@ public class ChildPicture : MonoBehaviour
 
     public void ChangeToFullChildPicture()
     {
+        changed = true;
+
         MeshRenderer before = hungryChildPicture.GetComponent<MeshRenderer>();
         MeshRenderer after = fullChildPicture.GetComponent<MeshRenderer>();
 

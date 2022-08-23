@@ -29,6 +29,8 @@ public class GameManager : Singleton<GameManager>
 
     private bool isDaytime = true;
 
+    public SaveData saveData;
+
     public bool IsDaytime
     {
         get
@@ -120,8 +122,8 @@ public class GameManager : Singleton<GameManager>
         {
             col.enabled = true;
         }
-        
-        if(afterEvent != null)
+
+        if (afterEvent != null)
         {
             afterEvent.Invoke();
         }

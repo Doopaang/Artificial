@@ -33,9 +33,11 @@ public class WerewolfPicture : MonoBehaviour
 
     private MoveSceneCamera moveSceneCamera;
 
-    private bool isGainCrescentMoon = false;
+    [HideInInspector]
+    public bool isGainCrescentMoon = false;
 
-    private bool firstNightInteract = true;
+    [HideInInspector]
+    public bool firstNightInteract = true;
 
     private Coroutine coroutine = null;
 
@@ -88,6 +90,8 @@ public class WerewolfPicture : MonoBehaviour
         {
             StopCoroutine(coroutine);
         }
+
+        Debug.Log(state + "   " + werePictureType);
 
         MeshRenderer before = pictures[(int)state].GetComponent<MeshRenderer>();
         state = werePictureType;

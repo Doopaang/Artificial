@@ -6,5 +6,6 @@ public class Ch2Key : MonoBehaviour
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_KEY);
         Destroy(gameObject);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

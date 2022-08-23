@@ -11,6 +11,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private Image fadeOutImage;
 
+    [SerializeField]
+    private SceneLoader loader;
+
     bool startFadeOut = false;
 
     private void Start()
@@ -26,7 +29,7 @@ public class MainMenu : MonoBehaviour
 
             if (fadeOutImage.color.a >= 1.0f)
             {
-                SceneManager.LoadScene(1);
+                loader.LoadInGameScene();
             }
         }
     }

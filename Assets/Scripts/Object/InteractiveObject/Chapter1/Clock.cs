@@ -6,5 +6,6 @@ public class Clock : MonoBehaviour
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_EMPTY_WATCH);
         gameObject.SetActive(false);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

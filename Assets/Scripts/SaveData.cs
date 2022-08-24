@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveData : MonoBehaviour
 {
@@ -51,6 +52,8 @@ public class SaveData : MonoBehaviour
     private void Start()
     {
         Load();
+
+        SceneManager.sceneUnloaded += (A) => { Save(); };
     }
 
     public void Save()
@@ -479,7 +482,7 @@ public class SaveData : MonoBehaviour
 
 
 
-
+        Application.quitting += () => { Save(); };
 
 
         reader.Close();

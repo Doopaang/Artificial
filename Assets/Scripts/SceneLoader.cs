@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    private SaveData saveData = new SaveData();
-
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -15,12 +13,10 @@ public class SceneLoader : MonoBehaviour
     public IEnumerator LoadInGameScene()
     {
         var async = SceneManager.LoadSceneAsync(1);
-        while (!async.isDone)
-        {
-            yield return null;
-        }
 
-        saveData.Load();
+        yield return new WaitUntil(() => { return async.isDone; });
+
+        FindObjectOfType<SaveData>().Load();
         Destroy(gameObject);
     }
 }

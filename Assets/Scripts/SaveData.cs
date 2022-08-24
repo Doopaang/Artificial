@@ -48,6 +48,11 @@ public class SaveData : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Load();
+    }
+
     public void Save()
     {
         string str = "";
@@ -120,6 +125,10 @@ public class SaveData : MonoBehaviour
         BlueButtonBox blueButtonBox = FindObjectOfType<BlueButtonBox>(true);
         str += blueButtonBox.solved.ToString() + "\n";
         #endregion
+        #region __2번째방 입장__
+        Start2Room start2Room = FindObjectOfType<Start2Room>(true);
+        str += start2Room.first.ToString() + "\n";
+        #endregion
         #endregion
         #region __서랍__
         foreach (Drawer drawer in drawers)
@@ -189,8 +198,6 @@ public class SaveData : MonoBehaviour
         StreamWriter writer = new StreamWriter(fileStream, System.Text.Encoding.Unicode);
         writer.Write(str);
         writer.Close();
-
-        Debug.Log(str);
     }
 
     public void Load()
@@ -350,6 +357,12 @@ public class SaveData : MonoBehaviour
         {
             blueButtonBox.Open();
         }
+        #endregion
+        #region __2번째방 입장__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        Start2Room start2Room = FindObjectOfType<Start2Room>(true);
+        start2Room.first = bool.Parse(values[0]);
         #endregion
         #endregion
         #region __서랍__

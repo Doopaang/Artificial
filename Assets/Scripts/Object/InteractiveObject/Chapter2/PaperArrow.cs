@@ -6,5 +6,6 @@ public class PaperArrow : MonoBehaviour
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_PAPER_ARROW);
         Destroy(gameObject);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

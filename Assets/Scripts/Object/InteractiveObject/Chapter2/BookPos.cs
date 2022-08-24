@@ -6,7 +6,8 @@ public class BookPos : MonoBehaviour
     [SerializeField]
     private GameObject mesh;
 
-    private EItemType book = EItemType.NONE;
+    [SerializeField]
+    public EItemType book = EItemType.NONE;
 
     private GameObject bookObject = null;
 
@@ -32,21 +33,26 @@ public class BookPos : MonoBehaviour
         else if (usingItem >= EItemType.CHAPTER2_BOOK1 &&
             usingItem <= EItemType.CHAPTER2_BOOK5)
         {
-            book = usingItem;
+            SetBook(usingItem);
+
             GameManager.Instance.Inventory.DeleteItem(usingItem);
-
-            List<Item> itemDictionary = GameManager.Instance.itemDictionary;
-            foreach(Item item in itemDictionary)
-            {
-                if(item.itemType == usingItem)
-                {
-                    bookObject = Instantiate(item.gameObject, transform.position, transform.rotation, transform);
-
-                    break;
-                }
-            }
-
-            mesh.SetActive(false);
         }
+
+        GameManager.Instance.saveData.SaveBookPos(this, book);
+    }
+
+    public void SetBook(EItemType itemType)
+    {
+        if (itemType == EItemType.NONE)
+        {
+            return;
+        }
+
+        book = itemType;
+
+        Item item = GameManager.Instance.itemDictionary.Find((A) => { return A.itemType == itemType; });
+        bookObject = Instantiate(item.gameObject, transform.position, transform.rotation, transform);
+
+        mesh.SetActive(false);
     }
 }

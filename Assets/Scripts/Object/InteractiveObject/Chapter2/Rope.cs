@@ -6,5 +6,6 @@ public class Rope : MonoBehaviour
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_ROPE);
         Destroy(gameObject);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

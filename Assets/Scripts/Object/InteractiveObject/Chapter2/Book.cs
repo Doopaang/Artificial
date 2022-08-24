@@ -28,5 +28,6 @@ public class Book : MonoBehaviour
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_BOOK1 + bookNum - 1);
         Destroy(gameObject);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

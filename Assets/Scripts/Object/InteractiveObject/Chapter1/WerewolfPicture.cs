@@ -33,9 +33,11 @@ public class WerewolfPicture : MonoBehaviour
 
     private MoveSceneCamera moveSceneCamera;
 
-    private bool isGainCrescentMoon = false;
+    [HideInInspector]
+    public bool isGainCrescentMoon = false;
 
-    private bool firstNightInteract = true;
+    [HideInInspector]
+    public bool firstNightInteract = true;
 
     private Coroutine coroutine = null;
 
@@ -84,6 +86,11 @@ public class WerewolfPicture : MonoBehaviour
 
     public void ChangePicture(EWerewolfPictureType werePictureType, bool isFade = true)
     {
+        if (state == werePictureType)
+        {
+            return;
+        }
+
         if (coroutine != null)
         {
             StopCoroutine(coroutine);

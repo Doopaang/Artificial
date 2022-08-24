@@ -6,5 +6,6 @@ public class Battery : MonoBehaviour
     {
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER1_BATTERY);
         gameObject.SetActive(false);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

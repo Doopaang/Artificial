@@ -40,12 +40,9 @@ public class Slot : MonoBehaviour
             itemObject = Instantiate(newItemData.itemObject,
                 transformObject.transform.position, newItemData.itemRotation, transformObject.transform);
 
-            itemObject.layer = LayerMask.NameToLayer("UI");
+            ChangeLayersRecursively(ItemObject.transform);
 
             itemObject.transform.localScale = newItemData.scaleInventory;
-
-            if (itemObject.GetComponent<MeshRenderer>())
-                itemObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
             if (itemObject.GetComponent<Collider>())
                 itemObject.GetComponent<Collider>().enabled = false;
@@ -74,6 +71,19 @@ public class Slot : MonoBehaviour
         else
         {
             inventory.Combine(itemType);
+        }
+    }
+
+    public void ChangeLayersRecursively(Transform trans)
+    {
+        trans.gameObject.layer = LayerMask.NameToLayer("UI");
+
+        if (trans.GetComponent<MeshRenderer>())
+            trans.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
+        foreach (Transform child in trans)
+        {
+            ChangeLayersRecursively(child);
         }
     }
 }

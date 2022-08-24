@@ -26,6 +26,7 @@ public class Brush : MonoBehaviour
         interected = true;
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_BRUSH);
         Destroy(gameObject);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 
     public void ApplyColor()

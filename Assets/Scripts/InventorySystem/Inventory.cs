@@ -7,7 +7,8 @@ public class Inventory : MonoBehaviour
 {
     private Slot[] slotList;
 
-    private List<Item> itemList;
+    [HideInInspector]
+    public List<Item> itemList;
 
     private Slot selectedSlot;
 
@@ -92,7 +93,7 @@ public class Inventory : MonoBehaviour
         selectedImage.gameObject.GetComponent<RectTransform>().position = selectedSlot.ItemObject.gameObject.transform.position;
     }
 
-    public void GainItem(EItemType itemType, UnityAction afterEvent = null)
+    public void GainItem(EItemType itemType, UnityAction afterEvent = null, bool showDetail = true)
     {
         if (itemList.Count >= slotList.Length)
             return;
@@ -101,7 +102,14 @@ public class Inventory : MonoBehaviour
 
         ApplyItemList();
 
-        ActivateItemDetailWindow(itemType, afterEvent);
+        if (showDetail)
+        {
+            ActivateItemDetailWindow(itemType, afterEvent);
+        }
+        else if (afterEvent != null)
+        {
+            afterEvent.Invoke();
+        }
     }
 
     public void PressedUseButton()
@@ -224,7 +232,7 @@ public class Inventory : MonoBehaviour
         selectedImage.gameObject.SetActive(false);
     }
 
-    private void SetUsingItem(EItemType itemType)
+    public void SetUsingItem(EItemType itemType)
     {
         usingItem = itemType;
 

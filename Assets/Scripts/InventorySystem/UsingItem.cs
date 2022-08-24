@@ -27,10 +27,10 @@ public class UsingItem : MonoBehaviour
         if (usingItemObject)
             Destroy(usingItemObject);
 
-        usingItemObject = Instantiate(newItemData.itemObject, 
+        usingItemObject = Instantiate(newItemData.itemObject,
             transformObject.transform.position, newItemData.itemRotation, transformObject.transform);
 
-        usingItemObject.layer = LayerMask.NameToLayer("UI");
+        ChangeLayersRecursively(usingItemObject.transform);
         usingItemObject.transform.localScale = newItemData.scaleUsing;
 
         if (usingItemObject.GetComponent<MeshRenderer>())
@@ -48,6 +48,19 @@ public class UsingItem : MonoBehaviour
         else if (ui.gameObject.activeSelf)
         {
             ui.gameObject.SetActive(false);
+        }
+    }
+
+    public void ChangeLayersRecursively(Transform trans)
+    {
+        trans.gameObject.layer = LayerMask.NameToLayer("UI");
+
+        if (trans.GetComponent<MeshRenderer>())
+            trans.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+
+        foreach (Transform child in trans)
+        {
+            ChangeLayersRecursively(child);
         }
     }
 }

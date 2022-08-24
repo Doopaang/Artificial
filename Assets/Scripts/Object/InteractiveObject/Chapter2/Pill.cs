@@ -30,5 +30,6 @@ public class Pill : MonoBehaviour
         GameManager.Instance.Inventory.GainItem(EItemType.CHAPTER2_PILL);
         GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_HOOK);
         Destroy(gameObject);
+        GameManager.Instance.saveData.SaveMapItem(this);
     }
 }

@@ -23,7 +23,10 @@ public class BookshelfEmpty : MonoBehaviour
     {
         foreach (BookPos bookPos in bookPosArray)
         {
-            bookPos.Mesh.SetActive(true);
+            if (bookPos.book == EItemType.NONE)
+            {
+                bookPos.Mesh.SetActive(true);
+            }
         }
     }
 

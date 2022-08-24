@@ -1,10 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CameraSystem : Singleton<CameraSystem>
 {
-    [SerializeField]
-    private MoveSceneCamera currentCamera;
+    public MoveSceneCamera currentCamera;
 
     [System.Serializable]
     private class CameraBaseInspector
@@ -13,6 +13,8 @@ public class CameraSystem : Singleton<CameraSystem>
     }
     [SerializeField, Header("Base"), Tooltip("DON'T TOUCH THIS.")]
     private CameraBaseInspector baseInspector = new CameraBaseInspector();
+
+    public List<MoveSceneCamera> cameras;
 
     private void Start()
     {

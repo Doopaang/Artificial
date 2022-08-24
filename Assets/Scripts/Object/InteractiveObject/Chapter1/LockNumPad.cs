@@ -13,6 +13,9 @@ public class LockNumPad : PuzzleObject
     [SerializeField]
     private TMPro.TextMeshProUGUI text;
 
+    [SerializeField]
+    private TMPro.TextMeshProUGUI[] colorNum;
+
     private int value = 0;
 
     protected void OnEnable()
@@ -58,5 +61,13 @@ public class LockNumPad : PuzzleObject
     private void UpdateText()
     {
         text.text = value == 0 ? "" : value.ToString();
+
+        for (int i = 0; i < colorNum.Length; i++)
+        {
+            if (i < text.text.Length)
+                colorNum[i].text = text.text[i].ToString();
+            else
+                colorNum[i].text = "";
+        }
     }
 }

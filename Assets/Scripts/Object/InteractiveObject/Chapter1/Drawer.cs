@@ -9,7 +9,7 @@ public class Drawer : MonoBehaviour
 
     // 해당 변수는 추가됨
     [SerializeField]
-    private GameObject item;
+    private GameObject objectInDrawer;
 
     [SerializeField]
     private Vector3 movementVectorForClose;
@@ -38,6 +38,9 @@ public class Drawer : MonoBehaviour
 
         opened = !opened;
 
+        //여기 있는 1줄이 추가됨
+        objectInDrawer.GetComponent<Collider>().enabled = opened;
+
         SoundSystem.Instance.PlaySFX("Drawer", transform.position);
     }
 
@@ -46,9 +49,6 @@ public class Drawer : MonoBehaviour
         GameManager.Instance.Inventory.ClearItem();
 
         locked = false;
-
-        //여기 있는 1줄이 추가됨
-        item.GetComponent<Collider>().enabled = true;
 
         SoundSystem.Instance.PlaySFX("LockUnlock", transform.position);
     }

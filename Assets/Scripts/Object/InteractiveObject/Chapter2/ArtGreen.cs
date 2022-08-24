@@ -18,8 +18,10 @@ public class ArtGreen : MonoBehaviour
     [HideInInspector]
     public bool isChanged = false;
 
-    private bool isFirst = true;
-    private bool isFlowerFirst = true;
+    [HideInInspector]
+    public bool isFirst = true;
+    [HideInInspector]
+    public bool isFlowerFirst = true;
 
     public void Interact()
     {
@@ -79,5 +81,11 @@ public class ArtGreen : MonoBehaviour
         StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(roseRenderer, whiteRenderer));
 
         DialogueSystem.Instance.StartDialogue("Green_After_effect");
+    }
+
+    public void ChangePictureLoad()
+    {
+        isChanged = true;
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(roseRenderer, whiteRenderer, false));
     }
 }

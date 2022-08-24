@@ -5,7 +5,8 @@ public class ShreddedRedCharacterPicture : MonoBehaviour
     [SerializeField]
     private ArtGreen green;
 
-    private bool isFirst = true;
+    [HideInInspector]
+    public bool isFirst = true;
 
     public void Interact()
     {

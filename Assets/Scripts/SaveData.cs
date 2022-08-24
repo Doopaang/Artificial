@@ -21,7 +21,17 @@ public class SaveData : MonoBehaviour
     private List<ReactInteraction> reacts;
 
     [SerializeField]
-    private List<Transform> transforms;
+    private List<Drawer> drawers;
+    [SerializeField]
+    private List<CabinetDoor> cabinets;
+    [SerializeField]
+    private List<PuzzleDoor> doors;
+    [SerializeField]
+    private List<Lock> locks;
+    [SerializeField]
+    private List<DrawerDoor> drawerDoors;
+    [SerializeField]
+    private List<ColorPuzzleBox> colorPuzzles;
 
     private void Awake()
     {
@@ -82,6 +92,76 @@ public class SaveData : MonoBehaviour
         HousePicture housePicture = FindObjectOfType<HousePicture>();
         str += housePicture.state.ToString() + "," + housePicture.gateLocked.ToString() + "\n";
         #endregion
+        #region __노랑 그림__
+        ArtYellow artYellow = FindObjectOfType<ArtYellow>();
+        str += artYellow.isFirst.ToString() + "," + artYellow.usedFlower.ToString() + "," + artYellow.usedKnife.ToString() + "," + artYellow.isFirstGreen.ToString() + "," + artYellow.isChanged.ToString() + "\n";
+        #endregion
+        #region __초록 그림__
+        ArtGreen artGreen = FindObjectOfType<ArtGreen>();
+        str += artGreen.isChanged.ToString() + "," + artGreen.isFirst.ToString() + "," + artGreen.isFlowerFirst.ToString() + "\n";
+        #endregion
+        #region __파랑 그림__
+        ArtBlue artBlue = FindObjectOfType<ArtBlue>();
+        str += artBlue.isChanged.ToString() + "," + artBlue.isFirst.ToString() + "," + artBlue.usedItem.ToString() + "\n";
+        #endregion
+        #region __빨강 그림__
+        ArtRed artRed = FindObjectOfType<ArtRed>(true);
+        str += artRed.isChanged.ToString() + "\n";
+        #endregion
+        #region __찢어진 빨강 그림__
+        ShreddedRedCharacterPicture shreddedArtRed = FindObjectOfType<ShreddedRedCharacterPicture>(true);
+        str += shreddedArtRed.isFirst.ToString() + "\n";
+        #endregion
+        #region __열쇠 자물쇠__
+        LockForKey lockKey = FindObjectOfType<LockForKey>(true);
+        str += lockKey.opened.ToString() + "\n";
+        #endregion
+        #region __파란버튼 퍼즐__
+        BlueButtonBox blueButtonBox = FindObjectOfType<BlueButtonBox>(true);
+        str += blueButtonBox.solved.ToString() + "\n";
+        #endregion
+        #endregion
+        #region __서랍__
+        foreach (Drawer drawer in drawers)
+        {
+            str += drawer.opened.ToString() + "|" + drawer.locked.ToString() + ",";
+        }
+        str += "\n";
+        #endregion
+        #region __캐비넷__
+        foreach (CabinetDoor cabinet in cabinets)
+        {
+            str += cabinet.locked.ToString() + "|" + cabinet.opened.ToString() + ",";
+        }
+        str += "\n";
+        #endregion        
+        #region __문__
+        foreach (PuzzleDoor door in doors)
+        {
+            str += door.isOpened.ToString() + ",";
+        }
+        str += "\n";
+        #endregion
+        #region __자물쇠__
+        foreach (Lock locker in locks)
+        {
+            str += locker.opened.ToString() + ",";
+        }
+        str += "\n";
+        #endregion
+        #region __사물함__
+        foreach (DrawerDoor drawerDoor in drawerDoors)
+        {
+            str += drawerDoor.locked.ToString() + "|" + drawerDoor.opened.ToString() + ",";
+        }
+        str += "\n";
+        #endregion
+        #region __색깔 퍼즐__
+        foreach (ColorPuzzleBox colorPuzzle in colorPuzzles)
+        {
+            str += colorPuzzle.solved.ToString() + ",";
+        }
+        str += "\n";
         #endregion
         #region __리액트__
         foreach (ReactInteraction react in reacts)
@@ -203,6 +283,167 @@ public class SaveData : MonoBehaviour
         housePicture.ChangePicture((EHousePictureType)System.Enum.Parse(typeof(EHousePictureType), values[0]), null, false);
         housePicture.gateLocked = bool.Parse(values[1]);
         #endregion
+        #region __노랑 그림__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        ArtYellow artYellow = FindObjectOfType<ArtYellow>();
+        artYellow.isFirst = bool.Parse(values[0]);
+        artYellow.usedFlower = bool.Parse(values[1]);
+        artYellow.usedKnife = bool.Parse(values[2]);
+        artYellow.isFirstGreen = bool.Parse(values[3]);
+        if (bool.Parse(values[4]))
+        {
+            artYellow.ChangePicture();
+        }
+        #endregion
+        #region __초록 그림__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        ArtGreen artGreen = FindObjectOfType<ArtGreen>();
+        if (bool.Parse(values[0]))
+        {
+            artGreen.ChangePictureLoad();
+        }
+        artGreen.isFirst = bool.Parse(values[1]);
+        artGreen.isFlowerFirst = bool.Parse(values[2]);
+        #endregion
+        #region __파랑 그림__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        ArtBlue artBlue = FindObjectOfType<ArtBlue>();
+        if (bool.Parse(values[0]))
+        {
+            artBlue.ChangePictureLoad();
+        }
+        artBlue.isFirst = bool.Parse(values[1]);
+        artBlue.usedItem = bool.Parse(values[2]);
+        #endregion
+        #region __빨강 그림__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        ArtRed artRed = FindObjectOfType<ArtRed>(true);
+        if (bool.Parse(values[0]))
+        {
+            artRed.ChangeArt();
+        }
+        #endregion
+        #region __찢어진 빨강 그림__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        ShreddedRedCharacterPicture shreddedArtRed = FindObjectOfType<ShreddedRedCharacterPicture>(true);
+        shreddedArtRed.isFirst = bool.Parse(values[0]);
+        #endregion
+        #region __열쇠 자물쇠__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        LockForKey lockKey = FindObjectOfType<LockForKey>(true);
+        if (bool.Parse(values[0]))
+        {
+            lockKey.Open();
+        }
+        #endregion
+        #region __파란버튼 퍼즐__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        BlueButtonBox blueButtonBox = FindObjectOfType<BlueButtonBox>(true);
+        if (bool.Parse(values[0]))
+        {
+            blueButtonBox.Open();
+        }
+        #endregion
+        #endregion
+        #region __서랍__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        for (int count = 0; count < values.Length; count++)
+        {
+            if (!string.IsNullOrEmpty(values[count]))
+            {
+                string[] str = values[count].Split('|');
+                if (bool.Parse(str[0]))
+                {
+                    drawers[count].TranslateDrawer();
+                }
+                drawers[count].locked = bool.Parse(str[1]);
+            }
+        }
+        #endregion        
+        #region __캐비넷__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        for (int count = 0; count < values.Length; count++)
+        {
+            if (!string.IsNullOrEmpty(values[count]))
+            {
+                string[] str = values[count].Split('|');
+                cabinets[count].locked = bool.Parse(str[0]);
+                if (bool.Parse(str[1]))
+                {
+                    cabinets[count].Open();
+                }
+            }
+        }
+        #endregion
+        #region __문__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        for (int count = 0; count < values.Length; count++)
+        {
+            if (!string.IsNullOrEmpty(values[count]))
+            {
+                if (bool.Parse(values[count]))
+                {
+                    doors[count].Open();
+                }
+            }
+        }
+        #endregion
+        #region __자물쇠__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        for (int count = 0; count < values.Length; count++)
+        {
+            if (!string.IsNullOrEmpty(values[count]))
+            {
+                if (bool.Parse(values[count]))
+                {
+                    locks[count].Open();
+                }
+            }
+        }
+        #endregion
+        #region __사물함__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        for (int count = 0; count < values.Length; count++)
+        {
+            if (!string.IsNullOrEmpty(values[count]))
+            {
+                string[] str = values[count].Split('|');
+                if (!bool.Parse(str[0]))
+                {
+                    drawerDoors[count].Unlock();
+                }
+                if (bool.Parse(str[1]))
+                {
+                    drawerDoors[count].TranslateDrawer();
+                }
+            }
+        }
+        #endregion
+        #region __색깔 퍼즐__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        for (int count = 0; count < values.Length; count++)
+        {
+            if (!string.IsNullOrEmpty(values[count]))
+            {
+                if (!bool.Parse(values[0]))
+                {
+                    colorPuzzles[count].Open();
+                }
+            }
+        }
         #endregion
         #region __리액트__
         source = reader.ReadLine();
@@ -219,7 +460,7 @@ public class SaveData : MonoBehaviour
         values = source.Split(',', '\n');
         if (!string.IsNullOrEmpty(values[0]))
         {
-            GameManager.Instance.IsDaytime = !bool.Parse(values[0]);
+            GameManager.Instance.IsDaytime = bool.Parse(values[0]);
         }
         #endregion
 

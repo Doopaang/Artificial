@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Drawer : MonoBehaviour
 {
-    private bool opened = false;
+    [HideInInspector]
+    public bool opened = false;
 
-    [SerializeField]
-    private bool locked;
+    public bool locked;
 
     [SerializeField]
     private Vector3 movementVectorForClose;

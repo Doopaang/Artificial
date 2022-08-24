@@ -22,8 +22,10 @@ public class ArtBlue : MonoBehaviour
     [HideInInspector]
     public bool isChanged = false;
 
-    private bool isFirst = true;
-    private bool usedItem = false;
+    [HideInInspector]
+    public bool isFirst = true;
+    [HideInInspector]
+    public bool usedItem = false;
 
     public void Interact()
     {
@@ -91,5 +93,10 @@ public class ArtBlue : MonoBehaviour
         StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(lemonRenderer, whiteRenderer));
         DialogueSystem.Instance.StartDialogue("Blue_After_Effect");
         isChanged = true;
+    }
+    public void ChangePictureLoad()
+    {
+        isChanged = true;
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(lemonRenderer, whiteRenderer, false));
     }
 }

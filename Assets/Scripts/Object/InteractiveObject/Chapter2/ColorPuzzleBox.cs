@@ -13,6 +13,9 @@ public class ColorPuzzleBox : MonoBehaviour
 
     private MoveSceneCamera moveSceneCamera;
 
+    [HideInInspector]
+    public bool solved = false;
+
     private void Start()
     {
         moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
@@ -26,9 +29,15 @@ public class ColorPuzzleBox : MonoBehaviour
 
     public void Solve()
     {
-        item.GetComponent<Collider>().enabled = true;
-        cover.SetActive(false);
+        Open();
         SoundSystem.Instance.PlaySFX("OpenBox", transform.position);
         GameManager.Instance.Inventory.DeleteItem(deleteItem);
+    }
+
+    public void Open()
+    {
+        solved = true;
+        item.GetComponent<Collider>().enabled = true;
+        cover.SetActive(false);
     }
 }

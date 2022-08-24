@@ -18,9 +18,12 @@ public class ArtYellow : MonoBehaviour
     [SerializeField]
     private ArtGreen green;
 
-    private bool isFirst = true;
-    private bool usedFlower = false;
-    private bool usedKnife = false;
+    [HideInInspector]
+    public bool isFirst = true;
+    [HideInInspector]
+    public bool usedFlower = false;
+    [HideInInspector]
+    public bool usedKnife = false;
     [HideInInspector]
     public bool isFirstGreen = true;
 
@@ -123,7 +126,7 @@ public class ArtYellow : MonoBehaviour
         DialogueSystem.Instance.StartDialogue("Yellow_After_gain_black_handle", ChangePicture);
     }
 
-    private void ChangePicture()
+    public void ChangePicture()
     {
         isChanged = true;
         GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_PILL);

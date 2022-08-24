@@ -8905,18 +8905,18 @@ PrefabInstance:
     - target: {fileID: 3746507397111225624, guid: 51fa8a150e7fcd24d92ae4619e6301d4,
         type: 3}
       propertyPath: colliders.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3746507397111225624, guid: 51fa8a150e7fcd24d92ae4619e6301d4,
         type: 3}
       propertyPath: colliders.Array.data[1]
       value: 
-      objectReference: {fileID: 714821518}
+      objectReference: {fileID: 1873133824}
     - target: {fileID: 3746507397111225624, guid: 51fa8a150e7fcd24d92ae4619e6301d4,
         type: 3}
       propertyPath: colliders.Array.data[2]
       value: 
-      objectReference: {fileID: 1873133824}
+      objectReference: {fileID: 714821518}
     - target: {fileID: 3746507397111225624, guid: 51fa8a150e7fcd24d92ae4619e6301d4,
         type: 3}
       propertyPath: colliders.Array.data[3]
@@ -10486,7 +10486,12 @@ PrefabInstance:
         type: 3}
       propertyPath: SFXDic.m_values.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: a4eed89cce1a171449e4b026f51be473, type: 3}
+      objectReference: {fileID: 8300000, guid: 86a9ec5a8b24a72428c7bf860315111c, type: 3}
+    - target: {fileID: 1141543570431928086, guid: 79807289fbc9ea54381c269ea004a1ef,
+        type: 3}
+      propertyPath: SFXDic.m_values.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 404aeb118d7a70845b48e943f69b143b, type: 3}
     - target: {fileID: 1141543570431928086, guid: 79807289fbc9ea54381c269ea004a1ef,
         type: 3}
       propertyPath: SFXDic.m_values.Array.data[18]
@@ -20148,6 +20153,12 @@ PrefabInstance:
       propertyPath: back
       value: 
       objectReference: {fileID: 282068100}
+    - target: {fileID: 1174985532282266793, guid: 57da595ed8a5be345a1b02c4e748f521,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3180504181503086563, guid: db5915b89a824944dbbf284066a9de9a,
+        type: 3}
     - target: {fileID: 2872406131344760608, guid: 57da595ed8a5be345a1b02c4e748f521,
         type: 3}
       propertyPath: m_RootOrder

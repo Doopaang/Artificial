@@ -193,7 +193,6 @@ MonoBehaviour:
   back: {fileID: 0}
   colliders:
   - {fileID: 7675199044968126660}
-  - {fileID: 2232207375841731621}
   canvases: []
 --- !u!1001 &1807544756520484179
 PrefabInstance:
@@ -323,12 +322,6 @@ PrefabInstance:
 --- !u!4 &218586843159131735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1881699743664900868, guid: 5d07a731f9fe7024a9d4e6ff4df47664,
-    type: 3}
-  m_PrefabInstance: {fileID: 1807544756520484179}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2232207375841731621 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 571909500249332086, guid: 5d07a731f9fe7024a9d4e6ff4df47664,
     type: 3}
   m_PrefabInstance: {fileID: 1807544756520484179}
   m_PrefabAsset: {fileID: 0}

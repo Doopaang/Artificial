@@ -142,6 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b391d59e2e5cf1449820ff107ac3946a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
+  item: {fileID: 7293431247072786931}
   movementVectorForClose: {x: 0, y: 0, z: 0}
 --- !u!1001 &6065242998773729641
 PrefabInstance:
@@ -227,6 +229,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d89876ef7677f24dac89c51befa97a3, type: 3}
+--- !u!1 &7293431247072786931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3538539910180155546, guid: 4d89876ef7677f24dac89c51befa97a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6065242998773729641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7768097264229424307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4603172580109669850, guid: 4d89876ef7677f24dac89c51befa97a3,

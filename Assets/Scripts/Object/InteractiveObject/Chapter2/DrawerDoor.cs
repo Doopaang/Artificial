@@ -17,10 +17,10 @@ public class DrawerDoor : MonoBehaviour
     [SerializeField]
     private Vector3 movementVectorForClose;
 
-    [SerializeField]
-    private bool locked = true;
+    public bool locked = true;
 
-    private bool opened = false;
+    [HideInInspector]
+    public bool opened = false;
 
     public void Interact()
     {
@@ -35,6 +35,8 @@ public class DrawerDoor : MonoBehaviour
                 if (GameManager.Instance.Inventory.UsingItem == LockKey)
                 {
                     GameManager.Instance.Inventory.DeleteItem(LockKey);
+                    GameManager.Instance.Inventory.ClearItem();
+
                     Unlock();
                 }
                 else
@@ -46,6 +48,7 @@ public class DrawerDoor : MonoBehaviour
         else if (!locked)
         {
             TranslateDrawer();
+            SoundSystem.Instance.PlaySFX("Drawer", transform.position);
         }
     }
 
@@ -56,14 +59,10 @@ public class DrawerDoor : MonoBehaviour
         transform.Translate(translateDirection * movementVectorForClose, Space.Self);
 
         opened = !opened;
-
-        SoundSystem.Instance.PlaySFX("Drawer", transform.position);
     }
 
     public void Unlock()
     {
-        GameManager.Instance.Inventory.ClearItem();
-
         locked = false;
 
         handle.SetActive(true);

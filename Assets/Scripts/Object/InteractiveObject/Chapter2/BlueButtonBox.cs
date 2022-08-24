@@ -10,6 +10,9 @@ public class BlueButtonBox : MonoBehaviour
 
     private MoveSceneCamera moveSceneCamera;
 
+    [HideInInspector]
+    public bool solved = false;
+
     private void Start()
     {
         moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
@@ -23,9 +26,15 @@ public class BlueButtonBox : MonoBehaviour
 
     public void Solve()
     {
-        cover.SetActive(false);
-        item.GetComponent<Collider>().enabled = true;
+        Open();
         SoundSystem.Instance.PlaySFX("OpenBox", transform.position);
         GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_PAPER_ARROW);
+    }
+
+    public void Open()
+    {
+        solved = true;
+        cover.SetActive(false);
+        item.GetComponent<Collider>().enabled = true;
     }
 }

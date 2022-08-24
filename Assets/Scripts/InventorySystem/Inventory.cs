@@ -49,11 +49,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Awake()
     {
         slotList = GetComponentsInChildren<Slot>();
         itemList = new List<Item>();
+    }
 
+    private void Start()
+    {
         DeactiveInventory();
 
         itemDetailWindow.gameObject.SetActive(false);

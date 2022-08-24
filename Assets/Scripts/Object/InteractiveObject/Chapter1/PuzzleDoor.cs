@@ -23,6 +23,9 @@ public class PuzzleDoor : MonoBehaviour
     [SerializeField]
     private EItemType deleteItem;
 
+    [HideInInspector]
+    public bool isOpened = false;
+
     private void Awake()
     {
         if (nextStageCamera)
@@ -37,20 +40,27 @@ public class PuzzleDoor : MonoBehaviour
 
     public void Unlock()
     {
-        if (nextStageCamera)
-            nextStageCamera.gameObject.SetActive(true);
+        Open();
 
         if (solveSceneCamera)
             CameraSystem.Instance.MoveCamera(solveSceneCamera);
+
+        SoundSystem.Instance.PlaySFX("OpenDoor", transform.position);
+
+        GameManager.Instance.Inventory.DeleteItem(deleteItem);
+    }
+
+    public void Open()
+    {
+        isOpened = true;
+
+        if (nextStageCamera)
+            nextStageCamera.gameObject.SetActive(true);
 
         if (doorCollider)
             doorCollider.GetComponent<Collider>().enabled = false;
 
         gameObject.transform.Rotate(doorOpenRotaion);
         gameObject.transform.Translate(doorOpenTranslation);
-
-        SoundSystem.Instance.PlaySFX("OpenDoor", transform.position);
-
-        GameManager.Instance.Inventory.DeleteItem(deleteItem);
     }
 }

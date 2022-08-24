@@ -14,31 +14,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private SceneLoader loader;
 
-    bool startFadeOut = false;
-
     private void Start()
     {
         SoundSystem.Instance.PlayBGM("MainMenu");
-    }
-
-    private void Update()
-    {
-        if (startFadeOut)
-        {
-            StartCoroutine("FadeOut");
-
-            if (fadeOutImage.color.a >= 1.0f)
-            {
-                if (loader.isActiveAndEnabled)
-                {
-                    loader.LoadInGameScene();
-                }
-                else
-                {
-                    SceneManager.LoadScene(1);
-                }
-            }
-        }
     }
 
     public void StartGame()
@@ -57,17 +35,26 @@ public class MainMenu : MonoBehaviour
 
         for (int i = 0; i <= 100; i++)
         {
-            color.a += Time.deltaTime * 0.01f;
+            color.a += 0.01f;
 
             fadeOutImage.color = color;
+
+            yield return new WaitForFixedUpdate();
         }
 
-        yield return null;
+        //if (loader.isActiveAndEnabled)
+        //{
+        //    StartCoroutine(loader.LoadInGameScene());
+        //}
+        //else
+        //{
+            SceneManager.LoadScene(1);
+        //}
     }
 
     public void StartFadeOut()
     {
-        startFadeOut = true;
+        StartCoroutine("FadeOut");
     }
 
     public void ExitGame()

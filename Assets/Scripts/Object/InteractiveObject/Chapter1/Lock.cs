@@ -10,6 +10,9 @@ public class Lock : MonoBehaviour
 
     private MoveSceneCamera moveSceneCamera;
 
+    [HideInInspector]
+    public bool opened = false;
+
     private void Start()
     {
         moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
@@ -23,8 +26,14 @@ public class Lock : MonoBehaviour
 
     public void Solve()
     {
+        Open();
         cabinetDoor.Unlock();
-        gameObject.SetActive(false);
         GameManager.Instance.Inventory.DeleteItem(deleteItem);
+    }
+
+    public void Open()
+    {
+        opened = true;
+        gameObject.SetActive(false);
     }
 }

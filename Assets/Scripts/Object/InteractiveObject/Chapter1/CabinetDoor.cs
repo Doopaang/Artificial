@@ -14,10 +14,10 @@ public class CabinetDoor : MonoBehaviour
     [SerializeField]
     private MoveSceneCamera CabinetCamera;
 
-    [SerializeField]
-    private bool locked = true;
+    public bool locked = true;
 
-    private bool opened = false;
+    [HideInInspector]
+    public bool opened = false;
 
     public void Interact()
     {
@@ -27,6 +27,13 @@ public class CabinetDoor : MonoBehaviour
             return;
         }
 
+        Open();
+
+        SoundSystem.Instance.PlaySFX("Cabinet", transform.position);
+    }
+
+    public void Open()
+    {
         int rotateDirection = opened ? 1 : -1;
 
         leftDoor.transform.Rotate(new Vector3(0.0f, rotateDirection * -90.0f, 0.0f));
@@ -38,8 +45,6 @@ public class CabinetDoor : MonoBehaviour
         {
             collider.enabled = opened;
         }
-
-        SoundSystem.Instance.PlaySFX("Cabinet", transform.position);
     }
 
     public void Unlock()

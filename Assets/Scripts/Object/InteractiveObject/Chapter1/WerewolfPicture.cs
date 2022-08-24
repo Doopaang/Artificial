@@ -86,12 +86,15 @@ public class WerewolfPicture : MonoBehaviour
 
     public void ChangePicture(EWerewolfPictureType werePictureType, bool isFade = true)
     {
+        if (state == werePictureType)
+        {
+            return;
+        }
+
         if (coroutine != null)
         {
             StopCoroutine(coroutine);
         }
-
-        Debug.Log(state + "   " + werePictureType);
 
         MeshRenderer before = pictures[(int)state].GetComponent<MeshRenderer>();
         state = werePictureType;

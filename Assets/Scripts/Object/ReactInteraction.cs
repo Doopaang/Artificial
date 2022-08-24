@@ -15,14 +15,14 @@ public class ReactInteraction : MonoBehaviour
     [SerializeField]
     private UnityEvent ReactRetryUsedItem;
 
-    private bool retryInteraction = false;
-    private bool usedItem = false;
+    public bool retryInteraction = false;
+    public bool usedItem = false;
 
     public EItemType necessaryItem;
 
     public void React()
     {
-        if (!usedItem && 
+        if (!usedItem &&
             necessaryItem != EItemType.NONE &&
             GameManager.Instance.Inventory.UsingItem == necessaryItem)
         {

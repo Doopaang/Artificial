@@ -14,12 +14,11 @@ public class HousePicture : MonoBehaviour
     [SerializeField]
     private GameObject[] pictures;
 
-    [SerializeField]
-    private EHousePictureType state = EHousePictureType.Daytime;
+    public EHousePictureType state = EHousePictureType.Daytime;
 
     private MoveSceneCamera moveSceneCamera;
 
-    private bool gateLocked = true;
+    public bool gateLocked = true;
 
     private Coroutine coroutine = null;
 
@@ -69,8 +68,13 @@ public class HousePicture : MonoBehaviour
         ChangePicture(EHousePictureType.Night);
     }
 
-    public void ChangePicture(EHousePictureType housePictureType, UnityAction afterEvent = null)
+    public void ChangePicture(EHousePictureType housePictureType, UnityAction afterEvent = null, bool isFade = true)
     {
+        if (state == housePictureType)
+        {
+            return;
+        }
+
         if (coroutine != null)
         {
             StopCoroutine(coroutine);
@@ -80,6 +84,6 @@ public class HousePicture : MonoBehaviour
         state = housePictureType;
         MeshRenderer after = pictures[(int)housePictureType].GetComponent<MeshRenderer>();
 
-        coroutine = StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, true, afterEvent));
+        coroutine = StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, isFade, afterEvent));
     }
 }

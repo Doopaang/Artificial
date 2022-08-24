@@ -417,7 +417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &464722069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
   - {fileID: 1673294305}
   - {fileID: 340827455}
   fadeOutImage: {fileID: 1822006743}
-  loader: {fileID: 0}
+  loader: {fileID: 464722069}
 --- !u!4 &735806561
 Transform:
   m_ObjectHideFlags: 0

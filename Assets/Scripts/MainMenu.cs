@@ -29,7 +29,14 @@ public class MainMenu : MonoBehaviour
 
             if (fadeOutImage.color.a >= 1.0f)
             {
-                loader.LoadInGameScene();
+                if (loader.isActiveAndEnabled)
+                {
+                    loader.LoadInGameScene();
+                }
+                else
+                {
+                    SceneManager.LoadScene(1);
+                }
             }
         }
     }

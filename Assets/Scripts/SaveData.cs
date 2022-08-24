@@ -18,6 +18,9 @@ public class SaveData : MonoBehaviour
     public EItemType usingItem = EItemType.NONE;
 
     [SerializeField]
+    private List<ReactInteraction> reacts;
+
+    [SerializeField]
     private List<Transform> transforms;
 
     private void Awake()
@@ -76,8 +79,16 @@ public class SaveData : MonoBehaviour
         str += werewolfPicture.state.ToString() + "," + werewolfPicture.isGainCrescentMoon + "," + werewolfPicture.firstNightInteract + "\n";
         #endregion
         #region __대문 그림__
-
+        HousePicture housePicture = FindObjectOfType<HousePicture>();
+        str += housePicture.state.ToString() + "," + housePicture.gateLocked.ToString() + "\n";
         #endregion
+        #endregion
+        #region __리액트__
+        foreach (ReactInteraction react in reacts)
+        {
+            str += react.retryInteraction.ToString() + "|" + react.usedItem.ToString() + ",";
+        }
+        str += "\n";
         #endregion
         #region __밤낮__
         str += GameManager.Instance.IsDaytime.ToString() + "\n";
@@ -186,8 +197,22 @@ public class SaveData : MonoBehaviour
         werewolfPicture.firstNightInteract = bool.Parse(values[2]);
         #endregion
         #region __대문 그림__
-
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        HousePicture housePicture = FindObjectOfType<HousePicture>();
+        housePicture.ChangePicture((EHousePictureType)System.Enum.Parse(typeof(EHousePictureType), values[0]), null, false);
+        housePicture.gateLocked = bool.Parse(values[1]);
         #endregion
+        #endregion
+        #region __리액트__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        for (int count = 0; count < reacts.Count; count++)
+        {
+            string[] str = values[count].Split('|');
+            reacts[count].retryInteraction = bool.Parse(str[0]);
+            reacts[count].usedItem = bool.Parse(str[1]);
+        }
         #endregion
         #region __밤낮__
         source = reader.ReadLine();
@@ -230,4 +255,5 @@ public class SaveData : MonoBehaviour
         bookSet[index] = type;
     }
     #endregion
+
 }

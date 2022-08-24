@@ -11,9 +11,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private Image fadeOutImage;
 
-    [SerializeField]
-    private SceneLoader loader;
-
     private void Start()
     {
         SoundSystem.Instance.PlayBGM("MainMenu");
@@ -42,14 +39,7 @@ public class MainMenu : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        //if (loader.isActiveAndEnabled)
-        //{
-        //    StartCoroutine(loader.LoadInGameScene());
-        //}
-        //else
-        //{
-            SceneManager.LoadScene(1);
-        //}
+        SceneManager.LoadScene(1);
     }
 
     public void StartFadeOut()

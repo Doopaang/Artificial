@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1797408702}
-  popUpTime: 28
+  popUpTime: 32.5
 --- !u!1 &1797408700
 GameObject:
   m_ObjectHideFlags: 0

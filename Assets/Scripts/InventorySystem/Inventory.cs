@@ -115,6 +115,25 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void LoadItem(EItemType itemType, UnityAction afterEvent = null, bool showDetail = true)
+    {
+        if (itemList.Count >= slotList.Length)
+            return;
+
+        itemList.Add(SearchItemData(itemType));
+
+        ApplyItemList();
+
+        if (showDetail)
+        {
+            ActivateItemDetailWindow(itemType, afterEvent);
+        }
+        else if (afterEvent != null)
+        {
+            afterEvent.Invoke();
+        }
+    }
+
     public void PressedUseButton()
     {
         if (!selectedSlot)

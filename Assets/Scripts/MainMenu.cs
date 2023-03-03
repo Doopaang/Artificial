@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class MainMenu : MonoBehaviour
 {
@@ -23,7 +24,14 @@ public class MainMenu : MonoBehaviour
         foreach (GameObject button in buttons)
             button.SetActive(false);
 
-        DialogueSystem.Instance.StartDialogue("Game_Start", StartFadeOut);
+        string path = Path.Combine(Application.dataPath, "../Save/Save");
+        FileInfo fileInfo = new FileInfo(path);
+        if (!fileInfo.Exists)
+        {
+            DialogueSystem.Instance.StartDialogue("Game_Start", StartFadeOut);
+            return;
+        }
+        StartFadeOut();
     }
 
     public IEnumerator FadeOut()

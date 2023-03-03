@@ -1,8 +1,6 @@
 ﻿using System.IO;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SaveData : MonoBehaviour
 {
@@ -36,7 +34,7 @@ public class SaveData : MonoBehaviour
 
     private void Awake()
     {
-        path = Path.Combine(Application.persistentDataPath, "Save");
+        path = Path.Combine(Application.dataPath, "../Save/Save");
         mapItemGain = new List<bool>();
         for (int count = 0; count < items.Count; count++)
         {
@@ -53,7 +51,7 @@ public class SaveData : MonoBehaviour
     {
         Load();
 
-        SceneManager.sceneUnloaded += (A) => { Save(); };
+        //SceneManager.sceneUnloaded += (A) => { Save(); };
     }
 
     public void Save()
@@ -229,7 +227,7 @@ public class SaveData : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(str))
             {
-                GameManager.Instance.Inventory.GainItem((EItemType)System.Enum.Parse(typeof(EItemType), str), null, false);
+                GameManager.Instance.Inventory.LoadItem((EItemType)System.Enum.Parse(typeof(EItemType), str), null, false);
             }
         }
         #endregion
@@ -275,7 +273,7 @@ public class SaveData : MonoBehaviour
         if (bool.Parse(values[0]))
         {
             ChildPicture childPicture = FindObjectOfType<ChildPicture>();
-            childPicture.ChangeToFullChildPicture();
+            childPicture.ChangeToFullChildPicture(true);
         }
         #endregion
         #region __늑대인간 그림__
@@ -481,8 +479,7 @@ public class SaveData : MonoBehaviour
         #endregion
 
 
-
-        Application.quitting += () => { Save(); };
+        //Application.quitting += () => { Save(); };
 
 
         reader.Close();

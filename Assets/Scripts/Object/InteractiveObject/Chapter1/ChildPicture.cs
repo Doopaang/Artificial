@@ -27,13 +27,13 @@ public class ChildPicture : MonoBehaviour
             CameraSystem.Instance.MoveCamera(moveSceneCamera);
     }
 
-    public void ChangeToFullChildPicture()
+    public void ChangeToFullChildPicture(bool isLoad = false)
     {
         changed = true;
 
         MeshRenderer before = hungryChildPicture.GetComponent<MeshRenderer>();
         MeshRenderer after = fullChildPicture.GetComponent<MeshRenderer>();
 
-        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, true, () => { fullChildPicture.Interact(); }));
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, true, () => { fullChildPicture.Interact(); }, isLoad));
     }
 }

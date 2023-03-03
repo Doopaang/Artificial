@@ -31,11 +31,11 @@ public class DialogueSystem : Singleton<DialogueSystem>, IPointerClickHandler
     ///  [�ӽ�] ġƮŰ
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            SkipTyping();
-            EndDialogue();
-        }
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    SkipTyping();
+        //    EndDialogue();
+        //}
     }
 
 #endif

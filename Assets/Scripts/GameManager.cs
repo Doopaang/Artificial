@@ -84,7 +84,7 @@ public class GameManager : Singleton<GameManager>
         inputBlock.gameObject.SetActive(value);
     }
 
-    public IEnumerator ChangeFadeCoroutine(MeshRenderer before, MeshRenderer after, bool isFade = true, UnityAction afterEvent = null)
+    public IEnumerator ChangeFadeCoroutine(MeshRenderer before, MeshRenderer after, bool isFade = true, UnityAction afterEvent = null, bool isLoad = false)
     {
         before.gameObject.SetActive(true);
         after.gameObject.SetActive(true);
@@ -123,7 +123,7 @@ public class GameManager : Singleton<GameManager>
             col.enabled = true;
         }
 
-        if (afterEvent != null)
+        if (!isLoad && afterEvent != null)
         {
             afterEvent.Invoke();
         }

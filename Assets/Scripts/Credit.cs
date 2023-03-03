@@ -16,6 +16,9 @@ public class Credit : MonoBehaviour
     [SerializeField]
     private double popUpTime;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
     private void Awake()
     {
         player = GetComponent<VideoPlayer>();
@@ -39,6 +42,17 @@ public class Credit : MonoBehaviour
         {
             pop = true;
             text.GetComponent<Animator>().SetTrigger("PopUp");
+        }
+
+        if(Input.GetMouseButton(0))
+        {
+            player.playbackSpeed = 4.0f;
+            audioSource.pitch = 2.0f;
+        }
+        else
+        {
+            player.playbackSpeed = 1.0f;
+            audioSource.pitch = 1.0f;
         }
     }
 }

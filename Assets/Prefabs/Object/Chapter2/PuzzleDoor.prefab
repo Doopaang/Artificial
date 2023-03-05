@@ -131,8 +131,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorOpenRotaion: {x: 0, y: 0, z: 0}
   doorOpenTranslation: {x: 0, y: 0, z: 0}
+  doorCollider: {fileID: 0}
   nextStageCamera: {fileID: 0}
   moveSceneCamera: {fileID: 0}
+  solveSceneCamera: {fileID: 0}
+  deleteItem: 0
+  isOpened: 0
 --- !u!1 &6706657451447663799
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +370,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -108.5
       objectReference: {fileID: 0}
+    - target: {fileID: 923550926242080734, guid: 6b54b263fcf1c074b8db71ad2c6d3565,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 923550926461417044, guid: 6b54b263fcf1c074b8db71ad2c6d3565,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -495,6 +504,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 923550927356565243, guid: 6b54b263fcf1c074b8db71ad2c6d3565,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 923550927356565243, guid: 6b54b263fcf1c074b8db71ad2c6d3565,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 749804894325972415}
+    - target: {fileID: 923550927356565243, guid: 6b54b263fcf1c074b8db71ad2c6d3565,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 923550927356565243, guid: 6b54b263fcf1c074b8db71ad2c6d3565,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: <_OnValidate>b__4_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 923550927356565243, guid: 6b54b263fcf1c074b8db71ad2c6d3565,
+        type: 3}
+      propertyPath: solvedFunction.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: PuzzleObject, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 923550927435443177, guid: 6b54b263fcf1c074b8db71ad2c6d3565,
         type: 3}
@@ -753,6 +787,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b54b263fcf1c074b8db71ad2c6d3565, type: 3}
+--- !u!114 &749804894325972415 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 923550927356565243, guid: 6b54b263fcf1c074b8db71ad2c6d3565,
+    type: 3}
+  m_PrefabInstance: {fileID: 483797455464565572}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c741600b5a18e8141aaa665e5ab4c001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2810849765409139268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2428829710932222208, guid: 6b54b263fcf1c074b8db71ad2c6d3565,

@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Start3Room : MonoBehaviour, IEnterCameraEvent
 {
-    private bool first = true;
+    [HideInInspector]
+    public bool first = true;
 
     public void OnMoved()
     {

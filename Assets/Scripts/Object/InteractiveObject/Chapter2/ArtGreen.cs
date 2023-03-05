@@ -86,6 +86,7 @@ public class ArtGreen : MonoBehaviour
     public void ChangePictureLoad()
     {
         isChanged = true;
+        greenRenderer.gameObject.SetActive(false);
         StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(roseRenderer, whiteRenderer, false));
     }
 }

@@ -130,6 +130,10 @@ public class SaveData : MonoBehaviour
         Start2Room start2Room = FindObjectOfType<Start2Room>(true);
         str += start2Room.first.ToString() + "\n";
         #endregion
+        #region __3번째방 입장__
+        Start3Room start3Room = FindObjectOfType<Start3Room>(true);
+        str += start3Room.first.ToString() + "\n";
+        #endregion
         #endregion
         #region __서랍__
         foreach (Drawer drawer in drawers)
@@ -301,7 +305,7 @@ public class SaveData : MonoBehaviour
         artYellow.isFirstGreen = bool.Parse(values[3]);
         if (bool.Parse(values[4]))
         {
-            artYellow.ChangePicture();
+            artYellow.ChangePictureLoad();
         }
         #endregion
         #region __초록 그림__
@@ -364,6 +368,12 @@ public class SaveData : MonoBehaviour
         values = source.Split(',', '\n');
         Start2Room start2Room = FindObjectOfType<Start2Room>(true);
         start2Room.first = bool.Parse(values[0]);
+        #endregion
+        #region __3번째방 입장__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        Start3Room start3Room = FindObjectOfType<Start3Room>(true);
+        start3Room.first = bool.Parse(values[0]);
         #endregion
         #endregion
         #region __서랍__

@@ -97,6 +97,7 @@ public class ArtBlue : MonoBehaviour
     public void ChangePictureLoad()
     {
         isChanged = true;
+        blueRenderer.gameObject.SetActive(false);
         StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(lemonRenderer, whiteRenderer, false));
     }
 }

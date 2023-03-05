@@ -134,4 +134,11 @@ public class ArtYellow : MonoBehaviour
 
         DialogueSystem.Instance.StartDialogue("Yellow_After_yellow_died_effect");
     }
+
+    public void ChangePictureLoad()
+    {
+        isChanged = true;
+        GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_PILL);
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(YellowPortrait, WhitePortrait));
+    }
 }

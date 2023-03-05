@@ -105,7 +105,14 @@ public class GameManager : Singleton<GameManager>
         Color color = before.material.color;
         while (color.a > 0.0f)
         {
-            color.a -= (isFade ? fadeSpeed * Time.fixedDeltaTime : 1.0f);
+            if(isFade)
+            {
+                color.a -= fadeSpeed * Time.fixedDeltaTime;
+            }
+            else
+            {
+                color.a = 0.0f;
+            }
             before.material.color = color;
             yield return new WaitForFixedUpdate();
         }

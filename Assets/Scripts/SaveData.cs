@@ -195,7 +195,10 @@ public class SaveData : MonoBehaviour
         Color.RGBToHSV(GameManager.Instance.brushColor, out h, out s, out v);
         str += h + "," + s + "," + v + "," + brushUI.red.interactable.ToString() + "," + brushUI.green.interactable.ToString() + "," + brushUI.blue.interactable.ToString() + "\n";
         #endregion
-
+        #region __망원경__
+        ColorPuzzleHint puzzleHint = FindObjectOfType<ColorPuzzleHint>(true);
+        str += puzzleHint.usedItem.ToString() + "\n";
+        #endregion
 
 
         DirectoryInfo directoryInfo = new DirectoryInfo(Path.GetDirectoryName(path));
@@ -264,7 +267,9 @@ public class SaveData : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(values[count]))
             {
-                bookPoses[count].SetBook((EItemType)System.Enum.Parse(typeof(EItemType), values[count]));
+                EItemType book = (EItemType)System.Enum.Parse(typeof(EItemType), values[count]);
+                bookSet[count] = book;
+                bookPoses[count].SetBook(book);
             }
         }
         #endregion
@@ -507,6 +512,12 @@ public class SaveData : MonoBehaviour
         brushUI.green.interactable = bool.Parse(values[4]);
         brushUI.blue.interactable = bool.Parse(values[5]);
         GameManager.Instance.brushUI.LoadBrushes();
+        #endregion
+        #region __망원경__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        ColorPuzzleHint puzzleHint = FindObjectOfType<ColorPuzzleHint>(true);
+        puzzleHint.usedItem = bool.Parse(values[0]);
         #endregion
 
 

@@ -4,7 +4,8 @@ public class ColorPuzzleHint : MonoBehaviour
 {
     private MoveSceneCamera moveSceneCamera;
 
-    private bool usedItem = false;
+    [HideInInspector]
+    public bool usedItem = false;
 
     private void Start()
     {

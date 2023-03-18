@@ -139,6 +139,6 @@ public class ArtYellow : MonoBehaviour
     {
         isChanged = true;
         GameManager.Instance.Inventory.DeleteItem(EItemType.CHAPTER2_PILL);
-        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(YellowPortrait, WhitePortrait));
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(YellowPortrait, WhitePortrait, false));
     }
 }

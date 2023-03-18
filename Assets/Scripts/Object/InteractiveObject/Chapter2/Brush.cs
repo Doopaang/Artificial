@@ -1,12 +1,20 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Brush : MonoBehaviour
 {
     private static bool interected = false;
 
+    private bool sceneUnloading = false;
+
+    private void Awake()
+    {
+        SceneManager.sceneUnloaded += CheckSceneUnload;
+    }
+
     private void OnDestroy()
     {
-        if (interected)
+        if (interected && !sceneUnloading)
         {
             GameManager.Instance.brushUI.Brushes.Remove(this);
         }
@@ -39,5 +47,10 @@ public class Brush : MonoBehaviour
         Color color = GameManager.Instance.brushColor;
         color.a = value;
         GetComponentInChildren<MeshRenderer>().materials[0].SetColor("_Color", color);
+    }
+
+    private void CheckSceneUnload(Scene scene)
+    {
+        sceneUnloading = true;
     }
 }

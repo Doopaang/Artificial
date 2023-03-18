@@ -57,6 +57,7 @@ public class HouseOwner : MonoBehaviour
 
     private void DeactiveGate()
     {
+        housePicture.gate = false;
         gate.gameObject.SetActive(false);
     }
 }

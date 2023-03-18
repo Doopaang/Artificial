@@ -16,6 +16,8 @@ public class ArtGreen : MonoBehaviour
     private ArtYellow yellow;
 
     [HideInInspector]
+    public bool usedItem = false;
+    [HideInInspector]
     public bool isChanged = false;
 
     [HideInInspector]
@@ -67,6 +69,7 @@ public class ArtGreen : MonoBehaviour
 
     private void ChangeToRose()
     {
+        usedItem = true;
         StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(greenRenderer, roseRenderer, true, GainGreenHandle));
     }
 
@@ -85,8 +88,14 @@ public class ArtGreen : MonoBehaviour
 
     public void ChangePictureLoad()
     {
-        isChanged = true;
-        greenRenderer.gameObject.SetActive(false);
-        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(roseRenderer, whiteRenderer, false));
+        if(isChanged)
+        {
+            greenRenderer.gameObject.SetActive(false);
+            StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(roseRenderer, whiteRenderer, false));
+        }
+        else if(usedItem)
+        {
+            StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(greenRenderer, roseRenderer, false));
+        }
     }
 }

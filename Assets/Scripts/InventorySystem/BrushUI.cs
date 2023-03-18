@@ -4,14 +4,9 @@ using System.Collections.Generic;
 
 public class BrushUI : MonoBehaviour
 {
-    [SerializeField]
-    private Button red;
-
-    [SerializeField]
-    private Button green;
-
-    [SerializeField]
-    private Button blue;
+    public Button red;
+    public Button green;
+    public Button blue;
 
     private List<Brush> brushes = new List<Brush>();
 
@@ -30,7 +25,7 @@ public class BrushUI : MonoBehaviour
 
     public void ClickButton(string color)
     {
-        switch(color)
+        switch (color)
         {
             case "red":
                 GameManager.Instance.ChangeBrushColor(ref GameManager.Instance.brushColor.r);
@@ -72,9 +67,17 @@ public class BrushUI : MonoBehaviour
 
     public void ApplyBrushColor()
     {
-        foreach(Brush brush in brushes)
+        foreach (Brush brush in brushes)
         {
-            brush.ApplyColor();
+            if (brush)
+            {
+                brush.ApplyColor();
+            }
         }
+    }
+
+    public void LoadBrushes()
+    {
+        brushes = new List<Brush>(FindObjectsOfType<Brush>());
     }
 }

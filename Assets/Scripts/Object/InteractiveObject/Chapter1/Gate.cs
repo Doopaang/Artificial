@@ -7,7 +7,7 @@ public class Gate : MonoBehaviour
 
     private ReactInteraction reactInteraction;
 
-    private void Start()
+    private void Awake()
     {
         reactInteraction = GetComponent<ReactInteraction>();
     }

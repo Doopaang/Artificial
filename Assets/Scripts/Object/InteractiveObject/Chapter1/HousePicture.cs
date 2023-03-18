@@ -19,6 +19,7 @@ public class HousePicture : MonoBehaviour
     private MoveSceneCamera moveSceneCamera;
 
     public bool gateLocked = true;
+    public bool gate = true;
 
     private Coroutine coroutine = null;
 

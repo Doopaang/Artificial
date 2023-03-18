@@ -96,7 +96,7 @@ public class SaveData : MonoBehaviour
         #endregion
         #region __대문 그림__
         HousePicture housePicture = FindObjectOfType<HousePicture>();
-        str += housePicture.state.ToString() + "," + housePicture.gateLocked.ToString() + "\n";
+        str += housePicture.state.ToString() + "," + housePicture.gateLocked.ToString() + "," + housePicture.gate.ToString() + "\n";
         #endregion
         #region __노랑 그림__
         ArtYellow artYellow = FindObjectOfType<ArtYellow>();
@@ -104,7 +104,7 @@ public class SaveData : MonoBehaviour
         #endregion
         #region __초록 그림__
         ArtGreen artGreen = FindObjectOfType<ArtGreen>();
-        str += artGreen.isChanged.ToString() + "," + artGreen.isFirst.ToString() + "," + artGreen.isFlowerFirst.ToString() + "\n";
+        str += artGreen.isChanged.ToString() + "," + artGreen.isFirst.ToString() + "," + artGreen.isFlowerFirst.ToString() + "," + artGreen.usedItem.ToString() + "\n";
         #endregion
         #region __파랑 그림__
         ArtBlue artBlue = FindObjectOfType<ArtBlue>();
@@ -189,7 +189,12 @@ public class SaveData : MonoBehaviour
         Start3Room start3Room = FindObjectOfType<Start3Room>(true);
         str += start3Room.first.ToString() + "\n";
         #endregion
-
+        #region __붓__
+        BrushUI brushUI = FindObjectOfType<BrushUI>(true);
+        float h, s, v;
+        Color.RGBToHSV(GameManager.Instance.brushColor, out h, out s, out v);
+        str += h + "," + s + "," + v + "," + brushUI.red.interactable.ToString() + "," + brushUI.green.interactable.ToString() + "," + brushUI.blue.interactable.ToString() + "\n";
+        #endregion
 
 
 
@@ -238,9 +243,10 @@ public class SaveData : MonoBehaviour
         #region __현재 카메라__
         source = reader.ReadLine();
         values = source.Split(',', '\n');
+        int camera = 0;
         if (!string.IsNullOrEmpty(values[0]))
         {
-            CameraSystem.Instance.MoveCamera(CameraSystem.Instance.cameras[int.Parse(values[0])]);
+            camera = int.Parse(values[0]);
         }
         #endregion
         #region __맵 아이템__
@@ -294,6 +300,12 @@ public class SaveData : MonoBehaviour
         HousePicture housePicture = FindObjectOfType<HousePicture>();
         housePicture.ChangePicture((EHousePictureType)System.Enum.Parse(typeof(EHousePictureType), values[0]), null, false);
         housePicture.gateLocked = bool.Parse(values[1]);
+        Gate gate = FindObjectOfType<Gate>();
+        if (!bool.Parse(values[2]))
+        {
+            housePicture.gate = false;
+            gate.gameObject.SetActive(false);
+        }
         #endregion
         #region __노랑 그림__
         source = reader.ReadLine();
@@ -312,23 +324,20 @@ public class SaveData : MonoBehaviour
         source = reader.ReadLine();
         values = source.Split(',', '\n');
         ArtGreen artGreen = FindObjectOfType<ArtGreen>();
-        if (bool.Parse(values[0]))
-        {
-            artGreen.ChangePictureLoad();
-        }
+        artGreen.isChanged = bool.Parse(values[0]);
         artGreen.isFirst = bool.Parse(values[1]);
         artGreen.isFlowerFirst = bool.Parse(values[2]);
+        artGreen.usedItem = bool.Parse(values[3]);
+        artGreen.ChangePictureLoad();
         #endregion
         #region __파랑 그림__
         source = reader.ReadLine();
         values = source.Split(',', '\n');
         ArtBlue artBlue = FindObjectOfType<ArtBlue>();
-        if (bool.Parse(values[0]))
-        {
-            artBlue.ChangePictureLoad();
-        }
+        artBlue.isChanged = bool.Parse(values[0]);
         artBlue.isFirst = bool.Parse(values[1]);
         artBlue.usedItem = bool.Parse(values[2]);
+        artBlue.ChangePictureLoad();
         #endregion
         #region __빨강 그림__
         source = reader.ReadLine();
@@ -456,7 +465,7 @@ public class SaveData : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(values[count]))
             {
-                if (!bool.Parse(values[0]))
+                if (bool.Parse(values[count]))
                 {
                     colorPuzzles[count].Open();
                 }
@@ -489,8 +498,21 @@ public class SaveData : MonoBehaviour
         Start3Room start3Room = FindObjectOfType<Start3Room>(true);
         start3Room.first = bool.Parse(values[0]);
         #endregion
+        #region __붓__
+        source = reader.ReadLine();
+        values = source.Split(',', '\n');
+        GameManager.Instance.brushColor = Color.HSVToRGB(float.Parse(values[0]), float.Parse(values[1]), float.Parse(values[2]));
+        BrushUI brushUI = FindObjectOfType<BrushUI>(true);
+        brushUI.red.interactable = bool.Parse(values[3]);
+        brushUI.green.interactable = bool.Parse(values[4]);
+        brushUI.blue.interactable = bool.Parse(values[5]);
+        GameManager.Instance.brushUI.LoadBrushes();
+        #endregion
 
 
+        #region __카메라 적용__
+        CameraSystem.Instance.MoveCamera(CameraSystem.Instance.cameras[camera]);
+        #endregion
 
         //Application.quitting += () => { Save(); };
 

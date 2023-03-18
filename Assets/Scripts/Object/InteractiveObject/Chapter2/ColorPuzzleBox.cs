@@ -16,6 +16,9 @@ public class ColorPuzzleBox : MonoBehaviour
     [HideInInspector]
     public bool solved = false;
 
+    [SerializeField]
+    private PuzzleObject puzzle;
+
     private void Start()
     {
         moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
@@ -39,5 +42,10 @@ public class ColorPuzzleBox : MonoBehaviour
         solved = true;
         item.GetComponent<Collider>().enabled = true;
         cover.SetActive(false);
+
+        if (puzzle)
+        {
+            Destroy(puzzle.gameObject);
+        }
     }
 }

@@ -67,6 +67,9 @@ public class FinalDoor : MonoBehaviour
     {
         puzzleColl.enabled = false;
         doorColl.enabled = true;
+
+        GameManager.Instance.saveData.Save();
+        FindObjectOfType<PauseMenu>().gameObject.SetActive(false);
     }
 
     public void Interact()

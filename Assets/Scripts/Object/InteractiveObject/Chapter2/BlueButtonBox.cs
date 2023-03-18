@@ -13,6 +13,9 @@ public class BlueButtonBox : MonoBehaviour
     [HideInInspector]
     public bool solved = false;
 
+    [SerializeField]
+    private PuzzleObject puzzle;
+
     private void Start()
     {
         moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
@@ -36,5 +39,10 @@ public class BlueButtonBox : MonoBehaviour
         solved = true;
         cover.SetActive(false);
         item.GetComponent<Collider>().enabled = true;
+
+        if (puzzle)
+        {
+            Destroy(puzzle.gameObject);
+        }
     }
 }

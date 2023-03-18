@@ -53,9 +53,6 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        brushColor = Color.black;
-        brushUI.gameObject.SetActive(false);
-
         SoundSystem.Instance.PlayBGM("InGame");
     }
 

@@ -11,7 +11,7 @@ public class ChildPicture : MonoBehaviour
     [HideInInspector]
     public bool changed = false;
 
-    private void Start()
+    private void Awake()
     {
         moveSceneCamera = GetComponentInChildren<MoveSceneCamera>();
 
@@ -34,6 +34,6 @@ public class ChildPicture : MonoBehaviour
         MeshRenderer before = hungryChildPicture.GetComponent<MeshRenderer>();
         MeshRenderer after = fullChildPicture.GetComponent<MeshRenderer>();
 
-        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, true, () => { fullChildPicture.Interact(); }, isLoad));
+        StartCoroutine(GameManager.Instance.ChangeFadeCoroutine(before, after, false, () => { fullChildPicture.Interact(); }, isLoad));
     }
 }

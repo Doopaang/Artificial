@@ -4001,6 +4001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58fcfd0fe1b4e084aa2aecee704540f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  first: 1
 --- !u!4 &283105960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4579100096229528, guid: 8b52a049bbba76b4187f855da48487cc,
@@ -5972,7 +5973,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7246
+  m_Name: pb_Mesh268632
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8033,6 +8034,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 803841300}
     m_Modifications:
+    - target: {fileID: 2704204400298724734, guid: 63117c9674cac1c47afdea87bc797f6a,
+        type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 2125577556}
     - target: {fileID: 7162182730152200535, guid: 63117c9674cac1c47afdea87bc797f6a,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9080,13 +9086,13 @@ PrefabInstance:
     - target: {fileID: 3746507397111225624, guid: 51fa8a150e7fcd24d92ae4619e6301d4,
         type: 3}
       propertyPath: colliders.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3746507397111225624, guid: 51fa8a150e7fcd24d92ae4619e6301d4,
         type: 3}
       propertyPath: colliders.Array.data[1]
       value: 
-      objectReference: {fileID: 714821518}
+      objectReference: {fileID: 1873133824}
     - target: {fileID: 3746507397111225624, guid: 51fa8a150e7fcd24d92ae4619e6301d4,
         type: 3}
       propertyPath: colliders.Array.data[2]
@@ -9289,7 +9295,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23808
+  m_Name: pb_Mesh265660
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9503,12 +9509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7094d93c229304a959e3711d1ee167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &714821518 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 6035886687020453919, guid: 4d89876ef7677f24dac89c51befa97a3,
-    type: 3}
-  m_PrefabInstance: {fileID: 7159174645781618187}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &715182493 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8201410181705020760, guid: c0b59f95d82edcb4d91991170b450450,
@@ -18623,6 +18623,11 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 1962459524}
+    - target: {fileID: 1864596282486217879, guid: c0b59f95d82edcb4d91991170b450450,
+        type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 627114882}
     - target: {fileID: 2170747948332623291, guid: c0b59f95d82edcb4d91991170b450450,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21150,7 +21155,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24508
+  m_Name: pb_Mesh269106
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26812,6 +26817,11 @@ PrefabInstance:
       objectReference: {fileID: 1896956861}
     - target: {fileID: 1864596282486217879, guid: c0b59f95d82edcb4d91991170b450450,
         type: 3}
+      propertyPath: puzzle
+      value: 
+      objectReference: {fileID: 637214893}
+    - target: {fileID: 1864596282486217879, guid: c0b59f95d82edcb4d91991170b450450,
+        type: 3}
       propertyPath: deleteItem
       value: 24
       objectReference: {fileID: 0}
@@ -27665,6 +27675,21 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1940898608}
+    - target: {fileID: 7785044114231626123, guid: c628efdcb57053d44a52e076338214b1,
+        type: 3}
+      propertyPath: brushColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785044114231626123, guid: c628efdcb57053d44a52e076338214b1,
+        type: 3}
+      propertyPath: brushColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785044114231626123, guid: c628efdcb57053d44a52e076338214b1,
+        type: 3}
+      propertyPath: brushColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7785044114231626123, guid: c628efdcb57053d44a52e076338214b1,
         type: 3}
       propertyPath: housePicture
@@ -31718,6 +31743,18 @@ BoxCollider:
     type: 3}
   m_PrefabInstance: {fileID: 1700229172}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2125577556 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7162182730174625172, guid: 63117c9674cac1c47afdea87bc797f6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 639031532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1256ecc2f49405f4ea72e930dfa6e5c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2125658861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4948139635436348, guid: 3db9702ab99294a4ab34f47de04cd1c1,
